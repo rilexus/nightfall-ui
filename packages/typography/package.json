@@ -1,0 +1,36 @@
+{
+  "name": "@nightfall-ui/typography",
+  "version": "1.0.0",
+  "license": "MIT",
+  "description": "Typography for the NIghtfall UI component library.",
+  "author": "Stanislav Panchenko <email@stanislavpanchenko.de>",
+  "homepage": "https://rilexus.github.io/nightfall-ui/",
+  "scripts": {
+    "tsc:watch": "tsc --watch",
+    "build": "tsc --project ./tsconfig.json",
+    "start": "npm run tsc:watch"
+  },
+  "devDependencies": {
+    "styled-components": "^5.3.3"
+  },
+  "dependencies": {},
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "peerDependencies": {
+    "styled-components": "^5.3.3",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rilexus/nightfall-ui"
+  },
+  "keywords": [
+    "react",
+    "ui",
+    "library"
+  ],
+  "bugs": {
+    "url": "https://github.com/rilexus/nightfall-ui/issues"
+  }
+}

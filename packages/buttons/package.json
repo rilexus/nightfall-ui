@@ -1,0 +1,41 @@
+{
+  "name": "@nightfall-ui/buttons",
+  "version": "1.0.0",
+  "license": "MIT",
+  "description": "Buttons for the Nightfall UI component library.",
+  "author": "Stanislav Panchenko <email@stanislavpanchenko.de>",
+  "homepage": "https://rilexus.github.io/nightfall-ui/",
+  "scripts": {
+    "tsc:watch": "tsc --watch",
+    "build": "tsc --project ./tsconfig.json",
+    "start": "npm run tsc:watch"
+  },
+  "devDependencies": {
+    "styled-components": "^5.3.3",
+    "@nightfall-ui/hooks": "*",
+    "@nightfall-ui/theme": "*"
+  },
+  "dependencies": {},
+  "peerDependencies": {
+    "@nightfall-ui/hooks": "*",
+    "react-transitions-library": "^1.10.0",
+    "@nightfall-ui/theme": "*",
+    "styled-components": "^5.3.3",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rilexus/nightfall-ui"
+  },
+  "keywords": [
+    "react",
+    "ui",
+    "library"
+  ],
+  "bugs": {
+    "url": "https://github.com/rilexus/nightfall-ui/issues"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "extends": "../../ts-config.json",
+  "compilerOptions": {
+    "composite": true,
+    "target": "es5",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "outDir": "dist",
+    "declaration": true,
+    "declarationMap": true,
+    "allowJs": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "noEmit": false,
+    "jsx": "react-jsx",
+    "strict": true,
+    "baseUrl": "."
+  },
+  "ts-node": {
+    "compilerOptions": {
+      "module": "CommonJS"
+    }
+  },
+  "include": ["src/**/*"],
+  "exclude": [
+    "**/*.spec.ts",
+    "**/*.test.ts",
+    "dist",
+    "docs",
+    "node_modules",
+    "webpack.config.ts",
+    "site"
+  ]
+}

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/packages/buttons/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/site/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/theme/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/typography/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/accordion/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/forms/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/hooks/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/utils/dist" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
