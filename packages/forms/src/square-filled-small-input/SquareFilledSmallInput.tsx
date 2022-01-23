@@ -4,18 +4,15 @@ import {
   filledInputBackgroundColorCss,
   inputFocusCss,
   inputPlaceholderCss,
+  squareFilledInputBorderCss,
 } from "../css";
-import { px75, py25, roundedMD, themedTextColor } from "@nightfall-ui/theme";
+import { px75, py25, roundedLG, themedTextColor } from "@nightfall-ui/theme";
 import { regularNormalCss } from "@nightfall-ui/typography";
-import { InputPlaceholder } from "../components";
-import { useFocused } from "@nightfall-ui/hooks";
-import { useInputValue } from "../hooks";
-import { mergeRefs } from "@nightfall-ui/utils";
 
 const StyledSquareFilledSmallInput = styled.input`
   outline: none;
-  border: none;
-  ${roundedMD};
+  ${squareFilledInputBorderCss};
+  ${roundedLG};
   ${themedTextColor};
   ${px75};
   ${py25};
@@ -28,30 +25,8 @@ const StyledSquareFilledSmallInput = styled.input`
 const SquareFilledSmallInput = forwardRef<
   HTMLInputElement,
   HTMLAttributes<HTMLInputElement>
->(({ placeholder, ...props }, outsideRef) => {
-  const [focused, inputRef] = useFocused();
-  const [value, valueRef] = useInputValue();
-
-  const hasValue = !!value;
-  return (
-    <div
-      style={{
-        display: "inline-block",
-        position: "relative",
-      }}
-    >
-      {placeholder && (
-        <InputPlaceholder focused={focused} hasValue={hasValue}>
-          {placeholder}
-        </InputPlaceholder>
-      )}
-      <StyledSquareFilledSmallInput
-        {...props}
-        placeholder={placeholder}
-        ref={mergeRefs([outsideRef, inputRef, valueRef])}
-      />
-    </div>
-  );
+>((props, outsideRef) => {
+  return <StyledSquareFilledSmallInput {...props} ref={outsideRef} />;
 });
 
 export { SquareFilledSmallInput };

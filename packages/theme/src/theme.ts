@@ -1,44 +1,7 @@
-import { marginTheme, MarginThemeType } from "./margin";
-import { paddingTheme, PaddingTheme } from "./padding";
+import { marginTheme } from "./margin";
+import { paddingTheme } from "./padding";
+import { Theme } from "./Theme.type";
 
-type Mode = "dark" | "light" | "main";
-
-interface ThemedColor {
-  light: string;
-  main: string;
-  dark: string;
-  contrastText: string;
-}
-
-interface Theme {
-  margin: MarginThemeType;
-  padding: PaddingTheme;
-  font: {
-    antialiased: string;
-    italic: string;
-    notItalic: string;
-    family: {
-      sans: string;
-      serif: string;
-      mono: string;
-    };
-    weight: {
-      [key: string]: number;
-    };
-  };
-  colors: {
-    mode: Mode;
-    primary: ThemedColor;
-    secondary: ThemedColor;
-    error: ThemedColor;
-    warning: ThemedColor;
-    info: ThemedColor;
-    success: ThemedColor;
-    text: ThemedColor;
-    background: ThemedColor;
-    grey: string[];
-  };
-}
 const theme: Theme = {
   margin: marginTheme,
   padding: paddingTheme,
@@ -101,11 +64,19 @@ const theme: Theme = {
       "#868686",
       "#7e7e7e",
       "#4f4f4f",
-      "#3a3a3a",
+      "rgb(56,56,56)",
       "#333333",
       "#1a1a1a",
       "#000000",
     ],
+  },
+  media: {
+    small: "320px",
+    medium: "375px",
+    large: "425px",
+    tablet: "768px",
+    laptop: "1024px",
+    desktop: "1440px",
   },
   font: {
     antialiased: "antialiased",
@@ -142,5 +113,4 @@ const theme: Theme = {
   },
 };
 
-export type { Mode, Theme };
 export { theme };

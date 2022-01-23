@@ -5,3 +5,4 @@ export * from "./use-mouse-over";
 export * from "./use-mouse-down";
 export * from "./use-touch";
 export * from "./use-focused";
+export * from "./use-media-query";

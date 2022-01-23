@@ -1,23 +1,20 @@
 import React, { forwardRef, HTMLAttributes } from "react";
 import styled from "styled-components";
-import { useCSSProperties, useFocused } from "@nightfall-ui/hooks";
 import {
   mx50,
-  px50,
   px75,
   py50,
-  roundedMD,
+  roundedLG,
+  roundedXL,
   themedTextColor,
 } from "@nightfall-ui/theme";
-import { useInputValue } from "../hooks";
 import { regularNormalCss } from "@nightfall-ui/typography";
-import { mergeRefs } from "@nightfall-ui/utils";
 import {
   filledInputBackgroundColorCss,
   inputFocusCss,
   inputPlaceholderCss,
+  squareFilledInputBorderCss,
 } from "../css";
-import { InputPlaceholder } from "../components";
 
 const StyledSquareFilledMediumInput = styled.input`
   ${mx50};
@@ -25,9 +22,9 @@ const StyledSquareFilledMediumInput = styled.input`
   ${px75};
   ${themedTextColor};
   ${regularNormalCss};
-  ${roundedMD};
+  ${roundedLG};
   outline: none;
-  border: none;
+  ${squareFilledInputBorderCss};
   ${filledInputBackgroundColorCss};
   ${inputFocusCss};
   ${inputPlaceholderCss};
@@ -36,34 +33,8 @@ const StyledSquareFilledMediumInput = styled.input`
 const SquareFilledMediumInput = forwardRef<
   HTMLInputElement,
   HTMLAttributes<HTMLInputElement>
->(({ placeholder, ...props }, outsideRef) => {
-  const [focused, inputRef] = useFocused();
-  const [value, valueRef] = useInputValue();
-
-  const hasValue = !!value;
-
-  const style = useCSSProperties(
-    {
-      position: "relative",
-      display: "inline-block",
-    },
-    []
-  );
-
-  return (
-    <div style={style}>
-      {placeholder && (
-        <InputPlaceholder focused={focused} hasValue={hasValue}>
-          {placeholder}
-        </InputPlaceholder>
-      )}
-      <StyledSquareFilledMediumInput
-        {...props}
-        placeholder={placeholder}
-        ref={mergeRefs([inputRef, valueRef, outsideRef])}
-      />
-    </div>
-  );
+>((props, outsideRef) => {
+  return <StyledSquareFilledMediumInput {...props} ref={outsideRef} />;
 });
 SquareFilledMediumInput.displayName = "SquareFilledMediumInput";
 export { SquareFilledMediumInput };

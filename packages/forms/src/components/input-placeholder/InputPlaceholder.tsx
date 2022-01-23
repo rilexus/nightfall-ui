@@ -1,25 +1,33 @@
-import React, { FC } from "react";
+import React, { FC, HTMLAttributes } from "react";
 import { useCSSProperties } from "@nightfall-ui/hooks";
+import styled from "styled-components";
+import { absolute, themedTextColor } from "@nightfall-ui/theme";
 
-const InputPlaceholder: FC<{ focused: boolean; hasValue: boolean }> = ({
-  children,
-  hasValue,
-  focused,
-}) => {
+const StyledSpan = styled.span`
+  pointer-events: none;
+  ${themedTextColor};
+  ${absolute};
+  transform: translateY(-50%);
+  top: 50%;
+  left: 0.5rem;
+`;
+
+const InputPlaceholder: FC<
+  { focused: boolean; hasValue: boolean } & HTMLAttributes<HTMLSpanElement>
+> = ({ children, hasValue, focused, ...props }) => {
   const placeholderStyle = useCSSProperties(
     {
-      pointerEvents: "none",
       transition: `opacity ${hasValue ? 0 : 200}ms ease 0ms`,
-      color: "white",
       opacity: hasValue ? 0 : focused ? 0.1 : 0.3,
-      position: "absolute",
-      transform: `translateY(-50%)`,
-      top: "50%",
-      left: ".5rem",
+      ...props.style,
     },
     [focused, hasValue]
   );
-  return <span style={placeholderStyle}>{children}</span>;
+  return (
+    <StyledSpan {...props} style={placeholderStyle}>
+      {children}
+    </StyledSpan>
+  );
 };
 
 export { InputPlaceholder };

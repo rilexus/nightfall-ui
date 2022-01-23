@@ -29,6 +29,10 @@ const pt75 = css`
   padding-top: ${padding("75")};
 `;
 
+const pt87 = css`
+  padding-top: ${padding("87")};
+`;
+
 const pt100 = css`
   padding-top: ${padding("100")};
 `;

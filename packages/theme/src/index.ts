@@ -6,3 +6,5 @@ export * from "./margin";
 export * from "./user-select";
 export * from "./padding";
 export * from "./rounded";
+export * from "./position";
+export * from "./Theme.type";

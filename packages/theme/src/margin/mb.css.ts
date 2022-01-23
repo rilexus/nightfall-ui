@@ -2,71 +2,71 @@ import { css } from "styled-components";
 import { margin } from "./Margin.theme";
 
 const mb0 = css`
-  margin-bottom: ${margin(0)};
+  margin-bottom: ${margin("0")};
 `;
 
 const mb1 = css`
-  margin-bottom: ${margin(1)};
+  margin-bottom: ${margin("1")};
 `;
 
 const mb12 = css`
-  margin-bottom: ${margin(12)};
+  margin-bottom: ${margin("12")};
 `;
 
 const mb37 = css`
-  margin-bottom: ${margin(37)};
+  margin-bottom: ${margin("37")};
 `;
 
 const mb50 = css`
-  margin-bottom: ${margin(50)};
+  margin-bottom: ${margin("50")};
 `;
 
 const mb62 = css`
-  margin-bottom: ${margin(62)};
+  margin-bottom: ${margin("62")};
 `;
 
 const mb75 = css`
-  margin-bottom: ${margin(75)};
+  margin-bottom: ${margin("75")};
 `;
 
 const mb87 = css`
-  margin-bottom: ${margin(87)};
+  margin-bottom: ${margin("87")};
 `;
 
 const mb100 = css`
-  margin-bottom: ${margin(100)};
+  margin-bottom: ${margin("100")};
 `;
 
 const mb125 = css`
-  margin-bottom: ${margin(125)};
+  margin-bottom: ${margin("125")};
 `;
 
 const mb150 = css`
-  margin-bottom: ${margin(150)};
+  margin-bottom: ${margin("150")};
 `;
 
 const mb175 = css`
-  margin-bottom: ${margin(175)};
+  margin-bottom: ${margin("175")};
 `;
 
 const mb200 = css`
-  margin-bottom: ${margin(200)};
+  margin-bottom: ${margin("200")};
 `;
 
 const mb225 = css`
-  margin-bottom: ${margin(225)};
+  margin-bottom: ${margin("225")};
 `;
 
 const mb250 = css`
-  margin-bottom: ${margin(250)};
+  margin-bottom: ${margin("250")};
 `;
 
 const mb275 = css`
-  margin-bottom: ${margin(275)};
+  margin-bottom: ${margin("275")};
 `;
 
 const mb300 = css`
-  margin-bottom: ${margin(300)};
+  margin-bottom: ${margin("300")};
 `;
 export {
   mb0,

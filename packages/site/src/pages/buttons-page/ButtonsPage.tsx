@@ -8,14 +8,9 @@ import {
   ExtraLargeSquareButton,
 } from "@nightfall-ui/buttons";
 import styled from "styled-components";
-import { mx37 } from "@nightfall-ui/theme";
 import { SmallTextButton, MediumSquareButton } from "@nightfall-ui/buttons";
 import { regularNormal2XLCss } from "@nightfall-ui/typography";
-import { Hr } from "../../components";
-
-const HorizontalSpacer = styled.span`
-  ${mx37};
-`;
+import { HorizontalSpacer, Hr } from "../../components";
 
 const H2 = styled.h2`
   ${regularNormal2XLCss}

@@ -1,5 +1,4 @@
-import { css } from "styled-components";
-import { Theme } from "../theme";
+import { Theme } from "../Theme.type";
 
 type PaddingTheme = {
   "0": string;

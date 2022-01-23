@@ -1,36 +1,78 @@
 import { css } from "styled-components";
 import { greyColor } from "@nightfall-ui/theme/dist/src";
+import { Ease } from "@nightfall-ui/ease";
 
 const inputFocusCss = css`
-  // border: 1px solid;
-  // border-color: transparent;
-  // transition: border-color 200ms ease 0ms;
-  // &:focus {
-  //   border-color: ${greyColor(6)};
-  // }
+  transition: border 200ms ${Ease.easeInOutCubic} 0ms, filter 200ms ease 0ms;
+
+  filter: drop-shadow(0 1px 2px transparent) drop-shadow(0 1px 1px transparent);
+
+  &:focus {
+    border: 1px solid #2997ff;
+    filter: drop-shadow(0 0px 1px #67acee) drop-shadow(0 0px 2px #1c8efa)
+      drop-shadow(0 0px 3px #2997ff);
+  }
 `;
 
 const filledInputBackgroundColorCss = css`
-  background-color: ${greyColor(7)};
+  background-color: ${greyColor(8)};
 `;
 
 const inputPlaceholderCss = css`
   ::-webkit-input-placeholder {
     /* Chrome/Opera/Safari */
-    opacity: 0;
+    opacity: 1;
+    transition: opacity 250ms;
   }
   ::-moz-placeholder {
     /* Firefox 19+ */
-    opacity: 0;
+    opacity: 1;
+    transition: opacity 250ms;
   }
   :-ms-input-placeholder {
     /* IE 10+ */
-    opacity: 0;
+    opacity: 1;
+    transition: opacity 250ms;
   }
   :-moz-placeholder {
     /* Firefox 18- */
-    opacity: 0;
+    opacity: 1;
+    transition: opacity 250ms;
+  }
+  &:focus {
+    ::-webkit-input-placeholder {
+      /* Chrome/Opera/Safari */
+      opacity: 0;
+    }
+    ::-moz-placeholder {
+      /* Firefox 19+ */
+      opacity: 0;
+    }
+    :-ms-input-placeholder {
+      /* IE 10+ */
+      opacity: 0;
+    }
+    :-moz-placeholder {
+      /* Firefox 18- */
+      opacity: 0;
+    }
   }
 `;
 
-export { filledInputBackgroundColorCss, inputFocusCss, inputPlaceholderCss };
+const squareFilledInputBorderCss = css`
+  border: none;
+  border: 1px solid transparent;
+`;
+
+const outlinedInputBorderCss = css`
+  border: 1px solid;
+  border-color: ${greyColor(6)};
+`;
+
+export {
+  filledInputBackgroundColorCss,
+  inputFocusCss,
+  inputPlaceholderCss,
+  outlinedInputBorderCss,
+  squareFilledInputBorderCss,
+};

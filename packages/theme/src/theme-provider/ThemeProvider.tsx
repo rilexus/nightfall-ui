@@ -1,7 +1,8 @@
 import React, { FC } from "react";
 
 import { ThemeProvider as StyledThemeProvider } from "styled-components";
-import { Theme, theme } from "../theme";
+import { theme } from "../theme";
+import { Theme } from "../Theme.type";
 
 const defaultTheme = theme;
 

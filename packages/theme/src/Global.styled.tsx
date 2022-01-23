@@ -2,6 +2,9 @@ import { createGlobalStyle } from "styled-components";
 import { backgroundColor, fontFamily, textColor } from "./getters";
 
 const GlobalCss = createGlobalStyle`
+  * {
+    box-sizing: border-box;
+  }
   html {
     font-family: ${fontFamily("sans")};
     background-color: ${backgroundColor()};

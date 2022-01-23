@@ -29,6 +29,10 @@ const pb75 = css`
   padding-bottom: ${padding("75")};
 `;
 
+const pb87 = css`
+  padding-bottom: ${padding("87")};
+`;
+
 const pb100 = css`
   padding-bottom: ${padding("100")};
 `;
@@ -72,6 +76,7 @@ export {
   pb37,
   pb50,
   pb75,
+  pb87,
   pb100,
   pb125,
   pb150,
