@@ -8,10 +8,11 @@
       <excludeFolder url="file://$MODULE_DIR$/packages/theme/dist" />
       <excludeFolder url="file://$MODULE_DIR$/packages/typography/dist" />
       <excludeFolder url="file://$MODULE_DIR$/packages/accordion/dist" />
-      <excludeFolder url="file://$MODULE_DIR$/packages/forms/dist" />
       <excludeFolder url="file://$MODULE_DIR$/packages/hooks/dist" />
       <excludeFolder url="file://$MODULE_DIR$/packages/utils/dist" />
       <excludeFolder url="file://$MODULE_DIR$/packages/layout/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/surfaces/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/text-fields/dist" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

@@ -5,6 +5,7 @@ import { ButtonsPage, Home, TypographyPage } from "./pages";
 import { FocusProvider } from "./components/focusable";
 import { ThemeProvider, GlobalCss } from "@nightfall-ui/theme";
 import { FormsPage } from "./pages/forms";
+import { Li, Ul } from "./components";
 
 const Page: FC = ({ children }) => {
   return <div>{children}</div>;
@@ -24,8 +25,8 @@ const App = () => {
       <ResetCssStyled />
       <GlobalCss />
       <nav>
-        <ul>
-          <li>
+        <Ul>
+          <Li>
             <div
               style={{
                 marginBottom: "1rem",
@@ -33,17 +34,27 @@ const App = () => {
             >
               <Link to={"/"}>Home</Link>
             </div>
-          </li>
+          </Li>
+          <Li>
+            <h2>Inputs</h2>
+            <Ul>
+              <Li>
+                <Link to={"/buttons"}>Buttons</Link>
+              </Li>
+              <Li>
+                <Link to={"/Fields"}>Fields</Link>
+              </Li>
+            </Ul>
+          </Li>
           <li>
-            <Link to={"/buttons"}>Buttons</Link>
+            <h2>Typography</h2>
+            <Ul>
+              <Li>
+                <Link to={"/typography"}>Typography</Link>
+              </Li>
+            </Ul>
           </li>
-          <li>
-            <Link to={"/forms"}>Forms</Link>
-          </li>
-          <li>
-            <Link to={"/typography"}>Typography</Link>
-          </li>
-        </ul>
+        </Ul>
       </nav>
       <div
         style={{
@@ -54,7 +65,7 @@ const App = () => {
           <Routes>
             <Route path={"/"} element={<Home />} />
             <Route path={"/buttons"} element={<ButtonsPage />} />
-            <Route path={"/forms"} element={<FormsPage />} />
+            <Route path={"/fields"} element={<FormsPage />} />
             <Route path={"/typography"} element={<TypographyPage />} />
             <Route path="*" element={<Navigate to={"/"} />} />
           </Routes>

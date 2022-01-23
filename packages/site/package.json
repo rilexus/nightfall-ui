@@ -36,8 +36,9 @@
 		"@nightfall-ui/typography": "*",
 		"@nightfall-ui/accordion": "*",
 		"@nightfall-ui/buttons": "*",
-		"@nightfall-ui/forms": "*",
+		"@nightfall-ui/text-fields": "*",
 		"@nightfall-ui/layout": "*",
+		"@nightfall-ui/surfaces": "*",
 		"dotenv": "^10.0.0",
 		"styled-components": "^5.3.3",
 		"uuid": "^8.3.2"

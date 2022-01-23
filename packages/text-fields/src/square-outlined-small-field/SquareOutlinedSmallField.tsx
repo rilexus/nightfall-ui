@@ -5,7 +5,7 @@ import {
   inputPlaceholderCss,
   outlinedInputBorderCss,
 } from "../css";
-import { px75, py25, roundedLG, themedTextColor } from "@nightfall-ui/theme";
+import { px75, py37, roundedLG, themedTextColor } from "@nightfall-ui/theme";
 import { regularNormalCss } from "@nightfall-ui/typography";
 
 const StyledSquareOutlinedSmallInput = styled.input`
@@ -14,7 +14,7 @@ const StyledSquareOutlinedSmallInput = styled.input`
   ${roundedLG};
   ${themedTextColor};
   ${px75};
-  ${py25};
+  ${py37};
   ${regularNormalCss};
   background: transparent;
   ${outlinedInputBorderCss};
@@ -22,11 +22,11 @@ const StyledSquareOutlinedSmallInput = styled.input`
   ${inputPlaceholderCss};
 `;
 
-const SquareOutlinedSmallInput = forwardRef<
+const SquareOutlinedSmallField = forwardRef<
   HTMLInputElement,
   HTMLAttributes<HTMLInputElement>
 >((props, outsideRef) => {
   return <StyledSquareOutlinedSmallInput {...props} ref={outsideRef} />;
 });
 
-export { SquareOutlinedSmallInput };
+export { SquareOutlinedSmallField };

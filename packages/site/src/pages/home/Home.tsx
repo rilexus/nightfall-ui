@@ -1,14 +1,14 @@
 import React from "react";
-import {NormalButton} from "@nightfall-ui/buttons";
-import {NormalInput} from "@nightfall-ui/forms";
+import { NormalButton } from "@nightfall-ui/buttons";
 
 const Home = () => {
   return (
-    <div style={{
-        color: 'white'
-    }}>
-        <NormalInput/>
-        <NormalButton>Normal</NormalButton>
+    <div
+      style={{
+        color: "white",
+      }}
+    >
+      <NormalButton>Normal</NormalButton>
     </div>
   );
 };

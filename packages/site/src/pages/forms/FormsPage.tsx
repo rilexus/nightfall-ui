@@ -4,106 +4,113 @@ import {
   SquareFilledLargeInput,
   SquareFilledMediumInput,
   SquareFilledSmallInput,
-  SquareOutlinedLargeInput,
+  // SquareOutlinedLargeInput,
   SquareOutlinedMediumInput,
-  SquareOutlinedSmallInput,
-} from "@nightfall-ui/forms";
-import { Grid, GridItem, XStack, YSpacer, YStack } from "@nightfall-ui/layout";
+  SquareOutlinedSmallField,
+} from "@nightfall-ui/text-fields";
+import { Flex, Grid, YSpacer, YStack } from "@nightfall-ui/layout";
+import { Card } from "@nightfall-ui/surfaces";
 
 const FormsPage = () => {
   return (
     <div>
-      <PageTitle>Forms</PageTitle>
+      <PageTitle>Fields</PageTitle>
       <div>
-        <XStack>
-          <div>
-            <YSpacer spacing={"extra-large"}>
-              <h4>Square Filled Input</h4>
-            </YSpacer>
-            <YStack spacing={"medium"}>
-              <SquareFilledSmallInput placeholder={"Placeholder"} />
-              <SquareFilledMediumInput placeholder={"Placeholder"} />
-              <SquareFilledLargeInput placeholder={"Placeholder"} />
-            </YStack>
-          </div>
-          <div>
-            <YSpacer spacing={"extra-large"}>
-              <h4>Square Outlined Input</h4>
-            </YSpacer>
-            <YStack>
-              <SquareOutlinedSmallInput placeholder={"Placeholder"} />
-              <SquareOutlinedMediumInput placeholder={"Placeholder"} />
-              <SquareOutlinedLargeInput placeholder={"Placeholder"} />
-            </YStack>
-          </div>
-        </XStack>
+        <Card
+          style={{
+            maxWidth: "500px",
+          }}
+        >
+          <Flex justify={"evenly"}>
+            <div>
+              <YSpacer spacing={"large"}>
+                <h4>Square Filled Input</h4>
+              </YSpacer>
+              <YStack spacing={"medium"}>
+                <SquareFilledSmallInput placeholder={"Placeholder"} />
+                <SquareFilledMediumInput placeholder={"Placeholder"} />
+                <SquareFilledLargeInput placeholder={"Placeholder"} />
+              </YStack>
+            </div>
+            <div>
+              <YSpacer spacing={"large"}>
+                <h4>Square Outlined Input</h4>
+              </YSpacer>
+              <YStack>
+                <SquareOutlinedSmallField placeholder={"Placeholder"} />
+                <SquareOutlinedSmallField placeholder={"Placeholder"} />
+                <SquareOutlinedSmallField placeholder={"Placeholder"} />
+              </YStack>
+            </div>
+          </Flex>
+        </Card>
       </div>
       <div>
-        <YSpacer spacing={"extra-large"}>
+        <YSpacer spacing={"large"}>
           <h4>Contact Form</h4>
         </YSpacer>
         <Grid spacing={"50"}>
-          <GridItem large={12} tablet={6} laptop={9} desktop={11}>
+          <Grid.Item small={12} large={6}>
             <SquareOutlinedMediumInput
               placeholder={"First name"}
               style={{
                 width: "100%",
               }}
             />
-          </GridItem>
-          <GridItem large={12} tablet={6} laptop={3} desktop={1}>
+          </Grid.Item>
+          <Grid.Item small={12} large={6}>
             <SquareOutlinedMediumInput
               placeholder={"Last name"}
               style={{
                 width: "100%",
               }}
             />
-          </GridItem>
+          </Grid.Item>
 
-          <GridItem small={12}>
+          <Grid.Item small={12} medium={9} large={10} laptop={11}>
             <SquareOutlinedMediumInput
               placeholder={"Street"}
               style={{
                 width: "100%",
               }}
             />
-          </GridItem>
+          </Grid.Item>
 
-          <GridItem small={12}>
+          <Grid.Item small={12} medium={3} large={2} laptop={1}>
             <SquareOutlinedMediumInput
               placeholder={"Nr"}
               style={{
                 width: "100%",
               }}
             />
-          </GridItem>
+          </Grid.Item>
 
-          <GridItem small={12}>
+          <Grid.Item small={12} medium={3} large={2} laptop={1}>
             <SquareOutlinedMediumInput
               placeholder={"ZIP"}
               style={{
                 width: "100%",
               }}
             />
-          </GridItem>
+          </Grid.Item>
 
-          <GridItem small={12}>
+          <Grid.Item small={12} medium={9} large={10} laptop={11}>
             <SquareOutlinedMediumInput
               placeholder={"City"}
               style={{
                 width: "100%",
               }}
             />
-          </GridItem>
+          </Grid.Item>
 
-          <GridItem small={12}>
+          <Grid.Item small={12}>
             <SquareOutlinedMediumInput
               placeholder={"Country"}
               style={{
                 width: "100%",
               }}
             />
-          </GridItem>
+          </Grid.Item>
         </Grid>
       </div>
     </div>

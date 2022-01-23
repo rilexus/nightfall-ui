@@ -4,37 +4,18 @@ import { useTheme } from "styled-components";
 import { Theme, PaddingTheme } from "@nightfall-ui/theme";
 
 const GridContext = createContext<string | null>(null);
+const GridContextProvider = GridContext.Provider;
 
 const useFlexContext = () => useContext(GridContext);
-
-const Grid: FC<{ spacing?: keyof PaddingTheme }> = ({
-  spacing = "0",
-  children,
-}) => {
-  const style = useCSSProperties(
-    {
-      display: "flex",
-      flexFlow: "row wrap",
-      marginTop: `-${spacing}`,
-      marginLeft: `-${spacing}`,
-    },
-    []
-  );
-
-  const theme = useTheme() as Theme;
-  return (
-    <GridContext.Provider value={theme.padding[spacing]}>
-      <div style={style}>{children}</div>
-    </GridContext.Provider>
-  );
-};
 
 const descending = ([, a]: [string, number], [, b]: [string, number]) =>
   a > b ? -1 : 1;
 
-const GridItem: FC<
-  { [Key in keyof Theme["media"]]?: number } & { columns?: number }
-> = ({ children, columns = 12, ...props }) => {
+type GrindItemProps = { [Key in keyof Theme["media"]]?: number } & {
+  columns?: number;
+};
+
+const GridItem: FC<GrindItemProps> = ({ children, columns = 12, ...props }) => {
   const spacing = useFlexContext();
   const { media } = useTheme() as Theme;
 
@@ -75,10 +56,38 @@ const GridItem: FC<
 
   return (
     // override context value, in case we have nested grid
-    <GridContext.Provider value={null}>
+    <GridContextProvider value={null}>
       <div style={style}>{children}</div>
-    </GridContext.Provider>
+    </GridContextProvider>
+  );
+};
+interface GridComposition {
+  Item: typeof GridItem;
+}
+
+const Grid: FC<{ spacing?: keyof PaddingTheme }> & GridComposition = ({
+  spacing = "0",
+  children,
+}) => {
+  const theme = useTheme() as Theme;
+  const style = useCSSProperties(
+    {
+      display: "flex",
+      flexFlow: "row wrap",
+      marginTop: `-${theme.padding[spacing]}`,
+      marginLeft: `-${theme.padding[spacing]}`,
+    },
+    []
+  );
+
+  return (
+    <GridContextProvider value={theme.padding[spacing]}>
+      <div style={style}>{children}</div>
+    </GridContextProvider>
   );
 };
 
-export { Grid, GridItem };
+Grid.Item = GridItem;
+Grid.Item.displayName = "GridItem";
+
+export { Grid };
