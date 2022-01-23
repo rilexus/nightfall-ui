@@ -71,12 +71,12 @@ const theme: Theme = {
     ],
   },
   media: {
-    small: "320px",
-    medium: "375px",
-    large: "425px",
-    tablet: "768px",
-    laptop: "1024px",
-    desktop: "1440px",
+    small: 320,
+    medium: 375,
+    large: 425,
+    tablet: 768,
+    laptop: 1024,
+    desktop: 1440,
   },
   font: {
     antialiased: "antialiased",

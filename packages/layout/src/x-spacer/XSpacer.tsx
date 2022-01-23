@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import React, { FC } from "react";
 import { Spacing } from "./Spacing.type";
-import { getSpacing } from "../vertical-spacer/getSpacing";
+import { getSpacing } from "../y-spacer/getSpacing";
 
 const StyledHorizontalSpacer = styled.div<{ spacing: Spacing }>`
   margin-right: ${getSpacing()};
@@ -10,7 +10,7 @@ const StyledHorizontalSpacer = styled.div<{ spacing: Spacing }>`
   }
 `;
 
-const HorizontalSpacer: FC<{ spacing?: Spacing }> = ({
+const XSpacer: FC<{ spacing?: Spacing }> = ({
   children,
   spacing = "medium",
 }) => {
@@ -21,4 +21,4 @@ const HorizontalSpacer: FC<{ spacing?: Spacing }> = ({
   );
 };
 
-export { HorizontalSpacer, StyledHorizontalSpacer };
+export { XSpacer, StyledHorizontalSpacer };

@@ -10,7 +10,7 @@ const StyledVerticalSpacer = styled.div<{ spacing: Spacing }>`
   }
 `;
 
-const VerticalSpacer: FC<{ spacing?: Spacing }> = ({
+const YSpacer: FC<{ spacing?: Spacing }> = ({
   children,
   spacing = "medium",
 }) => {
@@ -19,4 +19,4 @@ const VerticalSpacer: FC<{ spacing?: Spacing }> = ({
   );
 };
 
-export { VerticalSpacer, StyledVerticalSpacer };
+export { YSpacer, StyledVerticalSpacer };

@@ -8,48 +8,42 @@ import {
   SquareOutlinedMediumInput,
   SquareOutlinedSmallInput,
 } from "@nightfall-ui/forms";
-import {
-  Grid,
-  GridItem,
-  HorizontalStack,
-  VerticalSpacer,
-  VerticalStack,
-} from "@nightfall-ui/layout";
+import { Grid, GridItem, XStack, YSpacer, YStack } from "@nightfall-ui/layout";
 
 const FormsPage = () => {
   return (
     <div>
       <PageTitle>Forms</PageTitle>
       <div>
-        <HorizontalStack>
+        <XStack>
           <div>
-            <VerticalSpacer spacing={"extra-large"}>
+            <YSpacer spacing={"extra-large"}>
               <h4>Square Filled Input</h4>
-            </VerticalSpacer>
-            <VerticalStack spacing={"medium"}>
+            </YSpacer>
+            <YStack spacing={"medium"}>
               <SquareFilledSmallInput placeholder={"Placeholder"} />
               <SquareFilledMediumInput placeholder={"Placeholder"} />
               <SquareFilledLargeInput placeholder={"Placeholder"} />
-            </VerticalStack>
+            </YStack>
           </div>
           <div>
-            <VerticalSpacer spacing={"extra-large"}>
+            <YSpacer spacing={"extra-large"}>
               <h4>Square Outlined Input</h4>
-            </VerticalSpacer>
-            <VerticalStack>
+            </YSpacer>
+            <YStack>
               <SquareOutlinedSmallInput placeholder={"Placeholder"} />
               <SquareOutlinedMediumInput placeholder={"Placeholder"} />
               <SquareOutlinedLargeInput placeholder={"Placeholder"} />
-            </VerticalStack>
+            </YStack>
           </div>
-        </HorizontalStack>
+        </XStack>
       </div>
       <div>
-        <VerticalSpacer spacing={"extra-large"}>
+        <YSpacer spacing={"extra-large"}>
           <h4>Contact Form</h4>
-        </VerticalSpacer>
+        </YSpacer>
         <Grid spacing={"50"}>
-          <GridItem large={12} tablet={6} laptop={6}>
+          <GridItem large={12} tablet={6} laptop={9} desktop={11}>
             <SquareOutlinedMediumInput
               placeholder={"First name"}
               style={{
@@ -57,7 +51,7 @@ const FormsPage = () => {
               }}
             />
           </GridItem>
-          <GridItem large={12} tablet={6} laptop={6}>
+          <GridItem large={12} tablet={6} laptop={3} desktop={1}>
             <SquareOutlinedMediumInput
               placeholder={"Last name"}
               style={{
@@ -65,6 +59,7 @@ const FormsPage = () => {
               }}
             />
           </GridItem>
+
           <GridItem small={12}>
             <SquareOutlinedMediumInput
               placeholder={"Street"}
@@ -73,6 +68,7 @@ const FormsPage = () => {
               }}
             />
           </GridItem>
+
           <GridItem small={12}>
             <SquareOutlinedMediumInput
               placeholder={"Nr"}
@@ -81,6 +77,7 @@ const FormsPage = () => {
               }}
             />
           </GridItem>
+
           <GridItem small={12}>
             <SquareOutlinedMediumInput
               placeholder={"ZIP"}
@@ -89,6 +86,7 @@ const FormsPage = () => {
               }}
             />
           </GridItem>
+
           <GridItem small={12}>
             <SquareOutlinedMediumInput
               placeholder={"City"}
@@ -97,6 +95,7 @@ const FormsPage = () => {
               }}
             />
           </GridItem>
+
           <GridItem small={12}>
             <SquareOutlinedMediumInput
               placeholder={"Country"}

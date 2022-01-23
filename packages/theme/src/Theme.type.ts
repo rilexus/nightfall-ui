@@ -14,12 +14,12 @@ interface Theme {
   margin: MarginTheme;
   padding: PaddingTheme;
   media: {
-    small: string;
-    medium: string;
-    large: string;
-    tablet: string;
-    laptop: string;
-    desktop: string;
+    small: number;
+    medium: number;
+    large: number;
+    tablet: number;
+    laptop: number;
+    desktop: number;
   };
   font: {
     antialiased: string;
