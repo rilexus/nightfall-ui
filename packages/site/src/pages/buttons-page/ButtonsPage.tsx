@@ -1,16 +1,20 @@
 import React from "react";
 import {
-  TextButton,
-  ExtraLargeTextButton,
-  LargeTextButton,
-  SmallSquareButton,
-  LargeSquareButton,
-  ExtraLargeSquareButton,
+  TextExtraLargeButton,
+  TextLargeButton,
+  FilledSquareSmallButton,
+  FilledSquareLargeButton,
+  FilledSquareExtraLargeButton,
+  TextMediumButton,
 } from "@nightfall-ui/buttons";
 import styled from "styled-components";
-import { SmallTextButton, MediumSquareButton } from "@nightfall-ui/buttons";
+import {
+  TextSmallButton,
+  FilledSquareMediumButton,
+} from "@nightfall-ui/buttons";
 import { regularNormal2XLCss } from "@nightfall-ui/typography";
-import { HorizontalSpacer, Hr } from "../../components";
+import { Hr } from "../../components";
+import { XStack } from "@nightfall-ui/layout/dist/src";
 
 const H2 = styled.h2`
   ${regularNormal2XLCss}
@@ -22,26 +26,27 @@ const ButtonsPage = () => {
       <h1>Buttons</h1>
       <div>
         <H2>Text Buttons</H2>
-        <div>
-          <SmallTextButton>Click</SmallTextButton>
-          <HorizontalSpacer />
-          <TextButton>Click</TextButton>
-          <HorizontalSpacer />
-          <LargeTextButton>Click</LargeTextButton>
-          <HorizontalSpacer />
-          <ExtraLargeTextButton>Click</ExtraLargeTextButton>
-        </div>
+        <XStack>
+          <TextSmallButton>Click</TextSmallButton>
+          <TextMediumButton>Click</TextMediumButton>
+          <TextLargeButton>Click</TextLargeButton>
+          <TextExtraLargeButton>Click</TextExtraLargeButton>
+        </XStack>
       </div>
       <Hr />
       <div>
         <H2>Square Buttons</H2>
-        <SmallSquareButton>Click</SmallSquareButton>
-        <HorizontalSpacer />
-        <MediumSquareButton>Click</MediumSquareButton>
-        <HorizontalSpacer />
-        <LargeSquareButton>Click</LargeSquareButton>
-        <HorizontalSpacer />
-        <ExtraLargeSquareButton>Click</ExtraLargeSquareButton>
+        <div>
+          <XStack>
+            <FilledSquareSmallButton>Click</FilledSquareSmallButton>
+
+            <FilledSquareMediumButton>Click</FilledSquareMediumButton>
+
+            <FilledSquareLargeButton>Click</FilledSquareLargeButton>
+
+            <FilledSquareExtraLargeButton>Click</FilledSquareExtraLargeButton>
+          </XStack>
+        </div>
       </div>
     </div>
   );

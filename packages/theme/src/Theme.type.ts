@@ -13,7 +13,7 @@ interface ThemedColor {
 interface Theme {
   margin: MarginTheme;
   padding: PaddingTheme;
-  media: {
+  breakpoints: {
     small: number;
     medium: number;
     large: number;

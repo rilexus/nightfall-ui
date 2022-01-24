@@ -1,5 +1,4 @@
 import React from "react";
-import { NormalButton } from "@nightfall-ui/buttons";
 
 const Home = () => {
   return (
@@ -8,7 +7,7 @@ const Home = () => {
         color: "white",
       }}
     >
-      <NormalButton>Normal</NormalButton>
+      <h1>Nightfall UI</h1>
     </div>
   );
 };

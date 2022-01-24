@@ -1,12 +1,4 @@
-import React, {
-  FC,
-  MouseEventHandler,
-  ReactNode,
-  useCallback,
-  useEffect,
-  useRef,
-  useState,
-} from "react";
+import React, { FC, ReactNode, useCallback, useRef, useState } from "react";
 import styled from "styled-components";
 import {
   bold2XLCss,
@@ -28,6 +20,7 @@ import { useCSSStyle } from "react-transitions-library";
 import { RegularSubtypes } from "./RegularSubtypes";
 import { Hr, Li, Ul } from "../../components";
 import { UltraThinSubtypes } from "./UltraThinSubtypes";
+import { useClickOutside } from "@nightfall-ui/hooks";
 
 const H2 = styled.h2`
   margin: 1rem 0;
@@ -61,36 +54,6 @@ const SemiBoldFontSize = styled.div`
 const ExtraBoldFontSize = styled.div`
   ${extraBold2XLCss};
 `;
-
-function useClickOutside<Element extends HTMLElement>(
-  callback: MouseEventHandler<Element>
-) {
-  const callbackRef = useRef(callback);
-  const ref = useRef<Element | null>(null);
-
-  useEffect(() => {
-    if (callbackRef.current !== callback) {
-      callbackRef.current = callback;
-    }
-  }, [callback]);
-
-  useEffect(() => {
-    function handleClickOutside(event: any) {
-      if (ref.current && !ref.current.contains(event.target)) {
-        callbackRef.current(event);
-      }
-    }
-
-    // Bind the event listener
-    document.addEventListener("click", handleClickOutside);
-    return () => {
-      // Unbind the event listener on clean up
-      document.removeEventListener("click", handleClickOutside);
-    };
-  }, [callbackRef, ref]);
-
-  return ref;
-}
 
 const ControlledAccordion: FC<{
   head: ReactNode;

@@ -11,18 +11,18 @@ const useFlexContext = () => useContext(GridContext);
 const descending = ([, a]: [string, number], [, b]: [string, number]) =>
   a > b ? -1 : 1;
 
-type GrindItemProps = { [Key in keyof Theme["media"]]?: number } & {
+type GrindItemProps = { [Key in keyof Theme["breakpoints"]]?: number } & {
   columns?: number;
 };
 
 const GridItem: FC<GrindItemProps> = ({ children, columns = 12, ...props }) => {
   const spacing = useFlexContext();
-  const { media } = useTheme() as Theme;
+  const { breakpoints } = useTheme() as Theme;
 
   const sortedMedia = useMemo(() => {
     // sort theme.media in descending order
-    return Object.entries(media).sort(descending);
-  }, [media]);
+    return Object.entries(breakpoints).sort(descending);
+  }, [breakpoints]);
 
   const queriesMap = sortedMedia.map(([queryName, deviceWidth]) => {
     // listen for every media query, if its satisfied => boolean

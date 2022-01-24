@@ -1,0 +1,46 @@
+{
+  "name": "@nightfall-ui/inputs",
+  "version": "1.0.0",
+  "license": "MIT",
+  "description": "Inputs for the Nightfall UI component library.",
+  "author": "Stanislav Panchenko <email@stanislavpanchenko.de>",
+  "homepage": "https://rilexus.github.io/nightfall-ui/",
+  "scripts": {
+    "tsc:watch": "tsc --watch",
+    "build": "tsc --project ./tsconfig.json",
+    "start": "npm run tsc:watch"
+  },
+  "devDependencies": {
+    "@types/react-dom": "^17.0.11",
+    "@types/styled-components": "^5.1.17",
+    "@typescript-eslint/eslint-plugin": "^5.7.0",
+    "typescript": "^4.5.4",
+    "@nightfall-ui/utils": "*",
+    "@nightfall-ui/ease": "*",
+    "styled-components": "^5.3.3"
+  },
+  "dependencies": {
+  },
+  "peerDependencies": {
+    "@nightfall-ui/utils": "*",
+    "@nightfall-ui/ease": "*",
+    "styled-components": "^5.3.3",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rilexus/nightfall-ui"
+  },
+  "keywords": [
+    "react",
+    "ui",
+    "library",
+    "inputs"
+  ],
+  "bugs": {
+    "url": "https://github.com/rilexus/nightfall-ui/issues"
+  }
+}

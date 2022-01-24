@@ -18,7 +18,7 @@
   "dependencies": {},
   "peerDependencies": {
     "@nightfall-ui/hooks": "*",
-    "react-transitions-library": "^1.10.0",
+    "react-transitions-library": "^1.10.1",
     "@nightfall-ui/theme": "*",
     "styled-components": "^5.3.3",
     "react": "^17.0.2",

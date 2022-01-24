@@ -7,7 +7,6 @@ import { DefinePlugin } from "webpack";
 const BUILD_FOLDER = "docs";
 
 export default ({ development, production }: any) => {
-  console.log({__dirname})
   return {
     entry: "./index.tsx",
     mode: "development",

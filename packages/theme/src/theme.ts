@@ -70,7 +70,7 @@ const theme: Theme = {
       "#000000",
     ],
   },
-  media: {
+  breakpoints: {
     small: 320,
     medium: 375,
     large: 425,

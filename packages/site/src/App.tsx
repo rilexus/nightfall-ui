@@ -58,7 +58,8 @@ const App = () => {
       </nav>
       <div
         style={{
-          position: "relative",
+          maxWidth: "900px",
+          margin: "0 auto",
         }}
       >
         <Page>

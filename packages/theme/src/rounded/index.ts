@@ -28,12 +28,12 @@ const roundedFull = css`
   border-radius: 9999px;
 `;
 export {
+  roundedSM,
   rounded,
+  roundedMD,
+  roundedLG,
   rounded2XL,
   rounded3XL,
-  roundedFull,
-  roundedLG,
-  roundedMD,
-  roundedSM,
   roundedXL,
+  roundedFull,
 };

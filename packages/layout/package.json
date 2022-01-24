@@ -16,7 +16,7 @@
     "@typescript-eslint/eslint-plugin": "^5.7.0",
     "typescript": "^4.5.4",
     "react-transition-group": "^4.4.2",
-    "react-transitions-library": "^1.10.0",
+    "react-transitions-library": "^1.10.1",
     "styled-components": "^5.3.3",
     "@nightfall-ui/hooks": "*"
   },
@@ -25,7 +25,7 @@
   "peerDependencies": {
     "@nightfall-ui/hooks": "*",
     "react-transition-group": "^4.4.2",
-    "react-transitions-library": "^1.10.0",
+    "react-transitions-library": "^1.10.1",
     "styled-components": "^5.3.3",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"

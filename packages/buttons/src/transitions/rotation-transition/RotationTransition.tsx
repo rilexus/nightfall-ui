@@ -151,7 +151,6 @@ const RotationTransition: FC<{
   return (
     <div style={rotateStyle} onTouchEnd={reset} onTouchCancel={reset}>
       <AbsoluteContainer>
-        {children}
         <InnerGrid
           style={selectNone}
           onTouchEnd={reset}
@@ -235,6 +234,7 @@ const RotationTransition: FC<{
             onMouseOver={handleMouseEnter}
           />
         </InnerGrid>
+        {children}
       </AbsoluteContainer>
     </div>
   );

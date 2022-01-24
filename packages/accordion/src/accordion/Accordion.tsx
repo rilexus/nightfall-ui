@@ -102,7 +102,7 @@ const AccordionHead: FC<
 
 const AccordionBody = forwardRef<HTMLDivElement, { children: ReactNode }>(
   ({ children }, outsideRef) => {
-    const divRef = useRef<HTMLDivElement | null>(null);
+    const divRef = useRef<HTMLDivElement>(null);
     const open = useAccordionContext();
 
     const style = useCSSStyle(
@@ -115,6 +115,7 @@ const AccordionBody = forwardRef<HTMLDivElement, { children: ReactNode }>(
       },
       [open]
     );
+
     return (
       // @ts-ignore
       <AccordionContext.Provider value={null}>
