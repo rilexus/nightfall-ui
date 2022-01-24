@@ -1,10 +1,11 @@
 import { css } from "styled-components";
+import { greyColor } from "@nightfall-ui/theme";
 
 const filledButtonClickAnimation = css`
   transition: background-color 200ms ease 0ms;
 
   &:active {
-    background-color: #e1e1e1;
+    background-color: ${greyColor(4)};
   }
 `;
 
