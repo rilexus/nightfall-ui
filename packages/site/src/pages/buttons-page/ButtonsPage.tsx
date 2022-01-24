@@ -14,7 +14,7 @@ import {
 } from "@nightfall-ui/buttons";
 import { regularNormal2XLCss } from "@nightfall-ui/typography";
 import { Hr } from "../../components";
-import { XStack } from "@nightfall-ui/layout/dist/src";
+import { XStack } from "@nightfall-ui/layout";
 
 const H2 = styled.h2`
   ${regularNormal2XLCss}
