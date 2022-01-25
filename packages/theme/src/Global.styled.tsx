@@ -5,6 +5,9 @@ const GlobalCss = createGlobalStyle`
   * {
     box-sizing: border-box;
   }
+  :root {
+    font-size: 16px;
+  }
   html {
     font-family: ${fontFamily("sans")};
     background-color: ${backgroundColor()};

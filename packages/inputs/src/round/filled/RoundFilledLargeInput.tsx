@@ -1,9 +1,9 @@
 import React, { FC, HTMLAttributes } from "react";
 import styled from "styled-components";
-import { largeInputPaddingCss, roundedInputCss } from "../../css";
+import { largeInputPaddingCss, roundedFilledInputCss } from "../../css";
 
 const StyledRoundFilledLargeInput = styled.input`
-  ${roundedInputCss};
+  ${roundedFilledInputCss};
   ${largeInputPaddingCss};
 `;
 

@@ -1,29 +1,30 @@
-import React, { FC, HTMLAttributes } from "react";
+import React, { FC, forwardRef, HTMLAttributes } from "react";
 import { TextMediumButton } from "./TextMediumButton";
 import { ButtonSize } from "../ButtonSize.type";
 import { TextSmallButton } from "./TextSmallButton";
 import { TextLargeButton } from "./TextLargeButton";
 import { TextExtraLargeButton } from "./TextExtraLargeButton";
 
-const TextButton: FC<
+const TextButton = forwardRef<
+  HTMLButtonElement,
   HTMLAttributes<HTMLButtonElement> & { size?: ButtonSize }
-> = ({ size, ...props }) => {
+>(({ size, ...props }, outsideRef) => {
   switch (size) {
     case "medium": {
-      return <TextMediumButton {...props} />;
+      return <TextMediumButton {...props} ref={outsideRef} />;
     }
     case "large": {
-      return <TextLargeButton {...props} />;
+      return <TextLargeButton {...props} ref={outsideRef} />;
     }
     case "extra-large": {
-      return <TextExtraLargeButton {...props} />;
+      return <TextExtraLargeButton {...props} ref={outsideRef} />;
     }
     case "small": {
-      return <TextSmallButton {...props} />;
+      return <TextSmallButton {...props} ref={outsideRef} />;
     }
     default:
-      return <button {...props} />;
+      return <button {...props} ref={outsideRef} />;
   }
-};
+});
 
 export { TextButton };

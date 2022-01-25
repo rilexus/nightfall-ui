@@ -12,13 +12,13 @@ const StyledTextButtonMedium = styled(StyledStylesButton)`
   ${scaleTransitionCss};
 `;
 
-const TextMediumButton: FC<HTMLAttributes<HTMLButtonElement>> = forwardRef<
+const TextMediumButton = forwardRef<
   HTMLButtonElement,
   HTMLAttributes<HTMLButtonElement>
->((props, ref) => {
+>((props, outsideRef) => {
   return (
     <ButtonJumpTransition>
-      <StyledTextButtonMedium {...props} ref={ref} />
+      <StyledTextButtonMedium {...props} ref={outsideRef} />
     </ButtonJumpTransition>
   );
 });

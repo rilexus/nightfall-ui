@@ -18,28 +18,21 @@ import {
   ButtonScaleTransition,
   RotationTransition,
 } from "../../transitions";
-import { pillButtonBackgroundColorCss } from "./css/pillButtonBackgroundColor";
-import { pillButtonColorCss } from "./css/pillButtonColor.css";
 import { px100, py25 } from "@nightfall-ui/theme";
-import {
-  useCallbackRef,
-  useCSSProperties,
-  useMouseDown,
-} from "@nightfall-ui/hooks";
-import { filledButtonClickAnimation } from "./css";
+import { useCallbackRef } from "@nightfall-ui/hooks";
+import { filledButtonCss } from "../css";
 
 const smallPillButtonBorderRadius = css`
   border-radius: 0.3rem;
 `;
 
 const StyledSmallFilledButton = styled(StyledStylesButton)`
-  ${pillButtonColorCss};
   ${regularNormalSMCss};
-  ${pillButtonBackgroundColorCss};
   ${smallPillButtonBorderRadius};
   ${py25};
   ${px100};
-  ${filledButtonClickAnimation};
+
+  ${filledButtonCss}
 `;
 
 const useClick = (callback: () => void) => {

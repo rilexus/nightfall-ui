@@ -1,4 +1,4 @@
-import React, { FC, HTMLAttributes } from "react";
+import React, { forwardRef, HTMLAttributes } from "react";
 import {
   ButtonJumpTransition,
   ButtonOpacityTransition,
@@ -8,35 +8,32 @@ import {
 import styled from "styled-components";
 import { StyledStylesButton } from "../../styleless-button";
 import { regularNormalLGCss } from "@nightfall-ui/typography";
-import { pillButtonBackgroundColorCss } from "./css/pillButtonBackgroundColor";
-import { pillButtonColorCss } from "./css/pillButtonColor.css";
 import { px150, py50 } from "@nightfall-ui/theme";
-import { filledButtonClickAnimation } from "./css";
+import { filledButtonCss } from "../css";
 
 const StyledLargeButton = styled(StyledStylesButton)`
-  ${pillButtonColorCss};
-  ${pillButtonBackgroundColorCss};
   ${regularNormalLGCss};
   border-radius: 0.3rem;
   ${py50};
   ${px150};
-  ${filledButtonClickAnimation};
+  ${filledButtonCss}
 `;
 
-const FilledSquareLargeButton: FC<HTMLAttributes<HTMLButtonElement>> = (
-  props
-) => {
+const FilledSquareLargeButton = forwardRef<
+  HTMLButtonElement,
+  HTMLAttributes<HTMLButtonElement>
+>((props, outsideRef) => {
   return (
     <ButtonJumpTransition>
       <ButtonOpacityTransition>
         <ButtonScaleTransition>
           <RotationTransition deg={5}>
-            <StyledLargeButton {...props} />
+            <StyledLargeButton {...props} ref={outsideRef} />
           </RotationTransition>
         </ButtonScaleTransition>
       </ButtonOpacityTransition>
     </ButtonJumpTransition>
   );
-};
+});
 
 export { FilledSquareLargeButton };

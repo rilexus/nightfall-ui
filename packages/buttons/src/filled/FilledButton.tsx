@@ -1,21 +1,26 @@
-import React, { FC, HTMLAttributes } from "react";
+import React, { FC, forwardRef, HTMLAttributes } from "react";
 import { ButtonSize } from "../ButtonSize.type";
 import { FilledSquareButton } from "./filled-square-button/FilledSquareButton";
+import { RoundFilledButton } from "./round";
 
-const FilledButton: FC<
+const FilledButton = forwardRef<
+  HTMLButtonElement,
   HTMLAttributes<HTMLButtonElement> & {
-    shape: "square" | "round";
+    shape?: "square" | "round";
     size?: ButtonSize;
   }
-> = ({ shape, ...props }) => {
+>(({ shape = "square", size = "medium", ...props }, outsideRef) => {
   switch (shape) {
     case "square": {
-      return <FilledSquareButton {...props} />;
+      return <FilledSquareButton {...props} size={size} ref={outsideRef} />;
+    }
+    case "round": {
+      return <RoundFilledButton {...props} size={size} ref={outsideRef} />;
     }
     default: {
       return <button {...props} />;
     }
   }
-};
+});
 
 export { FilledButton };

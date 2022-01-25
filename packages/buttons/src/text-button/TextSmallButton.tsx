@@ -12,7 +12,7 @@ const StyledTextButtonSmall = styled(StyledStylesButton)`
   ${scaleTransitionCss};
 `;
 
-const TextSmallButton: FC<HTMLAttributes<HTMLButtonElement>> = forwardRef<
+const TextSmallButton = forwardRef<
   HTMLButtonElement,
   HTMLAttributes<HTMLButtonElement>
 >((props, ref) => {

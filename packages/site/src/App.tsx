@@ -6,6 +6,7 @@ import { FocusProvider } from "./components/focusable";
 import { ThemeProvider, GlobalCss } from "@nightfall-ui/theme";
 import { FormsPage } from "./pages/forms";
 import { Li, Ul } from "./components";
+import { DialogPage } from "./pages/dialog";
 
 const Page: FC = ({ children }) => {
   return <div>{children}</div>;
@@ -42,7 +43,7 @@ const App = () => {
                 <Link to={"/buttons"}>Buttons</Link>
               </Li>
               <Li>
-                <Link to={"/Fields"}>Fields</Link>
+                <Link to={"/inputs"}>Fields</Link>
               </Li>
             </Ul>
           </Li>
@@ -54,6 +55,14 @@ const App = () => {
               </Li>
             </Ul>
           </li>
+          <Li>
+            <h2>Feedback</h2>
+            <Ul>
+              <Li>
+                <Link to={"/dialog"}>Dialog</Link>
+              </Li>
+            </Ul>
+          </Li>
         </Ul>
       </nav>
       <div
@@ -66,7 +75,8 @@ const App = () => {
           <Routes>
             <Route path={"/"} element={<Home />} />
             <Route path={"/buttons"} element={<ButtonsPage />} />
-            <Route path={"/fields"} element={<FormsPage />} />
+            <Route path={"/inputs"} element={<FormsPage />} />
+            <Route path={"/dialog"} element={<DialogPage />} />
             <Route path={"/typography"} element={<TypographyPage />} />
             <Route path="*" element={<Navigate to={"/"} />} />
           </Routes>

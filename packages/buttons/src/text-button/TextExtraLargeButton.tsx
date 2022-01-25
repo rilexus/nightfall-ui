@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { themedTextColor } from "@nightfall-ui/theme";
-import React, { FC, HTMLAttributes } from "react";
+import React, { FC, forwardRef, HTMLAttributes } from "react";
 import { regularNormalXLCss } from "@nightfall-ui/typography";
 import { StyledStylesButton } from "../styleless-button";
 import { scaleTransitionCss } from "../css";
@@ -12,11 +12,14 @@ const StyledTextButtonExtraLarge = styled(StyledStylesButton)`
   ${scaleTransitionCss}
 `;
 
-const TextExtraLargeButton: FC<HTMLAttributes<HTMLButtonElement>> = (props) => {
+const TextExtraLargeButton = forwardRef<
+  HTMLButtonElement,
+  HTMLAttributes<HTMLButtonElement>
+>((props, outsideRef) => {
   return (
     <ButtonJumpTransition>
-      <StyledTextButtonExtraLarge {...props} />
+      <StyledTextButtonExtraLarge {...props} ref={outsideRef} />
     </ButtonJumpTransition>
   );
-};
+});
 export { StyledTextButtonExtraLarge, TextExtraLargeButton };

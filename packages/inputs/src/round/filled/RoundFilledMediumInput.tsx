@@ -1,10 +1,10 @@
 import React, { FC, HTMLAttributes } from "react";
 import styled from "styled-components";
-import { mediumInputPadding, roundedInputCss } from "../../css";
+import { mediumInputPadding, roundedFilledInputCss } from "../../css";
 
 const StyledRoundFilledMediumInput = styled.input`
   ${mediumInputPadding};
-  ${roundedInputCss};
+  ${roundedFilledInputCss};
 `;
 
 const RoundFilledMediumInput: FC<HTMLAttributes<HTMLInputElement>> = (

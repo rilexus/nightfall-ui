@@ -12,7 +12,7 @@ import {
   themedTextColor,
 } from "@nightfall-ui/theme";
 import { Ease } from "@nightfall-ui/ease";
-import { regularNormalCss, regularNormalSMCss } from "@nightfall-ui/typography";
+import { regularNormalCss } from "@nightfall-ui/typography";
 
 const inputFocusCss = css`
   transition: border 200ms ${Ease.easeInOutCubic} 0ms, filter 200ms ease 0ms;
@@ -117,7 +117,7 @@ const inputCss = css`
   ${inputPlaceholderCss};
 `;
 
-const roundedInputCss = css`
+const roundedFilledInputCss = css`
   ${inputCss};
   ${filledInputBorderCss};
   ${filledInputBackgroundColorCss};
@@ -143,7 +143,7 @@ export {
   inputFont,
   inputOutline,
   mediumInputPadding,
-  roundedInputCss,
+  roundedFilledInputCss,
   largeInputPaddingCss,
   inputCss,
   outlinedInputBackgroundCss,

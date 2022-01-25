@@ -6,12 +6,11 @@ import {
   FilledSquareLargeButton,
   FilledSquareExtraLargeButton,
   TextMediumButton,
-} from "@nightfall-ui/buttons";
-import styled from "styled-components";
-import {
+  Button,
   TextSmallButton,
   FilledSquareMediumButton,
 } from "@nightfall-ui/buttons";
+import styled from "styled-components";
 import { regularNormal2XLCss } from "@nightfall-ui/typography";
 import { Hr } from "../../components";
 import { XStack } from "@nightfall-ui/layout";
@@ -39,14 +38,28 @@ const ButtonsPage = () => {
         <div>
           <XStack>
             <FilledSquareSmallButton>Click</FilledSquareSmallButton>
-
             <FilledSquareMediumButton>Click</FilledSquareMediumButton>
-
             <FilledSquareLargeButton>Click</FilledSquareLargeButton>
-
             <FilledSquareExtraLargeButton>Click</FilledSquareExtraLargeButton>
           </XStack>
         </div>
+      </div>
+      <div>
+        <H2>Round Buttons</H2>
+        <XStack>
+          <Button shape={"round"} variant={"filled"} size={"small"}>
+            OK
+          </Button>
+          <Button shape={"round"} variant={"filled"} size={"medium"}>
+            OK
+          </Button>
+          <Button shape={"round"} variant={"filled"} size={"large"}>
+            OK
+          </Button>
+          <Button shape={"round"} variant={"filled"} size={"extra-large"}>
+            OK
+          </Button>
+        </XStack>
       </div>
     </div>
   );

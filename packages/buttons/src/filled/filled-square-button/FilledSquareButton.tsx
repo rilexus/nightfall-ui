@@ -1,26 +1,27 @@
-import React, { FC, HTMLAttributes } from "react";
+import React, { FC, forwardRef, HTMLAttributes } from "react";
 import { FilledSquareMediumButton } from "./FilledSquareMediumButton";
 import { FilledSquareSmallButton } from "./FilledSquareSmallButton";
 import { FilledSquareLargeButton } from "./FilledSquareLargeButton";
 import { FilledSquareExtraLargeButton } from "./FilledSquareExtraLargeButton";
 import { ButtonSize } from "../../ButtonSize.type";
 
-const FilledSquareButton: FC<
+const FilledSquareButton = forwardRef<
+  HTMLButtonElement,
   HTMLAttributes<HTMLButtonElement> & { size?: ButtonSize }
-> = ({ size = "medium", ...props }) => {
+>(({ size = "medium", ...props }, outsideRef) => {
   if (size === "medium") {
-    return <FilledSquareMediumButton {...props} />;
+    return <FilledSquareMediumButton {...props} ref={outsideRef} />;
   }
   if (size === "small") {
-    return <FilledSquareSmallButton {...props} />;
+    return <FilledSquareSmallButton {...props} ref={outsideRef} />;
   }
   if (size === "large") {
-    return <FilledSquareLargeButton {...props} />;
+    return <FilledSquareLargeButton {...props} ref={outsideRef} />;
   }
   if (size === "extra-large") {
-    return <FilledSquareExtraLargeButton {...props} />;
+    return <FilledSquareExtraLargeButton {...props} ref={outsideRef} />;
   }
-  return <button {...props} />;
-};
+  return <button {...props} ref={outsideRef} />;
+});
 
 export { FilledSquareButton };
