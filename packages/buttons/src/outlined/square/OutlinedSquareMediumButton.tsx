@@ -1,0 +1,38 @@
+import React, { forwardRef, HTMLAttributes } from "react";
+import styled from "styled-components";
+import {
+  ButtonJumpTransition,
+  ButtonOpacityTransition,
+  ButtonScaleTransition,
+} from "../../transitions";
+import {
+  outlinedButtonCss,
+  squareButtonCss,
+  squareLargeButtonPadding,
+  squareMediumButtonPadding,
+} from "../../css";
+import { regularLGCss, regularNormalCss } from "@nightfall-ui/typography";
+
+const StyledOutlinedMediumButton = styled.button`
+  ${outlinedButtonCss};
+  ${squareMediumButtonPadding};
+  ${regularNormalCss};
+  ${squareButtonCss};
+`;
+
+const OutlinedSquareMediumButton = forwardRef<
+  HTMLButtonElement,
+  HTMLAttributes<HTMLButtonElement>
+>(function OutlinedSquareMediumButton(props, outsideRef) {
+  return (
+    <ButtonJumpTransition>
+      <ButtonScaleTransition>
+        <ButtonOpacityTransition>
+          <StyledOutlinedMediumButton {...props} ref={outsideRef} />
+        </ButtonOpacityTransition>
+      </ButtonScaleTransition>
+    </ButtonJumpTransition>
+  );
+});
+
+export { OutlinedSquareMediumButton };

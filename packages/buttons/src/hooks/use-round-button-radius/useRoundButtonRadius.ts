@@ -19,8 +19,8 @@ const useRoundButtonRadius = (
   useLayoutEffect(() => {
     const child = ref.current;
     if (child) {
-      const width = child.getBoundingClientRect().width;
-      const height = child.getBoundingClientRect().height;
+      const width = child.clientWidth;
+      const height = child.clientHeight;
       const radius = Math.max(width as number, height as number);
       setRadius(radius);
     }

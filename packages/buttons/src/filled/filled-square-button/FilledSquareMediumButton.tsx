@@ -7,12 +7,11 @@ import {
 import styled, { css } from "styled-components";
 import { StyledStylesButton } from "../../styleless-button";
 import { regularNormalCss } from "@nightfall-ui/typography";
-import { px125, py37 } from "@nightfall-ui/theme";
 import { filledButtonCss } from "../css";
+import { squareMediumButtonPadding } from "../../css";
 
 const mediumButtonPadding = css`
-  ${py37};
-  ${px125};
+  ${squareMediumButtonPadding};
 `;
 
 const StyledMediumButton = styled(StyledStylesButton)`

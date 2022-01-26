@@ -1,4 +1,5 @@
-import React, { FC, ReactNode } from "react";
+import React, { FC, ReactNode, useContext, useEffect, useRef } from "react";
+import ReactDOM from "react-dom";
 import { TransitionGroup } from "react-transition-group";
 import {
   BackdropTransition,
@@ -6,11 +7,21 @@ import {
   FadeInTransition,
   ZoomInTransition,
 } from "react-transitions-library";
-import { useClickOutside, useCSSProperties } from "@nightfall-ui/hooks";
+import { useCSSProperties } from "@nightfall-ui/hooks";
 
-const BackgroundTransition: FC = ({ children, ...props }) => {
+const BackgroundTransition: FC<{ onClick?: () => void }> = ({
+  children,
+  ...props
+}) => {
   const timeout = 700;
   const blur = 10;
+  const wrapperStyle = useCSSProperties(
+    {
+      position: "fixed",
+      inset: "0",
+    },
+    []
+  );
   return (
     <BackdropTransition
       {...props}
@@ -19,10 +30,7 @@ const BackgroundTransition: FC = ({ children, ...props }) => {
       timeout={timeout}
       ease={Ease.easeOutQuint}
       backgroundColor={"#00000001"}
-      style={{
-        position: "fixed",
-        inset: 0,
-      }}
+      style={wrapperStyle}
     >
       {children}
     </BackdropTransition>
@@ -31,31 +39,51 @@ const BackgroundTransition: FC = ({ children, ...props }) => {
 
 const ContentTransition: FC = ({ children, ...props }) => {
   const timeout = 400;
+  const wrapperStyle = useCSSProperties(
+    {
+      position: "fixed",
+      inset: "0",
+    },
+    []
+  );
   return (
-    <ZoomInTransition {...props} from={0.9} to={1} timeout={timeout}>
-      <FadeInTransition {...props} from={0} to={1} timeout={timeout}>
+    <ZoomInTransition
+      {...props}
+      from={0.9}
+      to={1}
+      timeout={timeout}
+      style={wrapperStyle}
+    >
+      <FadeInTransition
+        {...props}
+        from={0}
+        to={1}
+        timeout={timeout}
+        style={wrapperStyle}
+      >
         {children}
       </FadeInTransition>
     </ZoomInTransition>
   );
 };
 
+const Portal: FC<{ container: any }> = ({ children, container }) => {
+  return ReactDOM.createPortal(children, container);
+};
+
+let containerId = -1;
+
 const Dialog: FC<{
   open: boolean;
-  onClose: () => void;
   element: ReactNode;
-}> = ({ children, onClose, open, element }) => {
-  const ref = useClickOutside<HTMLDivElement>(() => {
-    if (open) {
-      onClose();
-    }
-  });
+  onOutsideClick?: () => void;
+}> = ({ children, onOutsideClick, open, element }) => {
   const contentStyle = useCSSProperties(
     {
-      position: "absolute",
-      top: "50%",
-      transform: `translate(-50%, -75%)`,
-      left: "50%",
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      height: "100%",
     },
     []
   );
@@ -65,21 +93,45 @@ const Dialog: FC<{
     },
     []
   );
+
+  const containerRef = useRef<HTMLElement | null>(null);
+
+  useEffect(() => {
+    const id = ++containerId;
+    const elementId = `dialog-${id}`;
+    const container = document.createElement("div");
+    container.setAttribute("id", elementId);
+    containerRef.current = container;
+    document.body.appendChild(containerRef.current);
+
+    return () => {
+      const node = document.getElementById(elementId);
+      document.body.removeChild(node as any);
+    };
+  }, []);
+
   return (
     <div style={wrapperStyle}>
-      <ZoomInTransition in={open} from={1} to={0.95} timeout={700}>
+      <ZoomInTransition in={open} from={1} to={0.9} timeout={700}>
         {children}
       </ZoomInTransition>
-      <TransitionGroup>
-        {open && <BackgroundTransition key={"background"} />}
-        {open && (
-          <ContentTransition key={"content"}>
-            <div ref={ref} style={contentStyle}>
-              {element}
-            </div>
-          </ContentTransition>
-        )}
-      </TransitionGroup>
+      {containerRef.current && (
+        <Portal container={containerRef.current}>
+          <TransitionGroup>
+            {open && (
+              <BackgroundTransition
+                key={"background"}
+                onClick={onOutsideClick}
+              />
+            )}
+            {open && (
+              <ContentTransition key={"content"}>
+                <div style={contentStyle}>{element}</div>
+              </ContentTransition>
+            )}
+          </TransitionGroup>
+        </Portal>
+      )}
     </div>
   );
 };

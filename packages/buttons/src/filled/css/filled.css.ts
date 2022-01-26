@@ -1,5 +1,6 @@
 import { css } from "styled-components";
 import { greyColor } from "@nightfall-ui/theme";
+import { buttonCss } from "../../css";
 
 const filledButtonBackgroundColorCss = css`
   background-color: ${greyColor(8)};
@@ -7,7 +8,7 @@ const filledButtonBackgroundColorCss = css`
 const filledButtonColorCss = css`
   color: ${greyColor(3)};
 `;
-const filledButtonScaleTransition = css`
+const buttonScaleTransition = css`
   transition: transform 200ms ease 0ms, opacity 200ms ease 0ms;
   transform: scale(100%);
   opacity: 1;
@@ -30,16 +31,17 @@ const filledButtonClickAnimation = css`
 `;
 
 const filledButtonCss = css`
+  ${buttonCss};
   ${filledButtonBackgroundColorCss};
   ${filledButtonColorCss};
-  ${filledButtonScaleTransition};
+  ${buttonScaleTransition};
   ${filledButtonClickAnimation}
 `;
 
 export {
+  buttonScaleTransition,
   filledButtonColorCss,
   filledButtonClickAnimation,
   filledButtonBackgroundColorCss,
-  filledButtonScaleTransition,
   filledButtonCss,
 };

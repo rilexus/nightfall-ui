@@ -1,6 +1,7 @@
 import React, { forwardRef, HTMLAttributes } from "react";
 import { TextButton } from "../text-button";
 import { FilledButton } from "../filled";
+import { OutlinedButton } from "../outlined";
 
 type ButtonVariant = "filled" | "outlined" | "text";
 
@@ -20,6 +21,16 @@ const Button = forwardRef<
       case "filled": {
         return (
           <FilledButton {...props} size={size} shape={shape} ref={outsideRef} />
+        );
+      }
+      case "outlined": {
+        return (
+          <OutlinedButton
+            {...props}
+            size={size}
+            shape={shape}
+            ref={outsideRef}
+          />
         );
       }
       case "text": {

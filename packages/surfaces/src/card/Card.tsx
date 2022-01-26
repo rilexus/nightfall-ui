@@ -1,4 +1,4 @@
-import React, { FC, HTMLAttributes } from "react";
+import React, { FC, forwardRef, HTMLAttributes } from "react";
 import styled from "styled-components";
 import { p125, roundedXL } from "@nightfall-ui/theme";
 
@@ -8,8 +8,10 @@ const StyledCard = styled.div`
   ${p125};
 `;
 
-const Card: FC<HTMLAttributes<HTMLDivElement>> = ({ children, ...props }) => {
-  return <StyledCard {...props}>{children}</StyledCard>;
-};
+const Card = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
+  (props, outsideRef) => {
+    return <StyledCard {...props} ref={outsideRef} />;
+  }
+);
 
 export { Card, StyledCard };

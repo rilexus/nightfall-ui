@@ -8,15 +8,15 @@ import {
 import styled from "styled-components";
 import { StyledStylesButton } from "../../styleless-button";
 import { regularNormalLGCss } from "@nightfall-ui/typography";
-import { px150, py50 } from "@nightfall-ui/theme";
+import { px150, py50, roundedMD } from "@nightfall-ui/theme";
 import { filledButtonCss } from "../css";
+import { squareButtonCss, squareLargeButtonPadding } from "../../css";
 
 const StyledLargeButton = styled(StyledStylesButton)`
   ${regularNormalLGCss};
-  border-radius: 0.3rem;
-  ${py50};
-  ${px150};
-  ${filledButtonCss}
+  ${squareLargeButtonPadding};
+  ${filledButtonCss};
+  ${squareButtonCss};
 `;
 
 const FilledSquareLargeButton = forwardRef<

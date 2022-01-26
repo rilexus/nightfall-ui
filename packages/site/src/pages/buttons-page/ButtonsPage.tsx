@@ -2,13 +2,9 @@ import React from "react";
 import {
   TextExtraLargeButton,
   TextLargeButton,
-  FilledSquareSmallButton,
-  FilledSquareLargeButton,
-  FilledSquareExtraLargeButton,
   TextMediumButton,
   Button,
   TextSmallButton,
-  FilledSquareMediumButton,
 } from "@nightfall-ui/buttons";
 import styled from "styled-components";
 import { regularNormal2XLCss } from "@nightfall-ui/typography";
@@ -37,12 +33,37 @@ const ButtonsPage = () => {
         <H2>Square Buttons</H2>
         <div>
           <XStack>
-            <FilledSquareSmallButton>Click</FilledSquareSmallButton>
-            <FilledSquareMediumButton>Click</FilledSquareMediumButton>
-            <FilledSquareLargeButton>Click</FilledSquareLargeButton>
-            <FilledSquareExtraLargeButton>Click</FilledSquareExtraLargeButton>
+            <Button variant={"filled"} size={"small"} shape={"square"}>
+              Click
+            </Button>
+            <Button variant={"filled"} size={"medium"} shape={"square"}>
+              Click
+            </Button>
+            <Button variant={"filled"} size={"large"} shape={"square"}>
+              Click
+            </Button>
+            <Button variant={"filled"} size={"extra-large"} shape={"square"}>
+              Click
+            </Button>
           </XStack>
         </div>
+      </div>
+      <div>
+        <H2>Outlined Button</H2>
+        <XStack>
+          <Button variant={"outlined"} size={"small"} shape={"square"}>
+            Click
+          </Button>
+          <Button variant={"outlined"} size={"medium"} shape={"square"}>
+            Click
+          </Button>
+          <Button variant={"outlined"} size={"large"} shape={"square"}>
+            Click
+          </Button>
+          <Button variant={"outlined"} size={"extra-large"} shape={"square"}>
+            Click
+          </Button>
+        </XStack>
       </div>
       <div>
         <H2>Round Buttons</H2>
