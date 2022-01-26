@@ -1,8 +1,7 @@
-import { css } from "styled-components";
+import { css, keyframes } from "styled-components";
 import {
   greyColor,
   m0,
-  m12,
   px75,
   px87,
   py37,
@@ -14,15 +13,28 @@ import {
 import { Ease } from "@nightfall-ui/ease";
 import { regularNormalCss } from "@nightfall-ui/typography";
 
+const shine = keyframes`
+  from {
+    filter: drop-shadow(0 0px 1px #7fb3ff) drop-shadow(0 0px 1px #1c8efa) drop-shadow(0 0px 7px #2997ff);
+  }
+
+  to {
+    filter: drop-shadow(0 0px 1px #7fb3ff) drop-shadow(0 0px 1px #1c8efa)
+    drop-shadow(0 0px 3px #2997ff);
+  }
+`;
+
 const inputFocusCss = css`
   transition: border 200ms ${Ease.easeInOutCubic} 0ms, filter 200ms ease 0ms;
 
-  filter: drop-shadow(0 1px 2px transparent) drop-shadow(0 1px 1px transparent);
+  filter: drop-shadow(0 0px 1px transparent) drop-shadow(0 0px 1px #transparent)
+    drop-shadow(0 0px 3px transparent);
 
   &:focus {
     border: 1px solid #2997ff;
     filter: drop-shadow(0 0px 1px #7fb3ff) drop-shadow(0 0px 1px #1c8efa)
       drop-shadow(0 0px 3px #2997ff);
+    animation: 200ms ${shine} ease;
   }
 `;
 

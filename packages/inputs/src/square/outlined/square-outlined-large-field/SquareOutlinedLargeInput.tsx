@@ -6,7 +6,6 @@ import { roundedLG } from "@nightfall-ui/theme";
 const StyledSquareFilledLargeInput = styled.input`
   ${largeInputPaddingCss};
   ${roundedLG};
-
   ${outlineInputCss};
   ${inputCss};
 `;

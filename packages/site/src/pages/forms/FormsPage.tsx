@@ -91,69 +91,74 @@ const FormsPage = () => {
           <YSpacer spacing={"large"}>
             <h4>Contact Form</h4>
           </YSpacer>
-          <Grid spacing={"50"}>
-            <Grid.Item small={12} large={6}>
-              <SquareOutlinedMediumInput
-                placeholder={"First name"}
-                style={{
-                  width: "100%",
-                }}
-              />
-            </Grid.Item>
-            <Grid.Item small={12} large={6}>
-              <SquareOutlinedMediumInput
-                placeholder={"Last name"}
-                style={{
-                  width: "100%",
-                }}
-              />
-            </Grid.Item>
+          <Card>
+            <Grid spacing={"50"}>
+              <Grid.Item small={12} large={6}>
+                <Input
+                  shape={"square"}
+                  variant={"outlined"}
+                  size={"medium"}
+                  placeholder={"First name"}
+                  style={{
+                    width: "100%",
+                  }}
+                />
+              </Grid.Item>
+              <Grid.Item small={12} large={6}>
+                <SquareOutlinedMediumInput
+                  placeholder={"Last name"}
+                  style={{
+                    width: "100%",
+                  }}
+                />
+              </Grid.Item>
 
-            <Grid.Item small={12} medium={9} large={10} laptop={11}>
-              <SquareOutlinedMediumInput
-                placeholder={"Street"}
-                style={{
-                  width: "100%",
-                }}
-              />
-            </Grid.Item>
+              <Grid.Item small={12} medium={9} large={10} laptop={11}>
+                <SquareOutlinedMediumInput
+                  placeholder={"Street"}
+                  style={{
+                    width: "100%",
+                  }}
+                />
+              </Grid.Item>
 
-            <Grid.Item small={12} medium={3} large={2} laptop={1}>
-              <SquareOutlinedMediumInput
-                placeholder={"Nr"}
-                style={{
-                  width: "100%",
-                }}
-              />
-            </Grid.Item>
+              <Grid.Item small={12} medium={3} large={2} laptop={1}>
+                <SquareOutlinedMediumInput
+                  placeholder={"Nr"}
+                  style={{
+                    width: "100%",
+                  }}
+                />
+              </Grid.Item>
 
-            <Grid.Item small={12} medium={3} large={2} laptop={1}>
-              <SquareOutlinedMediumInput
-                placeholder={"ZIP"}
-                style={{
-                  width: "100%",
-                }}
-              />
-            </Grid.Item>
+              <Grid.Item small={12} medium={3} large={2} laptop={1}>
+                <SquareOutlinedMediumInput
+                  placeholder={"ZIP"}
+                  style={{
+                    width: "100%",
+                  }}
+                />
+              </Grid.Item>
 
-            <Grid.Item small={12} medium={9} large={10} laptop={11}>
-              <SquareOutlinedMediumInput
-                placeholder={"City"}
-                style={{
-                  width: "100%",
-                }}
-              />
-            </Grid.Item>
+              <Grid.Item small={12} medium={9} large={10} laptop={11}>
+                <SquareOutlinedMediumInput
+                  placeholder={"City"}
+                  style={{
+                    width: "100%",
+                  }}
+                />
+              </Grid.Item>
 
-            <Grid.Item small={12}>
-              <SquareOutlinedMediumInput
-                placeholder={"Country"}
-                style={{
-                  width: "100%",
-                }}
-              />
-            </Grid.Item>
-          </Grid>
+              <Grid.Item small={12}>
+                <SquareOutlinedMediumInput
+                  placeholder={"Country"}
+                  style={{
+                    width: "100%",
+                  }}
+                />
+              </Grid.Item>
+            </Grid>
+          </Card>
         </div>
       </div>
     </div>

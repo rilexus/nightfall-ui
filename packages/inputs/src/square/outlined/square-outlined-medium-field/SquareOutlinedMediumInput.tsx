@@ -7,7 +7,6 @@ const StyledSquareOutlinedMediumInput = styled.input`
   ${mediumInputPadding};
   ${roundedLG};
   ${outlineInputCss};
-
   ${inputCss};
 `;
 
