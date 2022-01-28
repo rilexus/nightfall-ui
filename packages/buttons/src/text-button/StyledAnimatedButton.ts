@@ -1,5 +1,4 @@
-import styled, { css } from "styled-components";
-import { StyledStylesButton } from "../styleless-button";
+import { css } from "styled-components";
 
 const StyledAnimatedButton = css`
   transition: transform 200ms ease 0ms, opacity 200ms ease 0ms;

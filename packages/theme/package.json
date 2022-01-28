@@ -2,7 +2,7 @@
   "name": "@nightfall-ui/theme",
   "version": "1.0.0",
   "license": "MIT",
-  "description": "Forms for the Nightfall UI component library.",
+  "description": "Theme for the Nightfall UI component library.",
   "author": "Stanislav Panchenko <email@stanislavpanchenko.de>",
   "homepage": "https://rilexus.github.io/nightfall-ui/",
   "scripts": {
@@ -15,12 +15,15 @@
     "@types/styled-components": "^5.1.17",
     "@typescript-eslint/eslint-plugin": "^5.7.0",
     "typescript": "^4.5.4",
-    "react-transition-group": "^4.4.2",
+    "@nightfall-ui/css": "*",
+    "@nightfall-ui/hooks": "*",
     "styled-components": "^5.3.3"
   },
   "dependencies": {
   },
   "peerDependencies": {
+    "@nightfall-ui/hooks": "*",
+    "@nightfall-ui/css": "*",
     "react-transition-group": "^4.4.2",
     "styled-components": "^5.3.3",
     "react": "^17.0.2",

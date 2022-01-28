@@ -8,7 +8,7 @@ import styled from "styled-components";
 import { useRoundButtonRadius } from "../../hooks";
 import { filledButtonCss, roundedButtonCss } from "../css";
 import { regularNormalCss } from "@nightfall-ui/typography";
-import { useCSSProperties } from "@nightfall-ui/hooks/dist/src";
+import { useCSSProperties } from "@nightfall-ui/hooks";
 
 const StyledButton = styled.button`
   ${roundedButtonCss};

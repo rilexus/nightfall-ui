@@ -1,12 +1,13 @@
 import { css } from "styled-components";
-import { greyColor } from "@nightfall-ui/theme";
+import { color, textColorCss } from "@nightfall-ui/css";
 import { buttonCss } from "../../css";
+import { fillCss } from "@nightfall-ui/theme";
 
 const filledButtonBackgroundColorCss = css`
-  background-color: ${greyColor(8)};
+  ${fillCss};
 `;
 const filledButtonColorCss = css`
-  color: ${greyColor(3)};
+  ${textColorCss};
 `;
 const buttonScaleTransition = css`
   transition: transform 200ms ease 0ms, opacity 200ms ease 0ms;
@@ -18,7 +19,7 @@ const buttonScaleTransition = css`
   }
   &:active {
     opacity: 0.7;
-    transform: scale(92%);
+    transform: scale(95%);
   }
 `;
 
@@ -26,7 +27,7 @@ const filledButtonClickAnimation = css`
   transition: background-color 200ms ease 0ms;
 
   &:active {
-    background-color: ${greyColor(2)};
+    background-color: ${color("gray.1")};
   }
 `;
 

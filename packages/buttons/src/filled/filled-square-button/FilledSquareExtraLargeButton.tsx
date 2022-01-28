@@ -8,7 +8,7 @@ import {
 import styled from "styled-components";
 import { StyledStylesButton } from "../../styleless-button";
 import { regularNormalXLCss } from "@nightfall-ui/typography";
-import { px150, py50 } from "@nightfall-ui/theme";
+import { px150, py50 } from "@nightfall-ui/css";
 import { filledButtonCss } from "../css";
 
 const StyledLargeButton = styled(StyledStylesButton)`

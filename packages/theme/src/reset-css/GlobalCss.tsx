@@ -1,5 +1,6 @@
 import { createGlobalStyle } from "styled-components";
-import { backgroundColor, fontFamily, textColor } from "./getters";
+import { color, fontFamily } from "@nightfall-ui/css";
+import { linkCss } from "../link";
 
 const GlobalCss = createGlobalStyle`
   * {
@@ -9,18 +10,18 @@ const GlobalCss = createGlobalStyle`
     font-size: 16px;
   }
   html {
+    background-color: ${color("gray.7")};
     font-family: ${fontFamily("sans")};
-    background-color: ${backgroundColor()};
   }
   a, p, h1, h2, h3, h4, h5, h6, code {
-    color: ${textColor()};
+    
   }
   a {
-    color: #9a9a9a;
     text-decoration: auto;
-	  &:hover {
+    &:hover {
       text-decoration: underline;
-	  };
+    };
+    ${linkCss};
   }
   p {
 	  font-size: 1.2rem;

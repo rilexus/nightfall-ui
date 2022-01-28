@@ -1,7 +1,7 @@
 import React, { forwardRef, HTMLAttributes } from "react";
 import styled from "styled-components";
 import { inputCss, largeInputPaddingCss, outlineInputCss } from "../../../css";
-import { roundedLG } from "@nightfall-ui/theme";
+import { roundedLG } from "@nightfall-ui/css";
 
 const StyledSquareFilledLargeInput = styled.input`
   ${largeInputPaddingCss};

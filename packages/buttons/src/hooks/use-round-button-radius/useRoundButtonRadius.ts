@@ -1,4 +1,4 @@
-import { PaddingTheme, Theme } from "@nightfall-ui/theme";
+import { PaddingTheme, Theme } from "@nightfall-ui/css";
 import {
   CSSProperties,
   LegacyRef,

@@ -1,4 +1,4 @@
-import { MarginTheme } from "@nightfall-ui/theme";
+import { MarginTheme } from "@nightfall-ui/css";
 
 type Spacing =
   | "extra-small"

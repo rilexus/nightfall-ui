@@ -1,6 +1,6 @@
 import React, { FC, forwardRef, HTMLAttributes } from "react";
 import styled from "styled-components";
-import { regularNormalCss, regularNormalSMCss } from "@nightfall-ui/typography";
+import { regularNormalSMCss } from "@nightfall-ui/typography";
 import { filledButtonCss, roundedButtonCss } from "../css";
 import {
   ButtonJumpTransition,
@@ -8,7 +8,7 @@ import {
   ButtonScaleTransition,
 } from "../../transitions";
 import { useRoundButtonRadius } from "../../hooks";
-import { useCSSProperties } from "@nightfall-ui/hooks/dist/src";
+import { useCSSProperties } from "@nightfall-ui/hooks";
 
 const StyledRoundFilledSmallButton = styled.button`
   ${roundedButtonCss};

@@ -9,7 +9,7 @@ import {
 import { filledButtonCss, roundedButtonCss } from "../css";
 import { regularNormalCss } from "@nightfall-ui/typography";
 import { useRoundButtonRadius } from "../../hooks";
-import { useCSSProperties } from "@nightfall-ui/hooks/dist/src";
+import { useCSSProperties } from "@nightfall-ui/hooks";
 
 const StyledRoundFilledMediumButton = styled.button`
   ${roundedButtonCss};

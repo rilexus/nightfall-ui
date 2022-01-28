@@ -1,15 +1,17 @@
 import { Link, Navigate, Route, Routes } from "react-router-dom";
 import React, { FC } from "react";
-import { ResetCssStyled } from "../ResetCss.styled";
 import { ButtonsPage, Home, TypographyPage } from "./pages";
 import { FocusProvider } from "./components/focusable";
-import { ThemeProvider, GlobalCss } from "@nightfall-ui/theme";
+import { ThemeProvider } from "@nightfall-ui/theme";
 import { FormsPage } from "./pages/forms";
 import { Li, Ul } from "./components";
 import { DialogPage } from "./pages/dialog";
+import styled from "styled-components";
+
+const StyledDiv = styled.div``;
 
 const Page: FC = ({ children }) => {
-  return <div>{children}</div>;
+  return <StyledDiv>{children}</StyledDiv>;
 };
 
 const Providers: FC = ({ children }) => {
@@ -23,8 +25,6 @@ const Providers: FC = ({ children }) => {
 const App = () => {
   return (
     <Providers>
-      <ResetCssStyled />
-      <GlobalCss />
       <nav>
         <Ul>
           <Li>

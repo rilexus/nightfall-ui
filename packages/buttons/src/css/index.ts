@@ -1,23 +1,20 @@
 import { css } from "styled-components";
 import {
-  greyColor,
+  color,
   px100,
   px125,
   px150,
-  py12,
   py25,
   py37,
   py50,
   roundedMD,
-  themedTextColor,
-} from "@nightfall-ui/theme";
+} from "@nightfall-ui/css";
 
 const filledBackgroundColor = css`
-  background-color: ${greyColor(8)};
+  background-color: ${color("gray3")};
 `;
 
 const buttonCss = css`
-  ${themedTextColor};
   border: none;
   outline: none;
   cursor: pointer;
@@ -40,7 +37,7 @@ const squareLargeButtonPadding = css`
 
 const outlinedButtonBorder = css`
   border: 1px solid;
-  border-color: ${greyColor(8)};
+  border-color: ${color("gray3")};
 `;
 
 const squareButtonCss = css`

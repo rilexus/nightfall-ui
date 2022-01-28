@@ -1,7 +1,7 @@
 import React, { createContext, FC, useContext, useMemo } from "react";
 import { useMediaQuery, useCSSProperties } from "@nightfall-ui/hooks";
 import { useTheme } from "styled-components";
-import { Theme, PaddingTheme } from "@nightfall-ui/theme";
+import { Theme, PaddingTheme } from "@nightfall-ui/css";
 
 const GridContext = createContext<string | null>(null);
 const GridContextProvider = GridContext.Provider;

@@ -6,7 +6,7 @@ import {
   mediumInputPadding,
   inputCss,
 } from "../../../css";
-import { roundedLG } from "@nightfall-ui/theme";
+import { roundedLG } from "@nightfall-ui/css";
 
 const StyledSquareFilledMediumInput = styled.input`
   ${mediumInputPadding};

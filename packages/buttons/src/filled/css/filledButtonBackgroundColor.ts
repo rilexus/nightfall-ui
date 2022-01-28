@@ -1,8 +1,8 @@
 import { css } from "styled-components";
-import { greyColor } from "@nightfall-ui/theme/dist/src";
+import { bgGray1 } from "@nightfall-ui/css";
 
 const pillButtonBackgroundColorCss = css`
-  background-color: ${greyColor(8)};
+  ${bgGray1};
 `;
 
 export { pillButtonBackgroundColorCss };

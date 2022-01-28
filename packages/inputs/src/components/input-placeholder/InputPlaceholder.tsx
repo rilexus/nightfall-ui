@@ -1,11 +1,10 @@
 import React, { FC, HTMLAttributes } from "react";
 import { useCSSProperties } from "@nightfall-ui/hooks";
 import styled from "styled-components";
-import { absolute, themedTextColor } from "@nightfall-ui/theme";
+import { absolute } from "@nightfall-ui/css";
 
 const StyledSpan = styled.span`
   pointer-events: none;
-  ${themedTextColor};
   ${absolute};
   transform: translateY(-50%);
   top: 50%;

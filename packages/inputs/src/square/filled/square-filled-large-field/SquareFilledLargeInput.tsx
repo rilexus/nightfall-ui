@@ -6,7 +6,7 @@ import {
   largeInputPaddingCss,
   inputCss,
 } from "../../../css";
-import { roundedLG } from "@nightfall-ui/theme";
+import { roundedLG } from "@nightfall-ui/css";
 
 const StyledSquareFilledLargeInput = styled.input`
   ${largeInputPaddingCss};

@@ -8,3 +8,4 @@ export * from "./use-focused";
 export * from "./use-media-query";
 export * from "./use-click-outside";
 export * from "./use-toggle";
+export * from "./use-prefes-color-schame";

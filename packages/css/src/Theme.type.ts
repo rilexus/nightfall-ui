@@ -1,18 +1,13 @@
 import { MarginTheme } from "./margin";
 import { PaddingTheme } from "./padding";
 
-type Mode = "dark" | "light" | "main";
-
-interface ThemedColor {
-  light: string;
-  main: string;
-  dark: string;
-  contrastText: string;
-}
-
 interface Theme {
   margin: MarginTheme;
   padding: PaddingTheme;
+  mode?: string;
+  textColor: {
+    [name: string]: any;
+  };
   breakpoints: {
     small: number;
     medium: number;
@@ -35,17 +30,8 @@ interface Theme {
     };
   };
   colors: {
-    mode: Mode;
-    primary: ThemedColor;
-    secondary: ThemedColor;
-    error: ThemedColor;
-    warning: ThemedColor;
-    info: ThemedColor;
-    success: ThemedColor;
-    text: ThemedColor;
-    background: ThemedColor;
-    grey: string[];
+    [name: string]: any;
   };
 }
 
-export type { Theme, Mode };
+export type { Theme };

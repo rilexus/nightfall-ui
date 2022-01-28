@@ -1,6 +1,6 @@
 import { css, keyframes } from "styled-components";
 import {
-  greyColor,
+  color,
   m0,
   px75,
   px87,
@@ -8,8 +8,7 @@ import {
   py50,
   py87,
   roundedFull,
-  themedTextColor,
-} from "@nightfall-ui/theme";
+} from "@nightfall-ui/css";
 import { Ease } from "@nightfall-ui/ease";
 import { regularNormalCss } from "@nightfall-ui/typography";
 
@@ -39,7 +38,6 @@ const inputFocusCss = css`
 `;
 
 const inputFont = css`
-  ${themedTextColor};
   ${regularNormalCss};
 `;
 
@@ -58,7 +56,7 @@ const mediumInputPadding = css`
 `;
 
 const filledInputBackgroundColorCss = css`
-  background-color: ${greyColor(8)};
+  background-color: ${color("gray6")};
 `;
 
 const filledInputBorderCss = css`
@@ -74,26 +72,26 @@ const largeInputPaddingCss = css`
 const inputPlaceholderCss = css`
   ::-webkit-input-placeholder {
     /* Chrome/Opera/Safari */
-    color: ${greyColor(6)};
+    color: ${color("gray5")};
     opacity: 1;
     transition: opacity 250ms;
   }
   ::-moz-placeholder {
     /* Firefox 19+ */
-    color: ${greyColor(6)};
+    color: ${color("gray5")};
     opacity: 1;
     transition: opacity 250ms;
   }
   :-ms-input-placeholder {
     /* IE 10+ */
-    color: ${greyColor(6)};
+    color: ${color("gray5")};
     opacity: 1;
     transition: opacity 250ms;
   }
   :-moz-placeholder {
     /* Firefox 18- */
     opacity: 1;
-    color: ${greyColor(7)};
+    color: ${color("gray5")};
     transition: opacity 250ms;
   }
   &:focus {
@@ -118,7 +116,7 @@ const inputPlaceholderCss = css`
 
 const outlinedInputBorderCss = css`
   border: 1px solid;
-  border-color: ${greyColor(8)};
+  border-color: ${color("gray5")};
 `;
 
 const inputCss = css`

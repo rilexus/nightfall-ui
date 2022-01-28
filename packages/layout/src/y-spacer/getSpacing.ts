@@ -1,4 +1,4 @@
-import { margin, MarginTheme } from "@nightfall-ui/theme";
+import { margin, MarginTheme } from "@nightfall-ui/css";
 import { Spacing } from "./Spacing.type";
 
 function getSpacing() {

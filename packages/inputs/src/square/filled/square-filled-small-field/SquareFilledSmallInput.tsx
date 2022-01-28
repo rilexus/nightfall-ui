@@ -7,7 +7,7 @@ import {
   smallInputPadding,
 } from "../../../css";
 
-import { roundedLG } from "@nightfall-ui/theme";
+import { roundedLG } from "@nightfall-ui/css";
 
 const StyledSquareFilledSmallInput = styled.input`
   ${filledInputBorderCss};

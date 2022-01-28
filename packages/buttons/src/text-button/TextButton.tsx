@@ -1,4 +1,4 @@
-import React, { FC, forwardRef, HTMLAttributes } from "react";
+import React, { forwardRef, HTMLAttributes } from "react";
 import { TextMediumButton } from "./TextMediumButton";
 import { ButtonSize } from "../ButtonSize.type";
 import { TextSmallButton } from "./TextSmallButton";

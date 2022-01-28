@@ -1,6 +1,6 @@
 import React, { FC, HTMLAttributes } from "react";
 import styled from "styled-components";
-import { selectNoneCss } from "@nightfall-ui/theme";
+import { selectNoneCss } from "@nightfall-ui/css";
 const StyledStylesButton = styled.button`
   ${selectNoneCss};
   background: transparent;

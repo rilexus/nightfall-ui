@@ -8,10 +8,9 @@ import {
 import {
   outlinedButtonCss,
   squareButtonCss,
-  squareLargeButtonPadding,
   squareMediumButtonPadding,
 } from "../../css";
-import { regularLGCss, regularNormalCss } from "@nightfall-ui/typography";
+import { regularNormalCss } from "@nightfall-ui/typography";
 
 const StyledOutlinedMediumButton = styled.button`
   ${outlinedButtonCss};

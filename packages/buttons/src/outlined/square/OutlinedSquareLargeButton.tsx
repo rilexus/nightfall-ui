@@ -9,7 +9,6 @@ import {
   outlinedButtonCss,
   squareButtonCss,
   squareLargeButtonPadding,
-  squareMediumButtonPadding,
 } from "../../css";
 import { regularNormalCss } from "@nightfall-ui/typography";
 
