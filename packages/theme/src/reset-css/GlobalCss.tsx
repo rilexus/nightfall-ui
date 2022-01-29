@@ -1,6 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 import { color, fontFamily } from "@nightfall-ui/css";
 import { linkCss } from "../link";
+import { backgroundCss } from "../background";
 
 const GlobalCss = createGlobalStyle`
   * {
@@ -10,7 +11,7 @@ const GlobalCss = createGlobalStyle`
     font-size: 16px;
   }
   html {
-    background-color: ${color("gray.7")};
+    ${backgroundCss};
     font-family: ${fontFamily("sans")};
   }
   a, p, h1, h2, h3, h4, h5, h6, code {

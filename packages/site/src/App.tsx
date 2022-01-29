@@ -1,17 +1,14 @@
 import { Link, Navigate, Route, Routes } from "react-router-dom";
 import React, { FC } from "react";
-import { ButtonsPage, Home, TypographyPage } from "./pages";
+import { ButtonsPage, DataDisplayPage, Home, TypographyPage } from "./pages";
 import { FocusProvider } from "./components/focusable";
 import { ThemeProvider } from "@nightfall-ui/theme";
 import { FormsPage } from "./pages/forms";
 import { Li, Ul } from "./components";
 import { DialogPage } from "./pages/dialog";
-import styled from "styled-components";
-
-const StyledDiv = styled.div``;
 
 const Page: FC = ({ children }) => {
-  return <StyledDiv>{children}</StyledDiv>;
+  return <div>{children}</div>;
 };
 
 const Providers: FC = ({ children }) => {
@@ -63,6 +60,10 @@ const App = () => {
               </Li>
             </Ul>
           </Li>
+          <li>
+            <h2>Data Display</h2>
+            <Link to={"/data-display"}>Data Display</Link>
+          </li>
         </Ul>
       </nav>
       <div
@@ -77,6 +78,7 @@ const App = () => {
             <Route path={"/buttons"} element={<ButtonsPage />} />
             <Route path={"/inputs"} element={<FormsPage />} />
             <Route path={"/dialog"} element={<DialogPage />} />
+            <Route path={"/data-display"} element={<DataDisplayPage />} />
             <Route path={"/typography"} element={<TypographyPage />} />
             <Route path="*" element={<Navigate to={"/"} />} />
           </Routes>

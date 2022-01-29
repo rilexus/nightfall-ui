@@ -1,9 +1,10 @@
-import React, { FC, forwardRef, HTMLAttributes } from "react";
+import React, { forwardRef, HTMLAttributes } from "react";
 import styled from "styled-components";
 import { p125, roundedXL } from "@nightfall-ui/css";
+import { secondaryBackgroundCss } from "@nightfall-ui/theme";
 
 const StyledCard = styled.div`
-  background-color: rgb(30, 30, 32);
+  ${secondaryBackgroundCss};
   ${roundedXL};
   ${p125};
 `;

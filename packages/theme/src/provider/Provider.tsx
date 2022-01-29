@@ -7,6 +7,7 @@ import { lightTheme } from "../themes/light.theme";
 
 const ThemeProvider: FC = ({ children }) => {
   const colorSchema = usePrefersColorScheme();
+
   const t = useMemo(
     () => (colorSchema === "dark" ? darkTheme : lightTheme),
     [colorSchema]

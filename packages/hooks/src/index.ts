@@ -9,3 +9,5 @@ export * from "./use-media-query";
 export * from "./use-click-outside";
 export * from "./use-toggle";
 export * from "./use-prefes-color-schame";
+export * from "./use-resize-observer";
+export * from "./useScroll";

@@ -1,4 +1,5 @@
 const darkTheme = {
+  // https://noahgilmore.com/blog/dark-mode-uicolor-compatibility/
   textColor: {
     DEFAULT: "white",
   },

@@ -33,6 +33,7 @@
 		"react-transitions-library": "^1.10.1",
 		"react-transition-group": "^4.4.2",
 		"@nightfall-ui/css": "*",
+		"@nightfall-ui/data-display": "*",
 		"@nightfall-ui/typography": "*",
 		"@nightfall-ui/theme": "*",
 		"@nightfall-ui/dialog": "*",
