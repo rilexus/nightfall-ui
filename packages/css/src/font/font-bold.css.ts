@@ -10,6 +10,10 @@ function fontWeight<T extends GenericTheme = Theme>(
   };
 }
 
+const fontMediumCss = css`
+  font-weight: ${fontWeight("medium")};
+`;
+
 const fontSemiBoldCss = css`
   font-weight: ${fontWeight("semiBold")};
 `;
@@ -22,4 +26,10 @@ const fontExtraBoldCss = css`
   font-weight: ${fontWeight("extraBold")};
 `;
 
-export { fontBoldCss, fontSemiBoldCss, fontExtraBoldCss, fontWeight };
+export {
+  fontBoldCss,
+  fontSemiBoldCss,
+  fontExtraBoldCss,
+  fontWeight,
+  fontMediumCss,
+};

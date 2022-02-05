@@ -3,6 +3,11 @@ export interface DarkTheme {
     DEFAULT: string;
   };
   lineHeight: {
+    body: string;
+    callout: string;
+    footnote: string;
+    caption1: string;
+    caption2: string;
     headline: string;
     largeTitle: string;
     title1: string;
@@ -11,6 +16,11 @@ export interface DarkTheme {
     subHeadline: string;
   };
   fontSize: {
+    body: string;
+    callout: string;
+    footnote: string;
+    caption1: string;
+    caption2: string;
     headline: string;
     largeTitle: string;
     title1: string;
@@ -28,6 +38,11 @@ const darkTheme: DarkTheme = {
     DEFAULT: "#ffffff99",
   },
   lineHeight: {
+    body: "1.375",
+    callout: "1.375",
+    footnote: "1.125",
+    caption1: "1",
+    caption2: "1.1818",
     headline: "1.2941",
     largeTitle: "1.2058",
     title1: "1.2142",
@@ -37,6 +52,11 @@ const darkTheme: DarkTheme = {
   },
   fontWeight: {},
   fontSize: {
+    body: "1.0625rem",
+    callout: "1rem",
+    footnote: "0.8125rem",
+    caption1: "0.75rem",
+    caption2: "0.6875rem",
     headline: "1.0625rem",
     largeTitle: "2.125rem",
     title1: "1.75rem",
@@ -45,6 +65,36 @@ const darkTheme: DarkTheme = {
     subHeadline: "0.9375rem",
   },
   colors: {
+    body: {
+      primary: "rgb(255,255,255)",
+      secondary: "rgb(235, 235, 245, 60%)",
+      tertiary: "rgb(235, 235, 245, 30%)",
+      quaternary: "rgb(235, 235, 245, 16%)",
+    },
+    callout: {
+      primary: "rgb(255,255,255)",
+      secondary: "rgb(235, 235, 245, 60%)",
+      tertiary: "rgb(235, 235, 245, 30%)",
+      quaternary: "rgb(235, 235, 245, 16%)",
+    },
+    footnote: {
+      primary: "rgb(255,255,255)",
+      secondary: "rgb(235, 235, 245, 60%)",
+      tertiary: "rgb(235, 235, 245, 30%)",
+      quaternary: "rgb(235, 235, 245, 16%)",
+    },
+    caption1: {
+      primary: "rgb(255,255,255)",
+      secondary: "rgb(235, 235, 245, 60%)",
+      tertiary: "rgb(235, 235, 245, 30%)",
+      quaternary: "rgb(235, 235, 245, 16%)",
+    },
+    caption2: {
+      primary: "rgb(255,255,255)",
+      secondary: "rgb(235, 235, 245, 60%)",
+      tertiary: "rgb(235, 235, 245, 30%)",
+      quaternary: "rgb(235, 235, 245, 16%)",
+    },
     headline: {
       primary: "rgb(255,255,255)",
       secondary: "rgb(235, 235, 245, 60%)",

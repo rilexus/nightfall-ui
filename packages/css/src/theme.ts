@@ -8,7 +8,8 @@ const theme: Theme = {
   fontWeight: {
     ultraThin: 100,
     thin: 200,
-    semiBold: 500,
+    medium: 500,
+    semiBold: 600,
     bold: 700,
     extraBold: 900,
   },

@@ -4,3 +4,8 @@ export * from "./title3";
 export * from "./subHeadline";
 export * from "./large-title";
 export * from "./headline";
+export * from "./caption1";
+export * from "./caption2";
+export * from "./footnote";
+export * from "./callout";
+export * from "./body";

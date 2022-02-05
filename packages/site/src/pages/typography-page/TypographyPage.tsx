@@ -8,6 +8,11 @@ import {
   Title3,
   SubHeadline,
   LargeTitle,
+  Caption1,
+  Caption2,
+  Footnote,
+  Callout,
+  Body,
 } from "@nightfall-ui/typography";
 import { Flex } from "@nightfall-ui/layout";
 import { YStack } from "@nightfall-ui/layout";
@@ -184,33 +189,228 @@ const TypographyPage = () => {
             <div>
               <h3>Regular</h3>
               <SubHeadline weight={"regular"} type={"primary"}>
-                Title3 Regular Primary
+                SubHeadline Regular Primary
               </SubHeadline>
               <SubHeadline weight={"regular"} type={"secondary"}>
-                Title3 Regular Secondary
+                SubHeadline Regular Secondary
               </SubHeadline>
               <SubHeadline weight={"regular"} type={"tertiary"}>
-                Title3 Regular Tertiary
+                SubHeadline Regular Tertiary
               </SubHeadline>
               <SubHeadline weight={"regular"} type={"quaternary"}>
-                Title3 Regular Quaternary
+                SubHeadline Regular Quaternary
               </SubHeadline>
             </div>
 
             <div>
               <h3>Bold</h3>
               <SubHeadline weight={"bold"} type={"primary"}>
-                Title3 Regular Primary
+                SubHeadline Bold Primary
               </SubHeadline>
               <SubHeadline weight={"bold"} type={"secondary"}>
-                Title3 Regular Secondary
+                SubHeadline Bold Secondary
               </SubHeadline>
               <SubHeadline weight={"bold"} type={"tertiary"}>
-                Title3 Regular Tertiary
+                SubHeadline Bold Tertiary
               </SubHeadline>
               <SubHeadline weight={"bold"} type={"quaternary"}>
-                Title3 Regular Quaternary
+                SubHeadline Bold Quaternary
               </SubHeadline>
+            </div>
+          </Flex>
+        </div>
+
+        <div>
+          <Title1 type={"primary"} weight={"regular"} as={"h2"}>
+            Caption1
+          </Title1>
+          <Flex>
+            <div>
+              <h3>Regular</h3>
+              <Caption1 weight={"regular"} type={"primary"}>
+                Caption1 Regular Primary
+              </Caption1>
+              <Caption1 weight={"regular"} type={"secondary"}>
+                Caption1 Regular Secondary
+              </Caption1>
+              <Caption1 weight={"regular"} type={"tertiary"}>
+                Caption1 Regular Tertiary
+              </Caption1>
+              <Caption1 weight={"regular"} type={"quaternary"}>
+                Caption1 Regular Quaternary
+              </Caption1>
+            </div>
+
+            <div>
+              <h3>Bold</h3>
+              <Caption1 weight={"bold"} type={"primary"}>
+                Caption1 Bold Primary
+              </Caption1>
+              <Caption1 weight={"bold"} type={"secondary"}>
+                Caption1 Bold Secondary
+              </Caption1>
+              <Caption1 weight={"bold"} type={"tertiary"}>
+                Caption1 Bold Tertiary
+              </Caption1>
+              <Caption1 weight={"bold"} type={"quaternary"}>
+                Caption1 Bold Quaternary
+              </Caption1>
+            </div>
+          </Flex>
+        </div>
+
+        <div>
+          <Title1 type={"primary"} weight={"regular"} as={"h2"}>
+            Caption2
+          </Title1>
+          <Flex>
+            <div>
+              <h3>Regular</h3>
+              <Caption2 weight={"regular"} type={"primary"}>
+                Caption2 Regular Primary
+              </Caption2>
+              <Caption2 weight={"regular"} type={"secondary"}>
+                Caption2 Regular Secondary
+              </Caption2>
+              <Caption2 weight={"regular"} type={"tertiary"}>
+                Caption2 Regular Tertiary
+              </Caption2>
+              <Caption2 weight={"regular"} type={"quaternary"}>
+                Caption2 Regular Quaternary
+              </Caption2>
+            </div>
+
+            <div>
+              <h3>Bold</h3>
+              <Caption2 weight={"bold"} type={"primary"}>
+                Caption2 Bold Primary
+              </Caption2>
+              <Caption2 weight={"bold"} type={"secondary"}>
+                Caption2 Bold Secondary
+              </Caption2>
+              <Caption2 weight={"bold"} type={"tertiary"}>
+                Caption2 Bold Tertiary
+              </Caption2>
+              <Caption2 weight={"bold"} type={"quaternary"}>
+                Caption2 Bold Quaternary
+              </Caption2>
+            </div>
+          </Flex>
+        </div>
+
+        <div>
+          <Title1 type={"primary"} weight={"regular"} as={"h2"}>
+            Footnote
+          </Title1>
+          <Flex>
+            <div>
+              <h3>Regular</h3>
+              <Footnote weight={"regular"} type={"primary"}>
+                Footnote Regular Primary
+              </Footnote>
+              <Footnote weight={"regular"} type={"secondary"}>
+                Footnote Regular Secondary
+              </Footnote>
+              <Footnote weight={"regular"} type={"tertiary"}>
+                Footnote Regular Tertiary
+              </Footnote>
+              <Footnote weight={"regular"} type={"quaternary"}>
+                Footnote Regular Quaternary
+              </Footnote>
+            </div>
+
+            <div>
+              <h3>Bold</h3>
+              <Footnote weight={"bold"} type={"primary"}>
+                Footnote Bold Primary
+              </Footnote>
+              <Footnote weight={"bold"} type={"secondary"}>
+                Footnote Bold Secondary
+              </Footnote>
+              <Footnote weight={"bold"} type={"tertiary"}>
+                Footnote Bold Tertiary
+              </Footnote>
+              <Footnote weight={"bold"} type={"quaternary"}>
+                Footnote Bold Quaternary
+              </Footnote>
+            </div>
+          </Flex>
+        </div>
+
+        <div>
+          <Title1 type={"primary"} weight={"regular"} as={"h2"}>
+            Callout
+          </Title1>
+          <Flex>
+            <div>
+              <h3>Regular</h3>
+              <Callout weight={"regular"} type={"primary"}>
+                Callout Regular Primary
+              </Callout>
+              <Callout weight={"regular"} type={"secondary"}>
+                Callout Regular Secondary
+              </Callout>
+              <Callout weight={"regular"} type={"tertiary"}>
+                Callout Regular Tertiary
+              </Callout>
+              <Callout weight={"regular"} type={"quaternary"}>
+                Callout Regular Quaternary
+              </Callout>
+            </div>
+
+            <div>
+              <h3>Bold</h3>
+              <Callout weight={"bold"} type={"primary"}>
+                Callout Bold Primary
+              </Callout>
+              <Callout weight={"bold"} type={"secondary"}>
+                Footnote Bold Secondary
+              </Callout>
+              <Callout weight={"bold"} type={"tertiary"}>
+                Callout Bold Tertiary
+              </Callout>
+              <Callout weight={"bold"} type={"quaternary"}>
+                Callout Bold Quaternary
+              </Callout>
+            </div>
+          </Flex>
+        </div>
+
+        <div>
+          <Title1 type={"primary"} weight={"regular"} as={"h2"}>
+            Body
+          </Title1>
+          <Flex>
+            <div>
+              <h3>Regular</h3>
+              <Body weight={"regular"} type={"primary"}>
+                Body Regular Primary
+              </Body>
+              <Body weight={"regular"} type={"secondary"}>
+                Body Regular Secondary
+              </Body>
+              <Body weight={"regular"} type={"tertiary"}>
+                Body Regular Tertiary
+              </Body>
+              <Body weight={"regular"} type={"quaternary"}>
+                Body Regular Quaternary
+              </Body>
+            </div>
+
+            <div>
+              <h3>Bold</h3>
+              <Body weight={"bold"} type={"primary"}>
+                Body Bold Primary
+              </Body>
+              <Body weight={"bold"} type={"secondary"}>
+                Body Bold Secondary
+              </Body>
+              <Body weight={"bold"} type={"tertiary"}>
+                Body Bold Tertiary
+              </Body>
+              <Body weight={"bold"} type={"quaternary"}>
+                Body Bold Quaternary
+              </Body>
             </div>
           </Flex>
         </div>

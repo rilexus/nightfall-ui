@@ -36,6 +36,7 @@ interface Theme {
   fontWeight: {
     ultraThin: number;
     thin: number;
+    medium: number;
     semiBold: number;
     bold: number;
     extraBold: number;
