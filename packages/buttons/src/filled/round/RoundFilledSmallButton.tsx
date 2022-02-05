@@ -1,6 +1,6 @@
-import React, { FC, forwardRef, HTMLAttributes } from "react";
+import React, { forwardRef, HTMLAttributes } from "react";
 import styled from "styled-components";
-import { regularNormalSMCss } from "@nightfall-ui/typography";
+import { regularNormalSMCss } from "@nightfall-ui/css";
 import { filledButtonCss, roundedButtonCss } from "../css";
 import {
   ButtonJumpTransition,

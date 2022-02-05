@@ -1,4 +1,4 @@
-import React, { FC, forwardRef, HTMLAttributes } from "react";
+import React, { forwardRef, HTMLAttributes } from "react";
 import {
   ButtonJumpTransition,
   ButtonOpacityTransition,
@@ -6,7 +6,7 @@ import {
 } from "../../transitions";
 import styled, { css } from "styled-components";
 import { StyledStylesButton } from "../../styleless-button";
-import { regularNormalCss } from "@nightfall-ui/typography";
+import { regularNormalCss } from "@nightfall-ui/css";
 import { filledButtonCss } from "../css";
 import { squareMediumButtonPadding } from "../../css";
 

@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import styled, { css } from "styled-components";
-import { boldNormal3XLCss } from "@nightfall-ui/typography";
+import { boldNormal3XLCss } from "@nightfall-ui/css";
 
 const pageTitleCss = css`
   ${boldNormal3XLCss};

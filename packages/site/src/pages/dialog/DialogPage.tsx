@@ -46,22 +46,24 @@ const DialogPage = () => {
           </Card>
         }
       >
-        <Card>
-          <Button
-            variant={"filled"}
-            shape={"round"}
-            size={"small"}
-            onClick={toggle}
-          >
-            first
-          </Button>
-          <Input
-            variant={"filled"}
-            shape={"round"}
-            size={"medium"}
-            placeholder={"Placeholder"}
-          />
-        </Card>
+        <div>
+          <Card>
+            <Button
+              variant={"filled"}
+              shape={"round"}
+              size={"small"}
+              onClick={toggle}
+            >
+              first
+            </Button>
+            <Input
+              variant={"filled"}
+              shape={"round"}
+              size={"medium"}
+              placeholder={"Placeholder"}
+            />
+          </Card>
+        </div>
       </Dialog>
     </div>
   );

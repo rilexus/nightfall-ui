@@ -7,7 +7,7 @@ import {
   TextSmallButton,
 } from "@nightfall-ui/buttons";
 import styled from "styled-components";
-import { regularNormal2XLCss } from "@nightfall-ui/typography";
+import { laptop, regularNormal2XLCss } from "@nightfall-ui/css";
 import { Hr } from "../../components";
 import { XStack } from "@nightfall-ui/layout";
 
@@ -15,10 +15,18 @@ const H2 = styled.h2`
   ${regularNormal2XLCss}
 `;
 
+const Div = styled.div`
+  color: red;
+  ${laptop`
+    color: blue;
+  `}
+`;
+
 const ButtonsPage = () => {
   return (
     <div>
       <h1>Buttons</h1>
+      <Div>some</Div>
       <div>
         <H2>Text Buttons</H2>
         <XStack>

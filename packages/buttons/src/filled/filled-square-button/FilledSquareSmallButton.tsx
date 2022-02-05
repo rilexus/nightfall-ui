@@ -1,7 +1,7 @@
 import React, { forwardRef, HTMLAttributes } from "react";
 import styled, { css } from "styled-components";
 import { StyledStylesButton } from "../../styleless-button";
-import { regularNormalSMCss } from "@nightfall-ui/typography";
+import { regularNormalSMCss } from "@nightfall-ui/css";
 import {
   ButtonJumpTransition,
   ButtonOpacityTransition,

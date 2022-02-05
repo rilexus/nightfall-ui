@@ -1,7 +1,7 @@
 import { css, keyframes } from "styled-components";
 import {
   color,
-  m0,
+  m12,
   px75,
   px87,
   py37,
@@ -10,29 +10,25 @@ import {
   roundedFull,
 } from "@nightfall-ui/css";
 import { Ease } from "@nightfall-ui/ease";
-import { regularNormalCss } from "@nightfall-ui/typography";
+import { regularNormalCss } from "@nightfall-ui/css";
+import { placeholderCss, regularPlatter } from "@nightfall-ui/theme";
 
 const shine = keyframes`
   from {
-    filter: drop-shadow(0 0px 1px #7fb3ff) drop-shadow(0 0px 1px #1c8efa) drop-shadow(0 0px 7px #2997ff);
+    box-shadow: 0 0 2px #7fb3ff, 0 0 5px #1c8efa, 0 0 13px #2997ff;
   }
 
   to {
-    filter: drop-shadow(0 0px 1px #7fb3ff) drop-shadow(0 0px 1px #1c8efa)
-    drop-shadow(0 0px 3px #2997ff);
+    box-shadow: 0 0 1px #7fb3ff, 0 0 3px #1c8efa, 0 0 4px #2997ff;
   }
 `;
 
 const inputFocusCss = css`
-  transition: border 200ms ${Ease.easeInOutCubic} 0ms, filter 200ms ease 0ms;
-
-  filter: drop-shadow(0 0px 1px transparent) drop-shadow(0 0px 1px #transparent)
-    drop-shadow(0 0px 3px transparent);
+  transition: border 200ms ${Ease.easeInOutCubic} 0ms;
 
   &:focus {
-    border: 1px solid #2997ff;
-    filter: drop-shadow(0 0px 1px #7fb3ff) drop-shadow(0 0px 1px #1c8efa)
-      drop-shadow(0 0px 3px #2997ff);
+    border: 1px solid #007efc;
+    box-shadow: 0 0 3px #7fb3ff, 0 0 5px #1c8efa, 0 0 6px #2997ff;
     animation: 200ms ${shine} ease;
   }
 `;
@@ -56,11 +52,10 @@ const mediumInputPadding = css`
 `;
 
 const filledInputBackgroundColorCss = css`
-  background-color: ${color("gray6")};
+  background-color: ${color("fill.quaternary")};
 `;
 
 const filledInputBorderCss = css`
-  border: none;
   border: 1px solid transparent;
 `;
 
@@ -72,58 +67,61 @@ const largeInputPaddingCss = css`
 const inputPlaceholderCss = css`
   ::-webkit-input-placeholder {
     /* Chrome/Opera/Safari */
-    color: ${color("gray5")};
+    ${placeholderCss};
     opacity: 1;
-    transition: opacity 250ms;
+    transition: opacity 200ms;
   }
   ::-moz-placeholder {
     /* Firefox 19+ */
-    color: ${color("gray5")};
+    ${placeholderCss};
     opacity: 1;
     transition: opacity 250ms;
   }
   :-ms-input-placeholder {
     /* IE 10+ */
-    color: ${color("gray5")};
+    ${placeholderCss};
     opacity: 1;
-    transition: opacity 250ms;
+    transition: opacity 200ms ease;
   }
   :-moz-placeholder {
     /* Firefox 18- */
     opacity: 1;
-    color: ${color("gray5")};
+    ${placeholderCss};
     transition: opacity 250ms;
   }
+
   &:focus {
     ::-webkit-input-placeholder {
       /* Chrome/Opera/Safari */
-      opacity: 0;
+      opacity: 0.3;
     }
     ::-moz-placeholder {
       /* Firefox 19+ */
-      opacity: 0;
+      opacity: 0.3;
     }
     :-ms-input-placeholder {
       /* IE 10+ */
-      opacity: 0;
+      opacity: 0.3;
     }
     :-moz-placeholder {
       /* Firefox 18- */
-      opacity: 0;
+      opacity: 0.3;
     }
   }
 `;
 
 const outlinedInputBorderCss = css`
   border: 1px solid;
-  border-color: ${color("gray5")};
+  border-color: ${color("separator")};
 `;
 
 const inputCss = css`
   ${inputFont};
   ${inputFocusCss};
   ${inputOutline};
-  ${m0};
+  ${m12};
+  color: white;
+  caret-color: ${color("blue.1")};
   ${inputPlaceholderCss};
 `;
 
@@ -135,7 +133,8 @@ const roundedFilledInputCss = css`
 `;
 
 const outlinedInputBackgroundCss = css`
-  background: transparent;
+  // background: transparent;
+  ${regularPlatter};
 `;
 
 const outlineInputCss = css`

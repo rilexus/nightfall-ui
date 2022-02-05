@@ -1,4 +1,4 @@
-import React, { FC, ReactNode, useContext, useEffect, useRef } from "react";
+import React, { FC, ReactNode, useEffect, useRef } from "react";
 import ReactDOM from "react-dom";
 import { TransitionGroup } from "react-transition-group";
 import {
@@ -14,7 +14,7 @@ const BackgroundTransition: FC<{ onClick?: () => void }> = ({
   ...props
 }) => {
   const timeout = 700;
-  const blur = 10;
+  const blur = 20;
   const wrapperStyle = useCSSProperties(
     {
       position: "fixed",

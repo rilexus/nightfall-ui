@@ -25,6 +25,10 @@ const p50 = css`
   padding: ${padding("50")};
 `;
 
+const p62 = css`
+  padding: ${padding("62")};
+`;
+
 const p75 = css`
   padding: ${padding("75")};
 `;
@@ -71,6 +75,7 @@ export {
   p25,
   p37,
   p50,
+  p62,
   p75,
   p100,
   p125,

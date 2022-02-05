@@ -1,24 +1,124 @@
-const darkTheme = {
+export interface DarkTheme {
+  textColor: {
+    DEFAULT: string;
+  };
+  lineHeight: {
+    headline: string;
+    largeTitle: string;
+    title1: string;
+    title2: string;
+    title3: string;
+    subHeadline: string;
+  };
+  fontSize: {
+    headline: string;
+    largeTitle: string;
+    title1: string;
+    title2: string;
+    title3: string;
+    subHeadline: string;
+  };
+  fontWeight: {};
+  colors: any;
+}
+
+const darkTheme: DarkTheme = {
   // https://noahgilmore.com/blog/dark-mode-uicolor-compatibility/
   textColor: {
-    DEFAULT: "white",
+    DEFAULT: "#ffffff99",
+  },
+  lineHeight: {
+    headline: "1.2941",
+    largeTitle: "1.2058",
+    title1: "1.2142",
+    title2: "1.2727",
+    title3: "1.2",
+    subHeadline: "1.3333",
+  },
+  fontWeight: {},
+  fontSize: {
+    headline: "1.0625rem",
+    largeTitle: "2.125rem",
+    title1: "1.75rem",
+    title2: "1.375rem",
+    title3: "1.25rem",
+    subHeadline: "0.9375rem",
   },
   colors: {
-    label: "#ffffffff",
-    secondaryLabel: "#ebebf599",
-    tertiaryLabel: "#ebebf54c",
-    quaternaryLabel: "#ebebf52d",
-    fill: "#7878805b",
-    secondaryFill: "#78788051",
-    tertiaryFill: "#7676803d",
-    quaternaryFill: "#7676802d",
+    headline: {
+      primary: "rgb(255,255,255)",
+      secondary: "rgb(235, 235, 245, 60%)",
+      tertiary: "rgb(235, 235, 245, 30%)",
+      quaternary: "rgb(235, 235, 245, 16%)",
+    },
+    largeTitle: {
+      primary: "rgb(255,255,255)",
+      secondary: "rgb(235, 235, 245, 60%)",
+      tertiary: "rgb(235, 235, 245, 30%)",
+      quaternary: "rgb(235, 235, 245, 16%)",
+    },
+    title1: {
+      primary: "rgb(255, 255, 255, 100%)",
+      secondary: "rgb(235, 235, 245, 60%)",
+      tertiary: "rgb(235, 235, 245, 30%)",
+      quaternary: "rgb(235, 235, 245, 16%)",
+    },
+    title2: {
+      primary: "rgb(255, 255, 255, 100%)",
+      secondary: "rgb(235, 235, 245, 60%)",
+      tertiary: "rgb(235, 235, 245, 30%)",
+      quaternary: "rgb(235, 235, 245, 16%)",
+    },
+    title3: {
+      primary: "rgb(255, 255, 255, 100%)",
+      secondary: "rgb(235, 235, 245, 60%)",
+      tertiary: "rgb(235, 235, 245, 30%)",
+      quaternary: "rgb(235, 235, 245, 16%)",
+    },
+    subHeadline: {
+      primary: "rgb(255, 255, 255, 100%)",
+      secondary: "rgb(235, 235, 245, 60%)",
+      tertiary: "rgb(235, 235, 245, 30%)",
+      quaternary: "rgb(235, 235, 245, 16%)",
+    },
+    label: {
+      primary: "#ffffffff",
+      secondary: "#ebebf599",
+      tertiary: "#ebebf54c",
+      quaternary: "#ebebf52d",
+    },
+    fill: {
+      primary: "rgb(120, 120, 128, 36%)",
+      secondary: "rgb(120, 120, 128, 32%)",
+      tertiary: "rgb(118, 118, 128, 24%)",
+      quaternary: "rgb(116, 116, 128, 18%)",
+    },
+    background: {
+      base: {
+        primary: "#000000ff",
+        secondary: "#1c1c1eff",
+        tertiary: "#2c2c2eff",
+      },
+      elevated: {
+        primary: "rgb(28, 28, 30, 100%)",
+        secondary: "rgb(44, 44, 46, 100%)",
+        tertiary: "rgb(58, 58, 60, 100%)",
+      },
+    },
+    materials: {
+      background: {
+        regular: "rgb(0, 0, 0, 41%)",
+        thin: "rgb(0, 0, 0, 26%)",
+        ultraThin: "rgb(0, 0, 0, 10%)",
+        thick: "rgb(0, 0, 0, 60%)",
+      },
+    },
+    groupedBackground: {
+      primary: "#000000ff",
+      secondary: "#1c1c1eff",
+      tertiary: "#2c2c2eff",
+    },
     placeholderText: "#ebebf54c",
-    background: "#000000ff",
-    secondaryBackground: "#1c1c1eff",
-    tertiaryBackground: "#2c2c2eff",
-    groupedBackground: "#000000ff",
-    secondaryGroupedBackground: "#1c1c1eff",
-    tertiaryGroupedBackground: "#2c2c2eff",
     separator: "#54545899",
     opaqueSeparator: "#38383aff",
     link: "#0984ffff",

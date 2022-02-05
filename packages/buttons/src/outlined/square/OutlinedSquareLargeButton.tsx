@@ -10,12 +10,10 @@ import {
   squareButtonCss,
   squareLargeButtonPadding,
 } from "../../css";
-import { regularNormalCss } from "@nightfall-ui/typography";
 
 const StyledOutlinedSquareLargeButton = styled.button`
   ${outlinedButtonCss};
   ${squareLargeButtonPadding};
-  ${regularNormalCss};
   ${squareButtonCss};
 `;
 

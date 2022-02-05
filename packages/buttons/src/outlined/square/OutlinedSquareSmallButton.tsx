@@ -1,7 +1,7 @@
 import React, { forwardRef, HTMLAttributes } from "react";
 import styled from "styled-components";
 import { outlinedButtonCss, squareSmallButtonPadding } from "../../css";
-import { regularNormalSMCss } from "@nightfall-ui/typography";
+
 import {
   ButtonJumpTransition,
   ButtonOpacityTransition,
@@ -11,7 +11,6 @@ import {
 const StyledOutlinedSquareButton = styled.button`
   ${squareSmallButtonPadding};
   ${outlinedButtonCss};
-  ${regularNormalSMCss};
 `;
 
 const OutlinedSquareSmallButton = forwardRef<

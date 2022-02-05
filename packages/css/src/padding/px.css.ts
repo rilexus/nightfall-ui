@@ -31,6 +31,11 @@ const px50 = css`
   padding-right: ${padding("50")};
 `;
 
+const px62 = css`
+  padding-left: ${padding("62")};
+  padding-right: ${padding("62")};
+`;
+
 const px75 = css`
   padding-left: ${padding("75")};
   padding-right: ${padding("75")};
@@ -92,6 +97,7 @@ export {
   px25,
   px37,
   px50,
+  px62,
   px75,
   px87,
   px100,

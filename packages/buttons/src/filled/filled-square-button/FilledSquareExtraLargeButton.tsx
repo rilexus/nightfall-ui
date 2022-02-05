@@ -7,16 +7,13 @@ import {
 } from "../../transitions";
 import styled from "styled-components";
 import { StyledStylesButton } from "../../styleless-button";
-import { regularNormalXLCss } from "@nightfall-ui/typography";
-import { px150, py50 } from "@nightfall-ui/css";
 import { filledButtonCss } from "../css";
+import { squareButtonCss, squareExtraLargeButtonPadding } from "../../css";
 
-const StyledLargeButton = styled(StyledStylesButton)`
-  ${regularNormalXLCss};
-  border-radius: 0.3rem;
-  ${py50};
-  ${px150};
+const StyledExtraLargeButton = styled(StyledStylesButton)`
+  ${squareButtonCss};
   ${filledButtonCss};
+  ${squareExtraLargeButtonPadding};
 `;
 
 const FilledSquareExtraLargeButton = forwardRef<
@@ -28,7 +25,7 @@ const FilledSquareExtraLargeButton = forwardRef<
       <ButtonOpacityTransition>
         <ButtonScaleTransition>
           <RotationTransition deg={5}>
-            <StyledLargeButton {...props} ref={outsideRef} />
+            <StyledExtraLargeButton {...props} ref={outsideRef} />
           </RotationTransition>
         </ButtonScaleTransition>
       </ButtonOpacityTransition>

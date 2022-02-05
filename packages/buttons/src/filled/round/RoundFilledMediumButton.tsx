@@ -7,7 +7,7 @@ import {
   ButtonScaleTransition,
 } from "../../transitions";
 import { filledButtonCss, roundedButtonCss } from "../css";
-import { regularNormalCss } from "@nightfall-ui/typography";
+import { regularNormalCss } from "@nightfall-ui/css";
 import { useRoundButtonRadius } from "../../hooks";
 import { useCSSProperties } from "@nightfall-ui/hooks";
 

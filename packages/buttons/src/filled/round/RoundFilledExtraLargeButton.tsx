@@ -7,7 +7,7 @@ import {
   ButtonOpacityTransition,
   ButtonScaleTransition,
 } from "../../transitions";
-import { regularNormalCss } from "@nightfall-ui/typography";
+import { regularNormalCss } from "@nightfall-ui/css";
 import { useCSSProperties } from "@nightfall-ui/hooks";
 
 const StyledButton = styled.button`

@@ -12,7 +12,7 @@ const StyledVerticalSpacer = styled.div<{ spacing: Spacing }>`
 
 const YSpacer: FC<{ spacing?: Spacing }> = ({
   children,
-  spacing = "medium",
+  spacing = "small",
 }) => {
   return (
     <StyledVerticalSpacer spacing={spacing}>{children}</StyledVerticalSpacer>

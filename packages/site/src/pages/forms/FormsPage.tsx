@@ -3,11 +3,11 @@ import { PageTitle } from "../../components";
 import {
   SquareFilledLargeInput,
   SquareOutlinedLargeInput,
-  SquareOutlinedMediumInput,
 } from "@nightfall-ui/inputs";
 import { Flex, Grid, YSpacer, YStack } from "@nightfall-ui/layout";
 import { Card } from "@nightfall-ui/surfaces";
 import { Input, SquareInput } from "@nightfall-ui/inputs";
+import { Button } from "@nightfall-ui/buttons/dist/src";
 
 const FormsPage = () => {
   return (
@@ -25,7 +25,7 @@ const FormsPage = () => {
                 <YSpacer spacing={"large"}>
                   <h4>Square Filled Input</h4>
                 </YSpacer>
-                <YStack spacing={"medium"}>
+                <YStack spacing={"small"}>
                   <Input
                     shape={"square"}
                     variant={"filled"}
@@ -44,7 +44,7 @@ const FormsPage = () => {
                 <YSpacer spacing={"large"}>
                   <h4>Square Outlined Input</h4>
                 </YSpacer>
-                <YStack>
+                <YStack spacing={"small"}>
                   <Input
                     shape={"square"}
                     variant={"outlined"}
@@ -63,7 +63,10 @@ const FormsPage = () => {
                 <YSpacer spacing={"large"}>
                   <h4>Round Filled Input</h4>
                 </YSpacer>
-                <YStack>
+                <Button variant={"filled"} size={"large"} shape={"square"}>
+                  Click
+                </Button>
+                <YStack spacing={"small"}>
                   <Input
                     placeholder={"Placeholder"}
                     shape={"round"}
@@ -87,78 +90,105 @@ const FormsPage = () => {
             </Flex>
           </Card>
         </div>
-        <div>
+        <div
+          style={{
+            position: "relative",
+          }}
+        >
           <YSpacer spacing={"large"}>
             <h4>Contact Form</h4>
           </YSpacer>
-          <Card>
-            <Grid spacing={"50"}>
-              <Grid.Item small={12} large={6}>
-                <Input
-                  shape={"square"}
-                  variant={"outlined"}
-                  size={"medium"}
-                  placeholder={"First name"}
-                  style={{
-                    width: "100%",
-                  }}
-                />
-              </Grid.Item>
-              <Grid.Item small={12} large={6}>
-                <SquareOutlinedMediumInput
-                  placeholder={"Last name"}
-                  style={{
-                    width: "100%",
-                  }}
-                />
-              </Grid.Item>
+          <img src="iPad_Wallpaper_Dark.png" alt="" />
+          <Grid
+            spacing={"25"}
+            style={{
+              position: "absolute",
+              top: 0,
+            }}
+          >
+            <Grid.Item small={12} large={6}>
+              <Input
+                shape={"square"}
+                variant={"outlined"}
+                size={"large"}
+                placeholder={"First name"}
+                style={{
+                  width: "100%",
+                }}
+              />
+            </Grid.Item>
+            <Grid.Item small={12} large={6}>
+              <Input
+                shape={"square"}
+                variant={"outlined"}
+                size={"large"}
+                placeholder={"Last name"}
+                style={{
+                  width: "100%",
+                }}
+              />
+            </Grid.Item>
 
-              <Grid.Item small={12} medium={9} large={10} laptop={11}>
-                <SquareOutlinedMediumInput
-                  placeholder={"Street"}
-                  style={{
-                    width: "100%",
-                  }}
-                />
-              </Grid.Item>
+            <Grid.Item small={12} medium={9} large={10} laptop={11}>
+              <Input
+                shape={"square"}
+                variant={"outlined"}
+                size={"large"}
+                placeholder={"Street"}
+                style={{
+                  width: "100%",
+                }}
+              />
+            </Grid.Item>
 
-              <Grid.Item small={12} medium={3} large={2} laptop={1}>
-                <SquareOutlinedMediumInput
-                  placeholder={"Nr"}
-                  style={{
-                    width: "100%",
-                  }}
-                />
-              </Grid.Item>
+            <Grid.Item small={12} medium={3} large={2} laptop={1}>
+              <Input
+                shape={"square"}
+                variant={"outlined"}
+                size={"large"}
+                placeholder={"Nr."}
+                style={{
+                  width: "100%",
+                }}
+              />
+            </Grid.Item>
 
-              <Grid.Item small={12} medium={3} large={2} laptop={1}>
-                <SquareOutlinedMediumInput
-                  placeholder={"ZIP"}
-                  style={{
-                    width: "100%",
-                  }}
-                />
-              </Grid.Item>
+            <Grid.Item small={12} medium={3} large={2} laptop={1}>
+              <Input
+                shape={"square"}
+                variant={"outlined"}
+                size={"large"}
+                placeholder={"ZIP"}
+                style={{
+                  width: "100%",
+                }}
+              />
+            </Grid.Item>
 
-              <Grid.Item small={12} medium={9} large={10} laptop={11}>
-                <SquareOutlinedMediumInput
-                  placeholder={"City"}
-                  style={{
-                    width: "100%",
-                  }}
-                />
-              </Grid.Item>
+            <Grid.Item small={12} medium={9} large={10} laptop={11}>
+              <Input
+                shape={"square"}
+                variant={"outlined"}
+                size={"large"}
+                placeholder={"City"}
+                style={{
+                  width: "100%",
+                }}
+              />
+            </Grid.Item>
 
-              <Grid.Item small={12}>
-                <SquareOutlinedMediumInput
-                  placeholder={"Country"}
-                  style={{
-                    width: "100%",
-                  }}
-                />
-              </Grid.Item>
-            </Grid>
-          </Card>
+            <Grid.Item small={12}>
+              <Input
+                shape={"square"}
+                variant={"outlined"}
+                size={"large"}
+                placeholder={"Country"}
+                style={{
+                  width: "100%",
+                }}
+              />
+            </Grid.Item>
+          </Grid>
         </div>
       </div>
     </div>

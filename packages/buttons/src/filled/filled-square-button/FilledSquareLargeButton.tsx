@@ -7,9 +7,9 @@ import {
 } from "../../transitions";
 import styled from "styled-components";
 import { StyledStylesButton } from "../../styleless-button";
-import { regularNormalLGCss } from "@nightfall-ui/typography";
 import { filledButtonCss } from "../css";
 import { squareButtonCss, squareLargeButtonPadding } from "../../css";
+import { regularNormalLGCss } from "@nightfall-ui/css";
 
 const StyledLargeButton = styled(StyledStylesButton)`
   ${regularNormalLGCss};

@@ -24,6 +24,9 @@ const pt37 = css`
 const pt50 = css`
   padding-top: ${padding("50")};
 `;
+const pt62 = css`
+  padding-top: ${padding("62")};
+`;
 
 const pt75 = css`
   padding-top: ${padding("75")};
@@ -75,7 +78,9 @@ export {
   pt25,
   pt37,
   pt50,
+  pt62,
   pt75,
+  pt87,
   pt100,
   pt125,
   pt150,

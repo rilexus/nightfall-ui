@@ -26,6 +26,11 @@ const py50 = css`
   padding-bottom: ${padding("50")};
 `;
 
+const py62 = css`
+  padding-top: ${padding("62")};
+  padding-bottom: ${padding("62")};
+`;
+
 const py87 = css`
   padding-top: ${padding("87")};
   padding-bottom: ${padding("87")};
@@ -51,4 +56,4 @@ const py175 = css`
   padding-bottom: ${padding("175")};
 `;
 
-export { py0, py12, py25, py37, py50, py87, py100, py125, py150, py175 };
+export { py0, py12, py25, py37, py50, py62, py87, py100, py125, py150, py175 };

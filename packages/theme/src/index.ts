@@ -5,3 +5,6 @@ export * from "./separator";
 export * from "./link";
 export * from "./provider";
 export * from "./reset-css";
+export * from "./platter";
+
+export * from "./typography";

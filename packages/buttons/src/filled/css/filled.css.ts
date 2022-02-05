@@ -1,10 +1,9 @@
 import { css } from "styled-components";
 import { color, textColorCss } from "@nightfall-ui/css";
 import { buttonCss } from "../../css";
-import { fillCss } from "@nightfall-ui/theme";
 
 const filledButtonBackgroundColorCss = css`
-  ${fillCss};
+  background-color: ${color("fill.secondary")};
 `;
 const filledButtonColorCss = css`
   ${textColorCss};

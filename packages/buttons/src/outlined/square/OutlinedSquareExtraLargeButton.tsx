@@ -10,12 +10,10 @@ import {
   squareButtonCss,
   squareExtraLargeButtonPadding,
 } from "../../css";
-import { regularNormalLGCss } from "@nightfall-ui/typography";
 
 const StyledOutlinedSquareLargeButton = styled.button`
   ${outlinedButtonCss};
   ${squareExtraLargeButtonPadding}
-  ${regularNormalLGCss};
   ${squareButtonCss};
 `;
 

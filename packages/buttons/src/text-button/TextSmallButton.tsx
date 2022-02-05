@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import React, { forwardRef, HTMLAttributes } from "react";
-import { regularNormalSMCss } from "@nightfall-ui/typography";
+import { regularNormalSMCss } from "@nightfall-ui/css";
 import { StyledStylesButton } from "../styleless-button";
 import { scaleTransitionCss } from "../css";
 import { ButtonJumpTransition } from "../transitions";

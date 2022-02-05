@@ -4,17 +4,19 @@ import {
   px100,
   px125,
   px150,
+  px175,
   py25,
   py37,
   py50,
+  py62,
   roundedMD,
+  textColorCss,
 } from "@nightfall-ui/css";
-
-const filledBackgroundColor = css`
-  background-color: ${color("gray3")};
-`;
+import { regularNormalLGCss } from "@nightfall-ui/css";
 
 const buttonCss = css`
+  ${textColorCss};
+  ${regularNormalLGCss};
   border: none;
   outline: none;
   cursor: pointer;
@@ -35,18 +37,18 @@ const squareLargeButtonPadding = css`
   ${px150};
 `;
 
+const squareExtraLargeButtonPadding = css`
+  ${py62};
+  ${px175};
+`;
+
 const outlinedButtonBorder = css`
   border: 1px solid;
-  border-color: ${color("gray3")};
+  border-color: ${color("gray.3")};
 `;
 
 const squareButtonCss = css`
   ${roundedMD};
-`;
-
-const squareExtraLargeButtonPadding = css`
-  ${py50};
-  ${px150};
 `;
 
 const outlinedButtonCss = css`
@@ -57,7 +59,6 @@ const outlinedButtonCss = css`
 `;
 
 export {
-  filledBackgroundColor,
   buttonCss,
   squareButtonCss,
   squareSmallButtonPadding,

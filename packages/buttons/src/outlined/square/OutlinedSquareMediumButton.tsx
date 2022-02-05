@@ -10,12 +10,10 @@ import {
   squareButtonCss,
   squareMediumButtonPadding,
 } from "../../css";
-import { regularNormalCss } from "@nightfall-ui/typography";
 
 const StyledOutlinedMediumButton = styled.button`
   ${outlinedButtonCss};
   ${squareMediumButtonPadding};
-  ${regularNormalCss};
   ${squareButtonCss};
 `;
 

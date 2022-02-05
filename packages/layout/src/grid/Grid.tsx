@@ -1,7 +1,14 @@
-import React, { createContext, FC, useContext, useMemo } from "react";
+import React, {
+  createContext,
+  FC,
+  HTMLAttributes,
+  useContext,
+  useMemo,
+} from "react";
 import { useMediaQuery, useCSSProperties } from "@nightfall-ui/hooks";
 import { useTheme } from "styled-components";
 import { Theme, PaddingTheme } from "@nightfall-ui/css";
+import { Ease } from "react-transitions-library";
 
 const GridContext = createContext<string | null>(null);
 const GridContextProvider = GridContext.Provider;
@@ -13,9 +20,19 @@ const descending = ([, a]: [string, number], [, b]: [string, number]) =>
 
 type GrindItemProps = { [Key in keyof Theme["breakpoints"]]?: number } & {
   columns?: number;
+  timeout?: number;
+  ease?: Ease;
+  delay?: number;
 };
 
-const GridItem: FC<GrindItemProps> = ({ children, columns = 12, ...props }) => {
+const GridItem: FC<GrindItemProps> = ({
+  children,
+  timeout = 200,
+  ease = Ease.easeIn,
+  delay = 0,
+  columns = 12,
+  ...props
+}) => {
   const spacing = useFlexContext();
   const { breakpoints } = useTheme() as Theme;
 
@@ -47,6 +64,7 @@ const GridItem: FC<GrindItemProps> = ({ children, columns = 12, ...props }) => {
 
   const style = useCSSProperties(
     {
+      transition: `flex-basis ${timeout}ms ${ease} ${delay}ms`,
       flexBasis: `${width}%`,
       paddingTop: spacing || "0px",
       paddingLeft: spacing || "0px",
@@ -65,24 +83,27 @@ interface GridComposition {
   Item: typeof GridItem;
 }
 
-const Grid: FC<{ spacing?: keyof PaddingTheme }> & GridComposition = ({
-  spacing = "0",
-  children,
-}) => {
+const Grid: FC<
+  HTMLAttributes<HTMLDivElement> & { spacing?: keyof PaddingTheme }
+> &
+  GridComposition = ({ spacing = "0", children, ...props }) => {
   const theme = useTheme() as Theme;
   const style = useCSSProperties(
     {
+      ...props.style,
       display: "flex",
       flexFlow: "row wrap",
       marginTop: `-${theme.padding[spacing]}`,
       marginLeft: `-${theme.padding[spacing]}`,
     },
-    []
+    [props.style]
   );
 
   return (
     <GridContextProvider value={theme.padding[spacing]}>
-      <div style={style}>{children}</div>
+      <div {...props} style={style}>
+        {children}
+      </div>
     </GridContextProvider>
   );
 };

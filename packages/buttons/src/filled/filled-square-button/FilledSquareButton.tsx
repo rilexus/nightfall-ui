@@ -1,4 +1,4 @@
-import React, { FC, forwardRef, HTMLAttributes } from "react";
+import React, { forwardRef, HTMLAttributes } from "react";
 import { FilledSquareMediumButton } from "./FilledSquareMediumButton";
 import { FilledSquareSmallButton } from "./FilledSquareSmallButton";
 import { FilledSquareLargeButton } from "./FilledSquareLargeButton";
