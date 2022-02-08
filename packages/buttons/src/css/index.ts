@@ -12,11 +12,11 @@ import {
   roundedMD,
   textColorCss,
 } from "@nightfall-ui/css";
-import { regularNormalLGCss } from "@nightfall-ui/css";
+import { bodyRegularPrimaryCss } from "@nightfall-ui/theme";
 
 const buttonCss = css`
   ${textColorCss};
-  ${regularNormalLGCss};
+  ${bodyRegularPrimaryCss};
   border: none;
   outline: none;
   cursor: pointer;
@@ -58,7 +58,22 @@ const outlinedButtonCss = css`
   background-color: transparent;
 `;
 
+const buttonScaleTransition = css`
+  transition: transform 200ms ease 0ms, opacity 200ms ease 0ms;
+  transform: scale(100%);
+  opacity: 1;
+  &:hover {
+    opacity: 0.8;
+    transform: scale(97%);
+  }
+  &:active {
+    opacity: 0.7;
+    transform: scale(95%);
+  }
+`;
+
 export {
+  buttonScaleTransition,
   buttonCss,
   squareButtonCss,
   squareSmallButtonPadding,

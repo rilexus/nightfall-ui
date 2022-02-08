@@ -133,8 +133,7 @@ const roundedFilledInputCss = css`
 `;
 
 const outlinedInputBackgroundCss = css`
-  // background: transparent;
-  ${regularPlatter};
+  background: transparent;
 `;
 
 const outlineInputCss = css`

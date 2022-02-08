@@ -7,13 +7,11 @@ import {
 import styled from "styled-components";
 import { useRoundButtonRadius } from "../../hooks";
 import { filledButtonCss, roundedButtonCss } from "../css";
-import { regularNormalCss } from "@nightfall-ui/css";
 import { useCSSProperties } from "@nightfall-ui/hooks";
 
 const StyledButton = styled.button`
   ${roundedButtonCss};
   ${filledButtonCss};
-  ${regularNormalCss};
   display: flex;
   justify-content: center;
   align-items: center;

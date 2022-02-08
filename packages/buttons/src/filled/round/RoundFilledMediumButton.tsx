@@ -7,14 +7,12 @@ import {
   ButtonScaleTransition,
 } from "../../transitions";
 import { filledButtonCss, roundedButtonCss } from "../css";
-import { regularNormalCss } from "@nightfall-ui/css";
 import { useRoundButtonRadius } from "../../hooks";
 import { useCSSProperties } from "@nightfall-ui/hooks";
 
 const StyledRoundFilledMediumButton = styled.button`
   ${roundedButtonCss};
   ${filledButtonCss};
-  ${regularNormalCss};
   display: flex;
   justify-content: center;
   align-items: center;

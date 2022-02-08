@@ -1,4 +1,4 @@
-import React, { FC, HTMLAttributes } from "react";
+import React, { CSSProperties, FC, HTMLAttributes } from "react";
 import styled from "styled-components";
 import { useCSSProperties } from "@nightfall-ui/hooks";
 
@@ -6,13 +6,22 @@ const StyledFlex = styled.div`
   display: flex;
 `;
 
-const Flex: FC<
-  {
-    justify?: "center" | "around" | "between" | "evenly" | "left";
-  } & HTMLAttributes<HTMLDivElement>
-> = ({ children, justify = "left", ...props }) => {
+const Flex: FC<{
+  align?: "center" | "end" | "start";
+  direction?: "column" | "row";
+  justify?: "center" | "around" | "between" | "evenly" | "left";
+  style?: CSSProperties;
+}> = ({
+  children,
+  direction = "row",
+  align = "center",
+  justify = "center",
+  ...props
+}) => {
   const style = useCSSProperties(
     {
+      alignItems: align,
+      flexDirection: direction,
       justifyContent:
         justify === "evenly" || justify === "around" || justify === "between"
           ? `space-${justify}`

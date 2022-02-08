@@ -6,6 +6,7 @@ import { ThemeProvider } from "@nightfall-ui/theme";
 import { FormsPage } from "./pages/forms";
 import { Li, Ul } from "./components";
 import { DialogPage } from "./pages/dialog";
+import { DialogProvider } from "@nightfall-ui/dialog";
 
 const Page: FC = ({ children }) => {
   return <div>{children}</div>;
@@ -14,7 +15,9 @@ const Page: FC = ({ children }) => {
 const Providers: FC = ({ children }) => {
   return (
     <FocusProvider>
-      <ThemeProvider>{children}</ThemeProvider>
+      <ThemeProvider>
+        <DialogProvider>{children}</DialogProvider>
+      </ThemeProvider>
     </FocusProvider>
   );
 };

@@ -5,3 +5,6 @@ export * from "./x-stack";
 export * from "./z-stack";
 export * from "./grid";
 export * from "./flex";
+export * from "./text-center";
+
+export * from "./padding";

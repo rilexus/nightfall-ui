@@ -9,3 +9,4 @@ export * from "./caption2";
 export * from "./footnote";
 export * from "./callout";
 export * from "./body";
+export * from "./label";

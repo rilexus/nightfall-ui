@@ -7,7 +7,6 @@ import {
 import { Flex, Grid, YSpacer, YStack } from "@nightfall-ui/layout";
 import { Card } from "@nightfall-ui/surfaces";
 import { Input, SquareInput } from "@nightfall-ui/inputs";
-import { Button } from "@nightfall-ui/buttons/dist/src";
 
 const FormsPage = () => {
   return (
@@ -63,9 +62,6 @@ const FormsPage = () => {
                 <YSpacer spacing={"large"}>
                   <h4>Round Filled Input</h4>
                 </YSpacer>
-                <Button variant={"filled"} size={"large"} shape={"square"}>
-                  Click
-                </Button>
                 <YStack spacing={"small"}>
                   <Input
                     placeholder={"Placeholder"}
@@ -98,7 +94,7 @@ const FormsPage = () => {
           <YSpacer spacing={"large"}>
             <h4>Contact Form</h4>
           </YSpacer>
-          <img src="iPad_Wallpaper_Dark.png" alt="" />
+
           <Grid
             spacing={"25"}
             style={{

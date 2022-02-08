@@ -7,7 +7,6 @@ const roundButtonBorderRadiusCss = css`
 `;
 
 const roundedButtonCss = css`
-  ${buttonCss};
   ${roundButtonBorderRadiusCss};
 `;
 

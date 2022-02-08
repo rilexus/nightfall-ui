@@ -7,7 +7,7 @@ import { ButtonJumpTransition } from "../transitions";
 
 const StyledTextButtonExtraLarge = styled(StyledStylesButton)`
   ${regularNormalXLCss};
-  ${scaleTransitionCss}
+  ${scaleTransitionCss};
 `;
 
 const TextExtraLargeButton = forwardRef<

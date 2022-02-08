@@ -7,13 +7,11 @@ import {
   ButtonOpacityTransition,
   ButtonScaleTransition,
 } from "../../transitions";
-import { regularNormalCss } from "@nightfall-ui/css";
 import { useCSSProperties } from "@nightfall-ui/hooks";
 
 const StyledButton = styled.button`
   ${roundedButtonCss};
   ${filledButtonCss};
-  ${regularNormalCss};
   display: flex;
   justify-content: center;
   align-items: center;

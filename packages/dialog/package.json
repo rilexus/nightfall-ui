@@ -19,12 +19,16 @@
     "react-transitions-library": "^1.10.1",
     "styled-components": "^5.3.3",
     "@nightfall-ui/ease": "*",
-    "@nightfall-ui/hooks": "*"
+    "@nightfall-ui/hooks": "*",
+    "@nightfall-ui/buttons": "*",
+    "@nightfall-ui/typography": "*"
   },
   "dependencies": {
   },
   "peerDependencies": {
+    "@nightfall-ui/typography": "*",
     "@nightfall-ui/ease": "*",
+    "@nightfall-ui/buttons": "*",
     "@nightfall-ui/hooks": "*",
     "react-transition-group": "^4.4.2",
     "react-transitions-library": "^1.10.1",
