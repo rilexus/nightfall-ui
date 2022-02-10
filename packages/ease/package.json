@@ -1,6 +1,6 @@
 {
   "name": "@nightfall-ui/ease",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "license": "MIT",
   "description": "Easing function for the Nightfall UI component library.",
   "author": "Stanislav Panchenko <email@stanislavpanchenko.de>",
