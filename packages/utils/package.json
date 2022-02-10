@@ -2,6 +2,7 @@
   "name": "@nightfall-ui/utils",
   "version": "1.0.1",
   "license": "MIT",
+  "private": false,
   "description": "Utils for the Nightfall UI component library.",
   "author": "Stanislav Panchenko <email@stanislavpanchenko.de>",
   "homepage": "https://rilexus.github.io/nightfall-ui/",
@@ -33,5 +34,6 @@
   ],
   "bugs": {
     "url": "https://github.com/rilexus/nightfall-ui/issues"
-  }
+  },
+  "gitHead": "da52d6979056000f61542711ce2d81705bf066d0"
 }
