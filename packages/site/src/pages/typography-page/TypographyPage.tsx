@@ -31,7 +31,7 @@ const TypographyPage = () => {
           <Title1 type={"primary"} weight={"regular"} as={"h2"}>
             Large Title
           </Title1>
-          <Flex>
+          <Flex justify={"left"}>
             <div>
               <h3>Regular</h3>
               <LargeTitle weight={"regular"} type={"primary"}>
@@ -70,7 +70,7 @@ const TypographyPage = () => {
           <Title1 type={"primary"} weight={"regular"} as={"h2"}>
             Title 1
           </Title1>
-          <Flex>
+          <Flex justify={"left"}>
             <div>
               <h3>Regular</h3>
               <Title1Regular>Title1 Regular Primary</Title1Regular>
@@ -124,7 +124,7 @@ const TypographyPage = () => {
           <Title1 type={"primary"} weight={"regular"} as={"h2"}>
             Title 3
           </Title1>
-          <Flex>
+          <Flex justify={"left"}>
             <div>
               <h3>Regular</h3>
               <Title3 weight={"regular"} type={"primary"}>
@@ -162,7 +162,7 @@ const TypographyPage = () => {
           <Title1 type={"primary"} weight={"regular"} as={"h2"}>
             Headline
           </Title1>
-          <Flex>
+          <Flex justify={"left"}>
             <div>
               <h3>Regular</h3>
               <Headline weight={"regular"} type={"primary"}>
@@ -185,7 +185,7 @@ const TypographyPage = () => {
           <Title1 type={"primary"} weight={"regular"} as={"h2"}>
             Sub Headline
           </Title1>
-          <Flex>
+          <Flex justify={"left"}>
             <div>
               <h3>Regular</h3>
               <SubHeadline weight={"regular"} type={"primary"}>
@@ -224,7 +224,7 @@ const TypographyPage = () => {
           <Title1 type={"primary"} weight={"regular"} as={"h2"}>
             Caption1
           </Title1>
-          <Flex>
+          <Flex justify={"left"}>
             <div>
               <h3>Regular</h3>
               <Caption1 weight={"regular"} type={"primary"}>
@@ -263,7 +263,7 @@ const TypographyPage = () => {
           <Title1 type={"primary"} weight={"regular"} as={"h2"}>
             Caption2
           </Title1>
-          <Flex>
+          <Flex justify={"left"}>
             <div>
               <h3>Regular</h3>
               <Caption2 weight={"regular"} type={"primary"}>
@@ -302,7 +302,7 @@ const TypographyPage = () => {
           <Title1 type={"primary"} weight={"regular"} as={"h2"}>
             Footnote
           </Title1>
-          <Flex>
+          <Flex justify={"left"}>
             <div>
               <h3>Regular</h3>
               <Footnote weight={"regular"} type={"primary"}>
@@ -341,7 +341,7 @@ const TypographyPage = () => {
           <Title1 type={"primary"} weight={"regular"} as={"h2"}>
             Callout
           </Title1>
-          <Flex>
+          <Flex justify={"left"}>
             <div>
               <h3>Regular</h3>
               <Callout weight={"regular"} type={"primary"}>
@@ -380,7 +380,7 @@ const TypographyPage = () => {
           <Title1 type={"primary"} weight={"regular"} as={"h2"}>
             Body
           </Title1>
-          <Flex>
+          <Flex justify={"left"}>
             <div>
               <h3>Regular</h3>
               <Body weight={"regular"} type={"primary"}>
