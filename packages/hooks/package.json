@@ -1,6 +1,6 @@
 {
   "name": "@nightfall-ui/hooks",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "license": "MIT",
   "private": false,
   "description": "Hooks for the Nightfall UI component library.",

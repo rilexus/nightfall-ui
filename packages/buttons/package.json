@@ -1,6 +1,6 @@
 {
   "name": "@nightfall-ui/buttons",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "license": "MIT",
   "private": false,
   "description": "Buttons for the Nightfall UI component library.",
@@ -12,9 +12,9 @@
     "start": "npm run tsc:watch"
   },
   "devDependencies": {
-    "@nightfall-ui/css": "^1.0.2",
-    "@nightfall-ui/theme": "^1.0.2",
-    "@nightfall-ui/hooks": "^1.0.2",
+    "@nightfall-ui/css": "^1.0.3",
+    "@nightfall-ui/hooks": "^1.0.3",
+    "@nightfall-ui/theme": "^1.0.3",
     "styled-components": "^5.3.3"
   },
   "peerDependencies": {
