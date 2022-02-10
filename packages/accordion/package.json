@@ -2,7 +2,6 @@
   "name": "@nightfall-ui/accordion",
   "version": "1.0.3",
   "license": "MIT",
-  "private": false,
   "description": "Accordion component for the Nightfall UI component library.",
   "author": "Stanislav Panchenko <email@stanislavpanchenko.de>",
   "homepage": "https://rilexus.github.io/nightfall-ui/",
@@ -42,5 +41,5 @@
   "bugs": {
     "url": "https://github.com/rilexus/nightfall-ui/issues"
   },
-  "gitHead": "ab4bd8606e268869860e9ef8e255ccad1bfdbe37"
+  "gitHead": "e73937528f02ab4450f72f4bc71b962dfa984211"
 }
