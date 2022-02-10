@@ -1,6 +1,6 @@
 {
   "name": "@nightfall-ui/utils",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "description": "Utils for the Nightfall UI component library.",
   "author": "Stanislav Panchenko <email@stanislavpanchenko.de>",
@@ -15,7 +15,6 @@
     "@typescript-eslint/eslint-plugin": "^5.7.0",
     "typescript": "^4.5.4"
   },
-  "dependencies": {},
   "peerDependencies": {
     "react": "^17.0.2",
     "react-dom": "^17.0.2"

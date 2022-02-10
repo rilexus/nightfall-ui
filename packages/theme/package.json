@@ -1,6 +1,6 @@
 {
   "name": "@nightfall-ui/theme",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "description": "Theme for the Nightfall UI component library.",
   "author": "Stanislav Panchenko <email@stanislavpanchenko.de>",
@@ -11,23 +11,21 @@
     "start": "npm run tsc:watch"
   },
   "devDependencies": {
+    "@nightfall-ui/css": "^1.0.1",
+    "@nightfall-ui/hooks": "^1.0.1",
     "@types/react-dom": "^17.0.11",
     "@types/styled-components": "^5.1.17",
     "@typescript-eslint/eslint-plugin": "^5.7.0",
-    "typescript": "^4.5.4",
-    "@nightfall-ui/css": "*",
-    "@nightfall-ui/hooks": "*",
-    "styled-components": "^5.3.3"
-  },
-  "dependencies": {
+    "styled-components": "^5.3.3",
+    "typescript": "^4.5.4"
   },
   "peerDependencies": {
-    "@nightfall-ui/hooks": "*",
     "@nightfall-ui/css": "*",
-    "react-transition-group": "^4.4.2",
-    "styled-components": "^5.3.3",
+    "@nightfall-ui/hooks": "*",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "react-transition-group": "^4.4.2",
+    "styled-components": "^5.3.3"
   },
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

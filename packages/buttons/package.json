@@ -1,6 +1,6 @@
 {
   "name": "@nightfall-ui/buttons",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "description": "Buttons for the Nightfall UI component library.",
   "author": "Stanislav Panchenko <email@stanislavpanchenko.de>",
@@ -11,20 +11,19 @@
     "start": "npm run tsc:watch"
   },
   "devDependencies": {
-    "styled-components": "^5.3.3",
-    "@nightfall-ui/hooks": "*",
-    "@nightfall-ui/theme": "*",
-    "@nightfall-ui/css": "*"
+    "@nightfall-ui/css": "^1.0.1",
+    "@nightfall-ui/hooks": "^1.0.1",
+    "@nightfall-ui/theme": "^1.0.1",
+    "styled-components": "^5.3.3"
   },
-  "dependencies": {},
   "peerDependencies": {
+    "@nightfall-ui/css": "*",
     "@nightfall-ui/hooks": "*",
     "@nightfall-ui/theme": "*",
-    "react-transitions-library": "^1.10.1",
-    "@nightfall-ui/css": "*",
-    "styled-components": "^5.3.3",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "react-transitions-library": "^1.10.1",
+    "styled-components": "^5.3.3"
   },
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

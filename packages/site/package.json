@@ -1,6 +1,6 @@
 {
 	"name": "@nightfall-ui/site",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"license": "MIT",
 	"description": "Documentation for the Nightfall UI component library.",
 	"author": "Stanislav Panchenko <email@stanislavpanchenko.de>",
@@ -27,31 +27,28 @@
 		"webpack-dev-server": "^4.6.0"
 	},
 	"dependencies": {
-		"react-icons": "^4.3.1",
+		"@nightfall-ui/accordion": "^1.0.1",
+		"@nightfall-ui/buttons": "^1.0.1",
+		"@nightfall-ui/css": "^1.0.1",
+		"@nightfall-ui/data-display": "^1.0.1",
+		"@nightfall-ui/dialog": "^1.0.1",
+		"@nightfall-ui/hooks": "^1.0.1",
+		"@nightfall-ui/inputs": "^1.0.1",
+		"@nightfall-ui/layout": "^1.0.1",
+		"@nightfall-ui/surfaces": "^1.0.1",
+		"@nightfall-ui/theme": "^1.0.1",
+		"@nightfall-ui/typography": "^1.0.1",
+		"dotenv": "^10.0.0",
 		"react": "^17.0.2",
 		"react-dom": "^17.0.2",
-		"react-transitions-library": "^1.10.1",
+		"react-icons": "^4.3.1",
 		"react-transition-group": "^4.4.2",
-		"@nightfall-ui/css": "*",
-		"@nightfall-ui/data-display": "*",
-		"@nightfall-ui/typography": "*",
-		"@nightfall-ui/theme": "*",
-		"@nightfall-ui/dialog": "*",
-		"@nightfall-ui/accordion": "*",
-		"@nightfall-ui/buttons": "*",
-		"@nightfall-ui/inputs": "*",
-		"@nightfall-ui/hooks": "*",
-		"@nightfall-ui/layout": "*",
-		"@nightfall-ui/surfaces": "*",
-		"dotenv": "^10.0.0",
+		"react-transitions-library": "^1.10.1",
 		"styled-components": "^5.3.3",
 		"uuid": "^8.3.2"
 	},
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
-	"peerDependencies": {
-
-	},
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/rilexus/nightfall-ui"
