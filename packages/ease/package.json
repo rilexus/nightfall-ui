@@ -1,6 +1,6 @@
 {
   "name": "@nightfall-ui/ease",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "license": "MIT",
   "private": false,
   "description": "Easing function for the Nightfall UI component library.",

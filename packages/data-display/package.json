@@ -1,6 +1,6 @@
 {
   "name": "@nightfall-ui/data-display",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "license": "MIT",
   "private": false,
   "description": "Data display components for the Nightfall UI component library.",
@@ -12,10 +12,10 @@
     "start": "npm run tsc:watch"
   },
   "devDependencies": {
-    "@nightfall-ui/css": "^1.0.1",
-    "@nightfall-ui/hooks": "^1.0.1",
-    "@nightfall-ui/theme": "^1.0.1",
-    "@nightfall-ui/utils": "^1.0.1",
+    "@nightfall-ui/css": "^1.0.2",
+    "@nightfall-ui/hooks": "^1.0.2",
+    "@nightfall-ui/theme": "^1.0.2",
+    "@nightfall-ui/utils": "^1.0.2",
     "styled-components": "^5.3.3"
   },
   "peerDependencies": {
