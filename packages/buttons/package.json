@@ -13,8 +13,8 @@
   },
   "devDependencies": {
     "@nightfall-ui/css": "^1.0.2",
-    "@nightfall-ui/hooks": "^1.0.2",
     "@nightfall-ui/theme": "^1.0.2",
+    "@nightfall-ui/hooks": "^1.0.2",
     "styled-components": "^5.3.3"
   },
   "peerDependencies": {
@@ -40,5 +40,5 @@
   "bugs": {
     "url": "https://github.com/rilexus/nightfall-ui/issues"
   },
-  "gitHead": "da52d6979056000f61542711ce2d81705bf066d0"
+  "gitHead": "ab4bd8606e268869860e9ef8e255ccad1bfdbe37"
 }
