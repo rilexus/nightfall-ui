@@ -42,5 +42,8 @@
   "bugs": {
     "url": "https://github.com/rilexus/nightfall-ui/issues"
   },
-  "gitHead": "e73937528f02ab4450f72f4bc71b962dfa984211"
+  "gitHead": "2b62c356802032b84cbf90f276e85b01ac223a86",
+  "publishConfig": {
+    "access": "public"
+  }
 }
