@@ -1,6 +1,6 @@
 {
   "name": "@nightfall-ui/typography",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "license": "MIT",
   "description": "Typography for the NIghtfall UI component library.",
   "author": "Stanislav Panchenko <email@stanislavpanchenko.de>",
@@ -16,9 +16,9 @@
   "main": "dist/src/index.js",
   "types": "dist/src/index.d.ts",
   "peerDependencies": {
-    "@nightfall-ui/theme": "*",
     "@nightfall-ui/css": "*",
     "@nightfall-ui/hooks": "*",
+    "@nightfall-ui/theme": "*",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "styled-components": "^5.3.3"
