@@ -12,7 +12,7 @@ import {
   Ease,
   ZoomInTransition,
 } from "react-transitions-library";
-import { useCSSProperties } from "@nightfall-ui/hooks/dist/src";
+import { useCSSProperties } from "@nightfall-ui/hooks";
 import { TransitionGroup } from "react-transition-group";
 
 const Context = createContext<[boolean, Dispatch<SetStateAction<boolean>>]>([

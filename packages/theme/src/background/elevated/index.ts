@@ -1,5 +1,5 @@
 import { css } from "styled-components";
-import { color } from "@nightfall-ui/css/dist/src";
+import { color } from "@nightfall-ui/css";
 
 const primaryElevatedBackgroundCss = css`
   // The color for the main background of your interface.
