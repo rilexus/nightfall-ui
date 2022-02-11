@@ -1,4 +1,4 @@
-import React, { FC, forwardRef, HTMLAttributes } from "react";
+import React, { forwardRef, HTMLAttributes } from "react";
 import { RoundFilledButton } from "./RoundFilledButton";
 
 const RoundButton = forwardRef<
