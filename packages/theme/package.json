@@ -22,13 +22,14 @@
   "peerDependencies": {
     "@nightfall-ui/css": "*",
     "@nightfall-ui/hooks": "*",
+    "@types/styled-components": "^5.1.17",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-transition-group": "^4.4.2",
     "styled-components": "^5.3.3"
   },
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "dist/src/index.js",
+  "types": "dist/src/index.d.ts",
   "repository": {
     "type": "git",
     "url": "https://github.com/rilexus/nightfall-ui"
