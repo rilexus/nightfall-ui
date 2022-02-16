@@ -1,9 +1,16 @@
-import React, { forwardRef, HTMLAttributes } from "react";
+import React, {
+  ButtonHTMLAttributes,
+  DetailedHTMLProps,
+  forwardRef,
+} from "react";
 import { OutlinedSquareButton } from "./square";
 
 const OutlinedButton = forwardRef<
   HTMLButtonElement,
-  HTMLAttributes<HTMLButtonElement> & {
+  DetailedHTMLProps<
+    ButtonHTMLAttributes<HTMLButtonElement>,
+    HTMLButtonElement
+  > & {
     shape?: "square" | "round";
     size?: "small" | "large" | "medium" | "extra-large";
   }

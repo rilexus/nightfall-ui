@@ -1,5 +1,5 @@
 import { Link, Navigate, Route, Routes } from "react-router-dom";
-import React, { FC } from "react";
+import React, { FC, useEffect, useRef } from "react";
 import { ButtonsPage, DataDisplayPage, Home, TypographyPage } from "./pages";
 import { FocusProvider } from "./components/focusable";
 import { ThemeProvider } from "@nightfall-ui/theme";
@@ -23,6 +23,13 @@ const Providers: FC = ({ children }) => {
 };
 
 const App = () => {
+  const ref = useRef(null);
+
+  useEffect(() => {
+    // eslint-disable-next-line
+    // @ts-ignore
+    // ref.current?.requestFullscreen();
+  }, [ref]);
   return (
     <Providers>
       <nav>
@@ -76,6 +83,34 @@ const App = () => {
         }}
       >
         <Page>
+          <button
+            style={{
+              color: "black",
+            }}
+            onClick={() => {
+              // eslint-disable-next-line
+              // @ts-ignore
+              ref.current?.requestFullscreen();
+            }}
+          >
+            Full
+          </button>
+          <div
+            ref={ref}
+            style={{
+              // position: "absolute",
+              // left: 0,
+              // top: 0,
+              // margin: "auto",
+              // backgroundColor: "white",
+              color: "black",
+            }}
+          >
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus
+            deleniti ducimus, id iusto maxime nam natus necessitatibus
+            perferendis ratione totam. Impedit magnam magni totam. Alias
+            asperiores fugiat laudantium repellat saepe!
+          </div>
           <Routes>
             <Route path={"/"} element={<Home />} />
             <Route path={"/buttons"} element={<ButtonsPage />} />

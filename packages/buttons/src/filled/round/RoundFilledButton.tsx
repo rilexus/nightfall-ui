@@ -1,4 +1,8 @@
-import React, { FC, forwardRef, HTMLAttributes } from "react";
+import React, {
+  ButtonHTMLAttributes,
+  DetailedHTMLProps,
+  forwardRef,
+} from "react";
 import { RoundFilledSmallButton } from "./RoundFilledSmallButton";
 import { ButtonSize } from "../../ButtonSize.type";
 import { RoundFilledMediumButton } from "./RoundFilledMediumButton";
@@ -7,7 +11,10 @@ import { RoundFilledExtraLargeButton } from "./RoundFilledExtraLargeButton";
 
 const RoundFilledButton = forwardRef<
   HTMLButtonElement,
-  HTMLAttributes<HTMLButtonElement> & { size?: ButtonSize }
+  DetailedHTMLProps<
+    ButtonHTMLAttributes<HTMLButtonElement>,
+    HTMLButtonElement
+  > & { size?: ButtonSize }
 >(({ size = "medium", ...props }, outsideRef) => {
   switch (size) {
     case "small": {

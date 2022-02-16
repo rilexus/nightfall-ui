@@ -1,4 +1,8 @@
-import React, { forwardRef, HTMLAttributes } from "react";
+import React, {
+  ButtonHTMLAttributes,
+  DetailedHTMLProps,
+  forwardRef,
+} from "react";
 import { TextMediumButton } from "./TextMediumButton";
 import { ButtonSize } from "../ButtonSize.type";
 import { TextSmallButton } from "./TextSmallButton";
@@ -7,7 +11,10 @@ import { TextExtraLargeButton } from "./TextExtraLargeButton";
 
 const TextButton = forwardRef<
   HTMLButtonElement,
-  HTMLAttributes<HTMLButtonElement> & { size?: ButtonSize }
+  DetailedHTMLProps<
+    ButtonHTMLAttributes<HTMLButtonElement>,
+    HTMLButtonElement
+  > & { size?: ButtonSize }
 >(({ size, ...props }, outsideRef) => {
   switch (size) {
     case "medium": {

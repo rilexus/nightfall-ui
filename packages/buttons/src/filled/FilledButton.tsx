@@ -1,11 +1,18 @@
-import React, { FC, forwardRef, HTMLAttributes } from "react";
+import React, {
+  ButtonHTMLAttributes,
+  DetailedHTMLProps,
+  forwardRef,
+} from "react";
 import { ButtonSize } from "../ButtonSize.type";
 import { FilledSquareButton } from "./filled-square-button/FilledSquareButton";
 import { RoundFilledButton } from "./round";
 
 const FilledButton = forwardRef<
   HTMLButtonElement,
-  HTMLAttributes<HTMLButtonElement> & {
+  DetailedHTMLProps<
+    ButtonHTMLAttributes<HTMLButtonElement>,
+    HTMLButtonElement
+  > & {
     shape?: "square" | "round";
     size?: ButtonSize;
   }

@@ -1,4 +1,9 @@
-import React, { forwardRef, HTMLAttributes } from "react";
+import React, {
+  ButtonHTMLAttributes,
+  DetailedHTMLProps,
+  forwardRef,
+  HTMLAttributes,
+} from "react";
 import { TextButton } from "../text-button";
 import { FilledButton } from "../filled";
 import { OutlinedButton } from "../outlined";
@@ -7,7 +12,10 @@ type ButtonVariant = "filled" | "outlined" | "text";
 
 const Button = forwardRef<
   HTMLButtonElement,
-  HTMLAttributes<HTMLButtonElement> & {
+  DetailedHTMLProps<
+    ButtonHTMLAttributes<HTMLButtonElement>,
+    HTMLButtonElement
+  > & {
     variant?: ButtonVariant;
     size?: "medium" | "large" | "small" | "extra-large";
     shape?: "square" | "round";

@@ -8,7 +8,7 @@ const BUILD_FOLDER = "docs";
 
 export default ({ development, production }: any) => {
   return {
-    entry: "./index.tsx",
+    entry: ["@babel/polyfill", "./index.tsx"],
     mode: "development",
     module: {
       rules: [

@@ -1,5 +1,9 @@
 import styled from "styled-components";
-import React, { forwardRef, HTMLAttributes } from "react";
+import React, {
+  ButtonHTMLAttributes,
+  DetailedHTMLProps,
+  forwardRef,
+} from "react";
 import { regularNormalSMCss } from "@nightfall-ui/css";
 import { StyledStylesButton } from "../styleless-button";
 import { scaleTransitionCss } from "../css";
@@ -12,7 +16,7 @@ const StyledTextButtonSmall = styled(StyledStylesButton)`
 
 const TextSmallButton = forwardRef<
   HTMLButtonElement,
-  HTMLAttributes<HTMLButtonElement>
+  DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>
 >((props, ref) => {
   return (
     <ButtonJumpTransition>
