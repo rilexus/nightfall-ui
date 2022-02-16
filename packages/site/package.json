@@ -1,6 +1,6 @@
 {
 	"name": "@nightfall-ui/site",
-	"version": "1.0.9",
+	"version": "1.0.10",
 	"license": "MIT",
 	"description": "Documentation for the Nightfall UI component library.",
 	"author": "Stanislav Panchenko <email@stanislavpanchenko.de>",
@@ -10,9 +10,9 @@
 		"start": "webpack serve --config webpack.config.ts --env development"
 	},
 	"devDependencies": {
-		"@babel/polyfill": "^7.12.1",
 		"@babel/core": "^7.16.5",
 		"@babel/plugin-transform-runtime": "^7.16.5",
+		"@babel/polyfill": "^7.12.1",
 		"@babel/preset-env": "^7.16.5",
 		"@babel/preset-react": "^7.16.5",
 		"@babel/preset-typescript": "^7.16.5",
@@ -29,12 +29,12 @@
 	},
 	"dependencies": {
 		"@nightfall-ui/accordion": "^1.0.7",
-		"@nightfall-ui/buttons": "^1.0.9",
+		"@nightfall-ui/buttons": "^1.0.10",
 		"@nightfall-ui/css": "^1.0.6",
 		"@nightfall-ui/data-display": "^1.0.7",
-		"@nightfall-ui/dialog": "^1.0.9",
+		"@nightfall-ui/dialog": "^1.0.10",
 		"@nightfall-ui/hooks": "^1.0.6",
-		"@nightfall-ui/inputs": "^1.0.7",
+		"@nightfall-ui/inputs": "^1.0.8",
 		"@nightfall-ui/layout": "^1.0.7",
 		"@nightfall-ui/surfaces": "^1.0.7",
 		"@nightfall-ui/theme": "^1.0.6",
