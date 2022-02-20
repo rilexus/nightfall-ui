@@ -1,6 +1,6 @@
 {
   "name": "@nightfall-ui/inputs",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "license": "MIT",
   "description": "Inputs for the Nightfall UI component library.",
   "author": "Stanislav Panchenko <email@stanislavpanchenko.de>",
@@ -12,7 +12,7 @@
   },
   "devDependencies": {
     "@nightfall-ui/ease": "^1.0.7",
-    "@nightfall-ui/icons": "^1.0.1",
+    "@nightfall-ui/icons": "^1.0.2",
     "@nightfall-ui/layout": "^1.0.8",
     "@nightfall-ui/surfaces": "^1.0.8",
     "@nightfall-ui/theme": "^1.0.6",
