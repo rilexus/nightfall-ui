@@ -1,4 +1,4 @@
-import React, { FC, ReactNode, useEffect, useRef, VFC } from "react";
+import React, { CSSProperties, FC, useEffect, useRef } from "react";
 import ReactDOM from "react-dom";
 import { TransitionGroup } from "react-transition-group";
 import { FadeInTransition, ZoomInTransition } from "react-transitions-library";
@@ -7,28 +7,15 @@ import { useDialogContext } from "../dialog-provider";
 
 const ContentTransition: FC<any> = ({ children, onExited, ...props }) => {
   const timeout = 400;
-  const wrapperStyle = useCSSProperties(
-    {
-      position: "fixed",
-      inset: "0",
-    },
-    []
-  );
+
   return (
-    <ZoomInTransition
-      {...props}
-      from={0.9}
-      to={1}
-      timeout={timeout}
-      style={wrapperStyle}
-    >
+    <ZoomInTransition {...props} from={0.9} to={1} timeout={timeout}>
       <FadeInTransition
         {...props}
         onExited={onExited}
         from={0}
         to={1}
         timeout={timeout}
-        style={wrapperStyle}
       >
         {children}
       </FadeInTransition>
@@ -42,11 +29,11 @@ const Portal: FC<{ container: any }> = ({ children, container }) => {
 
 let containerId = -1;
 
-const Dialog: VFC<{
+const Dialog: FC<{
+  style?: CSSProperties;
   open: boolean;
-  element: ReactNode;
   onOutsideClick?: () => void;
-}> = ({ open, element }) => {
+}> = ({ open, children, style }) => {
   const [_, setOpen] = useDialogContext();
 
   useEffect(() => {
@@ -59,8 +46,10 @@ const Dialog: VFC<{
       justifyContent: "center",
       alignItems: "center",
       height: "100%",
+      position: "relative",
+      ...style,
     },
-    []
+    [style]
   );
   const wrapperStyle = useCSSProperties(
     {
@@ -101,13 +90,22 @@ const Dialog: VFC<{
     <div style={wrapperStyle}>
       {containerRef.current && (
         <Portal container={containerRef.current}>
-          <TransitionGroup>
-            {open && (
-              <ContentTransition key={"content"} onExited={onExited}>
-                <div style={contentStyle}>{element}</div>
-              </ContentTransition>
-            )}
-          </TransitionGroup>
+          <div
+            style={{
+              position: "fixed",
+              inset: 0,
+            }}
+          >
+            <div style={contentStyle}>
+              <TransitionGroup>
+                {open && (
+                  <ContentTransition key={"content"} onExited={onExited}>
+                    <div>{children}</div>
+                  </ContentTransition>
+                )}
+              </TransitionGroup>
+            </div>
+          </div>
         </Portal>
       )}
     </div>

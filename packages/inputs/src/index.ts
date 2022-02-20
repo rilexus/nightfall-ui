@@ -9,3 +9,6 @@ export * from "./square/outlined/square-outlined-medium-field";
 export * from "./square/outlined/square-outlined-small-field";
 
 export * from "./input";
+
+// ========== SELECT ==========
+export * from "./select";

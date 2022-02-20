@@ -24,7 +24,7 @@ const useDialogContext = () => useContext(Context);
 
 const BackgroundTransition: FC = ({ children, ...props }) => {
   const timeout = 700;
-  const blur = 20;
+  const blur = 15;
   const wrapperStyle = useCSSProperties(
     {
       position: "fixed",

@@ -86,26 +86,23 @@ const PermissionDialog: VFC<{
   denyLabel,
 }) => {
   return (
-    <Dialog
-      open={open}
-      element={
-        <Container>
-          <DialogText title={title} description={description} />
-          <Flex
-            style={{
-              width: "100%",
-            }}
-          >
-            <ActionButton onClick={onDeny} themeColor={"blue.1"}>
-              {denyLabel}
-            </ActionButton>
-            <EmphasizedActionButton onClick={onConfirm} themeColor={"blue.1"}>
-              {confirmLabel}
-            </EmphasizedActionButton>
-          </Flex>
-        </Container>
-      }
-    />
+    <Dialog open={open}>
+      <Container>
+        <DialogText title={title} description={description} />
+        <Flex
+          style={{
+            width: "100%",
+          }}
+        >
+          <ActionButton onClick={onDeny} themeColor={"blue.1"}>
+            {denyLabel}
+          </ActionButton>
+          <EmphasizedActionButton onClick={onConfirm} themeColor={"blue.1"}>
+            {confirmLabel}
+          </EmphasizedActionButton>
+        </Flex>
+      </Container>
+    </Dialog>
   );
 };
 
@@ -117,19 +114,16 @@ const AcknowledgmentDialog: VFC<{
   label: ReactNode;
 }> = ({ open, onAcknowledge, title, description, label }) => {
   return (
-    <Dialog
-      open={open}
-      element={
-        <Container>
-          <Acknowledgment
-            title={title}
-            description={description}
-            label={label}
-            onAcknowledge={onAcknowledge}
-          />
-        </Container>
-      }
-    />
+    <Dialog open={open}>
+      <Container>
+        <Acknowledgment
+          title={title}
+          description={description}
+          label={label}
+          onAcknowledge={onAcknowledge}
+        />
+      </Container>
+    </Dialog>
   );
 };
 

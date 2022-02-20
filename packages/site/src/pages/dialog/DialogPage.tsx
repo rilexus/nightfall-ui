@@ -19,19 +19,16 @@ const DialogPage = () => {
 
   return (
     <div>
-      <Dialog
-        open={dialogOpen}
-        element={
-          <div>
-            <Card>
-              <Flex direction={"column"}>
-                <DialogText title={"Dialog"} description={"Some text"} />
-                <ActionButton onClick={toggleDialog}>Close</ActionButton>
-              </Flex>
-            </Card>
-          </div>
-        }
-      />
+      <Dialog open={dialogOpen}>
+        <div>
+          <Card>
+            <Flex direction={"column"}>
+              <DialogText title={"Dialog"} description={"Some text"} />
+              <ActionButton onClick={toggleDialog}>Close</ActionButton>
+            </Flex>
+          </Card>
+        </div>
+      </Dialog>
       <AcknowledgmentDialog
         open={open}
         title={"A Short Title Is Best"}

@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { PageTitle } from "../../components";
 import {
+  Option,
+  Select,
   SquareFilledLargeInput,
   SquareOutlinedLargeInput,
 } from "@nightfall-ui/inputs";
@@ -9,6 +11,7 @@ import { Card } from "@nightfall-ui/surfaces";
 import { Input, SquareInput } from "@nightfall-ui/inputs";
 
 const FormsPage = () => {
+  const [value, setValue] = useState("dog");
   return (
     <div>
       <div>
@@ -19,6 +22,14 @@ const FormsPage = () => {
               maxWidth: "800px",
             }}
           >
+            <Select
+              onChange={(e: any) => setValue(e.target.value)}
+              value={value}
+            >
+              <Option value={"dog"}>dog</Option>
+              <Option value={"cat"}>cat</Option>
+              <Option value={"mouse"}>mouse</Option>
+            </Select>
             <Flex justify={"evenly"}>
               <div>
                 <YSpacer spacing={"large"}>
