@@ -11,7 +11,7 @@ import { Card } from "@nightfall-ui/surfaces";
 import { Input, SquareInput } from "@nightfall-ui/inputs";
 
 const FormsPage = () => {
-  const [value, setValue] = useState("dog");
+  const [value, setValue] = useState("cat");
   return (
     <div>
       <div>
@@ -26,9 +26,9 @@ const FormsPage = () => {
               onChange={(e: any) => setValue(e.target.value)}
               value={value}
             >
-              <Option value={"dog"}>dog</Option>
-              <Option value={"cat"}>cat</Option>
-              <Option value={"mouse"}>mouse</Option>
+              <Option value={"cat"}>Cat</Option>
+              <Option value={"dog"}>Dog</Option>
+              <Option value={"mouse"}>Mouse</Option>
             </Select>
             <Flex justify={"evenly"}>
               <div>
