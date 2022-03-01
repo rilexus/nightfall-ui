@@ -41,10 +41,14 @@ const GridItem: FC<GrindItemProps> = ({
     return Object.entries(breakpoints).sort(descending);
   }, [breakpoints]);
 
-  const queriesMap = sortedMedia.map(([queryName, deviceWidth]) => {
+  const queriesMap = sortedMedia.map(([queryName, deviceWidth], idx) => {
     // listen for every media query, if its satisfied => boolean
     return {
-      [queryName]: useMediaQuery(`(min-width: ${deviceWidth}px)`), // => boolean
+      [queryName]: useMediaQuery(
+        `(${
+          sortedMedia.length - 1 === idx ? "max" : "min"
+        }-width: ${deviceWidth}px)`
+      ), // => boolean
     };
   });
 
@@ -66,16 +70,30 @@ const GridItem: FC<GrindItemProps> = ({
     {
       transition: `flex-basis ${timeout}ms ${ease} ${delay}ms`,
       flexBasis: `${width}%`,
-      paddingTop: spacing || "0px",
-      paddingLeft: spacing || "0px",
+      paddingTop: spacing as string,
+      paddingLeft: spacing as string,
     },
     [width, spacing]
+  );
+
+  const filteredProps = useMemo(
+    () =>
+      Object.entries(props).reduce((acc, [key, value]) => {
+        if (key in breakpoints) return acc;
+        return {
+          ...acc,
+          [key]: value,
+        };
+      }, {}),
+    [props, breakpoints]
   );
 
   return (
     // override context value, in case we have nested grid
     <GridContextProvider value={null}>
-      <div style={style}>{children}</div>
+      <div style={style} {...filteredProps}>
+        {children}
+      </div>
     </GridContextProvider>
   );
 };

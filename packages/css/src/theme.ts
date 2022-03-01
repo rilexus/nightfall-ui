@@ -184,7 +184,7 @@ const theme: Theme = {
   },
   breakpoints: {
     small: 320,
-    medium: 375,
+    medium: 321,
     large: 425,
     tablet: 768,
     laptop: 1024,
