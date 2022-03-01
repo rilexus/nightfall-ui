@@ -1,6 +1,6 @@
 {
   "name": "@nightfall-ui/dialog",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "license": "MIT",
   "description": "Dialog component for the Nightfall UI component library.",
   "author": "Stanislav Panchenko <email@stanislavpanchenko.de>",
@@ -11,7 +11,7 @@
     "start": "npm run tsc:watch"
   },
   "devDependencies": {
-    "@nightfall-ui/buttons": "^1.0.10",
+    "@nightfall-ui/buttons": "^1.0.11",
     "@nightfall-ui/ease": "^1.0.7",
     "@nightfall-ui/hooks": "^1.0.6",
     "@nightfall-ui/typography": "^1.0.7",
