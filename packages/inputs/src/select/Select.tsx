@@ -110,7 +110,7 @@ const Select: FC<{
             }}
           >
             {child}
-          </>
+          </StyledOptionText>
           <div>
             <KeyboardArrowDown />
           </div>
