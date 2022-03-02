@@ -1,17 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
 import { PageTitle } from "../../components";
 import {
-  Option,
-  Select,
   SquareFilledLargeInput,
   SquareOutlinedLargeInput,
 } from "@nightfall-ui/inputs";
-import { Flex, Grid, Hr, YSpacer, YStack } from "@nightfall-ui/layout";
+import { Flex, Grid, YSpacer, YStack } from "@nightfall-ui/layout";
 import { Card } from "@nightfall-ui/surfaces";
 import { Input, SquareInput } from "@nightfall-ui/inputs";
 
 const FormsPage = () => {
-  const [value, setValue] = useState("cat");
   return (
     <div>
       <div>
@@ -188,15 +185,6 @@ const FormsPage = () => {
             </Grid.Item>
           </Grid>
         </div>
-      </div>
-      <div>
-        <Hr />
-        <h4>Select</h4>
-        <Select onChange={(e: any) => setValue(e.target.value)} value={value}>
-          <Option value={"cat"}>Cat</Option>
-          <Option value={"dog"}>Dog</Option>
-          <Option value={"mouse"}>Mouse</Option>
-        </Select>
       </div>
     </div>
   );

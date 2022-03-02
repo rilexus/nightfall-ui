@@ -1,6 +1,12 @@
 import { Link, Navigate, Route, Routes } from "react-router-dom";
 import React, { FC } from "react";
-import { ButtonsPage, DataDisplayPage, Home, TypographyPage } from "./pages";
+import {
+  ButtonsPage,
+  DataDisplayPage,
+  Home,
+  SelectPage,
+  TypographyPage,
+} from "./pages";
 import { FocusProvider } from "./components/focusable";
 import { ThemeProvider } from "@nightfall-ui/theme";
 import { FormsPage } from "./pages/forms";
@@ -55,6 +61,9 @@ const App = () => {
               </Li>
               <Li>
                 <Link to={"/inputs"}>Fields</Link>
+              </Li>
+              <Li>
+                <Link to={"/select"}>Select</Link>
               </Li>
             </Ul>
           </Li>
@@ -113,6 +122,7 @@ const App = () => {
             <Route path={"/"} element={<Home />} />
             <Route path={"/buttons"} element={<ButtonsPage />} />
             <Route path={"/inputs"} element={<FormsPage />} />
+            <Route path={"/select"} element={<SelectPage />} />
             <Route path={"/dialog"} element={<DialogPage />} />
             <Route path={"/data-display"} element={<DataDisplayPage />} />
             <Route path={"/typography"} element={<TypographyPage />} />

@@ -38,6 +38,13 @@ const StyledSelect = styled.div`
   ${filledInputBackgroundColorCss};
 `;
 
+const StyledOptionText = styled.span`
+  max-width: 270px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+`;
+
 const Select: FC<{
   value: string | number;
   onChange: (event: Event) => void;
@@ -97,13 +104,13 @@ const Select: FC<{
             justifyContent: "space-between",
           }}
         >
-          <div
+          <StyledOptionText
             style={{
               marginRight: "0.5rem",
             }}
           >
             {child}
-          </div>
+          </>
           <div>
             <KeyboardArrowDown />
           </div>
@@ -165,13 +172,13 @@ const Option: FC<{ value: string | number }> = ({ value, children }) => {
             onClick={() => select(value)}
             style={flexStyle}
           >
-            <span
+            <StyledOptionText
               className={"option"}
               role={"option"}
               aria-selected={isSelected}
             >
               {children}
-            </span>
+            </StyledOptionText>
             <span style={checkmarkStyle}>
               <Checkmark
                 fill={"#0984ffff"}
