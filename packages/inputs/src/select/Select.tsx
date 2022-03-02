@@ -7,13 +7,12 @@ import React, {
   useState,
 } from "react";
 import { Dialog } from "@nightfall-ui/dialog";
-import { Checkmark } from "@nightfall-ui/icons";
+import { Checkmark, KeyboardArrowDown } from "@nightfall-ui/icons";
 import { useCSSProperties } from "@nightfall-ui/hooks";
 import { Flex } from "@nightfall-ui/layout";
 import { Platter } from "@nightfall-ui/surfaces";
 import styled from "styled-components";
-import { roundedLG } from "@nightfall-ui/css";
-import { filledInputBackgroundColorCss, filledInputBorderCss } from "../css";
+import { filledInputBackgroundColorCss, inputBorderRadius } from "../css";
 
 const SelectContext = createContext<{
   select: (value: string | number) => void;
@@ -30,6 +29,14 @@ type Event = {
     value: string | number;
   };
 };
+
+const StyledSelect = styled.div`
+  display: inline-block;
+  padding: 0.5rem 0.4rem 0.5rem 0.4rem;
+  cursor: pointer;
+  ${inputBorderRadius};
+  ${filledInputBackgroundColorCss};
+`;
 
 const Select: FC<{
   value: string | number;
@@ -72,7 +79,7 @@ const Select: FC<{
 
   return (
     <SelectContext.Provider value={{ select, value }}>
-      <div
+      <StyledSelect
         ref={ref}
         aria-expanded={open}
         aria-labelledby={id}
@@ -84,13 +91,27 @@ const Select: FC<{
             positionRef.current = e.target.getBoundingClientRect();
             setOpen(true);
           }}
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
+          }}
         >
-          {!open && child}
+          <div
+            style={{
+              marginRight: "0.5rem",
+            }}
+          >
+            {child}
+          </div>
+          <div>
+            <KeyboardArrowDown />
+          </div>
         </div>
         <Dialog open={open} style={dialogStyle}>
           <ul role={"listbox"}>{children}</ul>
         </Dialog>
-      </div>
+      </StyledSelect>
     </SelectContext.Provider>
   );
 };

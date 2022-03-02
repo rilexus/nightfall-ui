@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import { TransitionGroup } from "react-transition-group";
 import { FadeInTransition, ZoomInTransition } from "react-transitions-library";
 import { useCallbackRef, useCSSProperties } from "@nightfall-ui/hooks";
-import { useDialogContext } from "../dialog-provider";
+import { DialogContext, useDialogContext } from "../dialog-provider";
 
 const ContentTransition: FC<any> = ({ children, onExited, ...props }) => {
   const timeout = 400;
@@ -27,14 +27,13 @@ const Portal: FC<{ container: any }> = ({ children, container }) => {
   return ReactDOM.createPortal(children, container);
 };
 
-let containerId = -1;
-
 const Dialog: FC<{
   style?: CSSProperties;
   open: boolean;
   onOutsideClick?: () => void;
 }> = ({ open, children, style }) => {
-  const [_, setOpen] = useDialogContext();
+  const context = useDialogContext();
+  const setOpen = context?.[1] || (() => {});
 
   useEffect(() => {
     setOpen(open);
@@ -68,10 +67,7 @@ const Dialog: FC<{
 
   useEffect(() => {
     if (open) {
-      const id = ++containerId;
-      const elementId = `dialog-${id}`;
       const container = document.createElement("div");
-      container.setAttribute("id", elementId);
       containerRef.current = container;
       document.body.appendChild(container);
     }
@@ -87,28 +83,30 @@ const Dialog: FC<{
   };
 
   return (
-    <div style={wrapperStyle}>
-      {containerRef.current && (
-        <Portal container={containerRef.current}>
-          <div
-            style={{
-              position: "fixed",
-              inset: 0,
-            }}
-          >
-            <div style={contentStyle}>
-              <TransitionGroup>
-                {open && (
-                  <ContentTransition key={"content"} onExited={onExited}>
-                    <div>{children}</div>
-                  </ContentTransition>
-                )}
-              </TransitionGroup>
+    <DialogContext.Provider value={null}>
+      <div style={wrapperStyle}>
+        {containerRef.current && (
+          <Portal container={containerRef.current}>
+            <div
+              style={{
+                position: "fixed",
+                inset: 0,
+              }}
+            >
+              <div style={contentStyle}>
+                <TransitionGroup>
+                  {open && (
+                    <ContentTransition key={"content"} onExited={onExited}>
+                      <div>{children}</div>
+                    </ContentTransition>
+                  )}
+                </TransitionGroup>
+              </div>
             </div>
-          </div>
-        </Portal>
-      )}
-    </div>
+          </Portal>
+        )}
+      </div>
+    </DialogContext.Provider>
   );
 };
 

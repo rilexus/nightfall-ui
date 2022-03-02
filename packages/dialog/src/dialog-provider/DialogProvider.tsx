@@ -7,24 +7,24 @@ import React, {
   useMemo,
   useState,
 } from "react";
-import {
-  BackdropTransition,
-  Ease,
-  ZoomInTransition,
-} from "react-transitions-library";
+import { Ease, ZoomInTransition } from "react-transitions-library";
 import { useCSSProperties } from "@nightfall-ui/hooks";
 import { TransitionGroup } from "react-transition-group";
+import { BackdropTransition } from "./transitions/BackdropTransition";
 
-const Context = createContext<[boolean, Dispatch<SetStateAction<boolean>>]>([
-  false,
-  () => {},
-]);
+const DialogContext = createContext<
+  [boolean, Dispatch<SetStateAction<boolean>>] | null
+>([false, () => {}]);
 
-const useDialogContext = () => useContext(Context);
+const useDialogContext = () => useContext(DialogContext);
 
-const BackgroundTransition: FC = ({ children, ...props }) => {
-  const timeout = 700;
-  const blur = 15;
+const BackgroundTransition: FC<{
+  blur?: { from: string; to: string; timeout: number };
+}> = ({
+  children,
+  blur = { from: "0px", to: "15px", timeout: 700 },
+  ...props
+}) => {
   const wrapperStyle = useCSSProperties(
     {
       position: "fixed",
@@ -32,12 +32,13 @@ const BackgroundTransition: FC = ({ children, ...props }) => {
     },
     []
   );
+
   return (
     <BackdropTransition
       {...props}
-      from={"0px"}
-      to={`${blur}px`}
-      timeout={timeout}
+      from={blur.from}
+      to={blur.to}
+      timeout={blur.timeout}
       ease={Ease.easeOutQuint}
       backgroundColor={"#00000001"}
       style={wrapperStyle}
@@ -53,15 +54,43 @@ const DialogProvider: FC = ({ children }) => {
   const contextValue = useMemo<any>(() => [open, setOpen], [open]);
 
   return (
-    <Context.Provider value={contextValue}>
-      <ZoomInTransition in={open} from={1} to={0.95} timeout={700}>
-        {children}
-      </ZoomInTransition>
-      <TransitionGroup>
-        {open && <BackgroundTransition key={"background"} />}
-      </TransitionGroup>
-    </Context.Provider>
+    <DialogContext.Provider value={contextValue}>
+      {children}
+    </DialogContext.Provider>
   );
 };
 
-export { DialogProvider, useDialogContext };
+const DialogBackgroundTransition: FC<{
+  zoom?: { from: number; to: number; timeout: number };
+  blur?: { from: string; to: string; timeout: number };
+}> = ({
+  children,
+  zoom = { from: 1, to: 0.97, timeout: 700 },
+  blur = { from: "0px", to: "15px", timeout: 700 },
+}) => {
+  //@ts-ignore
+  const [open] = useDialogContext();
+
+  return (
+    <div>
+      <ZoomInTransition
+        in={open}
+        from={zoom.from}
+        to={zoom.to}
+        timeout={zoom.timeout}
+      >
+        {children}
+      </ZoomInTransition>
+      <TransitionGroup>
+        {open && <BackgroundTransition key={"background"} blur={blur} />}
+      </TransitionGroup>
+    </div>
+  );
+};
+
+export {
+  DialogProvider,
+  useDialogContext,
+  DialogBackgroundTransition,
+  DialogContext,
+};

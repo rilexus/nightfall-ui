@@ -6,7 +6,7 @@ import {
   SquareFilledLargeInput,
   SquareOutlinedLargeInput,
 } from "@nightfall-ui/inputs";
-import { Flex, Grid, YSpacer, YStack } from "@nightfall-ui/layout";
+import { Flex, Grid, Hr, YSpacer, YStack } from "@nightfall-ui/layout";
 import { Card } from "@nightfall-ui/surfaces";
 import { Input, SquareInput } from "@nightfall-ui/inputs";
 
@@ -22,14 +22,6 @@ const FormsPage = () => {
               maxWidth: "800px",
             }}
           >
-            <Select
-              onChange={(e: any) => setValue(e.target.value)}
-              value={value}
-            >
-              <Option value={"cat"}>Cat</Option>
-              <Option value={"dog"}>Dog</Option>
-              <Option value={"mouse"}>Mouse</Option>
-            </Select>
             <Flex justify={"evenly"}>
               <div>
                 <YSpacer spacing={"large"}>
@@ -109,7 +101,6 @@ const FormsPage = () => {
           <Grid
             spacing={"25"}
             style={{
-              position: "absolute",
               top: 0,
             }}
           >
@@ -197,6 +188,15 @@ const FormsPage = () => {
             </Grid.Item>
           </Grid>
         </div>
+      </div>
+      <div>
+        <Hr />
+        <h4>Select</h4>
+        <Select onChange={(e: any) => setValue(e.target.value)} value={value}>
+          <Option value={"cat"}>Cat</Option>
+          <Option value={"dog"}>Dog</Option>
+          <Option value={"mouse"}>Mouse</Option>
+        </Select>
       </div>
     </div>
   );

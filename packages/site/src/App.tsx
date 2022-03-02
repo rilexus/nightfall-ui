@@ -1,12 +1,15 @@
 import { Link, Navigate, Route, Routes } from "react-router-dom";
-import React, { FC, useEffect, useRef } from "react";
+import React, { FC } from "react";
 import { ButtonsPage, DataDisplayPage, Home, TypographyPage } from "./pages";
 import { FocusProvider } from "./components/focusable";
 import { ThemeProvider } from "@nightfall-ui/theme";
 import { FormsPage } from "./pages/forms";
 import { Li, Ul } from "./components";
 import { DialogPage } from "./pages/dialog";
-import { DialogProvider } from "@nightfall-ui/dialog";
+import {
+  DialogBackgroundTransition,
+  DialogProvider,
+} from "@nightfall-ui/dialog";
 import { GridPage } from "./pages/grid";
 
 const Page: FC = ({ children }) => {
@@ -17,20 +20,20 @@ const Providers: FC = ({ children }) => {
   return (
     <FocusProvider>
       <ThemeProvider>
-        <DialogProvider>{children}</DialogProvider>
+        <DialogProvider>
+          <DialogBackgroundTransition
+            zoom={{ from: 1, to: 0.99, timeout: 400 }}
+            blur={{ from: "0px", to: "7px", timeout: 400 }}
+          >
+            {children}
+          </DialogBackgroundTransition>
+        </DialogProvider>
       </ThemeProvider>
     </FocusProvider>
   );
 };
 
 const App = () => {
-  const ref = useRef(null);
-
-  useEffect(() => {
-    // eslint-disable-next-line
-    // @ts-ignore
-    // ref.current?.requestFullscreen();
-  }, [ref]);
   return (
     <Providers>
       <nav>
@@ -73,11 +76,19 @@ const App = () => {
           </Li>
           <li>
             <h2>Data Display</h2>
-            <Link to={"/data-display"}>Data Display</Link>
+            <Ul>
+              <Li>
+                <Link to={"/data-display"}>Data Display</Link>
+              </Li>
+            </Ul>
           </li>
           <li>
-            <h2>Grid</h2>
-            <Link to={"/grid"}>Grid</Link>
+            <h2>Layout</h2>
+            <Ul>
+              <Li>
+                <Link to={"/grid"}>Grid</Link>
+              </Li>
+            </Ul>
           </li>
         </Ul>
       </nav>
@@ -89,13 +100,7 @@ const App = () => {
       >
         <Page>
           <div
-            ref={ref}
             style={{
-              // position: "absolute",
-              // left: 0,
-              // top: 0,
-              // margin: "auto",
-              // backgroundColor: "white",
               color: "black",
             }}
           >

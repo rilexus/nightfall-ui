@@ -8,10 +8,11 @@ import {
   py50,
   py87,
   roundedFull,
+  roundedLG,
 } from "@nightfall-ui/css";
 import { Ease } from "@nightfall-ui/ease";
 import { regularNormalCss } from "@nightfall-ui/css";
-import { placeholderCss, regularPlatter } from "@nightfall-ui/theme";
+import { placeholderCss } from "@nightfall-ui/theme";
 
 const shine = keyframes`
   from {
@@ -132,6 +133,10 @@ const roundedFilledInputCss = css`
   ${roundedFull};
 `;
 
+const inputBorderRadius = css`
+  ${roundedLG};
+`;
+
 const outlinedInputBackgroundCss = css`
   background: transparent;
 `;
@@ -142,6 +147,7 @@ const outlineInputCss = css`
 `;
 
 export {
+  inputBorderRadius,
   filledInputBackgroundColorCss,
   inputFocusCss,
   inputPlaceholderCss,

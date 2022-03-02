@@ -8,3 +8,4 @@ export * from "./flex";
 export * from "./text-center";
 
 export * from "./padding";
+export * from "./hr";
