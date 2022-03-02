@@ -1,6 +1,6 @@
 {
   "name": "@nightfall-ui/dialog",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "license": "MIT",
   "description": "Dialog component for the Nightfall UI component library.",
   "author": "Stanislav Panchenko <email@stanislavpanchenko.de>",

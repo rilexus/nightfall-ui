@@ -1,6 +1,6 @@
 {
   "name": "@nightfall-ui/layout",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "license": "MIT",
   "description": "Layout components for the Nightfall UI component library.",
   "author": "Stanislav Panchenko <email@stanislavpanchenko.de>",
