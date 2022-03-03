@@ -1,4 +1,4 @@
-import React, { FC, HTMLAttributes } from "react";
+import React, { FC, forwardRef, HTMLAttributes } from "react";
 import { SquareFilledLargeInput } from "./square-filled-large-field";
 import { SquareFilledMediumInput } from "./square-filled-medium-field";
 import { SquareFilledSmallInput } from "./square-filled-small-field";
@@ -7,21 +7,25 @@ const FilledSquareInput: FC<
   HTMLAttributes<HTMLInputElement> & {
     size: "large" | "small" | "medium" | "extra-large";
   }
-> = ({ size, ...props }) => {
+> = forwardRef(function FilledSquareInput({ size, ...props }, outsideRef) {
   switch (size) {
     case "large": {
-      return <SquareFilledLargeInput {...props} />;
+      //@ts-ignore
+      return <SquareFilledLargeInput {...props} ref={outsideRef} />;
     }
     case "medium": {
-      return <SquareFilledMediumInput {...props} />;
+      //@ts-ignore
+      return <SquareFilledMediumInput {...props} ref={outsideRef} />;
     }
     case "small": {
-      return <SquareFilledSmallInput {...props} />;
+      //@ts-ignore
+      return <SquareFilledSmallInput {...props} ref={outsideRef} />;
     }
     default: {
-      return <input {...props} />;
+      //@ts-ignore
+      return <input {...props} ref={outsideRef} />;
     }
   }
-};
+});
 
 export { FilledSquareInput };

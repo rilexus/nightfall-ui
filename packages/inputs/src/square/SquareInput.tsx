@@ -1,4 +1,4 @@
-import React, { FC, HTMLAttributes } from "react";
+import React, { FC, forwardRef, HTMLAttributes } from "react";
 import { FilledSquareInput } from "./filled";
 import { OutlinedSquareInput } from "./outlined/OutlinedSquareInput";
 
@@ -7,19 +7,25 @@ const SquareInput: FC<
     variant?: "filled" | "outlined";
     size?: "large" | "small" | "medium";
   }
-> = ({ variant = "filled", size = "medium", ...props }) => {
+> = forwardRef(function SquareInout(
+  { variant = "filled", size = "medium", ...props },
+  outsideRef
+) {
   switch (variant) {
     case "filled": {
-      return <FilledSquareInput size={size} {...props} />;
+      //@ts-ignore
+      return <FilledSquareInput size={size} {...props} ref={outsideRef} />;
     }
     case "outlined": {
-      return <OutlinedSquareInput size={size} {...props} />;
+      //@ts-ignore
+      return <OutlinedSquareInput size={size} {...props} ref={outsideRef} />;
     }
     default: {
       console.warn(`SquareInput with variant: ${variant} is not implemented!`);
-      return <input {...props} />;
+      //@ts-ignore
+      return <input {...props} ref={outsideRef} />;
     }
   }
-};
+});
 
 export { SquareInput };

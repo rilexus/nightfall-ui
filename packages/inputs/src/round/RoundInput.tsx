@@ -1,4 +1,4 @@
-import React, { FC, HTMLAttributes } from "react";
+import React, { FC, forwardRef, HTMLAttributes } from "react";
 import { RoundFilledInput } from "./filled/RoundFilledInput";
 
 const RoundInput: FC<
@@ -6,16 +6,21 @@ const RoundInput: FC<
     variant?: "filled" | "outlined";
     size?: "large" | "small" | "medium";
   }
-> = ({ size = "medium", variant = "filled", ...props }) => {
+> = forwardRef(function (
+  { size = "medium", variant = "filled", ...props },
+  outsideRef
+) {
   switch (variant) {
     case "filled": {
-      return <RoundFilledInput {...props} size={size} />;
+      //@ts-ignore
+      return <RoundFilledInput {...props} size={size} ref={outsideRef} />;
     }
     default: {
       console.warn(`RoundInput with variant: ${variant} is not implemented!`);
-      return <input {...props} />;
+      //@ts-ignore
+      return <input {...props} ref={outsideRef} />;
     }
   }
-};
+});
 
 export { RoundInput };

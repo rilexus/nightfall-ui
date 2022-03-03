@@ -1,25 +1,32 @@
-import React, { FC, HTMLAttributes } from "react";
+import React, { FC, forwardRef, HTMLAttributes } from "react";
 import { SquareOutlinedMediumInput } from "./square-outlined-medium-field";
 import { SquareOutlinedSmallInput } from "./square-outlined-small-field";
 import { SquareOutlinedLargeInput } from "./square-outlined-large-field";
 
 const OutlinedSquareInput: FC<
   HTMLAttributes<HTMLInputElement> & { size?: "medium" | "large" | "small" }
-> = ({ size = "medium", ...props }) => {
+> = forwardRef(function OutlinedSquareInput(
+  { size = "medium", ...props },
+  outsideRef
+) {
   switch (size) {
     case "medium": {
-      return <SquareOutlinedMediumInput {...props} />;
+      //@ts-ignore
+      return <SquareOutlinedMediumInput {...props} ref={outsideRef} />;
     }
     case "small": {
-      return <SquareOutlinedSmallInput {...props} />;
+      //@ts-ignore
+      return <SquareOutlinedSmallInput {...props} ref={outsideRef} />;
     }
     case "large": {
-      return <SquareOutlinedLargeInput {...props} />;
+      //@ts-ignore
+      return <SquareOutlinedLargeInput {...props} ref={outsideRef} />;
     }
     default: {
-      return <input {...props} />;
+      //@ts-ignore
+      return <input {...props} ref={outsideRef} />;
     }
   }
-};
+});
 
 export { OutlinedSquareInput };

@@ -1,26 +1,33 @@
-import React, { FC, HTMLAttributes } from "react";
+import React, { FC, forwardRef, HTMLAttributes } from "react";
 import { RoundFilledSmallInput } from "./RoundFilledSmallInput";
 import { RoundFilledMediumInput } from "./RoundFilledMediumInput";
 import { RoundFilledLargeInput } from "./RoundFilledLargeInput";
 
 const RoundFilledInput: FC<
   HTMLAttributes<HTMLInputElement> & { size?: "large" | "small" | "medium" }
-> = ({ size = "medium", ...props }) => {
+> = forwardRef(function RoundFilledInput(
+  { size = "medium", ...props },
+  outsideRef
+) {
   switch (size) {
     case "small": {
-      return <RoundFilledSmallInput {...props} />;
+      //@ts-ignore
+      return <RoundFilledSmallInput {...props} ref={outsideRef} />;
     }
     case "medium": {
-      return <RoundFilledMediumInput {...props} />;
+      //@ts-ignore
+      return <RoundFilledMediumInput {...props} ref={outsideRef} />;
     }
     case "large": {
-      return <RoundFilledLargeInput {...props} />;
+      //@ts-ignore
+      return <RoundFilledLargeInput {...props} ref={outsideRef} />;
     }
     default: {
       console.warn(`RoundFillInput with size: ${size} is not implemented!`);
-      return <input {...props} />;
+      //@ts-ignore
+      return <input {...props} ref={outsideRef} />;
     }
   }
-};
+});
 
 export { RoundFilledInput };

@@ -1,4 +1,4 @@
-import React, { FC, HTMLAttributes } from "react";
+import React, { FC, forwardRef, HTMLAttributes } from "react";
 import { SquareInput } from "../square/SquareInput";
 import { RoundInput } from "../round/RoundInput";
 
@@ -8,19 +8,25 @@ const Input: FC<
     size?: "small" | "large" | "medium";
     variant?: "filled" | "outlined";
   }
-> = ({ size = "medium", shape = "square", ...props }) => {
+> = forwardRef(function Input(
+  { size = "medium", shape = "square", ...props },
+  outsideRef
+) {
   switch (shape) {
     case "square": {
-      return <SquareInput size={size} {...props} />;
+      //@ts-ignore
+      return <SquareInput size={size} {...props} ref={outsideRef} />;
     }
     case "round": {
-      return <RoundInput size={size} {...props} />;
+      //@ts-ignore
+      return <RoundInput size={size} {...props} ref={outsideRef} />;
     }
     default: {
       console.warn(`Input: ${shape} is not implemented!`);
-      return <input {...props} />;
+      //@ts-ignore
+      return <input {...props} ref={outsideRef} />;
     }
   }
-};
+});
 
 export { Input };

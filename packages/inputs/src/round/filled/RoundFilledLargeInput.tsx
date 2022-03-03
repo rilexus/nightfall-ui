@@ -1,4 +1,4 @@
-import React, { FC, HTMLAttributes } from "react";
+import React, { FC, forwardRef, HTMLAttributes } from "react";
 import styled from "styled-components";
 import { largeInputPaddingCss, roundedFilledInputCss } from "../../css";
 
@@ -7,8 +7,11 @@ const StyledRoundFilledLargeInput = styled.input`
   ${largeInputPaddingCss};
 `;
 
-const RoundFilledLargeInput: FC<HTMLAttributes<HTMLInputElement>> = (props) => {
-  return <StyledRoundFilledLargeInput {...props} />;
-};
+const RoundFilledLargeInput: FC<HTMLAttributes<HTMLInputElement>> = forwardRef(
+  function RoundFilledLargeInput(props, ref) {
+    //@ts-ignore
+    return <StyledRoundFilledLargeInput {...props} ref={ref} />;
+  }
+);
 
 export { RoundFilledLargeInput, StyledRoundFilledLargeInput };
