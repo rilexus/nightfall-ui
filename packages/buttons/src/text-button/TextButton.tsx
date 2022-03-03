@@ -15,7 +15,7 @@ const TextButton = forwardRef<
     ButtonHTMLAttributes<HTMLButtonElement>,
     HTMLButtonElement
   > & { size?: ButtonSize }
->(({ size, ...props }, outsideRef) => {
+>(({ size = "medium", ...props }, outsideRef) => {
   switch (size) {
     case "medium": {
       return <TextMediumButton {...props} ref={outsideRef} />;
