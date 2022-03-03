@@ -19,11 +19,15 @@ type Props = {
   variant?: "outlined";
 };
 const TextArea: VFC<TextareaHTMLAttributes<HTMLTextAreaElement> & Props> =
-  forwardRef(function TextArea({
-    variant = "outlined", // TODO: implement more variants
-    ...props
-  }) {
-    return <StyledTextarea {...props} />;
+  forwardRef(function TextArea(
+    {
+      variant = "outlined", // TODO: implement more variants
+      ...props
+    },
+    ref
+  ) {
+    //@ts-ignore
+    return <StyledTextarea {...props} ref={ref} />;
   });
 
 export { TextArea };
