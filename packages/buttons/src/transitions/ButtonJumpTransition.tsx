@@ -2,12 +2,24 @@ import React, { FC, useCallback, useEffect, useRef, useState } from "react";
 import { useCSSProperties } from "@nightfall-ui/hooks";
 import { Ease, ZoomInTransition } from "react-transitions-library";
 
+export function useIsMounted() {
+  const isMountedRef = useRef(true);
+  const isMounted = useCallback(() => isMountedRef.current, []);
+
+  useEffect(() => {
+    return () => void (isMountedRef.current = false);
+  }, []);
+
+  return isMounted;
+}
+
 const useTimeoutToggle = (
   initialValue: boolean,
   timeout: number
 ): [boolean, () => void] => {
   const [value, setValue] = useState<boolean>(initialValue);
   const timeoutRef = useRef<any>();
+  const isMounted = useIsMounted();
 
   useEffect(() => {
     return () => {
@@ -18,7 +30,9 @@ const useTimeoutToggle = (
   const toggle = useCallback(() => {
     setValue((v) => {
       timeoutRef.current = setTimeout(() => {
-        setValue((v) => !v);
+        if (isMounted()) {
+          setValue((v) => !v);
+        }
       }, timeout);
       return !v;
     });
