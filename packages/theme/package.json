@@ -1,6 +1,6 @@
 {
   "name": "@nightfall-ui/theme",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "license": "MIT",
   "description": "Theme for the Nightfall UI component library.",
   "author": "Stanislav Panchenko <email@stanislavpanchenko.de>",
