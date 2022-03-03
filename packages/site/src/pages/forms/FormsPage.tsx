@@ -3,6 +3,7 @@ import { PageTitle } from "../../components";
 import {
   SquareFilledLargeInput,
   SquareOutlinedLargeInput,
+  TextArea,
 } from "@nightfall-ui/inputs";
 import { Flex, Grid, YSpacer, YStack } from "@nightfall-ui/layout";
 import { Card } from "@nightfall-ui/surfaces";
@@ -184,6 +185,12 @@ const FormsPage = () => {
               />
             </Grid.Item>
           </Grid>
+        </div>
+        <div>
+          <YSpacer spacing={"large"}>
+            <h4>Text area</h4>
+          </YSpacer>
+          <TextArea placeholder={"textarea"} />
         </div>
       </div>
     </div>

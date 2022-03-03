@@ -15,6 +15,9 @@ const GlobalCss = createGlobalStyle`
     ${primaryBaseBackgroundCss};
     font-family: ${fontFamily("sans")};
   }
+  input, textarea {
+    font-family: ${fontFamily("sans")};
+  }
   a, p, h1, h2, h3, h4, h5, h6, code {
     
   }

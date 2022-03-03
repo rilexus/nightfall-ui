@@ -27,7 +27,14 @@ const shine = keyframes`
 const inputFocusCss = css`
   transition: border 200ms ${Ease.easeInOutCubic} 0ms;
 
+  &:focus-visible {
+    outline: none;
+    border: 1px solid #007efc;
+    box-shadow: 0 0 3px #7fb3ff, 0 0 5px #1c8efa, 0 0 6px #2997ff;
+    animation: 200ms ${shine} ease;
+  }
   &:focus {
+    outline: none;
     border: 1px solid #007efc;
     box-shadow: 0 0 3px #7fb3ff, 0 0 5px #1c8efa, 0 0 6px #2997ff;
     animation: 200ms ${shine} ease;
@@ -121,7 +128,7 @@ const inputCss = css`
   ${inputFocusCss};
   ${inputOutline};
   ${m12};
-  color: white;
+  color: ${color("lightText")};
   caret-color: ${color("blue.1")};
   ${inputPlaceholderCss};
 `;
