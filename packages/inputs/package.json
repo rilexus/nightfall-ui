@@ -1,6 +1,6 @@
 {
   "name": "@nightfall-ui/inputs",
-  "version": "1.0.14",
+  "version": "1.0.15",
   "license": "MIT",
   "description": "Inputs for the Nightfall UI component library.",
   "author": "Stanislav Panchenko <email@stanislavpanchenko.de>",
