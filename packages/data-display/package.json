@@ -1,6 +1,6 @@
 {
   "name": "@nightfall-ui/data-display",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "license": "MIT",
   "description": "Data display components for the Nightfall UI component library.",
   "author": "Stanislav Panchenko <email@stanislavpanchenko.de>",
@@ -13,7 +13,7 @@
   "devDependencies": {
     "@nightfall-ui/css": "^1.0.7",
     "@nightfall-ui/hooks": "^1.0.6",
-    "@nightfall-ui/theme": "^1.0.8",
+    "@nightfall-ui/theme": "^1.0.9",
     "@nightfall-ui/utils": "^1.0.6",
     "styled-components": "^5.3.3"
   },
