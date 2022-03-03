@@ -1,4 +1,4 @@
-import React, { TextareaHTMLAttributes, VFC } from "react";
+import React, { forwardRef, TextareaHTMLAttributes, VFC } from "react";
 import styled from "styled-components";
 import {
   inputBorderRadius,
@@ -18,11 +18,12 @@ const StyledTextarea = styled.textarea`
 type Props = {
   variant?: "outlined";
 };
-const TextArea: VFC<TextareaHTMLAttributes<HTMLTextAreaElement> & Props> = ({
-  variant = "outlined", // TODO: implement more variants
-  ...props
-}) => {
-  return <StyledTextarea {...props} />;
-};
+const TextArea: VFC<TextareaHTMLAttributes<HTMLTextAreaElement> & Props> =
+  forwardRef(function TextArea({
+    variant = "outlined", // TODO: implement more variants
+    ...props
+  }) {
+    return <StyledTextarea {...props} />;
+  });
 
 export { TextArea };
