@@ -16,13 +16,53 @@ import { placeholderCss } from "@nightfall-ui/theme";
 
 const shine = keyframes`
   from {
-    box-shadow: 0 0 2px #7fb3ff, 0 0 5px #1c8efa, 0 0 13px #2997ff;
+    box-shadow: 0 0 2px #7fb3ff, 0 0 5px #1c8efa, 0 0 15px #2997ff;
   }
 
   to {
     box-shadow: 0 0 1px #7fb3ff, 0 0 3px #1c8efa, 0 0 4px #2997ff;
   }
 `;
+
+const errorShine = keyframes`
+  from {
+    box-shadow: 0 0 5px #fa4242, 0 0 7px #e51111, 0 0 15px #c52d2d;
+  }
+
+  to {
+    box-shadow: 0 0 3px rgb(202 70 12), 0 0 5px #e51111, 0 0 5px rgb(197 61 34);
+  }
+`;
+
+const inputError = ({ invalid }: { invalid?: boolean }) =>
+  invalid
+    ? css`
+        transition: border 200ms ${Ease.easeInOutCubic} 0ms;
+
+        outline: none;
+
+        border: 1px solid #ff5c1e;
+        box-shadow: 0 0 3px rgb(202 70 12), 0 0 5px #e51111,
+          0 0 5px rgb(197 61 34);
+        animation: 200ms ${errorShine} ease;
+
+        &:focus-visible {
+          outline: none;
+          border: 1px solid #ff5c1e;
+          box-shadow: 0 0 3px rgb(202 70 12), 0 0 5px #e51111,
+            0 0 5px rgb(197 61 34);
+          animation: 200ms ${errorShine} ease;
+        }
+
+        &:focus {
+          outline: none;
+          border: 1px solid #ff5c1e;
+          box-shadow: 0 0 3px rgb(202 70 12), 0 0 5px #e51111,
+            0 0 5px rgb(197 61 34);
+          animation: 200ms ${errorShine} ease;
+        }
+      `
+    : undefined;
 
 const inputFocusCss = css`
   transition: border 200ms ${Ease.easeInOutCubic} 0ms;
@@ -126,6 +166,7 @@ const outlinedInputBorderCss = css`
 const inputCss = css`
   ${inputFont};
   ${inputFocusCss};
+  ${inputError};
   ${inputOutline};
   ${m12};
   color: ${color("lightText")};
@@ -134,10 +175,10 @@ const inputCss = css`
 `;
 
 const roundedFilledInputCss = css`
-  ${inputCss};
   ${filledInputBorderCss};
   ${filledInputBackgroundColorCss};
   ${roundedFull};
+  ${inputCss};
 `;
 
 const inputBorderRadius = css`
@@ -154,6 +195,7 @@ const outlineInputCss = css`
 `;
 
 export {
+  inputError,
   inputBorderRadius,
   filledInputBackgroundColorCss,
   inputFocusCss,

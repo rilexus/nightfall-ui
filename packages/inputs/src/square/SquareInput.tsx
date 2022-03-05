@@ -1,12 +1,13 @@
 import React, { FC, forwardRef, HTMLAttributes } from "react";
 import { FilledSquareInput } from "./filled";
 import { OutlinedSquareInput } from "./outlined/OutlinedSquareInput";
+import { InputProps } from "../types/InputProps.type";
 
 const SquareInput: FC<
   HTMLAttributes<HTMLInputElement> & {
     variant?: "filled" | "outlined";
     size?: "large" | "small" | "medium";
-  }
+  } & InputProps
 > = forwardRef(function SquareInout(
   { variant = "filled", size = "medium", ...props },
   outsideRef

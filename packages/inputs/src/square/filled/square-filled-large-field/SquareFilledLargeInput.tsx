@@ -7,8 +7,9 @@ import {
   inputCss,
 } from "../../../css";
 import { roundedLG } from "@nightfall-ui/css";
+import { InputProps } from "../../../types/InputProps.type";
 
-const StyledSquareFilledLargeInput = styled.input`
+const StyledSquareFilledLargeInput = styled.input<InputProps>`
   ${largeInputPaddingCss};
   ${roundedLG};
   ${filledInputBorderCss};
@@ -19,7 +20,7 @@ const StyledSquareFilledLargeInput = styled.input`
 
 const SquareFilledLargeInput = forwardRef<
   HTMLInputElement,
-  HTMLAttributes<HTMLInputElement>
+  HTMLAttributes<HTMLInputElement> & InputProps
 >((props, outsideRef) => {
   return <StyledSquareFilledLargeInput {...props} ref={outsideRef} />;
 });

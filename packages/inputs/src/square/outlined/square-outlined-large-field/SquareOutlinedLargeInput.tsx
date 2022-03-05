@@ -1,9 +1,10 @@
 import React, { forwardRef, HTMLAttributes } from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { inputCss, largeInputPaddingCss, outlineInputCss } from "../../../css";
 import { roundedLG } from "@nightfall-ui/css";
+import { InputProps } from "../../../types/InputProps.type";
 
-const StyledSquareFilledLargeInput = styled.input`
+const StyledSquareFilledLargeInput = styled.input<InputProps>`
   ${largeInputPaddingCss};
   ${roundedLG};
   ${outlineInputCss};
@@ -12,10 +13,9 @@ const StyledSquareFilledLargeInput = styled.input`
 
 const SquareOutlinedLargeInput = forwardRef<
   HTMLInputElement,
-  HTMLAttributes<HTMLInputElement>
->((props, outsideRef) => {
+  HTMLAttributes<HTMLInputElement> & InputProps
+>(function SquareOutlinedLargeInput(props, outsideRef) {
   return <StyledSquareFilledLargeInput {...props} ref={outsideRef} />;
 });
 
-SquareOutlinedLargeInput.displayName = "SquareOutlinedLargeInput";
 export { SquareOutlinedLargeInput };

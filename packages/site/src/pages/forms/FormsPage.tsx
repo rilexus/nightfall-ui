@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { PageTitle } from "../../components";
 import {
   SquareFilledLargeInput,
@@ -10,6 +10,8 @@ import { Card } from "@nightfall-ui/surfaces";
 import { Input, SquareInput } from "@nightfall-ui/inputs";
 
 const FormsPage = () => {
+  const [error, setError] = useState(false);
+
   return (
     <div>
       <div>
@@ -21,12 +23,14 @@ const FormsPage = () => {
             }}
           >
             <Flex justify={"evenly"}>
+              <button onClick={() => setError((e) => !e)}>error</button>
               <div>
                 <YSpacer spacing={"large"}>
                   <h4>Square Filled Input</h4>
                 </YSpacer>
                 <YStack spacing={"small"}>
                   <Input
+                    invalid={error}
                     shape={"square"}
                     variant={"filled"}
                     size={"small"}
@@ -54,9 +58,13 @@ const FormsPage = () => {
                   <SquareInput
                     placeholder={"Placeholder"}
                     variant={"outlined"}
+                    invalid={error}
                     size={"medium"}
                   />
-                  <SquareOutlinedLargeInput placeholder={"Placeholder"} />
+                  <SquareOutlinedLargeInput
+                    placeholder={"Placeholder"}
+                    invalid={error}
+                  />
                 </YStack>
               </div>
               <div>
@@ -65,6 +73,7 @@ const FormsPage = () => {
                 </YSpacer>
                 <YStack spacing={"small"}>
                   <Input
+                    invalid={error}
                     placeholder={"Placeholder"}
                     shape={"round"}
                     size={"small"}

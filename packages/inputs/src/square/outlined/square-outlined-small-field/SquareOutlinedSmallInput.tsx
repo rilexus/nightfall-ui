@@ -2,8 +2,9 @@ import React, { forwardRef, HTMLAttributes } from "react";
 import styled from "styled-components";
 import { inputCss, outlineInputCss, smallInputPadding } from "../../../css";
 import { roundedLG } from "@nightfall-ui/css";
+import { InputProps } from "../../../types/InputProps.type";
 
-const StyledSquareOutlinedSmallInput = styled.input`
+const StyledSquareOutlinedSmallInput = styled.input<InputProps>`
   ${roundedLG};
   ${smallInputPadding};
   ${outlineInputCss};
@@ -12,7 +13,7 @@ const StyledSquareOutlinedSmallInput = styled.input`
 
 const SquareOutlinedSmallInput = forwardRef<
   HTMLInputElement,
-  HTMLAttributes<HTMLInputElement>
+  HTMLAttributes<HTMLInputElement> & InputProps
 >((props, outsideRef) => {
   return <StyledSquareOutlinedSmallInput {...props} ref={outsideRef} />;
 });

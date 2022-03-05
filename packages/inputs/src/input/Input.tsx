@@ -4,6 +4,7 @@ import { RoundInput } from "../round/RoundInput";
 
 const Input: FC<
   HTMLAttributes<HTMLInputElement> & {
+    invalid?: boolean;
     shape?: "square" | "round";
     size?: "small" | "large" | "medium";
     variant?: "filled" | "outlined";
@@ -15,11 +16,11 @@ const Input: FC<
   switch (shape) {
     case "square": {
       //@ts-ignore
-      return <SquareInput size={size} {...props} ref={outsideRef} />;
+      return <SquareInput {...props} size={size} ref={outsideRef} />;
     }
     case "round": {
       //@ts-ignore
-      return <RoundInput size={size} {...props} ref={outsideRef} />;
+      return <RoundInput {...props} size={size} ref={outsideRef} />;
     }
     default: {
       console.warn(`Input: ${shape} is not implemented!`);

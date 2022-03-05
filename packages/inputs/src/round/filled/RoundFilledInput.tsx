@@ -2,9 +2,12 @@ import React, { FC, forwardRef, HTMLAttributes } from "react";
 import { RoundFilledSmallInput } from "./RoundFilledSmallInput";
 import { RoundFilledMediumInput } from "./RoundFilledMediumInput";
 import { RoundFilledLargeInput } from "./RoundFilledLargeInput";
+import { InputProps } from "../../types/InputProps.type";
 
 const RoundFilledInput: FC<
-  HTMLAttributes<HTMLInputElement> & { size?: "large" | "small" | "medium" }
+  HTMLAttributes<HTMLInputElement> & {
+    size?: "large" | "small" | "medium";
+  } & InputProps
 > = forwardRef(function RoundFilledInput(
   { size = "medium", ...props },
   outsideRef
