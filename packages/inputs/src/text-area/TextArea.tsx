@@ -9,14 +9,15 @@ import {
 } from "../css";
 
 const StyledTextarea = styled.textarea`
-  ${inputCss};
   ${outlinedInputBackgroundCss};
   ${inputBorderRadius};
   ${outlinedInputBorderCss};
   ${mediumInputPadding};
+  ${inputCss};
 `;
 type Props = {
   variant?: "outlined";
+  invalid?: boolean;
 };
 const TextArea: VFC<TextareaHTMLAttributes<HTMLTextAreaElement> & Props> =
   forwardRef(function TextArea(
