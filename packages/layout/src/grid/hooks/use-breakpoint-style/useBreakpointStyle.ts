@@ -40,9 +40,6 @@ const useBreakpointStyle = (styles: {
     }
   }
 
-  return useMemo(() => {
-    console.log("calc");
-    return style;
-  }, [style]);
+  return style;
 };
 export { useBreakpointStyle };
