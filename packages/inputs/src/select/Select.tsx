@@ -32,7 +32,7 @@ type Event = {
 
 const StyledSelect = styled.div`
   display: inline-block;
-  padding: 0.5rem 0.4rem 0.5rem 0.4rem;
+  padding: 0.5rem 0.4rem 0.5rem 1rem;
   cursor: pointer;
   ${inputBorderRadius};
   ${filledInputBackgroundColorCss};
