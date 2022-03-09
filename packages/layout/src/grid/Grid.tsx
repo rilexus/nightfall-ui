@@ -25,7 +25,7 @@ type GrindItemProps = { [Key in keyof Theme["breakpoints"]]?: number } & {
   delay?: number;
 };
 
-const GridItem: FC<GrindItemProps> = ({
+const GridItem: FC<GrindItemProps & HTMLAttributes<HTMLDivElement>> = ({
   children,
   timeout = 200,
   ease = Ease.easeIn,
