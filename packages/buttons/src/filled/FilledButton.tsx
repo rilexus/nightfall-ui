@@ -30,4 +30,5 @@ const FilledButton = forwardRef<
   }
 });
 
+export default FilledButton;
 export { FilledButton };

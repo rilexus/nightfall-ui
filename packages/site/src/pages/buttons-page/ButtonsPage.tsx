@@ -10,6 +10,7 @@ import styled from "styled-components";
 import { laptop, regularNormal2XLCss } from "@nightfall-ui/css";
 import { Hr } from "../../components";
 import { XStack } from "@nightfall-ui/layout";
+import { LoadingGradient } from "@nightfall-ui/surfaces";
 
 const H2 = styled.h2`
   ${regularNormal2XLCss}
@@ -28,6 +29,16 @@ const ButtonsPage = () => {
       <h1>Buttons</h1>
       <Div>some</Div>
       <div>
+        <LoadingGradient
+          timeout={1000}
+          width={"400px"}
+          height={"10rem"}
+          viewBox="0 0 400 160"
+          backgroundColor={"#464646"}
+          foregroundColor={"#868686"}
+        >
+          <rect x="0" y="72" rx="3" ry="3" width="380" height="6" />
+        </LoadingGradient>
         <H2>Text Buttons</H2>
         <XStack>
           <TextSmallButton>Click</TextSmallButton>

@@ -2,11 +2,10 @@ import React, {
   ButtonHTMLAttributes,
   DetailedHTMLProps,
   forwardRef,
-  HTMLAttributes,
 } from "react";
 import { TextButton } from "../text-button";
-import { FilledButton } from "../filled";
 import { OutlinedButton } from "../outlined";
+import { FilledButton } from "../filled";
 
 type ButtonVariant = "filled" | "outlined" | "text";
 
