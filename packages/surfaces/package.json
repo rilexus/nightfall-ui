@@ -1,6 +1,6 @@
 {
   "name": "@nightfall-ui/surfaces",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "license": "MIT",
   "description": "Surfaces function for the Nightfall UI component library.",
   "author": "Stanislav Panchenko <email@stanislavpanchenko.de>",
