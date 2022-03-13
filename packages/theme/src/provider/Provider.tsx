@@ -3,15 +3,17 @@ import { CssProvider } from "@nightfall-ui/css";
 import { usePrefersColorScheme } from "@nightfall-ui/hooks";
 import { GlobalCss, ResetCss } from "../reset-css";
 import { darkTheme } from "../themes/dark.theme";
-import { lightTheme } from "../themes/light.theme";
 
 const ThemeProvider: FC = ({ children }) => {
   const colorSchema = usePrefersColorScheme();
 
   const t = useMemo(
-    () => (colorSchema === "dark" ? darkTheme : lightTheme),
+    // TODO: add light theme values
+    () => (colorSchema === "dark" ? darkTheme : darkTheme),
     [colorSchema]
   );
+
+  console.log(colorSchema);
   return (
     <CssProvider theme={t}>
       <ResetCss />
