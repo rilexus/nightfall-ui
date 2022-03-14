@@ -1,6 +1,6 @@
 {
   "name": "@nightfall-ui/inputs",
-  "version": "1.0.28",
+  "version": "1.0.29",
   "license": "MIT",
   "description": "Inputs for the Nightfall UI component library.",
   "author": "Stanislav Panchenko <email@stanislavpanchenko.de>",
@@ -11,11 +11,11 @@
     "start": "npm run tsc:watch"
   },
   "devDependencies": {
-    "@nightfall-ui/ease": "^1.0.7",
-    "@nightfall-ui/icons": "^1.0.6",
-    "@nightfall-ui/layout": "^1.0.12",
-    "@nightfall-ui/surfaces": "^1.0.13",
-    "@nightfall-ui/theme": "^1.0.10",
+    "@nightfall-ui/ease": "^1.0.8",
+    "@nightfall-ui/icons": "^1.0.7",
+    "@nightfall-ui/layout": "^1.0.13",
+    "@nightfall-ui/surfaces": "^1.0.14",
+    "@nightfall-ui/theme": "^1.0.11",
     "@nightfall-ui/utils": "^1.0.6",
     "@types/react-dom": "^17.0.11",
     "@types/styled-components": "^5.1.17",
