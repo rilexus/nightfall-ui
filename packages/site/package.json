@@ -28,6 +28,7 @@
 		"webpack-dev-server": "^4.6.0"
 	},
 	"dependencies": {
+		"react-hook-event": "1.0.1",
 		"@nightfall-ui/accordion": "^1.0.7",
 		"@nightfall-ui/buttons": "^1.0.17",
 		"@nightfall-ui/css": "^1.0.7",

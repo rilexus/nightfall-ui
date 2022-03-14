@@ -13,7 +13,6 @@ const ThemeProvider: FC = ({ children }) => {
     [colorSchema]
   );
 
-  console.log(colorSchema);
   return (
     <CssProvider theme={t}>
       <ResetCss />
