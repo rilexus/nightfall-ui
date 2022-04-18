@@ -18,6 +18,25 @@ const media = new Proxy(
   }
 ) as Record<keyof Theme["breakpoints"], (...args: any) => any>;
 
+/*
+
+Example:
+const Center = styled.div`
+  margin: auto;
+  ${small`
+    width: 95%
+  `}
+  ${tablet`
+    width: 90%
+  `}
+  ${laptop`
+    width: 50%
+  `};
+  ${desktop`
+    width: 40%
+  `}
+`;
+* */
 const laptop = media.laptop;
 const medium = media.medium;
 const desktop = media.desktop;

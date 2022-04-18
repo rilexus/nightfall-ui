@@ -4,6 +4,7 @@ import {
   ButtonsPage,
   DataDisplayPage,
   Home,
+  MediaCenter,
   SelectPage,
   TypographyPage,
 } from "./pages";
@@ -98,6 +99,9 @@ const App = () => {
               <Li>
                 <Link to={"/grid"}>Grid</Link>
               </Li>
+              <Li>
+                <Link to={"/media-center"}>Media Center</Link>
+              </Li>
             </Ul>
           </li>
         </Ul>
@@ -129,6 +133,7 @@ const App = () => {
             <Route path={"/data-display"} element={<DataDisplayPage />} />
             <Route path={"/typography"} element={<TypographyPage />} />
             <Route path={"/grid"} element={<GridPage />} />
+            <Route path={"/media-center"} element={<MediaCenter />} />
             <Route path="*" element={<Navigate to={"/"} />} />
           </Routes>
         </Page>

@@ -53,7 +53,7 @@ const GridItem: FC<GrindItemProps & HTMLAttributes<HTMLDivElement>> = ({
   });
 
   let width = 100; // percent
-  const ratio = 100 / columns;
+  const ratio = 100; // columns;
 
   for (let i = 0; i < queriesMap.length; i++) {
     const currentQuery = queriesMap[i];

@@ -9,3 +9,4 @@ export * from "./text-center";
 
 export * from "./padding";
 export * from "./hr";
+export * from "./Center";
