@@ -1,4 +1,4 @@
-import React, { FC, useMemo } from "react";
+import React, { FC, HTMLAttributes, useMemo } from "react";
 import { Theme } from "@nightfall-ui/css";
 import { useTheme } from "styled-components";
 import { useCSSProperties, useMediaQuery } from "@nightfall-ui/hooks";
@@ -21,7 +21,7 @@ const descending = ([, a]: [string, number], [, b]: [string, number]) =>
  *     </div>
  * </Center>
  */
-const Center: FC<MediaProps> = (props) => {
+const Center: FC<MediaProps & HTMLAttributes<HTMLDivElement>> = (props) => {
   const { breakpoints } = useTheme() as Theme;
 
   const sortedMedia = useMemo(() => {
@@ -57,13 +57,30 @@ const Center: FC<MediaProps> = (props) => {
 
   const style = useCSSProperties(
     {
+      ...props.style,
       margin: "auto",
       width: `${width}%`,
     },
-    [width]
+    [width, props.style]
   );
 
-  return <div style={style}>{props.children}</div>;
+  const filteredProps = useMemo(
+    () =>
+      Object.entries(props).reduce((acc, [key, value]) => {
+        if (key in breakpoints) return acc;
+        return {
+          ...acc,
+          [key]: value,
+        };
+      }, {}),
+    [props, breakpoints]
+  );
+
+  return (
+    <div style={style} {...filteredProps}>
+      {props.children}
+    </div>
+  );
 };
 
 export default Center;
