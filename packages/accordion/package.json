@@ -1,6 +1,6 @@
 {
   "name": "@nightfall-ui/accordion",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "license": "MIT",
   "description": "Accordion component for the Nightfall UI component library.",
   "author": "Stanislav Panchenko <email@stanislavpanchenko.de>",
