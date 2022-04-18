@@ -1,10 +1,4 @@
 import React, { forwardRef, HTMLAttributes } from "react";
-import {
-  ButtonJumpTransition,
-  ButtonOpacityTransition,
-  ButtonScaleTransition,
-  RotationTransition,
-} from "../../transitions";
 import styled from "styled-components";
 import { StyledStylesButton } from "../../styleless-button";
 import { filledButtonCss } from "../css";
@@ -22,17 +16,7 @@ const FilledSquareLargeButton = forwardRef<
   HTMLButtonElement,
   HTMLAttributes<HTMLButtonElement>
 >((props, outsideRef) => {
-  return (
-    <ButtonJumpTransition>
-      <ButtonOpacityTransition>
-        <ButtonScaleTransition>
-          <RotationTransition deg={5}>
-            <StyledLargeButton {...props} ref={outsideRef} />
-          </RotationTransition>
-        </ButtonScaleTransition>
-      </ButtonOpacityTransition>
-    </ButtonJumpTransition>
-  );
+  return <StyledLargeButton {...props} ref={outsideRef} />;
 });
 
 export { FilledSquareLargeButton };

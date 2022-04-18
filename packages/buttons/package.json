@@ -8,7 +8,8 @@
   "scripts": {
     "tsc:watch": "tsc --watch",
     "build": "tsc --project ./tsconfig.json",
-    "start": "npm run tsc:watch"
+    "start": "npm run tsc:watch",
+    "dev": "npm run tsc:watch"
   },
   "devDependencies": {
     "@nightfall-ui/css": "^1.0.10",

@@ -17,7 +17,7 @@ const Button = forwardRef<
   > & {
     variant?: ButtonVariant;
     size?: "medium" | "large" | "small" | "extra-large";
-    shape?: "square" | "round";
+    shape?: "square" | "round" | "oval";
   }
 >(
   (

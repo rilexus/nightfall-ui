@@ -11,7 +11,7 @@ const OutlinedButton = forwardRef<
     ButtonHTMLAttributes<HTMLButtonElement>,
     HTMLButtonElement
   > & {
-    shape?: "square" | "round";
+    shape?: "square" | "round" | "oval";
     size?: "small" | "large" | "medium" | "extra-large";
   }
 >(function OutlinedButton({ shape = "square", ...props }, outsideRef) {

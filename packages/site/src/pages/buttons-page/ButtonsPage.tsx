@@ -7,7 +7,7 @@ import {
   TextSmallButton,
 } from "@nightfall-ui/buttons";
 import styled from "styled-components";
-import { laptop, regularNormal2XLCss } from "@nightfall-ui/css";
+import { regularNormal2XLCss } from "@nightfall-ui/css";
 import { Hr } from "../../components";
 import { XStack } from "@nightfall-ui/layout";
 import { LoadingGradient } from "@nightfall-ui/surfaces";
@@ -16,18 +16,10 @@ const H2 = styled.h2`
   ${regularNormal2XLCss}
 `;
 
-const Div = styled.div`
-  color: red;
-  ${laptop`
-    color: blue;
-  `}
-`;
-
 const ButtonsPage = () => {
   return (
     <div>
       <h1>Buttons</h1>
-      <Div>some</Div>
       <div>
         <LoadingGradient
           timeout={1000}
@@ -48,6 +40,25 @@ const ButtonsPage = () => {
         </XStack>
       </div>
       <Hr />
+      <div>
+        <H2>Oval Buttons</H2>
+        <div>
+          <XStack>
+            <Button variant={"filled"} shape={"oval"} size={"small"}>
+              Click
+            </Button>
+            <Button variant={"filled"} shape={"oval"} size={"medium"}>
+              Click
+            </Button>
+            <Button variant={"filled"} shape={"oval"} size={"large"}>
+              Click
+            </Button>
+            <Button variant={"filled"} shape={"oval"} size={"extra-large"}>
+              Click
+            </Button>
+          </XStack>
+        </div>
+      </div>
       <div>
         <H2>Square Buttons</H2>
         <div>

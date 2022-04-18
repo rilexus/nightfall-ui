@@ -46,7 +46,7 @@ export default ({ development, production }: any) => {
       historyApiFallback: true,
       compress: true,
       hot: true,
-      port: 3000,
+      port: 3002,
     },
     plugins: [
       new HtmlWebpackPlugin({ template: "./public/index.html" }),

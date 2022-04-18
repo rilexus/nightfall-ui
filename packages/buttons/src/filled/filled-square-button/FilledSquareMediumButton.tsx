@@ -1,9 +1,4 @@
 import React, { forwardRef, HTMLAttributes } from "react";
-import {
-  ButtonJumpTransition,
-  ButtonOpacityTransition,
-  ButtonScaleTransition,
-} from "../../transitions";
 import styled, { css } from "styled-components";
 import { StyledStylesButton } from "../../styleless-button";
 import { regularNormalCss } from "@nightfall-ui/css";
@@ -26,15 +21,7 @@ const FilledSquareMediumButton = forwardRef<
   HTMLButtonElement,
   HTMLAttributes<HTMLButtonElement>
 >((props, outsideRef) => {
-  return (
-    <ButtonJumpTransition>
-      <ButtonOpacityTransition>
-        <ButtonScaleTransition>
-          <StyledMediumButton {...props} ref={outsideRef} />
-        </ButtonScaleTransition>
-      </ButtonOpacityTransition>
-    </ButtonJumpTransition>
-  );
+  return <StyledMediumButton {...props} ref={outsideRef} />;
 });
 
 export { FilledSquareMediumButton };
