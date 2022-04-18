@@ -21,7 +21,6 @@
     "@nightfall-ui/hooks": "*",
     "@nightfall-ui/theme": "*",
     "react": "^18.0.0 || ^17.0.0",
-    "react-dom": "^18.0.0 || ^17.0.0",
     "react-transitions-library": "^1.10.1",
     "styled-components": "^5.3.3"
   },
