@@ -3,7 +3,13 @@ import { Center } from "@nightfall-ui/layout";
 
 const Page = () => {
   return (
-    <Center small={80} medium={50}>
+    <Center
+      small={80}
+      medium={50}
+      style={{
+        border: "1px solid red",
+      }}
+    >
       <div>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem iste
         mollitia nemo nulla sapiente suscipit, tenetur totam? Aliquam culpa

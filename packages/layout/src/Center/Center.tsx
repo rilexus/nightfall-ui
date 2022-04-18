@@ -77,7 +77,7 @@ const Center: FC<MediaProps & HTMLAttributes<HTMLDivElement>> = (props) => {
   );
 
   return (
-    <div style={style} {...filteredProps}>
+    <div {...filteredProps} style={style}>
       {props.children}
     </div>
   );

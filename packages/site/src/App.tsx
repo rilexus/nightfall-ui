@@ -97,10 +97,10 @@ const App = () => {
             <h2>Layout</h2>
             <Ul>
               <Li>
-                <Link to={"/grid"}>Grid</Link>
+                <Link to={"/layout-grid"}>Grid</Link>
               </Li>
               <Li>
-                <Link to={"/media-center"}>Media Center</Link>
+                <Link to={"/layout-center"}>Center</Link>
               </Li>
             </Ul>
           </li>
@@ -132,8 +132,8 @@ const App = () => {
             <Route path={"/dialog"} element={<DialogPage />} />
             <Route path={"/data-display"} element={<DataDisplayPage />} />
             <Route path={"/typography"} element={<TypographyPage />} />
-            <Route path={"/grid"} element={<GridPage />} />
-            <Route path={"/media-center"} element={<MediaCenter />} />
+            <Route path={"/layout-grid"} element={<GridPage />} />
+            <Route path={"/layout-center"} element={<MediaCenter />} />
             <Route path="*" element={<Navigate to={"/"} />} />
           </Routes>
         </Page>
