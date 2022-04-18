@@ -1,6 +1,6 @@
 {
 	"name": "@nightfall-ui/site",
-	"version": "1.0.35",
+	"version": "1.0.36",
 	"license": "MIT",
 	"description": "Documentation for the Nightfall UI component library.",
 	"author": "Stanislav Panchenko <email@stanislavpanchenko.de>",
@@ -30,10 +30,10 @@
 	},
 	"dependencies": {
 		"@nightfall-ui/accordion": "^1.0.9",
-		"@nightfall-ui/buttons": "^1.0.20",
+		"@nightfall-ui/buttons": "^1.0.21",
 		"@nightfall-ui/css": "^1.0.10",
 		"@nightfall-ui/data-display": "^1.0.14",
-		"@nightfall-ui/dialog": "^1.0.22",
+		"@nightfall-ui/dialog": "^1.0.23",
 		"@nightfall-ui/hooks": "^1.0.8",
 		"@nightfall-ui/inputs": "^1.0.31",
 		"@nightfall-ui/layout": "^1.0.14",
