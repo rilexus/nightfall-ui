@@ -15,7 +15,14 @@ const Flex: FC<
   {
     align?: "center" | "end" | "start";
     direction?: "column" | "row";
-    justify?: "center" | "around" | "between" | "evenly" | "left";
+    justify?:
+      | "center"
+      | "around"
+      | "between"
+      | "evenly"
+      | "left"
+      | "end"
+      | "start";
     style?: CSSProperties;
   } & DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>
 > = ({
