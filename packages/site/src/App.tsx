@@ -1,5 +1,5 @@
 import { Link, Navigate, Route, Routes } from "react-router-dom";
-import React, { FC, useEffect } from "react";
+import React, { FC } from "react";
 import {
   ButtonsPage,
   DataDisplayPage,
@@ -17,7 +17,7 @@ import {
 import { FormsPage } from "./pages/forms";
 import { DialogPage } from "./pages/dialog";
 import { GridPage } from "./pages/grid";
-import { useEmitter, useEvent } from "react-hook-event";
+import { HookEvent } from "./HookEvent";
 
 const Page: FC = ({ children }) => {
   return <div>{children}</div>;
@@ -41,14 +41,6 @@ const Providers: FC = ({ children }) => {
 };
 
 const App = () => {
-  useEvent("some", (...args) => {
-    console.log("hier", ...args);
-  });
-
-  const emit = useEmitter();
-  useEffect(() => {
-    emit("some", 2);
-  }, [emit]);
   return (
     <Providers>
       <nav>
@@ -117,6 +109,7 @@ const App = () => {
         }}
       >
         <Page>
+          <HookEvent />
           <div
             style={{
               color: "black",
