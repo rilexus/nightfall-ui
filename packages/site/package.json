@@ -29,6 +29,7 @@
 		"webpack-dev-server": "^4.6.0"
 	},
 	"dependencies": {
+		"@nightfall-ui/scroll-inertia": "1.0.0",
 		"@nightfall-ui/accordion": "^1.0.9",
 		"@nightfall-ui/buttons": "^1.0.22",
 		"@nightfall-ui/css": "^1.0.11",
@@ -43,7 +44,6 @@
 		"dotenv": "^10.0.0",
 		"react": "^17.0.2",
 		"react-dom": "^17.0.2",
-		"react-hook-event": "1.0.1",
 		"react-icons": "^4.3.1",
 		"react-transition-group": "^4.4.2",
 		"react-transitions-library": "^1.10.1",

@@ -18,7 +18,7 @@ import {
 import { FormsPage } from "./pages/forms";
 import { DialogPage } from "./pages/dialog";
 import { GridPage } from "./pages/grid";
-import { HookEvent } from "./HookEvent";
+import ScrollInertiaPage from "./pages/Scroll-Inertia-Page/ScrollInertiaPage";
 
 const Page: FC = ({ children }) => {
   return <div>{children}</div>;
@@ -44,7 +44,14 @@ const Providers: FC = ({ children }) => {
 const App = () => {
   return (
     <Providers>
-      <nav>
+      <nav
+        style={{
+          position: "fixed",
+          left: 0,
+          top: 0,
+          height: "100vh",
+        }}
+      >
         <Ul>
           <Li>
             <div
@@ -104,26 +111,18 @@ const App = () => {
               </Li>
             </Ul>
           </li>
+          <li>
+            <h2>Behaviour</h2>
+            <Ul>
+              <Li>
+                <Link to={"/scroll-inertia"}>Scroll Inertia</Link>
+              </Li>
+            </Ul>
+          </li>
         </Ul>
       </nav>
-      <div
-        style={{
-          maxWidth: "900px",
-          margin: "0 auto",
-        }}
-      >
+      <div>
         <Page>
-          <HookEvent />
-          <div
-            style={{
-              color: "black",
-            }}
-          >
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus
-            deleniti ducimus, id iusto maxime nam natus necessitatibus
-            perferendis ratione totam. Impedit magnam magni totam. Alias
-            asperiores fugiat laudantium repellat saepe!
-          </div>
           <Routes>
             <Route path={"/"} element={<Home />} />
             <Route path={"/buttons"} element={<ButtonsPage />} />
@@ -134,6 +133,7 @@ const App = () => {
             <Route path={"/typography"} element={<TypographyPage />} />
             <Route path={"/layout-grid"} element={<GridPage />} />
             <Route path={"/layout-center"} element={<MediaCenter />} />
+            <Route path={"/scroll-inertia"} element={<ScrollInertiaPage />} />
             <Route path="*" element={<Navigate to={"/"} />} />
           </Routes>
         </Page>

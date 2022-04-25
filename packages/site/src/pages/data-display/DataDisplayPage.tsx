@@ -1,16 +1,16 @@
 import React, { useState } from "react";
 import { AccordionUl, AccordionLi } from "@nightfall-ui/data-display";
 import { Card } from "@nightfall-ui/surfaces";
+import { Center } from "@nightfall-ui/layout";
+import { Title1 } from "@nightfall-ui/typography";
 
 const DataDisplayPage = () => {
   const [elems, setE] = useState([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]);
   return (
-    <div
-      style={{
-        color: "white",
-      }}
-    >
-      <h1>Data Display</h1>
+    <Center small={80} medium={50}>
+      <Title1 weight={"bold"} type={"primary"}>
+        Data Display
+      </Title1>
       <div>
         <AccordionUl
           style={{
@@ -35,7 +35,7 @@ const DataDisplayPage = () => {
           })}
         </AccordionUl>
       </div>
-    </div>
+    </Center>
   );
 };
 

@@ -14,15 +14,15 @@ import {
   Callout,
   Body,
 } from "@nightfall-ui/typography";
-import { Flex } from "@nightfall-ui/layout";
+import { Center, Flex } from "@nightfall-ui/layout";
 import { YStack } from "@nightfall-ui/layout";
 
 const TypographyPage = () => {
   return (
-    <div
+    <Center
+      small={80}
+      medium={50}
       style={{
-        width: "1024px",
-        margin: "0 auto",
         color: "white",
       }}
     >
@@ -415,7 +415,7 @@ const TypographyPage = () => {
           </Flex>
         </div>
       </YStack>
-    </div>
+    </Center>
   );
 };
 

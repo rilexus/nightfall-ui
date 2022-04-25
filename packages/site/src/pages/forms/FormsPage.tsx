@@ -5,7 +5,7 @@ import {
   SquareOutlinedLargeInput,
   TextArea,
 } from "@nightfall-ui/inputs";
-import { Flex, Grid, YSpacer, YStack } from "@nightfall-ui/layout";
+import { Center, Flex, Grid, YSpacer, YStack } from "@nightfall-ui/layout";
 import { Card } from "@nightfall-ui/surfaces";
 import { Input, SquareInput } from "@nightfall-ui/inputs";
 
@@ -13,7 +13,7 @@ const FormsPage = () => {
   const [error, setError] = useState(false);
 
   return (
-    <div>
+    <Center small={80} medium={50}>
       <div>
         <PageTitle>Fields</PageTitle>
         <div>
@@ -202,7 +202,7 @@ const FormsPage = () => {
           <TextArea placeholder={"textarea"} />
         </div>
       </div>
-    </div>
+    </Center>
   );
 };
 

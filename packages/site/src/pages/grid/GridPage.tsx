@@ -1,10 +1,10 @@
 import React from "react";
-import { Grid } from "@nightfall-ui/layout";
+import { Center, Grid } from "@nightfall-ui/layout";
 import { Card } from "@nightfall-ui/surfaces";
 
 const GridPage = () => {
   return (
-    <div>
+    <Center small={80} medium={50}>
       <div>
         <Grid spacing={"25"}>
           <Grid.Item small={12} medium={4} tablet={3} laptop={2}>
@@ -33,7 +33,7 @@ const GridPage = () => {
           </Grid.Item>
         </Grid>
       </div>
-    </div>
+    </Center>
   );
 };
 

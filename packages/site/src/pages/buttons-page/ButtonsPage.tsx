@@ -9,8 +9,9 @@ import {
 import styled from "styled-components";
 import { regularNormal2XLCss } from "@nightfall-ui/css";
 import { Hr } from "../../components";
-import { XStack } from "@nightfall-ui/layout";
+import { Center, XStack } from "@nightfall-ui/layout";
 import { LoadingGradient } from "@nightfall-ui/surfaces";
+import { Title1 } from "@nightfall-ui/typography";
 
 const H2 = styled.h2`
   ${regularNormal2XLCss}
@@ -18,8 +19,10 @@ const H2 = styled.h2`
 
 const ButtonsPage = () => {
   return (
-    <div>
-      <h1>Buttons</h1>
+    <Center small={80} medium={50}>
+      <Title1 type={"primary"} weight={"bold"}>
+        Buttons
+      </Title1>
       <div>
         <LoadingGradient
           timeout={1000}
@@ -112,7 +115,7 @@ const ButtonsPage = () => {
           </Button>
         </XStack>
       </div>
-    </div>
+    </Center>
   );
 };
 

@@ -1,10 +1,15 @@
 import React, { useState } from "react";
 import { Select, Option } from "@nightfall-ui/inputs";
+import { Center } from "@nightfall-ui/layout";
+import { Title1 } from "@nightfall-ui/typography";
 
 const SelectPage = () => {
   const [value, setValue] = useState("cat");
   return (
-    <div>
+    <Center small={80} medium={50}>
+      <Title1 weight={"bold"} type={"primary"}>
+        Select
+      </Title1>
       <h4>Animals</h4>
       <Select onChange={(e: any) => setValue(e.target.value)} value={value}>
         <Option value={"cat"}>Cat</Option>
@@ -18,7 +23,7 @@ const SelectPage = () => {
           sint tempora?
         </Option>
       </Select>
-    </div>
+    </Center>
   );
 };
 

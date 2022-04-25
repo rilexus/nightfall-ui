@@ -1,8 +1,8 @@
 {
-  "name": "@nightfall-ui/hooks",
-  "version": "1.0.8",
+  "name": "@nightfall-ui/scroll-inertia",
+  "version": "1.0.0",
   "license": "MIT",
-  "description": "Hooks for the Nightfall UI component library.",
+  "description": "Scroll inertia component for the Nightfall UI component library.",
   "author": "Stanislav Panchenko <email@stanislavpanchenko.de>",
   "homepage": "https://rilexus.github.io/nightfall-ui/",
   "scripts": {
@@ -12,12 +12,14 @@
     "dev": "npm run tsc:watch"
   },
   "devDependencies": {
+    "@nightfall-ui/hooks": "^1.0.8",
     "@types/react-dom": "^17.0.11",
     "@types/styled-components": "^5.1.17",
     "@typescript-eslint/eslint-plugin": "^5.7.0",
     "typescript": "^4.5.4"
   },
   "peerDependencies": {
+    "@nightfall-ui/hooks": "*",
     "react": "^18.0.0 || ^17.0.0"
   },
   "main": "dist/src/index.js",
@@ -30,7 +32,8 @@
     "react",
     "ui",
     "library",
-    "inputs"
+    "scroll",
+    "scroll-inertia"
   ],
   "bugs": {
     "url": "https://github.com/rilexus/nightfall-ui/issues"

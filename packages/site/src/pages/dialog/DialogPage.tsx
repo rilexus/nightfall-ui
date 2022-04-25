@@ -9,7 +9,7 @@ import {
 import { Card } from "@nightfall-ui/surfaces";
 import { ActionButton, Button } from "@nightfall-ui/buttons";
 import { useToggle } from "@nightfall-ui/hooks";
-import { Flex } from "@nightfall-ui/layout";
+import { Center, Flex } from "@nightfall-ui/layout";
 
 const DialogPage = () => {
   const [open, toggle] = useToggle(false);
@@ -18,7 +18,7 @@ const DialogPage = () => {
   const [permissionOpen, togglePermission] = useToggle(false);
 
   return (
-    <div>
+    <Center small={80} medium={50}>
       <Dialog open={dialogOpen}>
         <div>
           <Card>
@@ -88,7 +88,7 @@ const DialogPage = () => {
           </div>
         </Card>
       </div>
-    </div>
+    </Center>
   );
 };
 
