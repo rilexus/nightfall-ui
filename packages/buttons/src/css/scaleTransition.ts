@@ -5,12 +5,12 @@ const scaleTransitionCss = css`
   transform: scale(100%);
   opacity: 1;
   &:hover {
-    opacity: 0.8;
-    transform: scale(93%);
+    //opacity: 0.8;
+    //transform: scale(93%);
   }
   &:active {
-    opacity: 0.7;
-    transform: scale(85%);
+    //opacity: 0.7;
+    //transform: scale(85%);
   }
 `;
 export { scaleTransitionCss };

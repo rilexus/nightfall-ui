@@ -6,22 +6,17 @@ import React, {
 } from "react";
 import { regularNormalXLCss } from "@nightfall-ui/css";
 import { StyledStylesButton } from "../styleless-button";
-import { scaleTransitionCss } from "../css";
-import { ButtonJumpTransition } from "../transitions";
+import { wordButtonCss } from "./css";
 
 const StyledTextButtonExtraLarge = styled(StyledStylesButton)`
   ${regularNormalXLCss};
-  ${scaleTransitionCss};
+  ${wordButtonCss};
 `;
 
 const TextExtraLargeButton = forwardRef<
   HTMLButtonElement,
   DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>
 >((props, outsideRef) => {
-  return (
-    <ButtonJumpTransition>
-      <StyledTextButtonExtraLarge {...props} ref={outsideRef} />
-    </ButtonJumpTransition>
-  );
+  return <StyledTextButtonExtraLarge {...props} ref={outsideRef} />;
 });
 export { StyledTextButtonExtraLarge, TextExtraLargeButton };

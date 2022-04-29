@@ -8,6 +8,11 @@ import { ButtonSize } from "../ButtonSize.type";
 import { TextSmallButton } from "./TextSmallButton";
 import { TextLargeButton } from "./TextLargeButton";
 import { TextExtraLargeButton } from "./TextExtraLargeButton";
+import {
+  ButtonJumpTransition,
+  ButtonOpacityTransition,
+  ButtonScaleTransition,
+} from "../transitions";
 
 const TextButton = forwardRef<
   HTMLButtonElement,
@@ -16,22 +21,38 @@ const TextButton = forwardRef<
     HTMLButtonElement
   > & { size?: ButtonSize }
 >(({ size = "medium", ...props }, outsideRef) => {
+  let button = null;
   switch (size) {
     case "medium": {
-      return <TextMediumButton {...props} ref={outsideRef} />;
+      button = <TextMediumButton {...props} ref={outsideRef} />;
+      break;
     }
     case "large": {
-      return <TextLargeButton {...props} ref={outsideRef} />;
+      button = <TextLargeButton {...props} ref={outsideRef} />;
+      break;
     }
     case "extra-large": {
-      return <TextExtraLargeButton {...props} ref={outsideRef} />;
+      button = <TextExtraLargeButton {...props} ref={outsideRef} />;
+      break;
     }
     case "small": {
-      return <TextSmallButton {...props} ref={outsideRef} />;
+      button = <TextSmallButton {...props} ref={outsideRef} />;
+      break;
     }
     default:
-      return <button {...props} ref={outsideRef} />;
+      button = <button {...props} ref={outsideRef} />;
+      break;
   }
+
+  return (
+    <ButtonJumpTransition disabled={props.disabled}>
+      <ButtonOpacityTransition disabled={props.disabled}>
+        <ButtonScaleTransition disabled={props.disabled}>
+          {button}
+        </ButtonScaleTransition>
+      </ButtonOpacityTransition>
+    </ButtonJumpTransition>
+  );
 });
 
 export { TextButton };

@@ -6,7 +6,6 @@ import {
   justifyCenter,
   outlineNone,
 } from "@nightfall-ui/css";
-import { buttonScaleTransition } from "../css";
 
 const StyledActionButton = styled.button<{ color: string }>`
   height: 2.75rem;
@@ -17,7 +16,6 @@ const StyledActionButton = styled.button<{ color: string }>`
   background: transparent;
   border: none;
   ${outlineNone};
-  ${buttonScaleTransition};
   ${cursorPointer};
 `;
 

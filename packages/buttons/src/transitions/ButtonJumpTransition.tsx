@@ -47,6 +47,7 @@ const ButtonJumpTransition: FC<{
   to?: number;
   ease?: Ease;
   timeout?: number;
+  disabled?: boolean;
 }> = ({
   children,
   from = 1,
@@ -54,12 +55,13 @@ const ButtonJumpTransition: FC<{
   ease = Ease.ease,
   delay = 0,
   timeout = 150,
+  disabled,
 }) => {
   const [_in, toggle] = useTimeoutToggle(false, timeout);
   const inlineBlock = useCSSProperties({ display: "inline-block" }, []);
   return (
     <ZoomInTransition
-      in={_in}
+      in={_in && !disabled}
       from={from}
       to={to}
       onMouseUp={toggle}

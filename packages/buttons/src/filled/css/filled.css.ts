@@ -1,12 +1,9 @@
 import { css } from "styled-components";
 import { color, textColorCss } from "@nightfall-ui/css";
-import { buttonCss, buttonScaleTransition } from "../../css";
+import { buttonCss } from "../../css";
 
 const filledButtonBackgroundColorCss = css`
   background-color: ${color("fill.secondary")};
-`;
-const filledButtonColorCss = css`
-  ${textColorCss};
 `;
 
 const filledButtonClickAnimation = css`
@@ -20,12 +17,10 @@ const filledButtonClickAnimation = css`
 const filledButtonCss = css`
   ${buttonCss};
   ${filledButtonBackgroundColorCss};
-  ${buttonScaleTransition};
   ${filledButtonClickAnimation}
 `;
 
 export {
-  filledButtonColorCss,
   filledButtonClickAnimation,
   filledButtonBackgroundColorCss,
   filledButtonCss,

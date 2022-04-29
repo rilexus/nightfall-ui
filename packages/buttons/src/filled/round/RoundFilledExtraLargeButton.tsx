@@ -2,11 +2,7 @@ import styled from "styled-components";
 import { filledButtonCss, roundedButtonCss } from "../css";
 import React, { forwardRef, HTMLAttributes } from "react";
 import { useRoundButtonRadius } from "../../hooks";
-import {
-  ButtonJumpTransition,
-  ButtonOpacityTransition,
-  ButtonScaleTransition,
-} from "../../transitions";
+
 import { useCSSProperties } from "@nightfall-ui/hooks";
 
 const StyledButton = styled.button`
@@ -30,17 +26,11 @@ const RoundFilledExtraLargeButton = forwardRef<
     []
   );
   return (
-    <ButtonJumpTransition>
-      <ButtonOpacityTransition>
-        <ButtonScaleTransition>
-          <StyledButton {...props} style={style} ref={outsideRef}>
-            <div style={noSelect} ref={ref}>
-              {children}
-            </div>
-          </StyledButton>
-        </ButtonScaleTransition>
-      </ButtonOpacityTransition>
-    </ButtonJumpTransition>
+    <StyledButton {...props} style={style} ref={outsideRef}>
+      <div style={noSelect} ref={ref}>
+        {children}
+      </div>
+    </StyledButton>
   );
 });
 export { RoundFilledExtraLargeButton };

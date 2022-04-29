@@ -1,9 +1,9 @@
 import React, { forwardRef, HTMLAttributes } from "react";
 import styled, { css } from "styled-components";
-import { StyledStylesButton } from "../../styleless-button";
+import { StyledStylesButton } from "../../../styleless-button";
 import { regularNormalCss } from "@nightfall-ui/css";
-import { filledButtonCss } from "../css";
-import { squareMediumButtonPadding } from "../../css";
+import { filledButtonCss } from "../../css";
+import { squareMediumButtonPadding } from "../../../css";
 
 const mediumButtonPadding = css`
   ${squareMediumButtonPadding};
@@ -24,4 +24,4 @@ const FilledSquareMediumButton = forwardRef<
   return <StyledMediumButton {...props} ref={outsideRef} />;
 });
 
-export { FilledSquareMediumButton };
+export default FilledSquareMediumButton;

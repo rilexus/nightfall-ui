@@ -6,22 +6,17 @@ import React, {
 import styled from "styled-components";
 import { regularNormalSMCss } from "@nightfall-ui/css";
 import { StyledStylesButton } from "../styleless-button";
-import { scaleTransitionCss } from "../css";
-import { ButtonJumpTransition } from "../transitions";
+import { wordButtonCss } from "./css";
 
 const StyledTextButtonSmall = styled(StyledStylesButton)`
   ${regularNormalSMCss};
-  ${scaleTransitionCss};
+  ${wordButtonCss};
 `;
 
 const TextSmallButton = forwardRef<
   HTMLButtonElement,
   DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>
 >((props, ref) => {
-  return (
-    <ButtonJumpTransition>
-      <StyledTextButtonSmall {...props} ref={ref} />
-    </ButtonJumpTransition>
-  );
+  return <StyledTextButtonSmall {...props} ref={ref} />;
 });
 export { TextSmallButton };

@@ -42,14 +42,16 @@ const FilledButton = forwardRef<
       break;
     }
   }
+
   return (
-    <ButtonJumpTransition>
-      <ButtonOpacityTransition>
-        <ButtonScaleTransition>{button}</ButtonScaleTransition>
+    <ButtonJumpTransition disabled={props.disabled}>
+      <ButtonOpacityTransition disabled={props.disabled}>
+        <ButtonScaleTransition disabled={props.disabled}>
+          {button}
+        </ButtonScaleTransition>
       </ButtonOpacityTransition>
     </ButtonJumpTransition>
   );
 });
 
 export default FilledButton;
-export { FilledButton };

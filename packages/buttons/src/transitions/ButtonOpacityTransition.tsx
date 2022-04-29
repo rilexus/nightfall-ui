@@ -10,18 +10,23 @@ const ButtonOpacityTransition: FC<{
   timeout?: number;
   delay?: number;
   ease?: Ease;
-}> = ({ children, timeout = 400, ease = Ease.ease, delay = 0 }) => {
+  disabled?: boolean;
+}> = ({ children, timeout = 200, ease = Ease.ease, delay = 0, disabled }) => {
   const [mouseOver, mouseOverRef] = useMouseOver<HTMLDivElement>();
   const [mouseDown, mouseDownRef, setDown] = useMouseDown<HTMLDivElement>();
 
   const style = useCSSProperties(
     {
       userSelect: "none",
-      transition: `opacity ${timeout}ms ${ease} ${delay}ms`,
-      opacity: mouseDown ? 0.8 : mouseOver ? 0.88 : 1,
       display: "inline-block",
+      ...(!disabled
+        ? {
+            transition: `opacity ${timeout}ms ${ease} ${delay}ms`,
+            opacity: mouseDown ? 0.6 : mouseOver ? 0.7 : 1,
+          }
+        : {}),
     },
-    [mouseOver, mouseDown]
+    [mouseOver, mouseDown, disabled]
   );
 
   return (

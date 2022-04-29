@@ -1,8 +1,8 @@
 import React, { forwardRef, HTMLAttributes } from "react";
 import styled from "styled-components";
-import { StyledStylesButton } from "../../styleless-button";
-import { filledButtonCss } from "../css";
-import { squareButtonCss, squareExtraLargeButtonPadding } from "../../css";
+import { StyledStylesButton } from "../../../styleless-button";
+import { filledButtonCss } from "../../css";
+import { squareButtonCss, squareExtraLargeButtonPadding } from "../../../css";
 
 const StyledExtraLargeButton = styled(StyledStylesButton)`
   ${squareButtonCss};
@@ -17,4 +17,4 @@ const FilledSquareExtraLargeButton = forwardRef<
   return <StyledExtraLargeButton {...props} ref={outsideRef} />;
 });
 
-export { FilledSquareExtraLargeButton };
+export default FilledSquareExtraLargeButton;

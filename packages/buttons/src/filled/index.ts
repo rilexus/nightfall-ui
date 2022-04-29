@@ -1,4 +1,4 @@
 export * from "./filled-square-button";
-export * from "./FilledButton";
+export { default as FilledButton } from "./FilledButton";
 export * from "./round";
 export * from "./oval";

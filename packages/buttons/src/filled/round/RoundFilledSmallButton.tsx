@@ -1,11 +1,7 @@
 import React, { forwardRef, HTMLAttributes } from "react";
 import styled from "styled-components";
 import { filledButtonCss, roundedButtonCss } from "../css";
-import {
-  ButtonJumpTransition,
-  ButtonOpacityTransition,
-  ButtonScaleTransition,
-} from "../../transitions";
+
 import { useRoundButtonRadius } from "../../hooks";
 import { useCSSProperties } from "@nightfall-ui/hooks";
 
@@ -29,21 +25,11 @@ const RoundFilledSmallButton = forwardRef<
     []
   );
   return (
-    <ButtonJumpTransition>
-      <ButtonOpacityTransition>
-        <ButtonScaleTransition>
-          <StyledRoundFilledSmallButton
-            {...props}
-            style={style}
-            ref={outsideRef}
-          >
-            <div style={noSelect} ref={ref}>
-              {children}
-            </div>
-          </StyledRoundFilledSmallButton>
-        </ButtonScaleTransition>
-      </ButtonOpacityTransition>
-    </ButtonJumpTransition>
+    <StyledRoundFilledSmallButton {...props} style={style} ref={outsideRef}>
+      <div style={noSelect} ref={ref}>
+        {children}
+      </div>
+    </StyledRoundFilledSmallButton>
   );
 });
 

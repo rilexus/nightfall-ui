@@ -20,6 +20,10 @@ const buttonCss = css`
   border: none;
   outline: none;
   cursor: pointer;
+  &:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
 `;
 
 const squareSmallButtonPadding = css`
@@ -58,22 +62,7 @@ const outlinedButtonCss = css`
   background-color: transparent;
 `;
 
-const buttonScaleTransition = css`
-  transition: transform 200ms ease 0ms, opacity 200ms ease 0ms;
-  transform: scale(100%);
-  opacity: 1;
-  &:hover {
-    opacity: 0.8;
-    transform: scale(97%);
-  }
-  &:active {
-    opacity: 0.7;
-    transform: scale(95%);
-  }
-`;
-
 export {
-  buttonScaleTransition,
   buttonCss,
   squareButtonCss,
   squareSmallButtonPadding,
