@@ -1,1 +1,1 @@
-export * from "./SquareOutlinedLargeInput";
+export { default as SquareOutlinedLargeInput } from "./SquareOutlinedLargeInput";

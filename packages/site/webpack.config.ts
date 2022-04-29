@@ -4,12 +4,12 @@ import HtmlWebpackPlugin from "html-webpack-plugin";
 import CopyPlugin from "copy-webpack-plugin";
 import { DefinePlugin } from "webpack";
 
-const BUILD_FOLDER = "docs";
+const BUILD_FOLDER = "dist";
 
 export default ({ development, production }: any) => {
   return {
     entry: ["@babel/polyfill", "./index.tsx"],
-    mode: "development",
+    mode: development ? "development" : "production",
     module: {
       rules: [
         {
@@ -33,7 +33,7 @@ export default ({ development, production }: any) => {
     },
     output: {
       path: path.resolve(__dirname, BUILD_FOLDER),
-      filename: "bundle.js",
+      filename: "index.js",
     },
     devServer: {
       static: {

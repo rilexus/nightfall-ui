@@ -26,4 +26,4 @@ const SquareFilledMediumInput = forwardRef<
   return <StyledSquareFilledMediumInput {...props} ref={outsideRef} />;
 });
 SquareFilledMediumInput.displayName = "SquareFilledMediumInput";
-export { SquareFilledMediumInput };
+export default SquareFilledMediumInput;

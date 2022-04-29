@@ -100,7 +100,7 @@ const mediumInputPadding = css`
 `;
 
 const filledInputBackgroundColorCss = css`
-  background-color: ${color("fill.quaternary")};
+  background-color: ${color("fill.secondary")};
 `;
 
 const filledInputBorderCss = css`

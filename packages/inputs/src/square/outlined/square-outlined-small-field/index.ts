@@ -1,1 +1,1 @@
-export * from "./SquareOutlinedSmallInput";
+export { default as SquareOutlinedSmallInput } from "./SquareOutlinedSmallInput";

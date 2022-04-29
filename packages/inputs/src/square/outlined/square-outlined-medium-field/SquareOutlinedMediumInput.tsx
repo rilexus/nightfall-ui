@@ -20,4 +20,4 @@ const SquareOutlinedMediumInput = forwardRef<
 
 SquareOutlinedMediumInput.displayName = "SquareOutlinedMediumInput";
 
-export { SquareOutlinedMediumInput };
+export default SquareOutlinedMediumInput;

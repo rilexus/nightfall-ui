@@ -32,4 +32,4 @@ const OutlinedSquareInput: FC<
   }
 });
 
-export { OutlinedSquareInput };
+export default OutlinedSquareInput;

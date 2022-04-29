@@ -1,6 +1,6 @@
 import React, { FC, forwardRef, HTMLAttributes } from "react";
 import { FilledSquareInput } from "./filled";
-import { OutlinedSquareInput } from "./outlined/OutlinedSquareInput";
+import { OutlinedSquareInput } from "./outlined";
 import { InputProps } from "../types/InputProps.type";
 
 const SquareInput: FC<

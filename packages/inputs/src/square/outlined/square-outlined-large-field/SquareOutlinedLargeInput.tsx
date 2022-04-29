@@ -18,4 +18,4 @@ const SquareOutlinedLargeInput = forwardRef<
   return <StyledSquareFilledLargeInput {...props} ref={outsideRef} />;
 });
 
-export { SquareOutlinedLargeInput };
+export default SquareOutlinedLargeInput;

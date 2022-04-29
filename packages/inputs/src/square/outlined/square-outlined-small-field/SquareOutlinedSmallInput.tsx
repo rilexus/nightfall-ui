@@ -18,4 +18,4 @@ const SquareOutlinedSmallInput = forwardRef<
   return <StyledSquareOutlinedSmallInput {...props} ref={outsideRef} />;
 });
 
-export { SquareOutlinedSmallInput };
+export default SquareOutlinedSmallInput;

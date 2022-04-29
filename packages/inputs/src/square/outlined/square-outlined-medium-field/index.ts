@@ -1,1 +1,1 @@
-export * from "./SquareOutlinedMediumInput";
+export { default as SquareOutlinedMediumInput } from "./SquareOutlinedMediumInput";

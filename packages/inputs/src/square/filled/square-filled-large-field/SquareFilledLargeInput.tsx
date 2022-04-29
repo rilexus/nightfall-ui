@@ -26,4 +26,4 @@ const SquareFilledLargeInput = forwardRef<
 });
 
 SquareFilledLargeInput.displayName = "SquareFilledLargeInput";
-export { SquareFilledLargeInput };
+export default SquareFilledLargeInput;
