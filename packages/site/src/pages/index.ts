@@ -5,3 +5,4 @@ export * from "./data-display";
 export * from "./select";
 export * from "./MediaCenter";
 export * from "./Scroll-Inertia-Page";
+export * from "./TogglePage";

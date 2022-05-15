@@ -29,6 +29,7 @@
 		"webpack-dev-server": "^4.6.0"
 	},
 	"dependencies": {
+		"@nightfall-ui/toggles": "1.0.0",
 		"@nightfall-ui/accordion": "^1.0.9",
 		"@nightfall-ui/buttons": "^1.1.0",
 		"@nightfall-ui/css": "^1.0.11",

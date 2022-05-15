@@ -7,6 +7,7 @@
   "homepage": "https://rilexus.github.io/nightfall-ui/",
   "scripts": {
     "tsc:watch": "tsc --watch",
+    "dev": "tsc --watch",
     "build": "tsc --project ./tsconfig.json",
     "start": "npm run tsc:watch"
   },

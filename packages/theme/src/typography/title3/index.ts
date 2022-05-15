@@ -7,7 +7,7 @@ import {
   lineHeight,
   regularLGCss,
 } from "@nightfall-ui/css";
-import { DarkTheme } from "../../themes/dark.theme";
+import { ThemeType } from "../../themes/Theme.type";
 
 const title3RegularPrimaryCss = css`
   ${regularLGCss};
@@ -15,8 +15,8 @@ const title3RegularPrimaryCss = css`
 `;
 
 const font = css`
-  line-height: ${lineHeight<DarkTheme>("title3")};
-  font-size: ${fontSize<DarkTheme>("title3")};
+  line-height: ${lineHeight<ThemeType>("title3")};
+  font-size: ${fontSize<ThemeType>("title3")};
 `;
 
 const regular = css`

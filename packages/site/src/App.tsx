@@ -6,6 +6,7 @@ import {
   Home,
   MediaCenter,
   SelectPage,
+  TogglePage,
   TypographyPage,
 } from "./pages";
 import { FocusProvider } from "./components/focusable";
@@ -27,7 +28,7 @@ const Page: FC = ({ children }) => {
 const Providers: FC = ({ children }) => {
   return (
     <FocusProvider>
-      <ThemeProvider>
+      <ThemeProvider schema={"light"}>
         <DialogProvider>
           <DialogBackgroundTransition
             zoom={{ from: 1, to: 0.99, timeout: 400 }}
@@ -67,6 +68,9 @@ const App = () => {
             <Ul>
               <Li>
                 <Link to={"/buttons"}>Buttons</Link>
+              </Li>
+              <Li>
+                <Link to={"/toggle"}>Toggle</Link>
               </Li>
               <Li>
                 <Link to={"/inputs"}>Fields</Link>
@@ -126,6 +130,7 @@ const App = () => {
           <Routes>
             <Route path={"/"} element={<Home />} />
             <Route path={"/buttons"} element={<ButtonsPage />} />
+            <Route path={"/toggle"} element={<TogglePage />} />
             <Route path={"/inputs"} element={<FormsPage />} />
             <Route path={"/select"} element={<SelectPage />} />
             <Route path={"/dialog"} element={<DialogPage />} />

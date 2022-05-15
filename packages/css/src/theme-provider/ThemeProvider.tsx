@@ -1,5 +1,4 @@
 import React, { useMemo } from "react";
-
 import { ThemeProvider as StyledThemeProvider } from "styled-components";
 import { theme } from "../theme";
 
@@ -65,4 +64,4 @@ const CssProvider = ({ theme, children }: any) => {
   );
 };
 
-export { CssProvider };
+export default CssProvider;

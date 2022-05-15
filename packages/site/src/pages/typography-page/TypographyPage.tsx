@@ -35,32 +35,32 @@ const TypographyPage = () => {
             <div>
               <h3>Regular</h3>
               <LargeTitle weight={"regular"} type={"primary"}>
-                Title3 Regular Primary
+                Primary
               </LargeTitle>
               <LargeTitle weight={"regular"} type={"secondary"}>
-                Title3 Regular Secondary
+                Secondary
               </LargeTitle>
               <LargeTitle weight={"regular"} type={"tertiary"}>
-                Title3 Regular Tertiary
+                Tertiary
               </LargeTitle>
               <LargeTitle weight={"regular"} type={"quaternary"}>
-                Title3 Regular Quaternary
+                Quaternary
               </LargeTitle>
             </div>
 
             <div>
               <h3>Bold</h3>
               <LargeTitle weight={"bold"} type={"primary"}>
-                Title3 Bold Primary
+                Primary
               </LargeTitle>
               <LargeTitle weight={"bold"} type={"secondary"}>
-                Title3 Bold Secondary
+                Secondary
               </LargeTitle>
               <LargeTitle weight={"bold"} type={"tertiary"}>
-                Title3 Bold Tertiary
+                Tertiary
               </LargeTitle>
               <LargeTitle weight={"bold"} type={"quaternary"}>
-                Title3 Bold Quaternary
+                Quaternary
               </LargeTitle>
             </div>
           </Flex>
@@ -73,27 +73,21 @@ const TypographyPage = () => {
           <Flex justify={"left"}>
             <div>
               <h3>Regular</h3>
-              <Title1Regular>Title1 Regular Primary</Title1Regular>
-              <Title1Regular type={"secondary"}>
-                Title1 Regular Secondary
-              </Title1Regular>
-              <Title1Regular type={"tertiary"}>
-                Title1 Regular Tertiary
-              </Title1Regular>
-              <Title1Regular type={"quaternary"}>
-                Title1 Regular Quaternary
-              </Title1Regular>
+              <Title1Regular>Primary</Title1Regular>
+              <Title1Regular type={"secondary"}>Secondary</Title1Regular>
+              <Title1Regular type={"tertiary"}>Tertiary</Title1Regular>
+              <Title1Regular type={"quaternary"}>Quaternary</Title1Regular>
             </div>
 
             <div>
               <h3>Bold</h3>
-              <Title1Bold type={"primary"}>Title1 Bold Quaternary</Title1Bold>
-              <Title1Bold type={"secondary"}>Title1 Bold Secondary</Title1Bold>
+              <Title1Bold type={"primary"}>Quaternary</Title1Bold>
+              <Title1Bold type={"secondary"}>Secondary</Title1Bold>
               <Title1 type={"tertiary"} weight={"bold"}>
-                Title1 Bold Tertiary
+                Tertiary
               </Title1>
               <Title1 type={"quaternary"} weight={"bold"}>
-                Title1 Bold Quaternary
+                Quaternary
               </Title1>
             </div>
           </Flex>
@@ -106,16 +100,16 @@ const TypographyPage = () => {
           <div>
             <h3>Regular</h3>
             <Title2 weight={"regular"} type={"primary"}>
-              Title2 Regular Primary
+              Primary
             </Title2>
             <Title2 weight={"regular"} type={"secondary"}>
-              Title2 Regular Secondary
+              Secondary
             </Title2>
             <Title2 weight={"regular"} type={"tertiary"}>
-              Title2 Regular Tertiary
+              Tertiary
             </Title2>
             <Title2 weight={"regular"} type={"quaternary"}>
-              Title2 Regular Quaternary
+              Quaternary
             </Title2>
           </div>
         </div>
@@ -128,31 +122,31 @@ const TypographyPage = () => {
             <div>
               <h3>Regular</h3>
               <Title3 weight={"regular"} type={"primary"}>
-                Title3 Regular Primary
+                Primary
               </Title3>
               <Title3 weight={"regular"} type={"secondary"}>
-                Title3 Regular Secondary
+                Secondary
               </Title3>
               <Title3 weight={"regular"} type={"tertiary"}>
-                Title3 Regular Tertiary
+                Tertiary
               </Title3>
               <Title3 weight={"regular"} type={"quaternary"}>
-                Title3 Regular Quaternary
+                Quaternary
               </Title3>
             </div>
             <div>
               <h3>Bold</h3>
               <Title3 weight={"bold"} type={"primary"}>
-                Title3 Bold Primary
+                Primary
               </Title3>
               <Title3 weight={"bold"} type={"secondary"}>
-                Title3 Bold Secondary
+                Secondary
               </Title3>
               <Title3 weight={"bold"} type={"tertiary"}>
-                Title3 Bold Tertiary
+                Tertiary
               </Title3>
               <Title3 weight={"bold"} type={"quaternary"}>
-                Title3 Bold Quaternary
+                Quaternary
               </Title3>
             </div>
           </Flex>
@@ -166,16 +160,16 @@ const TypographyPage = () => {
             <div>
               <h3>Regular</h3>
               <Headline weight={"regular"} type={"primary"}>
-                Headline Regular Primary
+                Primary
               </Headline>
               <Headline weight={"regular"} type={"secondary"}>
-                Headline Regular Secondary
+                Secondary
               </Headline>
               <Headline weight={"regular"} type={"tertiary"}>
-                Headline Regular Tertiary
+                Tertiary
               </Headline>
               <Headline weight={"regular"} type={"quaternary"}>
-                Headline Regular Quaternary
+                Quaternary
               </Headline>
             </div>
           </Flex>
@@ -189,32 +183,32 @@ const TypographyPage = () => {
             <div>
               <h3>Regular</h3>
               <SubHeadline weight={"regular"} type={"primary"}>
-                SubHeadline Regular Primary
+                Primary
               </SubHeadline>
               <SubHeadline weight={"regular"} type={"secondary"}>
-                SubHeadline Regular Secondary
+                Secondary
               </SubHeadline>
               <SubHeadline weight={"regular"} type={"tertiary"}>
-                SubHeadline Regular Tertiary
+                Tertiary
               </SubHeadline>
               <SubHeadline weight={"regular"} type={"quaternary"}>
-                SubHeadline Regular Quaternary
+                Quaternary
               </SubHeadline>
             </div>
 
             <div>
               <h3>Bold</h3>
               <SubHeadline weight={"bold"} type={"primary"}>
-                SubHeadline Bold Primary
+                Primary
               </SubHeadline>
               <SubHeadline weight={"bold"} type={"secondary"}>
-                SubHeadline Bold Secondary
+                Secondary
               </SubHeadline>
               <SubHeadline weight={"bold"} type={"tertiary"}>
-                SubHeadline Bold Tertiary
+                Tertiary
               </SubHeadline>
               <SubHeadline weight={"bold"} type={"quaternary"}>
-                SubHeadline Bold Quaternary
+                Quaternary
               </SubHeadline>
             </div>
           </Flex>
@@ -228,32 +222,32 @@ const TypographyPage = () => {
             <div>
               <h3>Regular</h3>
               <Caption1 weight={"regular"} type={"primary"}>
-                Caption1 Regular Primary
+                Primary
               </Caption1>
               <Caption1 weight={"regular"} type={"secondary"}>
-                Caption1 Regular Secondary
+                Secondary
               </Caption1>
               <Caption1 weight={"regular"} type={"tertiary"}>
-                Caption1 Regular Tertiary
+                Tertiary
               </Caption1>
               <Caption1 weight={"regular"} type={"quaternary"}>
-                Caption1 Regular Quaternary
+                Quaternary
               </Caption1>
             </div>
 
             <div>
               <h3>Bold</h3>
               <Caption1 weight={"bold"} type={"primary"}>
-                Caption1 Bold Primary
+                Primary
               </Caption1>
               <Caption1 weight={"bold"} type={"secondary"}>
-                Caption1 Bold Secondary
+                Secondary
               </Caption1>
               <Caption1 weight={"bold"} type={"tertiary"}>
-                Caption1 Bold Tertiary
+                Tertiary
               </Caption1>
               <Caption1 weight={"bold"} type={"quaternary"}>
-                Caption1 Bold Quaternary
+                Quaternary
               </Caption1>
             </div>
           </Flex>
@@ -267,32 +261,32 @@ const TypographyPage = () => {
             <div>
               <h3>Regular</h3>
               <Caption2 weight={"regular"} type={"primary"}>
-                Caption2 Regular Primary
+                Primary
               </Caption2>
               <Caption2 weight={"regular"} type={"secondary"}>
-                Caption2 Regular Secondary
+                Secondary
               </Caption2>
               <Caption2 weight={"regular"} type={"tertiary"}>
-                Caption2 Regular Tertiary
+                Tertiary
               </Caption2>
               <Caption2 weight={"regular"} type={"quaternary"}>
-                Caption2 Regular Quaternary
+                Quaternary
               </Caption2>
             </div>
 
             <div>
               <h3>Bold</h3>
               <Caption2 weight={"bold"} type={"primary"}>
-                Caption2 Bold Primary
+                Primary
               </Caption2>
               <Caption2 weight={"bold"} type={"secondary"}>
-                Caption2 Bold Secondary
+                Secondary
               </Caption2>
               <Caption2 weight={"bold"} type={"tertiary"}>
-                Caption2 Bold Tertiary
+                Tertiary
               </Caption2>
               <Caption2 weight={"bold"} type={"quaternary"}>
-                Caption2 Bold Quaternary
+                Quaternary
               </Caption2>
             </div>
           </Flex>
@@ -306,32 +300,32 @@ const TypographyPage = () => {
             <div>
               <h3>Regular</h3>
               <Footnote weight={"regular"} type={"primary"}>
-                Footnote Regular Primary
+                Primary
               </Footnote>
               <Footnote weight={"regular"} type={"secondary"}>
-                Footnote Regular Secondary
+                Secondary
               </Footnote>
               <Footnote weight={"regular"} type={"tertiary"}>
-                Footnote Regular Tertiary
+                Tertiary
               </Footnote>
               <Footnote weight={"regular"} type={"quaternary"}>
-                Footnote Regular Quaternary
+                Quaternary
               </Footnote>
             </div>
 
             <div>
               <h3>Bold</h3>
               <Footnote weight={"bold"} type={"primary"}>
-                Footnote Bold Primary
+                Primary
               </Footnote>
               <Footnote weight={"bold"} type={"secondary"}>
-                Footnote Bold Secondary
+                Secondary
               </Footnote>
               <Footnote weight={"bold"} type={"tertiary"}>
-                Footnote Bold Tertiary
+                Tertiary
               </Footnote>
               <Footnote weight={"bold"} type={"quaternary"}>
-                Footnote Bold Quaternary
+                Quaternary
               </Footnote>
             </div>
           </Flex>
@@ -345,32 +339,32 @@ const TypographyPage = () => {
             <div>
               <h3>Regular</h3>
               <Callout weight={"regular"} type={"primary"}>
-                Callout Regular Primary
+                Primary
               </Callout>
               <Callout weight={"regular"} type={"secondary"}>
-                Callout Regular Secondary
+                Secondary
               </Callout>
               <Callout weight={"regular"} type={"tertiary"}>
-                Callout Regular Tertiary
+                Tertiary
               </Callout>
               <Callout weight={"regular"} type={"quaternary"}>
-                Callout Regular Quaternary
+                Quaternary
               </Callout>
             </div>
 
             <div>
               <h3>Bold</h3>
               <Callout weight={"bold"} type={"primary"}>
-                Callout Bold Primary
+                Primary
               </Callout>
               <Callout weight={"bold"} type={"secondary"}>
-                Footnote Bold Secondary
+                Secondary
               </Callout>
               <Callout weight={"bold"} type={"tertiary"}>
-                Callout Bold Tertiary
+                Tertiary
               </Callout>
               <Callout weight={"bold"} type={"quaternary"}>
-                Callout Bold Quaternary
+                Quaternary
               </Callout>
             </div>
           </Flex>
@@ -384,32 +378,32 @@ const TypographyPage = () => {
             <div>
               <h3>Regular</h3>
               <Body weight={"regular"} type={"primary"}>
-                Body Regular Primary
+                Primary
               </Body>
               <Body weight={"regular"} type={"secondary"}>
-                Body Regular Secondary
+                Secondary
               </Body>
               <Body weight={"regular"} type={"tertiary"}>
-                Body Regular Tertiary
+                Tertiary
               </Body>
               <Body weight={"regular"} type={"quaternary"}>
-                Body Regular Quaternary
+                Quaternary
               </Body>
             </div>
 
             <div>
               <h3>Bold</h3>
               <Body weight={"bold"} type={"primary"}>
-                Body Bold Primary
+                Primary
               </Body>
               <Body weight={"bold"} type={"secondary"}>
-                Body Bold Secondary
+                Secondary
               </Body>
               <Body weight={"bold"} type={"tertiary"}>
-                Body Bold Tertiary
+                Tertiary
               </Body>
               <Body weight={"bold"} type={"quaternary"}>
-                Body Bold Quaternary
+                Quaternary
               </Body>
             </div>
           </Flex>

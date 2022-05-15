@@ -1,28 +1,29 @@
 {
-  "name": "@nightfall-ui/typography",
-  "version": "1.0.8",
+  "name": "@nightfall-ui/toggles",
+  "version": "1.0.0",
   "license": "MIT",
-  "description": "Typography for the NIghtfall UI component library.",
+  "description": "Toggles for the Nightfall UI component library.",
   "author": "Stanislav Panchenko <email@stanislavpanchenko.de>",
   "homepage": "https://rilexus.github.io/nightfall-ui/",
   "scripts": {
     "tsc:watch": "tsc --watch",
-    "dev": "tsc --watch",
     "build": "tsc --project ./tsconfig.json",
-    "start": "npm run tsc:watch"
+    "start": "npm run tsc:watch",
+    "dev": "npm run tsc:watch"
   },
   "devDependencies": {
+    "@nightfall-ui/css": "^1.0.11",
+    "@nightfall-ui/theme": "^1.0.15",
     "styled-components": "^5.3.3"
   },
-  "main": "dist/src/index.js",
-  "types": "dist/src/index.d.ts",
   "peerDependencies": {
     "@nightfall-ui/css": "*",
-    "@nightfall-ui/hooks": "*",
     "@nightfall-ui/theme": "*",
     "react": "^18.0.0 || ^17.0.0",
     "styled-components": "^5.3.3"
   },
+  "main": "dist/src/index.js",
+  "types": "dist/src/index.d.ts",
   "repository": {
     "type": "git",
     "url": "https://github.com/rilexus/nightfall-ui"

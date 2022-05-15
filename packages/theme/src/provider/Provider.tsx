@@ -2,19 +2,20 @@ import React, { FC, useMemo } from "react";
 import { CssProvider } from "@nightfall-ui/css";
 import { usePrefersColorScheme } from "@nightfall-ui/hooks";
 import { GlobalCss, ResetCss } from "../reset-css";
-import { darkTheme } from "../themes/dark.theme";
+import { darkTheme, lightTheme } from "../themes";
 
-const ThemeProvider: FC = ({ children }) => {
+type Schema = "dark" | "light";
+
+const ThemeProvider: FC<{ schema?: Schema }> = ({ children, schema }) => {
   const colorSchema = usePrefersColorScheme();
+  const _schema = schema || colorSchema;
 
-  const t = useMemo(
-    // TODO: add light theme values
-    () => (colorSchema === "dark" ? darkTheme : darkTheme),
-    [colorSchema]
-  );
+  const theme = useMemo(() => {
+    return _schema === "dark" ? darkTheme : lightTheme;
+  }, [_schema]);
 
   return (
-    <CssProvider theme={t}>
+    <CssProvider theme={theme}>
       <ResetCss />
       <GlobalCss />
       {children}

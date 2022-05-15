@@ -6,11 +6,11 @@ import {
   fontSize,
   lineHeight,
 } from "@nightfall-ui/css";
-import { DarkTheme } from "../../themes/dark.theme";
+import { ThemeType } from "../../themes/Theme.type";
 
 const font = css`
-  line-height: ${lineHeight<DarkTheme>("title2")};
-  font-size: ${fontSize<DarkTheme>("title2")};
+  line-height: ${lineHeight<ThemeType>("title2")};
+  font-size: ${fontSize<ThemeType>("title2")};
 `;
 
 const regular = css`

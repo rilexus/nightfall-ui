@@ -42,6 +42,7 @@ export default ({ development, production }: any) => {
       client: {
         progress: true,
       },
+      bonjour: true,
       open: ["/"].filter(Boolean),
       historyApiFallback: true,
       compress: true,

@@ -29,4 +29,4 @@ const LargeTitle: ForwardRefExoticComponent<Props> = forwardRef(
   }
 );
 
-export { LargeTitle };
+export default LargeTitle;

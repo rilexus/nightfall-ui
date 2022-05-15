@@ -1,38 +1,6 @@
-export interface DarkTheme {
-  textColor: {
-    DEFAULT: string;
-  };
-  lineHeight: {
-    body: string;
-    callout: string;
-    footnote: string;
-    caption1: string;
-    caption2: string;
-    headline: string;
-    largeTitle: string;
-    title1: string;
-    title2: string;
-    title3: string;
-    subHeadline: string;
-  };
-  fontSize: {
-    body: string;
-    callout: string;
-    footnote: string;
-    caption1: string;
-    caption2: string;
-    headline: string;
-    largeTitle: string;
-    title1: string;
-    title2: string;
-    title3: string;
-    subHeadline: string;
-  };
-  fontWeight: {};
-  colors: any;
-}
+import { ThemeType } from "./Theme.type";
 
-const darkTheme: DarkTheme = {
+const darkTheme: ThemeType = {
   // https://noahgilmore.com/blog/dark-mode-uicolor-compatibility/
   textColor: {
     DEFAULT: "#ffffff99",
@@ -155,6 +123,11 @@ const darkTheme: DarkTheme = {
         tertiary: "rgb(58, 58, 60, 100%)",
       },
     },
+    groupedBackground: {
+      primary: "#000000ff",
+      secondary: "#1c1c1eff",
+      tertiary: "#2c2c2eff",
+    },
     materials: {
       background: {
         regular: "rgb(0, 0, 0, 41%)",
@@ -162,11 +135,6 @@ const darkTheme: DarkTheme = {
         ultraThin: "rgb(0, 0, 0, 10%)",
         thick: "rgb(0, 0, 0, 60%)",
       },
-    },
-    groupedBackground: {
-      primary: "#000000ff",
-      secondary: "#1c1c1eff",
-      tertiary: "#2c2c2eff",
     },
     placeholderText: "#ebebf54c",
     separator: "#54545899",
@@ -221,4 +189,4 @@ const darkTheme: DarkTheme = {
   },
 };
 
-export { darkTheme };
+export default darkTheme;

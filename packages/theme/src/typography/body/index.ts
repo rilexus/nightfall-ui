@@ -6,11 +6,11 @@ import {
   fontWeight,
   lineHeight,
 } from "@nightfall-ui/css";
-import { DarkTheme } from "../../themes/dark.theme";
+import { ThemeType } from "../../themes/Theme.type";
 
 const font = css`
-  font-size: ${fontSize<DarkTheme>("body")};
-  line-height: ${lineHeight<DarkTheme>("body")};
+  font-size: ${fontSize<ThemeType>("body")};
+  line-height: ${lineHeight<ThemeType>("body")};
 `;
 
 const regular = css`
@@ -18,7 +18,7 @@ const regular = css`
 `;
 
 const bold = css`
-  font-weight: ${fontWeight<DarkTheme>("semiBold")};
+  font-weight: ${fontWeight<ThemeType>("semiBold")};
 `;
 
 const bodyRegularPrimaryCss = css`

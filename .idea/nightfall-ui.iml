@@ -17,6 +17,7 @@
       <excludeFolder url="file://$MODULE_DIR$/packages/theme/dist" />
       <excludeFolder url="file://$MODULE_DIR$/packages/scroll-inertia/dist" />
       <excludeFolder url="file://$MODULE_DIR$/packages/site/docs" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/toggles/dist" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
