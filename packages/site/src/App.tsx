@@ -1,5 +1,5 @@
 import { Link, Navigate, Route, Routes } from "react-router-dom";
-import React, { FC } from "react";
+import React, { FC, useCallback, useReducer } from "react";
 import {
   ButtonsPage,
   DataDisplayPage,
@@ -20,15 +20,40 @@ import { FormsPage } from "./pages/forms";
 import { DialogPage } from "./pages/dialog";
 import { GridPage } from "./pages/grid";
 import ScrollInertiaPage from "./pages/Scroll-Inertia-Page/ScrollInertiaPage";
+import { Flex } from "@nightfall-ui/layout";
+import { Toggle } from "@nightfall-ui/toggles";
+import { useEventBus } from "./hooks";
+
+let schema: "dark" | "light" = "light";
+const setSchema = (newSchema: "dark" | "light") => {
+  schema = newSchema;
+  // eslint-disable-next-line
+  // @ts-ignore
+  window.eventbus.emit("color-schema:toggle", schema);
+};
+
+const useColorSchema = (): [
+  "dark" | "light",
+  (schema: "dark" | "light") => void
+] => {
+  const [, rerender] = useReducer((s) => !s, false);
+
+  useEventBus("color-schema:toggle", () => {
+    rerender();
+  });
+
+  return [schema, setSchema];
+};
 
 const Page: FC = ({ children }) => {
   return <div>{children}</div>;
 };
 
 const Providers: FC = ({ children }) => {
+  const [schema] = useColorSchema();
   return (
     <FocusProvider>
-      <ThemeProvider schema={"light"}>
+      <ThemeProvider schema={schema}>
         <DialogProvider>
           <DialogBackgroundTransition
             zoom={{ from: 1, to: 0.99, timeout: 400 }}
@@ -42,6 +67,20 @@ const Providers: FC = ({ children }) => {
   );
 };
 
+const ColorSchemaToggle = () => {
+  const [schema, setSchema] = useColorSchema();
+
+  const toggle = useCallback(() => {
+    if (schema === "dark") {
+      setSchema("light");
+    } else {
+      setSchema("dark");
+    }
+  }, [schema, setSchema]);
+
+  return <Toggle onChange={toggle} checked={schema === "light"} />;
+};
+
 const App = () => {
   return (
     <Providers>
@@ -49,7 +88,7 @@ const App = () => {
         style={{
           position: "fixed",
           left: 0,
-          top: 0,
+          top: "3rem",
           height: "100vh",
         }}
       >
@@ -126,6 +165,18 @@ const App = () => {
         </Ul>
       </nav>
       <div>
+        <header
+          style={{
+            position: "fixed",
+            width: "100vw",
+            top: 0,
+            height: "3rem",
+          }}
+        >
+          <Flex justify={"end"}>
+            <ColorSchemaToggle />
+          </Flex>
+        </header>
         <Page>
           <Routes>
             <Route path={"/"} element={<Home />} />

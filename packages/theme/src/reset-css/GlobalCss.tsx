@@ -12,6 +12,7 @@ const GlobalCss = createGlobalStyle`
     font-size: 16px;
   }
   html {
+    transition: background-color 200ms;
     ${primaryBaseBackgroundCss};
     font-family: ${fontFamily("sans")};
   }

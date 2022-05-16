@@ -2,6 +2,8 @@ import styled from "styled-components";
 import React, { FC } from "react";
 import { color } from "@nightfall-ui/css";
 
+const ease = `cubic-bezier(0.2, 0.13, 0.08, 1.49)`;
+
 const StyledToggle = styled.label`
   position: relative;
   display: inline-block;
@@ -36,8 +38,8 @@ const StyledToggle = styled.label`
     cursor: pointer;
     inset: 0;
     background-color: ${color("background.base.tertiary")};
-    -webkit-transition: 200ms;
-    transition: 200ms;
+    -webkit-transition: transform 200ms ${ease};
+    transition: transform 200ms ${ease}, background-color 200ms;
 
     &:before {
       // toggle
@@ -49,8 +51,8 @@ const StyledToggle = styled.label`
       left: 0.2rem;
       top: 0.2rem;
       background-color: ${color("background.elevated.primary")};
-      -webkit-transition: 200ms;
-      transition: 200ms;
+      -webkit-transition: transform 200ms ${ease};
+      transition: transform 200ms ${ease};
     }
   }
 `;
