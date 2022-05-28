@@ -1,5 +1,5 @@
 import { Link, Navigate, Route, Routes } from "react-router-dom";
-import React, { FC, useCallback, useReducer } from "react";
+import React, { FC, useCallback } from "react";
 import {
   ButtonsPage,
   DataDisplayPage,
@@ -22,28 +22,12 @@ import { GridPage } from "./pages/grid";
 import ScrollInertiaPage from "./pages/Scroll-Inertia-Page/ScrollInertiaPage";
 import { Flex } from "@nightfall-ui/layout";
 import { Toggle } from "@nightfall-ui/toggles";
-import { useEventBus } from "./hooks";
+import { createState, localStorageEnhancer } from "./libs";
 
-let schema: "dark" | "light" = "light";
-const setSchema = (newSchema: "dark" | "light") => {
-  schema = newSchema;
-  // eslint-disable-next-line
-  // @ts-ignore
-  window.eventbus.emit("color-schema:toggle", schema);
-};
-
-const useColorSchema = (): [
-  "dark" | "light",
-  (schema: "dark" | "light") => void
-] => {
-  const [, rerender] = useReducer((s) => !s, false);
-
-  useEventBus("color-schema:toggle", () => {
-    rerender();
-  });
-
-  return [schema, setSchema];
-};
+const useColorSchema = createState<"light" | "dark">(
+  "light",
+  localStorageEnhancer("colorSchema")
+);
 
 const Page: FC = ({ children }) => {
   return <div>{children}</div>;
@@ -51,6 +35,8 @@ const Page: FC = ({ children }) => {
 
 const Providers: FC = ({ children }) => {
   const [schema] = useColorSchema();
+  console.log({ schema });
+
   return (
     <FocusProvider>
       <ThemeProvider schema={schema}>
@@ -67,16 +53,16 @@ const Providers: FC = ({ children }) => {
   );
 };
 
+const toggleSchema = (schema: "light" | "dark") => {
+  if (schema === "light") return "dark";
+  return "light";
+};
 const ColorSchemaToggle = () => {
   const [schema, setSchema] = useColorSchema();
 
   const toggle = useCallback(() => {
-    if (schema === "dark") {
-      setSchema("light");
-    } else {
-      setSchema("dark");
-    }
-  }, [schema, setSchema]);
+    setSchema(toggleSchema);
+  }, [setSchema]);
 
   return <Toggle onChange={toggle} checked={schema === "light"} />;
 };
