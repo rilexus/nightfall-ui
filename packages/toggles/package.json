@@ -1,6 +1,6 @@
 {
   "name": "@nightfall-ui/toggles",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "license": "MIT",
   "description": "Toggles for the Nightfall UI component library.",
   "author": "Stanislav Panchenko <email@stanislavpanchenko.de>",
@@ -13,7 +13,7 @@
   },
   "devDependencies": {
     "@nightfall-ui/css": "^1.0.12",
-    "@nightfall-ui/theme": "^1.0.16",
+    "@nightfall-ui/theme": "^1.0.17",
     "styled-components": "^5.3.3"
   },
   "peerDependencies": {
