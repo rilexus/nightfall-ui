@@ -30,4 +30,6 @@ export * from "./typography";
 
 export * from "./media-queries";
 
+export * from "./text-transform";
+
 export { defaultTheme };
