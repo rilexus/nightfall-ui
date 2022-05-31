@@ -1,6 +1,6 @@
 {
   "name": "@nightfall-ui/theme",
-  "version": "1.0.19",
+  "version": "1.0.20",
   "license": "MIT",
   "description": "Theme for the Nightfall UI component library.",
   "author": "Stanislav Panchenko <email@stanislavpanchenko.de>",
@@ -12,7 +12,7 @@
     "start": "npm run tsc:watch"
   },
   "devDependencies": {
-    "@nightfall-ui/css": "^1.0.14",
+    "@nightfall-ui/css": "^1.0.15",
     "@nightfall-ui/hooks": "^1.1.0",
     "@types/react-dom": "^17.0.11",
     "@types/styled-components": "^5.1.17",
