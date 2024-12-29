@@ -1,6 +1,6 @@
 import React from "react";
-import { Center, Grid } from "@nightfall-ui/layout";
-import { Card } from "@nightfall-ui/surfaces";
+import { Center, Grid } from "@nightfall-ui/components";
+import { Card } from "@nightfall-ui/components";
 
 const GridPage = () => {
   return (

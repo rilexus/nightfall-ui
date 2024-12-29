@@ -15,18 +15,23 @@ const roundedMD = css`
 const roundedLG = css`
   border-radius: 0.5rem;
 `;
+
 const roundedXL = css`
   border-radius: 0.75rem;
 `;
+
 const rounded2XL = css`
   border-radius: 1rem;
 `;
+
 const rounded3XL = css`
   border-radius: 1.5rem;
 `;
+
 const roundedFull = css`
   border-radius: 9999px;
 `;
+
 export {
   roundedSM,
   rounded,

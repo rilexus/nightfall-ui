@@ -1,10 +1,10 @@
 import React from "react";
-import { Button } from "@nightfall-ui/buttons";
+import { Button } from "@nightfall-ui/components";
 import styled from "styled-components";
 import { regularNormal2XLCss } from "@nightfall-ui/css";
 import { Hr } from "../../components";
-import { Center, XStack } from "@nightfall-ui/layout";
-import { LoadingGradient } from "@nightfall-ui/surfaces";
+import { Center, XStack } from "@nightfall-ui/components";
+import { LoadingGradient } from "@nightfall-ui/components";
 import { Title1 } from "@nightfall-ui/typography";
 
 const H2 = styled.h2`

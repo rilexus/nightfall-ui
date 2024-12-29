@@ -8,14 +8,14 @@ import styled, {
   StyledComponentProps,
 } from "styled-components";
 import {
-  title1BoldPrimaryCss,
-  title1BoldQuaternaryCss,
-  title1BoldSecondaryCss,
-  title1BoldTertiaryCss,
-} from "@nightfall-ui/theme";
+  title2BoldPrimaryCss,
+  title2BoldQuaternaryCss,
+  title2BoldSecondaryCss,
+  title2BoldTertiaryCss,
+} from "./title2.css";
 
 const StyleTitle2BoldPrimary = styled.div`
-  ${title1BoldPrimaryCss}
+  ${title2BoldPrimaryCss}
 `;
 
 const Title2BoldPrimary = forwardRef<
@@ -28,7 +28,7 @@ const Title2BoldPrimary = forwardRef<
 });
 
 const StyleTitle2BoldSecondary = styled.div`
-  ${title1BoldSecondaryCss}
+  ${title2BoldSecondaryCss}
 `;
 
 const Title2BoldSecondary = forwardRef<
@@ -41,7 +41,7 @@ const Title2BoldSecondary = forwardRef<
 });
 
 const StyleTitle2BoldTertiary = styled.div`
-  ${title1BoldTertiaryCss}
+  ${title2BoldTertiaryCss}
 `;
 
 const Title2BoldTertiary = forwardRef<
@@ -54,7 +54,7 @@ const Title2BoldTertiary = forwardRef<
 });
 
 const StyleTitle2BoldQuaternary = styled.div`
-  ${title1BoldQuaternaryCss}
+  ${title2BoldQuaternaryCss}
 `;
 
 const Title2BoldQuaternary = forwardRef<

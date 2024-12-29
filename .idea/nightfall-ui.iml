@@ -3,21 +3,21 @@
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
     <content url="file://$MODULE_DIR$">
-      <excludeFolder url="file://$MODULE_DIR$/packages/buttons/dist" />
       <excludeFolder url="file://$MODULE_DIR$/packages/site/dist" />
       <excludeFolder url="file://$MODULE_DIR$/packages/typography/dist" />
-      <excludeFolder url="file://$MODULE_DIR$/packages/accordion/dist" />
       <excludeFolder url="file://$MODULE_DIR$/packages/hooks/dist" />
       <excludeFolder url="file://$MODULE_DIR$/packages/utils/dist" />
-      <excludeFolder url="file://$MODULE_DIR$/packages/layout/dist" />
-      <excludeFolder url="file://$MODULE_DIR$/packages/surfaces/dist" />
-      <excludeFolder url="file://$MODULE_DIR$/packages/inputs/dist" />
-      <excludeFolder url="file://$MODULE_DIR$/packages/dialog/dist" />
       <excludeFolder url="file://$MODULE_DIR$/packages/css/dist" />
       <excludeFolder url="file://$MODULE_DIR$/packages/theme/dist" />
       <excludeFolder url="file://$MODULE_DIR$/packages/scroll-inertia/dist" />
       <excludeFolder url="file://$MODULE_DIR$/packages/site/docs" />
-      <excludeFolder url="file://$MODULE_DIR$/packages/toggles/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/components/buttons/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/components/dialog/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/components/accordion/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/components/inputs/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/components/toggles/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/components/layout/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/components/surfaces/dist" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

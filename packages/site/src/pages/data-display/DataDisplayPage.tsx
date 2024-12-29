@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { AccordionUl, AccordionLi } from "@nightfall-ui/data-display";
-import { Card } from "@nightfall-ui/surfaces";
-import { Center } from "@nightfall-ui/layout";
+import { AccordionUl, AccordionLi } from "@nightfall-ui/components";
+import { Card } from "@nightfall-ui/components";
+import { Center } from "@nightfall-ui/components";
 import { Title1 } from "@nightfall-ui/typography";
 
 const DataDisplayPage = () => {

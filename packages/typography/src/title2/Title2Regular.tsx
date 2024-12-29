@@ -12,7 +12,7 @@ import {
   title2RegularQuaternaryCss,
   title2RegularSecondaryCss,
   title2RegularTertiaryCss,
-} from "@nightfall-ui/theme";
+} from "./title2.css";
 
 const StyleTitle2RegularPrimary = styled.div`
   ${title2RegularPrimaryCss}

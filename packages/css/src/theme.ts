@@ -1,5 +1,5 @@
-import { marginTheme } from "./margin";
-import { paddingTheme } from "./padding";
+import { marginTheme } from "./spacing";
+import { paddingTheme } from "./spacing";
 import { Theme } from "./Theme.type";
 
 const theme: Theme = {

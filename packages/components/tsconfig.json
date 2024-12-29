@@ -1,0 +1,28 @@
+{
+  "extends": "../../ts-config.json",
+  "compilerOptions": {
+    "composite": true,
+    "outDir": "dist",
+    "baseUrl": "."
+  },
+  "include": [
+    "buttons/**/*",
+    "accordion/**/*",
+    "data-display/**/*",
+    "dialog/**/*",
+    "inputs/**/*",
+    "toggle/**/*",
+    "layout/**/*",
+    "surfaces/**/*",
+    "scroll-inertia/**/*"
+  ],
+  "exclude": [
+    "**/*.spec.ts",
+    "**/*.test.ts",
+    "dist",
+    "docs",
+    "node_modules",
+    "webpack.config.ts",
+    "site"
+  ]
+}

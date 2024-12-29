@@ -1,5 +1,5 @@
 import { css } from "styled-components";
-import { fontThinCss } from "../font";
+import { fontThinCss } from "./font";
 import {
   textCss,
   text2XLCss,

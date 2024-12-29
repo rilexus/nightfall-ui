@@ -7,7 +7,7 @@ import {
   largeTitleBoldQuaternaryCss,
   largeTitleBoldSecondaryCss,
   largeTitleBoldTertiaryCss,
-} from "@nightfall-ui/theme";
+} from "./largeTitle.css";
 import React, { FC, forwardRef, HTMLAttributes } from "react";
 
 const StyleLargeTitleBoldPrimary = styled.div`

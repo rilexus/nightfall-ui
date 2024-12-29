@@ -8,7 +8,7 @@ import {
   footnoteBoldQuaternaryCss,
   footnoteBoldSecondaryCss,
   footnoteBoldTertiaryCss,
-} from "@nightfall-ui/theme";
+} from "./footnote.css";
 
 const StyleFootnoteBoldPrimary = styled.div`
   ${footnoteBoldPrimaryCss}

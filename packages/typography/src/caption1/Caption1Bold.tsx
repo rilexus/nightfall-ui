@@ -8,7 +8,7 @@ import {
   caption1BoldQuaternaryCss,
   caption1BoldSecondaryCss,
   caption1BoldTertiaryCss,
-} from "@nightfall-ui/theme";
+} from "./caption1.css";
 
 const StyleCaption1BoldPrimary = styled.div`
   ${caption1BoldPrimaryCss}

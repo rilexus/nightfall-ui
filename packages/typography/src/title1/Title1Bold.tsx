@@ -7,7 +7,7 @@ import {
   title1BoldQuaternaryCss,
   title1BoldSecondaryCss,
   title1BoldTertiaryCss,
-} from "@nightfall-ui/theme";
+} from "./title1.css";
 import React, { FC, forwardRef, HTMLAttributes } from "react";
 
 const StyleTitle1BoldPrimary = styled.div`

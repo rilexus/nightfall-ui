@@ -1,3 +1,4 @@
+import React, { FC, forwardRef, HTMLAttributes } from "react";
 import styled, {
   StyledComponent,
   StyledComponentProps,
@@ -7,8 +8,7 @@ import {
   title1RegularQuaternaryCss,
   title1RegularSecondaryCss,
   title1RegularTertiaryCss,
-} from "@nightfall-ui/theme";
-import React, { FC, forwardRef, HTMLAttributes } from "react";
+} from "./title1.css";
 
 const StyleTitle1RegularPrimary = styled.div`
   ${title1RegularPrimaryCss}

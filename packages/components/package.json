@@ -1,0 +1,42 @@
+{
+  "name": "@nightfall-ui/components",
+  "version": "1.0.9",
+  "license": "MIT",
+  "description": "Components package for the Nightfall UI library.",
+  "author": "Stanislav Panchenko <email@stanislavpanchenko.de>",
+  "homepage": "https://rilexus.github.io/nightfall-ui/",
+  "scripts": {
+    "tsc:watch": "tsc --watch",
+    "build": "tsc --project ./tsconfig.json",
+    "start": "npm run tsc:watch",
+    "dev": "npm run tsc:watch"
+  },
+  "dependencies": {
+    "react-transition-group": "^4.4.2",
+    "react-transitions-library": "^1.10.1"
+  },
+  "peerDependencies": {
+    "@nightfall-ui/css": "^1.0.15",
+    "@nightfall-ui/typography": "*",
+    "react": "^18.0.0 || ^17.0.0",
+    "styled-components": "^5.3.3"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rilexus/nightfall-ui"
+  },
+  "keywords": [
+    "react",
+    "ui",
+    "library"
+  ],
+  "bugs": {
+    "url": "https://github.com/rilexus/nightfall-ui/issues"
+  },
+  "gitHead": "2b62c356802032b84cbf90f276e85b01ac223a86",
+  "publishConfig": {
+    "access": "public"
+  }
+}

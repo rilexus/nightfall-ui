@@ -1,7 +1,7 @@
 import React, { useReducer } from "react";
-import { Center } from "@nightfall-ui/layout";
+import { Center } from "@nightfall-ui/components";
 import { Title1 } from "@nightfall-ui/typography";
-import { Toggle } from "@nightfall-ui/toggles";
+import { Toggle } from "@nightfall-ui/components";
 
 const TogglePage = () => {
   const [checked1, toggle1] = useReducer((s) => !s, false);

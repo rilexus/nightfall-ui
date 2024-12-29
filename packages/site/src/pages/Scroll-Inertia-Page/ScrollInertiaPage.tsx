@@ -1,17 +1,16 @@
-import { Center } from "@nightfall-ui/layout";
+import { Center } from "@nightfall-ui/components";
 import React, { FC, useRef } from "react";
-import { ScrollInertia } from "@nightfall-ui/scroll-inertia";
 import { useScrollVelocity } from "@nightfall-ui/hooks";
-import { Card } from "@nightfall-ui/surfaces";
+import { Card, ScrollInertia } from "@nightfall-ui/components";
 import { Caption1 } from "@nightfall-ui/typography";
 
 const SmallInertia: FC<{ velocity: number }> = ({ children, velocity }) => {
   return (
     <ScrollInertia
       velocity={velocity}
-      deltaSpeed={[0.1, 0.7]}
+      deltaSpeed={[0.1, 0.2]}
       timeout={70}
-      translation={10}
+      translation={20}
     >
       {children}
     </ScrollInertia>

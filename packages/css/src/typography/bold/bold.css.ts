@@ -13,7 +13,7 @@ import {
   textXSCss,
 } from "../../text";
 import { css } from "styled-components";
-import { fontBoldCss } from "../../font";
+import { fontBoldCss } from "../font";
 
 const boldXSCss = css`
   ${fontBoldCss};

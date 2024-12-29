@@ -7,7 +7,7 @@ import {
   subHeadlineRegularQuaternaryCss,
   subHeadlineRegularSecondaryCss,
   subHeadlineRegularTertiaryCss,
-} from "@nightfall-ui/theme";
+} from "./subtitle.css";
 import React, { FC, forwardRef, HTMLAttributes } from "react";
 
 const StyleSubHeadlineRegularPrimary = styled.div`

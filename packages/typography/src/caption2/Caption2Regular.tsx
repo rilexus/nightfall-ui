@@ -4,14 +4,14 @@ import styled, {
   StyledComponentProps,
 } from "styled-components";
 import {
-  caption1RegularPrimaryCss,
-  caption1RegularQuaternaryCss,
-  caption1RegularSecondaryCss,
-  caption1RegularTertiaryCss,
-} from "@nightfall-ui/theme";
+  caption2RegularPrimaryCss,
+  caption2RegularQuaternaryCss,
+  caption2RegularSecondaryCss,
+  caption2RegularTertiaryCss,
+} from "./caption2.css";
 
 const StyleCaption2RegularPrimary = styled.div`
-  ${caption1RegularPrimaryCss}
+  ${caption2RegularPrimaryCss}
 `;
 
 const Caption2RegularPrimary = forwardRef<
@@ -24,7 +24,7 @@ const Caption2RegularPrimary = forwardRef<
 });
 
 const StyleCaption2RegularSecondary = styled.div`
-  ${caption1RegularSecondaryCss}
+  ${caption2RegularSecondaryCss}
 `;
 
 const Caption2RegularSecondary = forwardRef<
@@ -37,7 +37,7 @@ const Caption2RegularSecondary = forwardRef<
 });
 
 const StyleCaption2RegularTertiary = styled.div`
-  ${caption1RegularTertiaryCss}
+  ${caption2RegularTertiaryCss}
 `;
 
 const Caption2RegularTertiary = forwardRef<
@@ -50,7 +50,7 @@ const Caption2RegularTertiary = forwardRef<
 });
 
 const StyleCaption2RegularQuaternary = styled.div`
-  ${caption1RegularQuaternaryCss}
+  ${caption2RegularQuaternaryCss}
 `;
 
 const Caption2RegularQuaternary = forwardRef<

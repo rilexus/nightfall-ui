@@ -10,19 +10,19 @@ import {
   TypographyPage,
 } from "./pages";
 import { FocusProvider } from "./components/focusable";
-import { ThemeProvider } from "@nightfall-ui/theme";
 import { Li, Ul } from "./components";
 import {
   DialogBackgroundTransition,
   DialogProvider,
-} from "@nightfall-ui/dialog";
+} from "@nightfall-ui/components";
 import { FormsPage } from "./pages/forms";
 import { DialogPage } from "./pages/dialog";
 import { GridPage } from "./pages/grid";
 import ScrollInertiaPage from "./pages/Scroll-Inertia-Page/ScrollInertiaPage";
-import { Flex } from "@nightfall-ui/layout";
-import { Toggle } from "@nightfall-ui/toggles";
+import { Flex } from "@nightfall-ui/components";
+import { Toggle } from "@nightfall-ui/components";
 import { createState, localStorageEnhancer } from "./libs";
+import { ThemeProvider } from "@nightfall-ui/css";
 
 const useColorSchema = createState<"light" | "dark">(
   "light",
@@ -35,7 +35,6 @@ const Page: FC = ({ children }) => {
 
 const Providers: FC = ({ children }) => {
   const [schema] = useColorSchema();
-  console.log({ schema });
 
   return (
     <FocusProvider>
@@ -43,7 +42,7 @@ const Providers: FC = ({ children }) => {
         <DialogProvider>
           <DialogBackgroundTransition
             zoom={{ from: 1, to: 0.99, timeout: 400 }}
-            blur={{ from: "0px", to: "7px", timeout: 400 }}
+            blur={{ from: "0px", to: "5px", timeout: 400 }}
           >
             {children}
           </DialogBackgroundTransition>
@@ -52,6 +51,57 @@ const Providers: FC = ({ children }) => {
     </FocusProvider>
   );
 };
+
+const routes = [
+  {
+    path: "/",
+    Element: Home,
+  },
+  {
+    path: "/buttons",
+    Element: ButtonsPage,
+  },
+  {
+    path: "/toggle",
+    Element: TogglePage,
+  },
+  {
+    path: "/fields",
+    Element: FormsPage,
+  },
+  {
+    path: "/select",
+    Element: SelectPage,
+  },
+  {
+    path: "/dialog",
+    Element: DialogPage,
+  },
+  {
+    path: "/data-display",
+    Element: DataDisplayPage,
+  },
+  {
+    path: "/typography",
+    Element: TypographyPage,
+  },
+  {
+    path: "/layout-grid",
+    Element: GridPage,
+  },
+  {
+    path: "/scroll-inertia",
+    Element: ScrollInertiaPage,
+  },
+  {
+    path: "/layout-center",
+    Element: MediaCenter,
+  },
+  {
+    path: "*",
+    Element: (...props: any) => <Navigate {...props} to={"/"} />,
+  },
+];
 
 const toggleSchema = (schema: "light" | "dark") => {
   if (schema === "light") return "dark";
@@ -98,7 +148,7 @@ const App = () => {
                 <Link to={"/toggle"}>Toggle</Link>
               </Li>
               <Li>
-                <Link to={"/inputs"}>Fields</Link>
+                <Link to={"/fields"}>Fields</Link>
               </Li>
               <Li>
                 <Link to={"/select"}>Select</Link>
@@ -165,18 +215,9 @@ const App = () => {
         </header>
         <Page>
           <Routes>
-            <Route path={"/"} element={<Home />} />
-            <Route path={"/buttons"} element={<ButtonsPage />} />
-            <Route path={"/toggle"} element={<TogglePage />} />
-            <Route path={"/inputs"} element={<FormsPage />} />
-            <Route path={"/select"} element={<SelectPage />} />
-            <Route path={"/dialog"} element={<DialogPage />} />
-            <Route path={"/data-display"} element={<DataDisplayPage />} />
-            <Route path={"/typography"} element={<TypographyPage />} />
-            <Route path={"/layout-grid"} element={<GridPage />} />
-            <Route path={"/layout-center"} element={<MediaCenter />} />
-            <Route path={"/scroll-inertia"} element={<ScrollInertiaPage />} />
-            <Route path="*" element={<Navigate to={"/"} />} />
+            {routes.map(({ path, Element }) => {
+              return <Route key={path} path={path} element={<Element />} />;
+            })}
           </Routes>
         </Page>
       </div>

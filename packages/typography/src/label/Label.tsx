@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { bodyBoldPrimaryCss, bodyRegularPrimaryCss } from "@nightfall-ui/theme";
 import { textCenter } from "@nightfall-ui/css";
+import { bodyBoldPrimaryCss, bodyRegularPrimaryCss } from "../body";
 
 const Label = styled.div`
   ${textCenter};

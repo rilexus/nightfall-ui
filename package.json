@@ -12,7 +12,8 @@
     "publish": "npx lerna publish",
     "init": "npx lerna init ---independent",
     "bootstrap": "npx lerna bootstrap --hoist",
-    "start": "npx lerna run --parallel start"
+    "start": "npx lerna run --parallel start",
+    "dev": "npm run start"
   },
   "devDependencies": {
     "@types/react-dom": "^17.0.11",

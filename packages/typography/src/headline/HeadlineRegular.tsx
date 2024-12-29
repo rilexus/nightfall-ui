@@ -8,7 +8,7 @@ import {
   headlineBoldQuaternaryCss,
   headlineBoldSecondaryCss,
   headlineBoldTertiaryCss,
-} from "@nightfall-ui/theme";
+} from "./headline.css";
 
 const StyleHeadlineRegularPrimary = styled.div`
   ${headlineBoldPrimaryCss}

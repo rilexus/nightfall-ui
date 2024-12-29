@@ -1,4 +1,4 @@
-import { fontExtraBoldCss } from "../font";
+import { fontExtraBoldCss } from "./font";
 import {
   text2XLCss,
   text3XLCss,

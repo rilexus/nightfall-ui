@@ -13,7 +13,7 @@ import {
   text8XLCss,
 } from "../text";
 import { css } from "styled-components";
-import { fontLight } from "../font";
+import { fontLight } from "./font";
 
 const lightSMCss = css`
   ${textSMCss};

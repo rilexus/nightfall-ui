@@ -4,10 +4,10 @@ import {
   SquareFilledLargeInput,
   SquareOutlinedLargeInput,
   TextArea,
-} from "@nightfall-ui/inputs";
-import { Center, Flex, Grid, YSpacer, YStack } from "@nightfall-ui/layout";
-import { Card } from "@nightfall-ui/surfaces";
-import { Input, SquareInput } from "@nightfall-ui/inputs";
+} from "@nightfall-ui/components";
+import { Center, Flex, Grid, YSpacer, YStack } from "@nightfall-ui/components";
+import { Card } from "@nightfall-ui/components";
+import { Input, SquareInput } from "@nightfall-ui/components";
 
 const FormsPage = () => {
   const [error, setError] = useState(false);
@@ -19,7 +19,7 @@ const FormsPage = () => {
         <div>
           <Card
             style={{
-              maxWidth: "800px",
+              maxWidth: "1000px",
             }}
           >
             <Flex justify={"evenly"}>
@@ -90,6 +90,32 @@ const FormsPage = () => {
                     shape={"round"}
                     size={"large"}
                     variant={"filled"}
+                  />
+                </YStack>
+              </div>
+              <div>
+                <YSpacer spacing={"large"}>
+                  <h4>Round Outlined Input</h4>
+                </YSpacer>
+                <YStack spacing={"small"}>
+                  <Input
+                    invalid={error}
+                    placeholder={"Placeholder"}
+                    shape={"round"}
+                    size={"small"}
+                    variant={"outlined"}
+                  />
+                  <Input
+                    placeholder={"Placeholder"}
+                    shape={"round"}
+                    size={"medium"}
+                    variant={"outlined"}
+                  />
+                  <Input
+                    placeholder={"Placeholder"}
+                    shape={"round"}
+                    size={"large"}
+                    variant={"outlined"}
                   />
                 </YStack>
               </div>

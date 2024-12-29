@@ -1,5 +1,5 @@
-import { MarginTheme } from "./margin";
-import { PaddingTheme } from "./padding";
+import { MarginTheme } from "./spacing";
+import { PaddingTheme } from "./spacing";
 
 export interface GenericTheme {
   fontSize: {

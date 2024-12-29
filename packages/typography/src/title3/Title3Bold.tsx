@@ -1,3 +1,8 @@
+import React, {
+  forwardRef,
+  ForwardRefExoticComponent,
+  HTMLAttributes,
+} from "react";
 import styled, {
   StyledComponent,
   StyledComponentProps,
@@ -7,12 +12,7 @@ import {
   title3BoldQuaternaryCss,
   title3BoldSecondaryCss,
   title3BoldTertiaryCss,
-} from "@nightfall-ui/theme";
-import React, {
-  forwardRef,
-  ForwardRefExoticComponent,
-  HTMLAttributes,
-} from "react";
+} from "./title3.css";
 
 const StyleTitle3BoldPrimary = styled.div`
   ${title3BoldPrimaryCss}

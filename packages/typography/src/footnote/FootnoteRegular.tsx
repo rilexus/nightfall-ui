@@ -8,7 +8,7 @@ import {
   footnoteRegularQuaternaryCss,
   footnoteRegularSecondaryCss,
   footnoteRegularTertiaryCss,
-} from "@nightfall-ui/theme";
+} from "./footnote.css";
 
 const StyleFootnoteRegularPrimary = styled.div`
   ${footnoteRegularPrimaryCss}

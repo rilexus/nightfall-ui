@@ -4,12 +4,13 @@ import {
   Dialog,
   DialogText,
   PermissionDialog,
-} from "@nightfall-ui/dialog";
-
-import { Card } from "@nightfall-ui/surfaces";
-import { ActionButton, Button } from "@nightfall-ui/buttons";
+  Card,
+  ActionButton,
+  Button,
+  Center,
+  Flex,
+} from "@nightfall-ui/components";
 import { useToggle } from "@nightfall-ui/hooks";
-import { Center, Flex } from "@nightfall-ui/layout";
 
 const DialogPage = () => {
   const [open, toggle] = useToggle(false);

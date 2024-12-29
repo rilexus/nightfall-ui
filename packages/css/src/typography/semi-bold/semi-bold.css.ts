@@ -1,4 +1,4 @@
-import { fontSemiBoldCss } from "../../font";
+import { fontSemiBoldCss } from "../font";
 import {
   text2XLCss,
   text3XLCss,

@@ -8,7 +8,7 @@ import {
   calloutBoldQuaternaryCss,
   calloutBoldSecondaryCss,
   calloutBoldTertiaryCss,
-} from "@nightfall-ui/theme";
+} from "./callout.css";
 
 const StyleCalloutBoldPrimary = styled.div`
   ${calloutBoldPrimaryCss}

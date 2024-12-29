@@ -12,7 +12,7 @@ import {
   subHeadlineBoldQuaternaryCss,
   subHeadlineBoldSecondaryCss,
   subHeadlineBoldTertiaryCss,
-} from "@nightfall-ui/theme";
+} from "./subtitle.css";
 
 const StyleSubHeadlineBoldPrimary = styled.div`
   ${subHeadlineBoldPrimaryCss}

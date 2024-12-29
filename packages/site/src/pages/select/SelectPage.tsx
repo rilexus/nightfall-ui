@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { Select, Option } from "@nightfall-ui/inputs";
-import { Center } from "@nightfall-ui/layout";
+import { Select, Option } from "@nightfall-ui/components";
+import { Center } from "@nightfall-ui/components";
 import { Title1 } from "@nightfall-ui/typography";
 
 const SelectPage = () => {

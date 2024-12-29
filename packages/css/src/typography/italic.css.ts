@@ -1,5 +1,5 @@
 import { css } from "styled-components";
-import { fontItalicCss } from "../font";
+import { fontItalicCss } from "./font";
 import {
   textCss,
   text2XLCss,

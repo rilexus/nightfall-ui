@@ -1,11 +1,12 @@
 export * from "./italic.css";
-
 export * from "./regular";
-
 export * from "./semi-bold";
 export * from "./bold";
 export * from "./extra-bold.css";
-
 export * from "./thin.css";
-
 export * from "./ultra-thin";
+export * from "./text-color";
+export * from "./text-align";
+export * from "./text-transform";
+export * from "./font-family";
+export * from "./font";

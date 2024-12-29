@@ -8,7 +8,7 @@ import {
   bodyBoldQuaternaryCss,
   bodyBoldSecondaryCss,
   bodyBoldTertiaryCss,
-} from "@nightfall-ui/theme";
+} from "./body.css";
 
 const StyleBodyBoldPrimary = styled.div`
   ${bodyBoldPrimaryCss}

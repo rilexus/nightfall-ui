@@ -1,5 +1,5 @@
 import React from "react";
-import { Center } from "@nightfall-ui/layout";
+import { Center } from "@nightfall-ui/components";
 import { LargeTitle } from "@nightfall-ui/typography";
 
 const Home = () => {

@@ -14,8 +14,8 @@ import {
   Callout,
   Body,
 } from "@nightfall-ui/typography";
-import { Center, Flex } from "@nightfall-ui/layout";
-import { YStack } from "@nightfall-ui/layout";
+import { Center, Flex } from "@nightfall-ui/components";
+import { YStack } from "@nightfall-ui/components";
 
 const TypographyPage = () => {
   return (
