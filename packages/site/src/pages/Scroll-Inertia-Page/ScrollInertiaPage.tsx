@@ -8,7 +8,7 @@ const SmallInertia: FC<{ velocity: number }> = ({ children, velocity }) => {
   return (
     <ScrollInertia
       velocity={velocity}
-      deltaSpeed={[0.1, 0.2]}
+      deltaSpeed={[0.1, 1]}
       timeout={70}
       translation={20}
     >

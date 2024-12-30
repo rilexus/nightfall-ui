@@ -23,6 +23,7 @@ import { Flex } from "@nightfall-ui/components";
 import { Toggle } from "@nightfall-ui/components";
 import { createState, localStorageEnhancer } from "./libs";
 import { ThemeProvider } from "@nightfall-ui/css";
+import SurfacesPage from "./pages/surfaces";
 
 const useColorSchema = createState<"light" | "dark">(
   "light",
@@ -96,6 +97,10 @@ const routes = [
   {
     path: "/layout-center",
     Element: MediaCenter,
+  },
+  {
+    path: "/surfaces",
+    Element: SurfacesPage,
   },
   {
     path: "*",
@@ -195,6 +200,14 @@ const App = () => {
             <Ul>
               <Li>
                 <Link to={"/scroll-inertia"}>Scroll Inertia</Link>
+              </Li>
+            </Ul>
+          </li>
+          <li>
+            <h2>Surfaces</h2>
+            <Ul>
+              <Li>
+                <Link to={"/surfaces"}>Surfaces</Link>
               </Li>
             </Ul>
           </li>

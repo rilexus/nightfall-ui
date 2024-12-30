@@ -13,8 +13,7 @@ const StyledMediumButton = styled(StyledStylesButton)`
   ${regularNormalCss};
   ${mediumButtonPadding};
   border-radius: 0.3rem;
-
-  ${filledButtonCss}
+  ${filledButtonCss};
 `;
 
 const FilledSquareMediumButton = forwardRef<

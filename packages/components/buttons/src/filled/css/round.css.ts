@@ -1,9 +1,8 @@
 import { css } from "styled-components";
 import { roundedFull } from "@nightfall-ui/css";
-import { buttonCss } from "../../css";
 
 const roundButtonBorderRadiusCss = css`
-  ${roundedFull}
+  ${roundedFull};
 `;
 
 const roundedButtonCss = css`

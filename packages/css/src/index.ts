@@ -24,6 +24,7 @@ export * from "./media-queries";
 export * from "./placeholder";
 export * from "./css-provider";
 export * from "./theme-provider";
+export * from "./filters";
 
 export * from "./getters";
 

@@ -8,6 +8,7 @@ import {
 import { Center, Flex, Grid, YSpacer, YStack } from "@nightfall-ui/components";
 import { Card } from "@nightfall-ui/components";
 import { Input, SquareInput } from "@nightfall-ui/components";
+import { Title1 } from "@nightfall-ui/typography";
 
 const FormsPage = () => {
   const [error, setError] = useState(false);
@@ -22,102 +23,113 @@ const FormsPage = () => {
               maxWidth: "1000px",
             }}
           >
+            <button onClick={() => setError((e) => !e)}>error</button>
             <Flex justify={"evenly"}>
-              <button onClick={() => setError((e) => !e)}>error</button>
               <div>
-                <YSpacer spacing={"large"}>
-                  <h4>Square Filled Input</h4>
-                </YSpacer>
-                <YStack spacing={"small"}>
-                  <Input
-                    invalid={error}
-                    shape={"square"}
-                    variant={"filled"}
-                    size={"small"}
-                    placeholder={"Placeholder"}
-                  />
-                  <SquareInput
-                    size={"medium"}
-                    variant={"filled"}
-                    placeholder={"Placeholder"}
-                  />
-                  <SquareFilledLargeInput placeholder={"Placeholder"} />
-                </YStack>
+                <Title1 type={"primary"} weight={"regular"}>
+                  Square
+                </Title1>
+                <div>
+                  <YSpacer spacing={"large"}>
+                    <h4>Filled</h4>
+                  </YSpacer>
+                  <YStack spacing={"small"}>
+                    <Input
+                      invalid={error}
+                      shape={"square"}
+                      variant={"filled"}
+                      size={"small"}
+                      placeholder={"Placeholder"}
+                    />
+                    <SquareInput
+                      size={"medium"}
+                      variant={"filled"}
+                      placeholder={"Placeholder"}
+                    />
+                    <SquareFilledLargeInput placeholder={"Placeholder"} />
+                  </YStack>
+                  <div>
+                    <YSpacer spacing={"large"}>
+                      <h4>Outlined</h4>
+                    </YSpacer>
+                    <YStack spacing={"small"}>
+                      <Input
+                        shape={"square"}
+                        variant={"outlined"}
+                        size={"small"}
+                        placeholder={"Placeholder"}
+                      />
+                      <SquareInput
+                        placeholder={"Placeholder"}
+                        variant={"outlined"}
+                        invalid={error}
+                        size={"medium"}
+                      />
+                      <SquareOutlinedLargeInput
+                        placeholder={"Placeholder"}
+                        invalid={error}
+                      />
+                    </YStack>
+                  </div>
+                </div>
               </div>
               <div>
+                <Title1 type={"primary"} weight={"regular"}>
+                  Round
+                </Title1>
                 <YSpacer spacing={"large"}>
-                  <h4>Square Outlined Input</h4>
+                  <h4>Filled</h4>
                 </YSpacer>
-                <YStack spacing={"small"}>
-                  <Input
-                    shape={"square"}
-                    variant={"outlined"}
-                    size={"small"}
-                    placeholder={"Placeholder"}
-                  />
-                  <SquareInput
-                    placeholder={"Placeholder"}
-                    variant={"outlined"}
-                    invalid={error}
-                    size={"medium"}
-                  />
-                  <SquareOutlinedLargeInput
-                    placeholder={"Placeholder"}
-                    invalid={error}
-                  />
-                </YStack>
-              </div>
-              <div>
-                <YSpacer spacing={"large"}>
-                  <h4>Round Filled Input</h4>
-                </YSpacer>
-                <YStack spacing={"small"}>
-                  <Input
-                    invalid={error}
-                    placeholder={"Placeholder"}
-                    shape={"round"}
-                    size={"small"}
-                    variant={"filled"}
-                  />
-                  <Input
-                    placeholder={"Placeholder"}
-                    shape={"round"}
-                    size={"medium"}
-                    variant={"filled"}
-                  />
-                  <Input
-                    placeholder={"Placeholder"}
-                    shape={"round"}
-                    size={"large"}
-                    variant={"filled"}
-                  />
-                </YStack>
-              </div>
-              <div>
-                <YSpacer spacing={"large"}>
-                  <h4>Round Outlined Input</h4>
-                </YSpacer>
-                <YStack spacing={"small"}>
-                  <Input
-                    invalid={error}
-                    placeholder={"Placeholder"}
-                    shape={"round"}
-                    size={"small"}
-                    variant={"outlined"}
-                  />
-                  <Input
-                    placeholder={"Placeholder"}
-                    shape={"round"}
-                    size={"medium"}
-                    variant={"outlined"}
-                  />
-                  <Input
-                    placeholder={"Placeholder"}
-                    shape={"round"}
-                    size={"large"}
-                    variant={"outlined"}
-                  />
-                </YStack>
+
+                <div>
+                  <YStack spacing={"small"}>
+                    <Input
+                      invalid={error}
+                      placeholder={"Placeholder"}
+                      shape={"round"}
+                      size={"small"}
+                      variant={"filled"}
+                    />
+                    <Input
+                      placeholder={"Placeholder"}
+                      shape={"round"}
+                      size={"medium"}
+                      variant={"filled"}
+                    />
+                    <Input
+                      placeholder={"Placeholder"}
+                      shape={"round"}
+                      size={"large"}
+                      variant={"filled"}
+                    />
+                  </YStack>
+                  <div>
+                    <YSpacer spacing={"large"}>
+                      <h4>Outlined</h4>
+                    </YSpacer>
+                    <YStack spacing={"small"}>
+                      <Input
+                        invalid={error}
+                        placeholder={"Placeholder"}
+                        shape={"round"}
+                        size={"small"}
+                        variant={"outlined"}
+                      />
+                      <Input
+                        placeholder={"Placeholder"}
+                        shape={"round"}
+                        size={"medium"}
+                        variant={"outlined"}
+                      />
+                      <Input
+                        placeholder={"Placeholder"}
+                        shape={"round"}
+                        size={"large"}
+                        variant={"outlined"}
+                      />
+                    </YStack>
+                  </div>
+                </div>
               </div>
             </Flex>
           </Card>

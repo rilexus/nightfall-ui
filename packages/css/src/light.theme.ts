@@ -115,7 +115,7 @@ const lightTheme = {
         tertiary: "#d0d0d9",
       },
       elevated: {
-        primary: "rgb(251,251,252)",
+        primary: "rgb(236,236,236)",
         secondary: "rgb(211,211,220)",
         tertiary: "rgb(199,199,208)",
       },

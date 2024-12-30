@@ -1,5 +1,5 @@
 import React, { forwardRef, HTMLAttributes } from "react";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import { StyledStylesButton } from "../../styleless-button";
 import { regularNormalSMCss } from "@nightfall-ui/css";
 
@@ -7,15 +7,11 @@ import { roundedMD } from "@nightfall-ui/css";
 import { filledButtonCss } from "../css";
 import { squareSmallButtonPadding } from "../../css";
 
-const smallPillButtonBorderRadius = css`
-  ${roundedMD};
-`;
-
 const StyledSmallFilledButton = styled(StyledStylesButton)`
   ${regularNormalSMCss};
-  ${smallPillButtonBorderRadius};
+  ${roundedMD};
   ${squareSmallButtonPadding};
-  ${filledButtonCss}
+  ${filledButtonCss};
 `;
 
 const FilledSquareSmallButton = forwardRef<

@@ -1,17 +1,12 @@
 import React, { FC } from "react";
-import styled, { css } from "styled-components";
-import { boldNormal3XLCss } from "@nightfall-ui/css";
-
-const pageTitleCss = css`
-  ${boldNormal3XLCss};
-`;
-
-const StyledH1 = styled.h1`
-  ${pageTitleCss};
-`;
+import { LargeTitle } from "@nightfall-ui/typography";
 
 const PageTitle: FC = ({ children }) => {
-  return <StyledH1>{children}</StyledH1>;
+  return (
+    <LargeTitle weight={"regular"} type={"primary"}>
+      {children}
+    </LargeTitle>
+  );
 };
 
-export { PageTitle, StyledH1, pageTitleCss };
+export { PageTitle };

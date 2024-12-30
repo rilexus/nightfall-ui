@@ -2,10 +2,9 @@ import React from "react";
 import { Button } from "@nightfall-ui/components";
 import styled from "styled-components";
 import { regularNormal2XLCss } from "@nightfall-ui/css";
-import { Hr } from "../../components";
+import { Hr, PageTitle } from "../../components";
 import { Center, XStack } from "@nightfall-ui/components";
 import { LoadingGradient } from "@nightfall-ui/components";
-import { Title1 } from "@nightfall-ui/typography";
 
 const H2 = styled.h2`
   ${regularNormal2XLCss}
@@ -14,9 +13,7 @@ const H2 = styled.h2`
 const ButtonsPage = () => {
   return (
     <Center small={80} medium={50}>
-      <Title1 type={"primary"} weight={"bold"}>
-        Buttons
-      </Title1>
+      <PageTitle>Buttons</PageTitle>
       <div>
         <LoadingGradient
           timeout={1000}
@@ -28,29 +25,29 @@ const ButtonsPage = () => {
         >
           <rect x="0" y="72" rx="3" ry="3" width="380" height="6" />
         </LoadingGradient>
-        <H2>Text Buttons</H2>
+        <H2>Text</H2>
         <XStack>
           <Button variant={"text"} size={"small"} disabled>
-            Click
+            Save
           </Button>
           <Button variant={"text"} size={"medium"}>
-            Click
+            Save
           </Button>
           <Button variant={"text"} size={"large"} disabled>
-            Click
+            Save
           </Button>
           <Button variant={"text"} size={"extra-large"}>
-            Click
+            Save
           </Button>
         </XStack>
       </div>
       <Hr />
       <div>
-        <H2>Oval Buttons</H2>
+        <H2>Oval</H2>
         <div>
           <XStack>
             <Button variant={"filled"} shape={"oval"} size={"small"}>
-              Click
+              Save
             </Button>
             <Button
               variant={"filled"}
@@ -58,29 +55,29 @@ const ButtonsPage = () => {
               size={"medium"}
               disabled={true}
             >
-              Click
+              Save
             </Button>
             <Button variant={"filled"} shape={"oval"} size={"large"}>
-              Click
+              Save
             </Button>
             <Button variant={"filled"} shape={"oval"} size={"extra-large"}>
-              Click
+              Save
             </Button>
           </XStack>
         </div>
       </div>
       <div>
-        <H2>Square Buttons</H2>
+        <H2>Square</H2>
         <div>
           <XStack>
             <Button variant={"filled"} size={"small"} shape={"square"}>
-              Click
+              Save
             </Button>
             <Button variant={"filled"} size={"medium"} shape={"square"}>
-              Click
+              Save
             </Button>
             <Button variant={"filled"} size={"large"} shape={"square"}>
-              Click
+              Save
             </Button>
             <Button
               variant={"filled"}
@@ -88,19 +85,19 @@ const ButtonsPage = () => {
               shape={"square"}
               disabled={true}
             >
-              Click
+              Save
             </Button>
           </XStack>
         </div>
       </div>
       <div>
-        <H2>Outlined Button</H2>
+        <H2>Outlined</H2>
         <XStack>
           <Button variant={"outlined"} size={"small"} shape={"square"}>
-            Click
+            Save
           </Button>
           <Button variant={"outlined"} size={"medium"} shape={"square"}>
-            Click
+            Save
           </Button>
           <Button
             variant={"outlined"}
@@ -108,15 +105,15 @@ const ButtonsPage = () => {
             shape={"square"}
             disabled={true}
           >
-            Click
+            Save
           </Button>
           <Button variant={"outlined"} size={"extra-large"} shape={"square"}>
-            Click
+            Save
           </Button>
         </XStack>
       </div>
       <div>
-        <H2>Round Buttons</H2>
+        <H2>Round</H2>
         <XStack>
           <Button
             shape={"round"}

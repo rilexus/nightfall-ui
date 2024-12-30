@@ -1,5 +1,5 @@
 import { css } from "styled-components";
-import { color, textColorCss } from "@nightfall-ui/css";
+import { color } from "@nightfall-ui/css";
 import { buttonCss } from "../../css";
 
 const filledButtonBackgroundColorCss = css`
