@@ -1,6 +1,6 @@
 {
   "name": "@nightfall-ui/components",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "license": "MIT",
   "description": "Components package for the Nightfall UI library.",
   "author": "Stanislav Panchenko <email@stanislavpanchenko.de>",
@@ -12,7 +12,7 @@
     "dev": "npm run tsc:watch"
   },
   "dependencies": {
-    "@nightfall-ui/typography": "^1.0.10",
+    "@nightfall-ui/typography": "^1.1.0",
     "react-transition-group": "^4.4.2",
     "react-transitions-library": "^1.10.1"
   },
