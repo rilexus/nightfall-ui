@@ -1,6 +1,6 @@
 import { MutableRefObject, useEffect, useRef, useState } from "react";
 
-function throttle(mainFunction, delay: number) {
+function throttle(mainFunction: (...args: any) => any, delay: number) {
   let timerFlag: any = null; // Variable to keep track of the timer
 
   // Returning a throttled version
@@ -15,11 +15,12 @@ function throttle(mainFunction, delay: number) {
     }
   };
 }
-function debounce(func, timeout = 300) {
-  let timer;
-  return (...args) => {
+function debounce(func: (...args: any) => any, timeout = 300) {
+  let timer: any;
+  return (...args: any) => {
     clearTimeout(timer);
     timer = setTimeout(() => {
+      //@ts-ignore
       func.apply(this, args);
     }, timeout);
   };

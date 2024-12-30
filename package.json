@@ -9,6 +9,7 @@
   "scripts": {
     "tsc:watch": "npx lerna tsc:watch",
     "build": "npx lerna run build",
+    "prepublish": "npm run build",
     "publish": "npx lerna publish",
     "init": "npx lerna init ---independent",
     "bootstrap": "npx lerna bootstrap --hoist",
