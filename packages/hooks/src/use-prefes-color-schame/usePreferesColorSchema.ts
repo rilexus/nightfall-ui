@@ -1,38 +1,17 @@
 import { useEffect, useState } from "react";
 
-const darkQuery =
-  typeof window !== undefined
-    ? window.matchMedia?.(`(prefers-color-scheme: dark)`)
-    : {
-        matches: false,
-        addEventListener: () => {},
-        removeEventListener: () => {},
-        addListener: () => {},
-        removeListener: () => {},
-      };
-
-const lightQuery =
-  typeof window !== undefined
-    ? window.matchMedia?.(`(prefers-color-scheme: light`)
-    : {
-        matches: true,
-        addEventListener: () => {},
-        removeEventListener: () => {},
-        addListener: () => {},
-        removeListener: () => {},
-      };
-
 const usePrefersColorScheme = () => {
+  if (typeof window === undefined || typeof window.matchMedia !== "function") {
+    return "no-preference";
+  }
+  const darkQuery = window.matchMedia?.(`(prefers-color-scheme: dark)`);
+  const lightQuery = window.matchMedia?.(`(prefers-color-scheme: light`);
   const isDark = darkQuery?.matches;
   const isLight = lightQuery?.matches;
 
-  const [preferredColorSchema, setPreferredColorSchema] = useState(
+  const [preferredColorSchema, setPreferredColorSchema] = useState(() =>
     isDark ? "dark" : isLight ? "light" : "no-preference"
   );
-
-  if (typeof window === undefined || typeof window.matchMedia !== "function") {
-    return preferredColorSchema;
-  }
 
   useEffect(() => {
     if (isDark) setPreferredColorSchema("dark");
