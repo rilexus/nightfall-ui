@@ -6,15 +6,8 @@
     "baseUrl": "."
   },
   "include": [
-    "buttons/**/*",
-    "accordion/**/*",
-    "data-display/**/*",
-    "dialog/**/*",
-    "inputs/**/*",
-    "toggle/**/*",
-    "layout/**/*",
-    "surfaces/**/*",
-    "scroll-inertia/**/*"
+    "./index.ts",
+    "src/**/*"
   ],
   "exclude": [
     "**/*.spec.ts",

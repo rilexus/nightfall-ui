@@ -11,13 +11,13 @@
       <excludeFolder url="file://$MODULE_DIR$/packages/theme/dist" />
       <excludeFolder url="file://$MODULE_DIR$/packages/scroll-inertia/dist" />
       <excludeFolder url="file://$MODULE_DIR$/packages/site/docs" />
-      <excludeFolder url="file://$MODULE_DIR$/packages/components/buttons/dist" />
-      <excludeFolder url="file://$MODULE_DIR$/packages/components/dialog/dist" />
-      <excludeFolder url="file://$MODULE_DIR$/packages/components/accordion/dist" />
-      <excludeFolder url="file://$MODULE_DIR$/packages/components/inputs/dist" />
-      <excludeFolder url="file://$MODULE_DIR$/packages/components/toggles/dist" />
-      <excludeFolder url="file://$MODULE_DIR$/packages/components/layout/dist" />
-      <excludeFolder url="file://$MODULE_DIR$/packages/components/surfaces/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/components/src/surfaces/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/components/src/toggles/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/components/src/layout/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/components/src/inputs/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/components/src/dialog/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/components/src/buttons/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/components/src/accordion/dist" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

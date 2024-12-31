@@ -5,7 +5,10 @@
     "outDir": "dist",
     "baseUrl": "."
   },
-  "include": ["src/**/*"],
+  "include": [
+    "./index.ts",
+    "src/**/*"
+  ],
   "exclude": [
     "**/*.spec.ts",
     "**/*.test.ts",

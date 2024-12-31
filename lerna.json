@@ -1,5 +1,13 @@
 {
-  "packages": ["packages/*"],
+  "packages": [
+    "packages/components",
+    "packages/css",
+    "packages/ease",
+    "packages/hooks",
+    "packages/icons",
+    "packages/typography",
+    "packages/utils"
+  ],
   "version": "independent",
   "npmClient": "npm"
 }
