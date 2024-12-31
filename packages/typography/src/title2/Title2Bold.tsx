@@ -3,10 +3,7 @@ import React, {
   ForwardRefExoticComponent,
   HTMLAttributes,
 } from "react";
-import styled, {
-  StyledComponent,
-  StyledComponentProps,
-} from "styled-components";
+import styled from "styled-components";
 import {
   title2BoldPrimaryCss,
   title2BoldQuaternaryCss,
@@ -18,10 +15,7 @@ const StyleTitle2BoldPrimary = styled.div`
   ${title2BoldPrimaryCss}
 `;
 
-const Title2BoldPrimary = forwardRef<
-  StyledComponent<"div", any>,
-  StyledComponentProps<"div", any, any, any>
->((props, ref) => {
+const Title2BoldPrimary = forwardRef((props, ref) => {
   //TODO: type ref
   //@ts-ignore
   return <StyleTitle2BoldPrimary {...props} ref={ref} />;
@@ -31,10 +25,7 @@ const StyleTitle2BoldSecondary = styled.div`
   ${title2BoldSecondaryCss}
 `;
 
-const Title2BoldSecondary = forwardRef<
-  StyledComponent<"div", any>,
-  StyledComponentProps<"div", any, any, any>
->((props, ref) => {
+const Title2BoldSecondary = forwardRef((props, ref) => {
   //TODO: type ref
   //@ts-ignore
   return <StyleTitle2BoldSecondary {...props} ref={ref} />;
@@ -44,10 +35,7 @@ const StyleTitle2BoldTertiary = styled.div`
   ${title2BoldTertiaryCss}
 `;
 
-const Title2BoldTertiary = forwardRef<
-  StyledComponent<"div", any>,
-  StyledComponentProps<"div", any, any, any>
->((props, ref) => {
+const Title2BoldTertiary = forwardRef((props, ref) => {
   //TODO: type ref
   //@ts-ignore
   return <StyleTitle2BoldTertiary {...props} ref={ref} />;
@@ -57,10 +45,7 @@ const StyleTitle2BoldQuaternary = styled.div`
   ${title2BoldQuaternaryCss}
 `;
 
-const Title2BoldQuaternary = forwardRef<
-  StyledComponent<"div", any>,
-  StyledComponentProps<"div", any, any, any>
->((props, ref) => {
+const Title2BoldQuaternary = forwardRef((props, ref) => {
   //TODO: type ref
   //@ts-ignore
   return <StyleTitle2BoldQuaternary {...props} ref={ref} />;

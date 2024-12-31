@@ -1,8 +1,5 @@
 import React, { FC, forwardRef, HTMLAttributes } from "react";
-import styled, {
-  StyledComponent,
-  StyledComponentProps,
-} from "styled-components";
+import styled from "styled-components";
 import {
   calloutRegularPrimaryCss,
   calloutRegularQuaternaryCss,
@@ -14,10 +11,7 @@ const StyleCalloutRegularPrimary = styled.div`
   ${calloutRegularPrimaryCss}
 `;
 
-const CalloutRegularPrimary = forwardRef<
-  StyledComponent<"div", any>,
-  StyledComponentProps<"div", any, any, any>
->((props, ref) => {
+const CalloutRegularPrimary = forwardRef((props, ref) => {
   //TODO: type ref
   //@ts-ignore
   return <StyleCalloutRegularPrimary {...props} ref={ref} />;
@@ -27,10 +21,7 @@ const StyleCalloutRegularSecondary = styled.div`
   ${calloutRegularSecondaryCss}
 `;
 
-const CalloutRegularSecondary = forwardRef<
-  StyledComponent<"div", any>,
-  StyledComponentProps<"div", any, any, any>
->((props, ref) => {
+const CalloutRegularSecondary = forwardRef((props, ref) => {
   //TODO: type ref
   //@ts-ignore
   return <StyleCalloutRegularSecondary {...props} ref={ref} />;
@@ -40,10 +31,7 @@ const StyleCalloutRegularTertiary = styled.div`
   ${calloutRegularTertiaryCss}
 `;
 
-const CalloutRegularTertiary = forwardRef<
-  StyledComponent<"div", any>,
-  StyledComponentProps<"div", any, any, any>
->((props, ref) => {
+const CalloutRegularTertiary = forwardRef((props, ref) => {
   //TODO: type ref
   //@ts-ignore
   return <StyleCalloutRegularTertiary {...props} ref={ref} />;
@@ -53,10 +41,7 @@ const StyleCalloutRegularQuaternary = styled.div`
   ${calloutRegularQuaternaryCss}
 `;
 
-const CalloutRegularQuaternary = forwardRef<
-  StyledComponent<"div", any>,
-  StyledComponentProps<"div", any, any, any>
->((props, ref) => {
+const CalloutRegularQuaternary = forwardRef((props, ref) => {
   //TODO: type ref
   //@ts-ignore
   return <StyleCalloutRegularQuaternary {...props} ref={ref} />;

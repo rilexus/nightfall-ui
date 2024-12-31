@@ -1,7 +1,4 @@
-import styled, {
-  StyledComponent,
-  StyledComponentProps,
-} from "styled-components";
+import styled from "styled-components";
 import {
   subHeadlineRegularPrimaryCss,
   subHeadlineRegularQuaternaryCss,
@@ -14,10 +11,7 @@ const StyleSubHeadlineRegularPrimary = styled.div`
   ${subHeadlineRegularPrimaryCss}
 `;
 
-const SubHeadlineRegularPrimary = forwardRef<
-  StyledComponent<"div", any>,
-  StyledComponentProps<"div", any, any, any>
->((props, ref) => {
+const SubHeadlineRegularPrimary = forwardRef((props, ref) => {
   //TODO: type ref
   //@ts-ignore
   return <StyleSubHeadlineRegularPrimary {...props} ref={ref} />;
@@ -27,10 +21,7 @@ const StyleSubHeadlineRegularSecondary = styled.div`
   ${subHeadlineRegularSecondaryCss}
 `;
 
-const SubHeadlineRegularSecondary = forwardRef<
-  StyledComponent<"div", any>,
-  StyledComponentProps<"div", any, any, any>
->((props, ref) => {
+const SubHeadlineRegularSecondary = forwardRef((props, ref) => {
   //TODO: type ref
   //@ts-ignore
   return <StyleSubHeadlineRegularSecondary {...props} ref={ref} />;
@@ -40,10 +31,7 @@ const StyleSubHeadlineRegularTertiary = styled.div`
   ${subHeadlineRegularTertiaryCss}
 `;
 
-const SubHeadlineRegularTertiary = forwardRef<
-  StyledComponent<"div", any>,
-  StyledComponentProps<"div", any, any, any>
->((props, ref) => {
+const SubHeadlineRegularTertiary = forwardRef((props, ref) => {
   //TODO: type ref
   //@ts-ignore
   return <StyleSubHeadlineRegularTertiary {...props} ref={ref} />;
@@ -53,10 +41,7 @@ const StyleSubHeadlineRegularQuaternary = styled.div`
   ${subHeadlineRegularQuaternaryCss}
 `;
 
-const SubHeadlineRegularQuaternary = forwardRef<
-  StyledComponent<"div", any>,
-  StyledComponentProps<"div", any, any, any>
->((props, ref) => {
+const SubHeadlineRegularQuaternary = forwardRef((props, ref) => {
   //TODO: type ref
   //@ts-ignore
   return <StyleSubHeadlineRegularQuaternary {...props} ref={ref} />;

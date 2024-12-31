@@ -7,7 +7,7 @@ import {
   outlineNone,
 } from "@nightfall-ui/css";
 
-const StyledActionButton = styled.button<{ color: string }>`
+const StyledActionButton = styled.button`
   height: 2.75rem;
   flex: 1;
   ${flex};

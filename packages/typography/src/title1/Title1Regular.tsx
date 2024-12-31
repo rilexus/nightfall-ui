@@ -1,8 +1,5 @@
 import React, { FC, forwardRef, HTMLAttributes } from "react";
-import styled, {
-  StyledComponent,
-  StyledComponentProps,
-} from "styled-components";
+import styled from "styled-components";
 import {
   title1RegularPrimaryCss,
   title1RegularQuaternaryCss,
@@ -14,10 +11,7 @@ const StyleTitle1RegularPrimary = styled.div`
   ${title1RegularPrimaryCss}
 `;
 
-const Title1RegularPrimary = forwardRef<
-  StyledComponent<"div", any>,
-  StyledComponentProps<"div", any, any, any>
->((props, ref) => {
+const Title1RegularPrimary = forwardRef((props, ref) => {
   //TODO: type ref
   //@ts-ignore
   return <StyleTitle1RegularPrimary {...props} ref={ref} />;
@@ -27,10 +21,7 @@ const StyleTitle1RegularSecondary = styled.div`
   ${title1RegularSecondaryCss}
 `;
 
-const Title1RegularSecondary = forwardRef<
-  StyledComponent<"div", any>,
-  StyledComponentProps<"div", any, any, any>
->((props, ref) => {
+const Title1RegularSecondary = forwardRef((props, ref) => {
   //TODO: type ref
   //@ts-ignore
   return <StyleTitle1RegularSecondary {...props} ref={ref} />;
@@ -40,10 +31,7 @@ const StyleTitle1RegularTertiary = styled.div`
   ${title1RegularTertiaryCss}
 `;
 
-const Title1RegularTertiary = forwardRef<
-  StyledComponent<"div", any>,
-  StyledComponentProps<"div", any, any, any>
->((props, ref) => {
+const Title1RegularTertiary = forwardRef((props, ref) => {
   //TODO: type ref
   //@ts-ignore
   return <StyleTitle1RegularTertiary {...props} ref={ref} />;
@@ -53,10 +41,7 @@ const StyleTitle1RegularQuaternary = styled.div`
   ${title1RegularQuaternaryCss}
 `;
 
-const Title1RegularQuaternary = forwardRef<
-  StyledComponent<"div", any>,
-  StyledComponentProps<"div", any, any, any>
->((props, ref) => {
+const Title1RegularQuaternary = forwardRef((props, ref) => {
   //TODO: type ref
   //@ts-ignore
   return <StyleTitle1RegularQuaternary {...props} ref={ref} />;

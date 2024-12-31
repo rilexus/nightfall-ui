@@ -1,8 +1,5 @@
 import React, { FC, forwardRef, HTMLAttributes } from "react";
-import styled, {
-  StyledComponent,
-  StyledComponentProps,
-} from "styled-components";
+import styled from "styled-components";
 import {
   footnoteRegularPrimaryCss,
   footnoteRegularQuaternaryCss,
@@ -14,10 +11,7 @@ const StyleFootnoteRegularPrimary = styled.div`
   ${footnoteRegularPrimaryCss}
 `;
 
-const FootnoteRegularPrimary = forwardRef<
-  StyledComponent<"div", any>,
-  StyledComponentProps<"div", any, any, any>
->((props, ref) => {
+const FootnoteRegularPrimary = forwardRef((props, ref) => {
   //TODO: type ref
   //@ts-ignore
   return <StyleFootnoteRegularPrimary {...props} ref={ref} />;
@@ -27,10 +21,7 @@ const StyleFootnoteRegularSecondary = styled.div`
   ${footnoteRegularSecondaryCss}
 `;
 
-const FootnoteRegularSecondary = forwardRef<
-  StyledComponent<"div", any>,
-  StyledComponentProps<"div", any, any, any>
->((props, ref) => {
+const FootnoteRegularSecondary = forwardRef((props, ref) => {
   //TODO: type ref
   //@ts-ignore
   return <StyleFootnoteRegularSecondary {...props} ref={ref} />;
@@ -40,10 +31,7 @@ const StyleFootnoteRegularTertiary = styled.div`
   ${footnoteRegularTertiaryCss}
 `;
 
-const FootnoteRegularTertiary = forwardRef<
-  StyledComponent<"div", any>,
-  StyledComponentProps<"div", any, any, any>
->((props, ref) => {
+const FootnoteRegularTertiary = forwardRef((props, ref) => {
   //TODO: type ref
   //@ts-ignore
   return <StyleFootnoteRegularTertiary {...props} ref={ref} />;
@@ -53,10 +41,7 @@ const StyleFootnoteRegularQuaternary = styled.div`
   ${footnoteRegularQuaternaryCss}
 `;
 
-const FootnoteRegularQuaternary = forwardRef<
-  StyledComponent<"div", any>,
-  StyledComponentProps<"div", any, any, any>
->((props, ref) => {
+const FootnoteRegularQuaternary = forwardRef((props, ref) => {
   //TODO: type ref
   //@ts-ignore
   return <StyleFootnoteRegularQuaternary {...props} ref={ref} />;

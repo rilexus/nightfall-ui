@@ -2,11 +2,14 @@ import styled from "styled-components";
 import { bodyBoldPrimaryCss } from "@nightfall-ui/typography";
 import React, { FC, HTMLAttributes } from "react";
 import { StyledActionButton } from "./ActionButton.styled";
-import { color } from "@nightfall-ui/css";
+import { color, Theme } from "@nightfall-ui/css";
 
-const Button = styled(StyledActionButton)<{ color: string }>`
+const Button = styled(StyledActionButton)<{ color: string; theme: Theme }>`
   ${bodyBoldPrimaryCss};
-  color: ${({ color: c }) => color(c)};
+  color: ${({ color: c, ...rest }) => {
+    //@ts-ignore
+    return color(c)(rest);
+  }};
 `;
 
 const EmphasizedActionButton: FC<

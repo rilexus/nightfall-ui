@@ -1,8 +1,5 @@
 import React, { FC, forwardRef, HTMLAttributes } from "react";
-import styled, {
-  StyledComponent,
-  StyledComponentProps,
-} from "styled-components";
+import styled from "styled-components";
 import {
   bodyRegularPrimaryCss,
   bodyRegularQuaternaryCss,
@@ -14,10 +11,7 @@ const StyleBodyRegularPrimary = styled.div`
   ${bodyRegularPrimaryCss}
 `;
 
-const BodyRegularPrimary = forwardRef<
-  StyledComponent<"div", any>,
-  StyledComponentProps<"div", any, any, any>
->((props, ref) => {
+const BodyRegularPrimary = forwardRef((props, ref) => {
   //TODO: type ref
   //@ts-ignore
   return <StyleBodyRegularPrimary {...props} ref={ref} />;
@@ -27,10 +21,7 @@ const StyleBodyRegularSecondary = styled.div`
   ${bodyRegularSecondaryCss}
 `;
 
-const BodyRegularSecondary = forwardRef<
-  StyledComponent<"div", any>,
-  StyledComponentProps<"div", any, any, any>
->((props, ref) => {
+const BodyRegularSecondary = forwardRef((props, ref) => {
   //TODO: type ref
   //@ts-ignore
   return <StyleBodyRegularSecondary {...props} ref={ref} />;
@@ -40,10 +31,7 @@ const StyleBodyRegularTertiary = styled.div`
   ${bodyRegularTertiaryCss}
 `;
 
-const BodyRegularTertiary = forwardRef<
-  StyledComponent<"div", any>,
-  StyledComponentProps<"div", any, any, any>
->((props, ref) => {
+const BodyRegularTertiary = forwardRef((props, ref) => {
   //TODO: type ref
   //@ts-ignore
   return <StyleBodyRegularTertiary {...props} ref={ref} />;
@@ -53,10 +41,7 @@ const StyleBodyRegularQuaternary = styled.div`
   ${bodyRegularQuaternaryCss}
 `;
 
-const BodyRegularQuaternary = forwardRef<
-  StyledComponent<"div", any>,
-  StyledComponentProps<"div", any, any, any>
->((props, ref) => {
+const BodyRegularQuaternary = forwardRef((props, ref) => {
   //TODO: type ref
   //@ts-ignore
   return <StyleBodyRegularQuaternary {...props} ref={ref} />;

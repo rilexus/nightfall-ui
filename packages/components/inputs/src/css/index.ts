@@ -33,35 +33,31 @@ const errorShine = keyframes`
   }
 `;
 
-const inputError = ({ invalid }: { invalid?: boolean }) =>
-  invalid
-    ? css`
-        transition: border 200ms ${Ease.easeInOutCubic} 0ms;
+const inputErrorCss = css`
+  transition: border 200ms ${Ease.easeInOutCubic} 0ms;
 
-        outline: none;
+  outline: none;
 
-        border: 1px solid #ff5c1e;
-        box-shadow: 0 0 3px rgb(202 70 12), 0 0 5px #e51111,
-          0 0 5px rgb(197 61 34);
-        animation: 200ms ${errorShine} ease;
+  border: 1px solid #ff5c1e;
+  box-shadow: 0 0 3px rgb(202 70 12), 0 0 5px #e51111, 0 0 5px rgb(197 61 34);
+  animation: 200ms ${errorShine} ease;
 
-        &:focus-visible {
-          outline: none;
-          border: 1px solid #ff5c1e;
-          box-shadow: 0 0 3px rgb(202 70 12), 0 0 5px #e51111,
-            0 0 5px rgb(197 61 34);
-          animation: 200ms ${errorShine} ease;
-        }
+  &:focus-visible {
+    outline: none;
+    border: 1px solid #ff5c1e;
+    box-shadow: 0 0 3px rgb(202 70 12), 0 0 5px #e51111, 0 0 5px rgb(197 61 34);
+    animation: 200ms ${errorShine} ease;
+  }
 
-        &:focus {
-          outline: none;
-          border: 1px solid #ff5c1e;
-          box-shadow: 0 0 3px rgb(202 70 12), 0 0 5px #e51111,
-            0 0 5px rgb(197 61 34);
-          animation: 200ms ${errorShine} ease;
-        }
-      `
-    : undefined;
+  &:focus {
+    outline: none;
+    border: 1px solid #ff5c1e;
+    box-shadow: 0 0 3px rgb(202 70 12), 0 0 5px #e51111, 0 0 5px rgb(197 61 34);
+    animation: 200ms ${errorShine} ease;
+  }
+`;
+const inputError = ({ invalid }: { invalid?: boolean }): any =>
+  invalid ? inputErrorCss : undefined;
 
 const inputFocusCss = css`
   transition: border 200ms ${Ease.easeInOutCubic} 0ms;
@@ -165,7 +161,7 @@ const outlinedInputBorderCss = css`
 const inputCss = css`
   ${inputFont};
   ${inputFocusCss};
-  ${inputError};
+  ${(args: any) => inputError(args)};
   ${inputOutline};
   ${m12};
   color: ${color("input.textColor")};

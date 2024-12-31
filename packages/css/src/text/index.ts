@@ -1,9 +1,9 @@
-import { css } from "styled-components";
+import { css, StyleFunction } from "styled-components";
 import { GenericTheme, Theme } from "../Theme.type";
 
 function fontSize<T extends GenericTheme = Theme>(
   name: keyof (Theme["fontSize"] & T["fontSize"])
-) {
+): StyleFunction<any> {
   // TODO: type theme here
   return ({ theme }: any) => {
     return theme.fontSize[name];

@@ -12,10 +12,9 @@
     "start": "npm run tsc:watch"
   },
   "peerDependencies": {
-    "@nightfall-ui/css": "*",
-    "@nightfall-ui/hooks": "*",
-    "react": "^18.0.0 || ^17.0.0",
-    "styled-components": "^5.3.3"
+    "@nightfall-ui/css": "^1.1.0",
+    "styled-components": "^6",
+    "react": "^19.0.0 || ^18.0.0"
   },
   "main": "dist/src/index.js",
   "types": "dist/src/index.d.ts",
@@ -26,7 +25,6 @@
   "keywords": [
     "typography",
     "nightfall-ui/typography",
-    "react",
     "ui",
     "library"
   ],

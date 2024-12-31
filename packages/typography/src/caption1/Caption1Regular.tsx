@@ -1,8 +1,5 @@
 import React, { FC, forwardRef, HTMLAttributes } from "react";
-import styled, {
-  StyledComponent,
-  StyledComponentProps,
-} from "styled-components";
+import styled from "styled-components";
 import {
   caption1RegularPrimaryCss,
   caption1RegularQuaternaryCss,
@@ -14,10 +11,7 @@ const StyleCaption1RegularPrimary = styled.div`
   ${caption1RegularPrimaryCss}
 `;
 
-const Caption1RegularPrimary = forwardRef<
-  StyledComponent<"div", any>,
-  StyledComponentProps<"div", any, any, any>
->((props, ref) => {
+const Caption1RegularPrimary = forwardRef((props, ref) => {
   //TODO: type ref
   //@ts-ignore
   return <StyleCaption1RegularPrimary {...props} ref={ref} />;
@@ -27,10 +21,7 @@ const StyleCaption1RegularSecondary = styled.div`
   ${caption1RegularSecondaryCss}
 `;
 
-const Caption1RegularSecondary = forwardRef<
-  StyledComponent<"div", any>,
-  StyledComponentProps<"div", any, any, any>
->((props, ref) => {
+const Caption1RegularSecondary = forwardRef((props, ref) => {
   //TODO: type ref
   //@ts-ignore
   return <StyleCaption1RegularSecondary {...props} ref={ref} />;
@@ -40,10 +31,7 @@ const StyleCaption1RegularTertiary = styled.div`
   ${caption1RegularTertiaryCss}
 `;
 
-const Caption1RegularTertiary = forwardRef<
-  StyledComponent<"div", any>,
-  StyledComponentProps<"div", any, any, any>
->((props, ref) => {
+const Caption1RegularTertiary = forwardRef((props, ref) => {
   //TODO: type ref
   //@ts-ignore
   return <StyleCaption1RegularTertiary {...props} ref={ref} />;
@@ -53,10 +41,7 @@ const StyleCaption1RegularQuaternary = styled.div`
   ${caption1RegularQuaternaryCss}
 `;
 
-const Caption1RegularQuaternary = forwardRef<
-  StyledComponent<"div", any>,
-  StyledComponentProps<"div", any, any, any>
->((props, ref) => {
+const Caption1RegularQuaternary = forwardRef((props, ref) => {
   //TODO: type ref
   //@ts-ignore
   return <StyleCaption1RegularQuaternary {...props} ref={ref} />;

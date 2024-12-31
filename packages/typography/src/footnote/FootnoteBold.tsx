@@ -1,8 +1,5 @@
 import React, { FC, forwardRef, HTMLAttributes } from "react";
-import styled, {
-  StyledComponent,
-  StyledComponentProps,
-} from "styled-components";
+import styled from "styled-components";
 import {
   footnoteBoldPrimaryCss,
   footnoteBoldQuaternaryCss,
@@ -14,10 +11,7 @@ const StyleFootnoteBoldPrimary = styled.div`
   ${footnoteBoldPrimaryCss}
 `;
 
-const FootnoteBoldPrimary = forwardRef<
-  StyledComponent<"div", any>,
-  StyledComponentProps<"div", any, any, any>
->((props, ref) => {
+const FootnoteBoldPrimary = forwardRef((props, ref) => {
   //TODO: type ref
   //@ts-ignore
   return <StyleFootnoteBoldPrimary {...props} ref={ref} />;
@@ -27,10 +21,7 @@ const StyleFootnoteBoldSecondary = styled.div`
   ${footnoteBoldSecondaryCss}
 `;
 
-const FootnoteBoldSecondary = forwardRef<
-  StyledComponent<"div", any>,
-  StyledComponentProps<"div", any, any, any>
->((props, ref) => {
+const FootnoteBoldSecondary = forwardRef((props, ref) => {
   //TODO: type ref
   //@ts-ignore
   return <StyleFootnoteBoldSecondary {...props} ref={ref} />;
@@ -40,10 +31,7 @@ const StyleFootnoteBoldTertiary = styled.div`
   ${footnoteBoldTertiaryCss}
 `;
 
-const FootnoteBoldTertiary = forwardRef<
-  StyledComponent<"div", any>,
-  StyledComponentProps<"div", any, any, any>
->((props, ref) => {
+const FootnoteBoldTertiary = forwardRef((props, ref) => {
   //TODO: type ref
   //@ts-ignore
   return <StyleFootnoteBoldTertiary {...props} ref={ref} />;
@@ -53,10 +41,7 @@ const StyleFootnoteBoldQuaternary = styled.div`
   ${footnoteBoldQuaternaryCss}
 `;
 
-const FootnoteBoldQuaternary = forwardRef<
-  StyledComponent<"div", any>,
-  StyledComponentProps<"div", any, any, any>
->((props, ref) => {
+const FootnoteBoldQuaternary = forwardRef((props, ref) => {
   //TODO: type ref
   //@ts-ignore
   return <StyleFootnoteBoldQuaternary {...props} ref={ref} />;

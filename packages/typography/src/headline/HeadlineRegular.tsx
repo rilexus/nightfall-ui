@@ -1,8 +1,5 @@
 import React, { FC, forwardRef, HTMLAttributes } from "react";
-import styled, {
-  StyledComponent,
-  StyledComponentProps,
-} from "styled-components";
+import styled from "styled-components";
 import {
   headlineBoldPrimaryCss,
   headlineBoldQuaternaryCss,
@@ -14,10 +11,7 @@ const StyleHeadlineRegularPrimary = styled.div`
   ${headlineBoldPrimaryCss}
 `;
 
-const HeadlineRegularPrimary = forwardRef<
-  StyledComponent<"div", any>,
-  StyledComponentProps<"div", any, any, any>
->((props, ref) => {
+const HeadlineRegularPrimary = forwardRef((props, ref) => {
   //TODO: type ref
   //@ts-ignore
   return <StyleHeadlineRegularPrimary {...props} ref={ref} />;
@@ -27,10 +21,7 @@ const StyleHeadlineRegularSecondary = styled.div`
   ${headlineBoldSecondaryCss}
 `;
 
-const HeadlineRegularSecondary = forwardRef<
-  StyledComponent<"div", any>,
-  StyledComponentProps<"div", any, any, any>
->((props, ref) => {
+const HeadlineRegularSecondary = forwardRef((props, ref) => {
   //TODO: type ref
   //@ts-ignore
   return <StyleHeadlineRegularSecondary {...props} ref={ref} />;
@@ -40,10 +31,7 @@ const StyleHeadlineRegularTertiary = styled.div`
   ${headlineBoldTertiaryCss}
 `;
 
-const HeadlineRegularTertiary = forwardRef<
-  StyledComponent<"div", any>,
-  StyledComponentProps<"div", any, any, any>
->((props, ref) => {
+const HeadlineRegularTertiary = forwardRef((props, ref) => {
   //TODO: type ref
   //@ts-ignore
   return <StyleHeadlineRegularTertiary {...props} ref={ref} />;
@@ -53,10 +41,7 @@ const StyleHeadlineRegularQuaternary = styled.div`
   ${headlineBoldQuaternaryCss}
 `;
 
-const HeadlineRegularQuaternary = forwardRef<
-  StyledComponent<"div", any>,
-  StyledComponentProps<"div", any, any, any>
->((props, ref) => {
+const HeadlineRegularQuaternary = forwardRef((props, ref) => {
   //TODO: type ref
   //@ts-ignore
   return <StyleHeadlineRegularQuaternary {...props} ref={ref} />;

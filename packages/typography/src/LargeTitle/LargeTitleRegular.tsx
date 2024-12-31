@@ -1,7 +1,4 @@
-import styled, {
-  StyledComponent,
-  StyledComponentProps,
-} from "styled-components";
+import styled from "styled-components";
 import {
   largeTitleRegularPrimaryCss,
   largeTitleRegularQuaternaryCss,
@@ -14,10 +11,7 @@ const StyleLargeTitleRegularPrimary = styled.div`
   ${largeTitleRegularPrimaryCss}
 `;
 
-const LargeTitleRegularPrimary = forwardRef<
-  StyledComponent<"div", any>,
-  StyledComponentProps<"div", any, any, any>
->((props, ref) => {
+const LargeTitleRegularPrimary = forwardRef((props, ref) => {
   //TODO: type ref
   //@ts-ignore
   return <StyleLargeTitleRegularPrimary {...props} ref={ref} />;
@@ -27,10 +21,7 @@ const StyleLargeTitleRegularSecondary = styled.div`
   ${largeTitleRegularSecondaryCss}
 `;
 
-const LargeTitleRegularSecondary = forwardRef<
-  StyledComponent<"div", any>,
-  StyledComponentProps<"div", any, any, any>
->((props, ref) => {
+const LargeTitleRegularSecondary = forwardRef((props, ref) => {
   //TODO: type ref
   //@ts-ignore
   return <StyleLargeTitleRegularSecondary {...props} ref={ref} />;
@@ -40,10 +31,7 @@ const StyleLargeTitleRegularTertiary = styled.div`
   ${largeTitleRegularTertiaryCss}
 `;
 
-const LargeTitleRegularTertiary = forwardRef<
-  StyledComponent<"div", any>,
-  StyledComponentProps<"div", any, any, any>
->((props, ref) => {
+const LargeTitleRegularTertiary = forwardRef((props, ref) => {
   //TODO: type ref
   //@ts-ignore
   return <StyleLargeTitleRegularTertiary {...props} ref={ref} />;
@@ -53,10 +41,7 @@ const StyleLargeTitleRegularQuaternary = styled.div`
   ${largeTitleRegularQuaternaryCss}
 `;
 
-const LargeTitleRegularQuaternary = forwardRef<
-  StyledComponent<"div", any>,
-  StyledComponentProps<"div", any, any, any>
->((props, ref) => {
+const LargeTitleRegularQuaternary = forwardRef((props, ref) => {
   //TODO: type ref
   //@ts-ignore
   return <StyleLargeTitleRegularQuaternary {...props} ref={ref} />;

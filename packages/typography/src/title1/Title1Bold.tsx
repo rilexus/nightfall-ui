@@ -1,7 +1,4 @@
-import styled, {
-  StyledComponent,
-  StyledComponentProps,
-} from "styled-components";
+import styled from "styled-components";
 import {
   title1BoldPrimaryCss,
   title1BoldQuaternaryCss,
@@ -14,10 +11,7 @@ const StyleTitle1BoldPrimary = styled.div`
   ${title1BoldPrimaryCss}
 `;
 
-const Title1BoldPrimary = forwardRef<
-  StyledComponent<"div", any>,
-  StyledComponentProps<"div", any, any, any>
->((props, ref) => {
+const Title1BoldPrimary = forwardRef((props, ref) => {
   //TODO: type ref
   //@ts-ignore
   return <StyleTitle1BoldPrimary {...props} ref={ref} />;
@@ -27,10 +21,7 @@ const StyleTitle1BoldSecondary = styled.div`
   ${title1BoldSecondaryCss}
 `;
 
-const Title1BoldSecondary = forwardRef<
-  StyledComponent<"div", any>,
-  StyledComponentProps<"div", any, any, any>
->((props, ref) => {
+const Title1BoldSecondary = forwardRef((props, ref) => {
   //TODO: type ref
   //@ts-ignore
   return <StyleTitle1BoldSecondary {...props} ref={ref} />;
@@ -40,10 +31,7 @@ const StyleTitle1BoldTertiary = styled.div`
   ${title1BoldTertiaryCss}
 `;
 
-const Title1BoldTertiary = forwardRef<
-  StyledComponent<"div", any>,
-  StyledComponentProps<"div", any, any, any>
->((props, ref) => {
+const Title1BoldTertiary = forwardRef((props, ref) => {
   //TODO: type ref
   //@ts-ignore
   return <StyleTitle1BoldTertiary {...props} ref={ref} />;
@@ -53,10 +41,7 @@ const StyleTitle1BoldQuaternary = styled.div`
   ${title1BoldQuaternaryCss}
 `;
 
-const Title1BoldQuaternary = forwardRef<
-  StyledComponent<"div", any>,
-  StyledComponentProps<"div", any, any, any>
->((props, ref) => {
+const Title1BoldQuaternary = forwardRef((props, ref) => {
   //TODO: type ref
   //@ts-ignore
   return <StyleTitle1BoldQuaternary {...props} ref={ref} />;

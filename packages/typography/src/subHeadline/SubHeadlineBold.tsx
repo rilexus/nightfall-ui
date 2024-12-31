@@ -3,10 +3,7 @@ import React, {
   ForwardRefExoticComponent,
   HTMLAttributes,
 } from "react";
-import styled, {
-  StyledComponent,
-  StyledComponentProps,
-} from "styled-components";
+import styled from "styled-components";
 import {
   subHeadlineBoldPrimaryCss,
   subHeadlineBoldQuaternaryCss,
@@ -18,10 +15,7 @@ const StyleSubHeadlineBoldPrimary = styled.div`
   ${subHeadlineBoldPrimaryCss}
 `;
 
-const SubHeadlineBoldPrimary = forwardRef<
-  StyledComponent<"div", any>,
-  StyledComponentProps<"div", any, any, any>
->((props, ref) => {
+const SubHeadlineBoldPrimary = forwardRef((props, ref) => {
   //TODO: type ref
   //@ts-ignore
   return <StyleSubHeadlineBoldPrimary {...props} ref={ref} />;
@@ -31,10 +25,7 @@ const StyleSubHeadlineBoldSecondary = styled.div`
   ${subHeadlineBoldSecondaryCss}
 `;
 
-const SubHeadlineBoldSecondary = forwardRef<
-  StyledComponent<"div", any>,
-  StyledComponentProps<"div", any, any, any>
->((props, ref) => {
+const SubHeadlineBoldSecondary = forwardRef((props, ref) => {
   //TODO: type ref
   //@ts-ignore
   return <StyleSubHeadlineBoldSecondary {...props} ref={ref} />;
@@ -44,10 +35,7 @@ const StyleSubHeadlineBoldTertiary = styled.div`
   ${subHeadlineBoldTertiaryCss}
 `;
 
-const SubHeadlineBoldTertiary = forwardRef<
-  StyledComponent<"div", any>,
-  StyledComponentProps<"div", any, any, any>
->((props, ref) => {
+const SubHeadlineBoldTertiary = forwardRef((props, ref) => {
   //TODO: type ref
   //@ts-ignore
   return <StyleSubHeadlineBoldTertiary {...props} ref={ref} />;
@@ -57,10 +45,7 @@ const StyleSubHeadlineBoldQuaternary = styled.div`
   ${subHeadlineBoldQuaternaryCss}
 `;
 
-const SubHeadlineBoldQuaternary = forwardRef<
-  StyledComponent<"div", any>,
-  StyledComponentProps<"div", any, any, any>
->((props, ref) => {
+const SubHeadlineBoldQuaternary = forwardRef((props, ref) => {
   //TODO: type ref
   //@ts-ignore
   return <StyleSubHeadlineBoldQuaternary {...props} ref={ref} />;
