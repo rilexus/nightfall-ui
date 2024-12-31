@@ -5,6 +5,10 @@ const darkQuery =
     ? window.matchMedia?.(`(prefers-color-scheme: dark)`)
     : {
         matches: false,
+        addEventListener: () => {},
+        removeEventListener: () => {},
+        addListener: () => {},
+        removeListener: () => {},
       };
 
 const lightQuery =
@@ -12,6 +16,10 @@ const lightQuery =
     ? window.matchMedia?.(`(prefers-color-scheme: light`)
     : {
         matches: true,
+        addEventListener: () => {},
+        removeEventListener: () => {},
+        addListener: () => {},
+        removeListener: () => {},
       };
 
 const usePrefersColorScheme = () => {
