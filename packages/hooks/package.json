@@ -1,6 +1,6 @@
 {
   "name": "@nightfall-ui/hooks",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "license": "MIT",
   "description": "Hooks for the Nightfall UI component library.",
   "author": "Stanislav Panchenko <email@stanislavpanchenko.de>",
