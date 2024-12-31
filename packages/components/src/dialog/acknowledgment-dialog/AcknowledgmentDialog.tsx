@@ -1,8 +1,8 @@
 import React, { FC, ReactNode, VFC } from "react";
-import { Flex, Padding, TextCenter } from "@nightfall-ui/components";
+import { Flex, Padding, TextCenter } from "../../layout";
 import { useCSSProperties } from "@nightfall-ui/hooks";
 import { Dialog } from "../dialog";
-import { ActionButton, EmphasizedActionButton } from "@nightfall-ui/components";
+import { ActionButton, EmphasizedActionButton } from "../../buttons";
 import { BodyRegular, Footnote } from "@nightfall-ui/typography";
 
 type AlertProps = { title: string; description: string };

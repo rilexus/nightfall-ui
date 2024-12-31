@@ -6,11 +6,11 @@ import React, {
   useRef,
   useState,
 } from "react";
-import { Dialog } from "@nightfall-ui/components";
+import { Dialog } from "../../dialog";
 import { Checkmark, KeyboardArrowDown } from "@nightfall-ui/icons";
 import { useCSSProperties } from "@nightfall-ui/hooks";
-import { Flex } from "@nightfall-ui/components";
-import { Platter } from "@nightfall-ui/components";
+import { Flex } from "../../layout";
+import { Platter } from "../../surfaces";
 import styled from "styled-components";
 import { filledInputBackgroundColorCss, inputBorderRadius } from "../css";
 

@@ -6,16 +6,13 @@
     "baseUrl": "."
   },
   "include": [
-    "./index.ts",
+    "index.ts",
     "src/**/*"
   ],
   "exclude": [
     "**/*.spec.ts",
     "**/*.test.ts",
-    "dist",
-    "docs",
-    "node_modules",
-    "webpack.config.ts",
-    "site"
+    "dist/**/*",
+    "node_modules"
   ]
 }

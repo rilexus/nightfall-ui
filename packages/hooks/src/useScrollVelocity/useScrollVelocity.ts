@@ -41,14 +41,9 @@ const useScrollVelocity = (
   const [th] = useState(() =>
     throttle((e: HTMLElement) => {
       const currentPos = e.scrollTop;
-
       const now = Date.now();
       const timeDelta = now - timeRef.current;
-
-      console.log(timeDelta);
-
       const positionDelta = currentPos - prevPositionRef.current;
-
       const velocity = positionDelta / timeDelta;
 
       prevPositionRef.current = currentPos;

@@ -6,7 +6,8 @@
     "packages/hooks",
     "packages/icons",
     "packages/typography",
-    "packages/utils"
+    "packages/utils",
+    "packages/site"
   ],
   "version": "independent",
   "npmClient": "npm"

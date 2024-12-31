@@ -10,8 +10,8 @@
     "build": "tsc --project ./tsconfig.json",
     "start": "npm run tsc:watch"
   },
-  "main": "dist/src/index.js",
-  "types": "dist/src/index.d.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "repository": {
     "type": "git",
     "url": "https://github.com/rilexus/nightfall-ui"
