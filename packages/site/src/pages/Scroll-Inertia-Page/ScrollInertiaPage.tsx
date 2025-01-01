@@ -1,10 +1,12 @@
 import { Center } from "@nightfall-ui/components";
-import React, { FC, useRef } from "react";
+import React, { FunctionComponent, PropsWithChildren, useRef } from "react";
 import { useScrollVelocity } from "@nightfall-ui/hooks";
 import { Card, ScrollInertia } from "@nightfall-ui/components";
 import { Caption1 } from "@nightfall-ui/typography";
 
-const SmallInertia: FC<{ velocity: number }> = ({ children, velocity }) => {
+const SmallInertia: FunctionComponent<
+  PropsWithChildren<{ velocity: number }>
+> = ({ children, velocity }) => {
   return (
     <ScrollInertia
       velocity={velocity}
@@ -17,7 +19,9 @@ const SmallInertia: FC<{ velocity: number }> = ({ children, velocity }) => {
   );
 };
 
-const MediumInertia: FC<{ velocity: number }> = ({ children, velocity }) => {
+const MediumInertia: FunctionComponent<
+  PropsWithChildren<{ velocity: number }>
+> = ({ children, velocity }) => {
   return (
     <ScrollInertia
       velocity={velocity}
@@ -30,7 +34,9 @@ const MediumInertia: FC<{ velocity: number }> = ({ children, velocity }) => {
   );
 };
 
-const HeavyInertia: FC<{ velocity: number }> = ({ children, velocity }) => {
+const HeavyInertia: FunctionComponent<
+  PropsWithChildren<{ velocity: number }>
+> = ({ children, velocity }) => {
   return (
     <ScrollInertia
       velocity={velocity}
@@ -43,7 +49,10 @@ const HeavyInertia: FC<{ velocity: number }> = ({ children, velocity }) => {
   );
 };
 
-const Margin: FC<{ value: string }> = ({ children, value }) => {
+const Margin: FunctionComponent<PropsWithChildren<{ value: string }>> = ({
+  children,
+  value,
+}) => {
   return (
     <div
       style={{

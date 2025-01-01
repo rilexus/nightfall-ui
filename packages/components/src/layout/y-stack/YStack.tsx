@@ -1,7 +1,7 @@
-import React, { FC } from "react";
+import React, { FunctionComponent, PropsWithChildren } from "react";
 import { Spacing, YSpacer } from "../y-spacer";
 
-const YStack: FC<{ spacing?: Spacing }> = ({
+const YStack: FunctionComponent<PropsWithChildren<{ spacing?: Spacing }>> = ({
   children,
   spacing = "medium",
 }) => {

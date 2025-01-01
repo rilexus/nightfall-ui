@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React, { FunctionComponent, PropsWithChildren } from "react";
 import { Ease, mergeRefs } from "react-transitions-library";
 import {
   useCSSProperties,
@@ -6,12 +6,14 @@ import {
   useMouseOver,
 } from "@nightfall-ui/hooks";
 
-const ButtonOpacityTransition: FC<{
-  timeout?: number;
-  delay?: number;
-  ease?: Ease;
-  disabled?: boolean;
-}> = ({ children, timeout = 200, ease = Ease.ease, delay = 0, disabled }) => {
+const ButtonOpacityTransition: FunctionComponent<
+  PropsWithChildren<{
+    timeout?: number;
+    delay?: number;
+    ease?: Ease;
+    disabled?: boolean;
+  }>
+> = ({ children, timeout = 200, ease = Ease.ease, delay = 0, disabled }) => {
   const [mouseOver, mouseOverRef] = useMouseOver<HTMLDivElement>();
   const [mouseDown, mouseDownRef, setDown] = useMouseDown<HTMLDivElement>();
 

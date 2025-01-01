@@ -1,4 +1,8 @@
-import React, { FC, HTMLAttributes } from "react";
+import React, {
+  FunctionComponent,
+  HTMLAttributes,
+  PropsWithChildren,
+} from "react";
 import styled from "styled-components";
 import { selectNoneCss } from "@nightfall-ui/css";
 const StyledStylesButton = styled.button`
@@ -11,7 +15,9 @@ const StyledStylesButton = styled.button`
   cursor: pointer;
 `;
 
-const StylelessButton: FC<HTMLAttributes<HTMLButtonElement>> = (props) => {
+const StylelessButton: FunctionComponent<
+  PropsWithChildren<HTMLAttributes<HTMLButtonElement>>
+> = (props) => {
   return <StyledStylesButton {...props} />;
 };
 

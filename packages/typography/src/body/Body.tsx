@@ -5,11 +5,12 @@ import React, {
 } from "react";
 import { BodyRegular } from "./BodyRegular";
 import { BodyBold } from "./BodyBold";
+import IntrinsicElements = React.JSX.IntrinsicElements;
 
 type Props = {
   type: "primary" | "secondary" | "tertiary" | "quaternary";
   weight: "regular" | "bold";
-  as?: keyof JSX.IntrinsicElements;
+  as?: keyof IntrinsicElements;
 } & HTMLAttributes<any>;
 
 const Body: ForwardRefExoticComponent<Props> = forwardRef(

@@ -1,4 +1,4 @@
-import React, { FC, ReactNode, VFC } from "react";
+import React, { FunctionComponent, PropsWithChildren, ReactNode } from "react";
 import { Flex, Padding, TextCenter } from "../../layout";
 import { useCSSProperties } from "@nightfall-ui/hooks";
 import { Dialog } from "../dialog";
@@ -7,7 +7,7 @@ import { BodyRegular, Footnote } from "@nightfall-ui/typography";
 
 type AlertProps = { title: string; description: string };
 
-const Container: FC = ({ children }) => {
+const Container: FunctionComponent<PropsWithChildren> = ({ children }) => {
   const style = useCSSProperties(
     {
       maxWidth: "16.75rem",
@@ -21,7 +21,10 @@ const Container: FC = ({ children }) => {
   );
 };
 
-const DialogText: VFC<AlertProps> = ({ title, description }) => {
+const DialogText: FunctionComponent<PropsWithChildren<AlertProps>> = ({
+  title,
+  description,
+}) => {
   return (
     <TextCenter>
       <Padding>
@@ -39,12 +42,9 @@ type AcknowledgmentProps = AlertProps & {
   label: ReactNode;
 };
 
-const Acknowledgment: VFC<AcknowledgmentProps> = ({
-  title,
-  description,
-  onAcknowledge,
-  label,
-}) => {
+const Acknowledgment: FunctionComponent<
+  PropsWithChildren<AcknowledgmentProps>
+> = ({ title, description, onAcknowledge, label }) => {
   const style = useCSSProperties(
     {
       maxWidth: "16.75rem",
@@ -68,15 +68,17 @@ const Acknowledgment: VFC<AcknowledgmentProps> = ({
   );
 };
 
-const PermissionDialog: VFC<{
-  open: boolean;
-  onConfirm: () => void;
-  onDeny: () => void;
-  title: string;
-  description: string;
-  confirmLabel: ReactNode;
-  denyLabel: ReactNode;
-}> = ({
+const PermissionDialog: FunctionComponent<
+  PropsWithChildren<{
+    open: boolean;
+    onConfirm: () => void;
+    onDeny: () => void;
+    title: string;
+    description: string;
+    confirmLabel: ReactNode;
+    denyLabel: ReactNode;
+  }>
+> = ({
   open,
   onConfirm,
   onDeny,
@@ -106,13 +108,15 @@ const PermissionDialog: VFC<{
   );
 };
 
-const AcknowledgmentDialog: VFC<{
-  onAcknowledge: () => void;
-  open: boolean;
-  title: string;
-  description: string;
-  label: ReactNode;
-}> = ({ open, onAcknowledge, title, description, label }) => {
+const AcknowledgmentDialog: FunctionComponent<
+  PropsWithChildren<{
+    onAcknowledge: () => void;
+    open: boolean;
+    title: string;
+    description: string;
+    label: ReactNode;
+  }>
+> = ({ open, onAcknowledge, title, description, label }) => {
   return (
     <Dialog open={open}>
       <Container>

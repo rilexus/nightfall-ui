@@ -49,7 +49,7 @@ const FootnoteRegularQuaternary = forwardRef((props, ref) => {
 
 type FootnoteRegularProps = {
   type?: "primary" | "secondary" | "tertiary" | "quaternary";
-  as?: keyof JSX.IntrinsicElements;
+  as?: keyof React.JSX.IntrinsicElements;
 } & HTMLAttributes<any>;
 
 const FootnoteRegular: FC<FootnoteRegularProps> = forwardRef(

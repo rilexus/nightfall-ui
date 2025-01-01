@@ -27,7 +27,7 @@ const useEventBus = (type: string, callback?: (...args: any) => void) => {
   }, [ref, type]);
 
   return useCallback(
-    (value) => {
+    (value: any) => {
       // eslint-disable-next-line
       // @ts-ignore
       window?.eventbus?.emit(type, value);

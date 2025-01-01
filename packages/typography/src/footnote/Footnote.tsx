@@ -5,11 +5,12 @@ import React, {
 } from "react";
 import { FootnoteRegular } from "./FootnoteRegular";
 import { FootnoteBold } from "./FootnoteBold";
+import IntrinsicElements = React.JSX.IntrinsicElements;
 
 type Props = {
   type: "primary" | "secondary" | "tertiary" | "quaternary";
   weight: "regular" | "bold";
-  as?: keyof JSX.IntrinsicElements;
+  as?: keyof IntrinsicElements;
 } & HTMLAttributes<any>;
 
 const Footnote: ForwardRefExoticComponent<Props> = forwardRef(

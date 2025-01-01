@@ -12,7 +12,8 @@
     "start": "npm run tsc:watch"
   },
   "peerDependencies": {
-    "styled-components": "^6"
+    "styled-components": "^5",
+    "react": "^19.0.0 || ^18.0.0"
   },
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

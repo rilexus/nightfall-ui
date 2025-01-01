@@ -9,7 +9,7 @@ import { Title1Regular } from "./Title1Regular";
 type Props = {
   type: "primary" | "secondary" | "tertiary" | "quaternary";
   weight: "bold" | "regular";
-  as?: keyof JSX.IntrinsicElements;
+  as?: keyof React.JSX.IntrinsicElements;
 } & HTMLAttributes<any>;
 
 const Title1: ForwardRefExoticComponent<Props> = forwardRef(

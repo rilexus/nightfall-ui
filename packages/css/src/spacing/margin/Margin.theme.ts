@@ -1,6 +1,5 @@
 import { MarginTheme } from "./MarginTheme";
 import { Theme } from "../../Theme.type";
-import { StyleFunction } from "styled-components";
 
 const marginTheme: MarginTheme = {
   "0": "0px",
@@ -24,7 +23,7 @@ const marginTheme: MarginTheme = {
 };
 
 const margin =
-  (value: keyof MarginTheme): StyleFunction<any> =>
+  (value: keyof MarginTheme): any =>
   ({ theme }: { theme: Theme }) => {
     return theme.margin[value];
   };

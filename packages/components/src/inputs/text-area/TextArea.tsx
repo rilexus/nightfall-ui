@@ -1,4 +1,9 @@
-import React, { forwardRef, TextareaHTMLAttributes, VFC } from "react";
+import React, {
+  forwardRef,
+  FunctionComponent,
+  PropsWithChildren,
+  TextareaHTMLAttributes,
+} from "react";
 import styled from "styled-components";
 import {
   inputBorderRadius,
@@ -19,16 +24,17 @@ type Props = {
   variant?: "outlined";
   invalid?: boolean;
 };
-const TextArea: VFC<TextareaHTMLAttributes<HTMLTextAreaElement> & Props> =
-  forwardRef(function TextArea(
-    {
-      variant = "outlined", // TODO: implement more variants
-      ...props
-    },
-    ref
-  ) {
-    //@ts-ignore
-    return <StyledTextarea {...props} ref={ref} />;
-  });
+const TextArea: FunctionComponent<
+  PropsWithChildren<TextareaHTMLAttributes<HTMLTextAreaElement> & Props>
+> = forwardRef(function TextArea(
+  {
+    variant = "outlined", // TODO: implement more variants
+    ...props
+  },
+  ref
+) {
+  //@ts-ignore
+  return <StyledTextarea {...props} ref={ref} />;
+});
 
 export { TextArea };

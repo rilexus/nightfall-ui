@@ -1,11 +1,21 @@
-import React, { CSSProperties, FC, useEffect, useRef } from "react";
+import React, {
+  CSSProperties,
+  FunctionComponent,
+  PropsWithChildren,
+  useEffect,
+  useRef,
+} from "react";
 import ReactDOM from "react-dom";
 import { TransitionGroup } from "react-transition-group";
 import { FadeInTransition, ZoomInTransition } from "react-transitions-library";
 import { useCallbackRef, useCSSProperties } from "@nightfall-ui/hooks";
 import { DialogContext, useDialogContext } from "../dialog-provider";
 
-const ContentTransition: FC<any> = ({ children, onExited, ...props }) => {
+const ContentTransition: FunctionComponent<PropsWithChildren<any>> = ({
+  children,
+  onExited,
+  ...props
+}) => {
   const timeout = 400;
 
   return (
@@ -23,15 +33,20 @@ const ContentTransition: FC<any> = ({ children, onExited, ...props }) => {
   );
 };
 
-const Portal: FC<{ container: any }> = ({ children, container }) => {
+const Portal: FunctionComponent<PropsWithChildren<{ container: any }>> = ({
+  children,
+  container,
+}) => {
   return ReactDOM.createPortal(children, container);
 };
 
-const Dialog: FC<{
-  style?: CSSProperties;
-  open: boolean;
-  onOutsideClick?: () => void;
-}> = ({ open, children, style }) => {
+const Dialog: FunctionComponent<
+  PropsWithChildren<{
+    style?: CSSProperties;
+    open: boolean;
+    onOutsideClick?: () => void;
+  }>
+> = ({ open, children, style }) => {
   const context = useDialogContext();
   const setOpen = context?.[1] || (() => {});
 

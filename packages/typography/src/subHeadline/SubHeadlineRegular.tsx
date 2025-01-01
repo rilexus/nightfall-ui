@@ -49,7 +49,7 @@ const SubHeadlineRegularQuaternary = forwardRef((props, ref) => {
 
 type SubHeadlineRegularProps = {
   type?: "primary" | "secondary" | "tertiary" | "quaternary";
-  as?: keyof JSX.IntrinsicElements;
+  as?: keyof React.JSX.IntrinsicElements;
 } & HTMLAttributes<any>;
 
 const SubHeadlineRegular: FC<SubHeadlineRegularProps> = forwardRef(

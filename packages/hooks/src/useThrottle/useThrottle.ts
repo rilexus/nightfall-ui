@@ -14,7 +14,7 @@ const useThrottle = (callback: (...args: any) => void, time: number) => {
   }, []);
 
   return useCallback(
-    (...args) => {
+    (...args: any) => {
       if (paused.current) return;
       paused.current = true;
 

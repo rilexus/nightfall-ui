@@ -1,7 +1,8 @@
 import React, {
   createContext,
   Dispatch,
-  FC,
+  FunctionComponent,
+  PropsWithChildren,
   SetStateAction,
   useContext,
   useMemo,
@@ -18,9 +19,11 @@ const DialogContext = createContext<
 
 const useDialogContext = () => useContext(DialogContext);
 
-const BackgroundTransition: FC<{
-  blur?: { from: string; to: string; timeout: number };
-}> = ({
+const BackgroundTransition: FunctionComponent<
+  PropsWithChildren<{
+    blur?: { from: string; to: string; timeout: number };
+  }>
+> = ({
   children,
   blur = { from: "0px", to: "15px", timeout: 700 },
   ...props
@@ -48,7 +51,7 @@ const BackgroundTransition: FC<{
   );
 };
 
-const DialogProvider: FC = ({ children }) => {
+const DialogProvider: FunctionComponent<PropsWithChildren> = ({ children }) => {
   const [open, setOpen] = useState(false);
 
   const contextValue = useMemo<any>(() => [open, setOpen], [open]);
@@ -60,10 +63,12 @@ const DialogProvider: FC = ({ children }) => {
   );
 };
 
-const DialogBackgroundTransition: FC<{
-  zoom?: { from: number; to: number; timeout: number };
-  blur?: { from: string; to: string; timeout: number };
-}> = ({
+const DialogBackgroundTransition: FunctionComponent<
+  PropsWithChildren<{
+    zoom?: { from: number; to: number; timeout: number };
+    blur?: { from: string; to: string; timeout: number };
+  }>
+> = ({
   children,
   zoom = { from: 1, to: 0.97, timeout: 700 },
   blur = { from: "0px", to: "5px", timeout: 700 },

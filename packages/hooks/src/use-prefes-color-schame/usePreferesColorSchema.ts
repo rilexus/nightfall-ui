@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 
+const darkQuery = window.matchMedia?.(`(prefers-color-scheme: dark)`);
+const lightQuery = window.matchMedia?.(`(prefers-color-scheme: light`);
 const usePrefersColorScheme = () => {
-  if (typeof window === undefined || typeof window.matchMedia !== "function") {
-    return "no-preference";
-  }
-  const darkQuery = window.matchMedia?.(`(prefers-color-scheme: dark)`);
-  const lightQuery = window.matchMedia?.(`(prefers-color-scheme: light`);
+  // if (typeof window === undefined || typeof window.matchMedia !== "function") {
+  //   return "no-preference";
+  // }
   const isDark = darkQuery?.matches;
   const isLight = lightQuery?.matches;
 

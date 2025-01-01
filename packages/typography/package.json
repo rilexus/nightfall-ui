@@ -14,7 +14,7 @@
   "peerDependencies": {
     "@nightfall-ui/css": "^1.1.0",
     "react": "^19.0.0 || ^18.0.0",
-    "styled-components": "^6"
+    "styled-components": "^5"
   },
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

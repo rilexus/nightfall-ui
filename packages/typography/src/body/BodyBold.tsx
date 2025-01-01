@@ -6,6 +6,7 @@ import {
   bodyBoldSecondaryCss,
   bodyBoldTertiaryCss,
 } from "./body.css";
+import IntrinsicElements = React.JSX.IntrinsicElements;
 
 const StyleBodyBoldPrimary = styled.div`
   ${bodyBoldPrimaryCss}
@@ -49,7 +50,7 @@ const BodyBoldQuaternary = forwardRef((props, ref) => {
 
 type BodyBoldProps = {
   type?: "primary" | "secondary" | "tertiary" | "quaternary";
-  as?: keyof JSX.IntrinsicElements;
+  as?: keyof IntrinsicElements;
 } & HTMLAttributes<any>;
 
 const BodyBold: FC<BodyBoldProps> = forwardRef(

@@ -8,7 +8,7 @@ import { HeadlineRegular } from "./HeadlineRegular";
 type Props = {
   type: "primary" | "secondary" | "tertiary" | "quaternary";
   weight: "regular";
-  as?: keyof JSX.IntrinsicElements;
+  as?: keyof React.JSX.IntrinsicElements;
 } & HTMLAttributes<any>;
 
 const Headline: ForwardRefExoticComponent<Props> = forwardRef(

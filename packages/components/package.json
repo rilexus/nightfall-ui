@@ -11,16 +11,17 @@
     "start": "npm run tsc:watch",
     "dev": "npm run tsc:watch"
   },
-  "dependencies": {
-    "react-transition-group": "^4.4.2",
-    "react-transitions-library": "^1.10.1"
+  "dependencies": {},
+  "devDependencies": {
+    "@types/react": "^19.0.2",
+    "@types/react-dom": "^19.0.2"
   },
   "peerDependencies": {
     "@nightfall-ui/css": "^1.1.0",
     "@nightfall-ui/hooks": "^1.2.0",
     "@nightfall-ui/typography": "^1.1.0",
     "react": "^19.0.0 || ^18.0.0",
-    "styled-components": "^6"
+    "styled-components": "^5"
   },
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

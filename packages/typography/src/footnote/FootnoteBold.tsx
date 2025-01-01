@@ -49,7 +49,7 @@ const FootnoteBoldQuaternary = forwardRef((props, ref) => {
 
 type FootnoteBoldProps = {
   type?: "primary" | "secondary" | "tertiary" | "quaternary";
-  as?: keyof JSX.IntrinsicElements;
+  as?: keyof React.JSX.IntrinsicElements;
 } & HTMLAttributes<any>;
 
 const FootnoteBold: FC<FootnoteBoldProps> = forwardRef(

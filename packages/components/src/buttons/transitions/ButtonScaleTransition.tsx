@@ -1,19 +1,20 @@
-import React, { FC } from "react";
+import React, { FunctionComponent, PropsWithChildren } from "react";
 import {
   useCSSProperties,
   useMouseDown,
   useMouseOver,
-  useMouseUp,
   useTouch,
 } from "@nightfall-ui/hooks";
 import { Ease, mergeRefs } from "react-transitions-library";
 
-const ButtonScaleTransition: FC<{
-  timeout?: number;
-  ease?: Ease;
-  delay?: number;
-  disabled?: boolean;
-}> = ({ disabled, children, timeout = 200, ease = Ease.ease, delay = 0 }) => {
+const ButtonScaleTransition: FunctionComponent<
+  PropsWithChildren<{
+    timeout?: number;
+    ease?: Ease;
+    delay?: number;
+    disabled?: boolean;
+  }>
+> = ({ disabled, children, timeout = 200, ease = Ease.ease, delay = 0 }) => {
   const [isOver, overRef] = useMouseOver();
   const [isDown, downRef] = useMouseDown();
   const [isTouched, touchRef] = useTouch();

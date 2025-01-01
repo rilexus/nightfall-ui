@@ -1,6 +1,7 @@
 import React, {
   createContext,
-  FC,
+  FunctionComponent,
+  PropsWithChildren,
   useContext,
   useEffect,
   useRef,
@@ -45,11 +46,13 @@ const StyledOptionText = styled.span`
   text-overflow: ellipsis;
 `;
 
-const Select: FC<{
-  value: string | number;
-  onChange: (event: Event) => void;
-  id?: string;
-}> = ({ id, children, onChange, value }) => {
+const Select: FunctionComponent<
+  PropsWithChildren<{
+    value: string | number;
+    onChange: (event: Event) => void;
+    id?: string;
+  }>
+> = ({ id, children, onChange, value }) => {
   const [open, setOpen] = useState(false);
   const ref = useRef(null);
   const positionRef = useRef({});
@@ -132,7 +135,9 @@ const StyledChildren = styled.div`
   }
 `;
 
-const Option: FC<{ value: string | number }> = ({ value, children }) => {
+const Option: FunctionComponent<
+  PropsWithChildren<{ value: string | number }>
+> = ({ value, children }) => {
   const { select, value: v } = useSelectContext();
   const isSelected = v === value;
 

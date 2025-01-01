@@ -6,6 +6,7 @@ import {
   bodyRegularSecondaryCss,
   bodyRegularTertiaryCss,
 } from "./body.css";
+import IntrinsicElements = React.JSX.IntrinsicElements;
 
 const StyleBodyRegularPrimary = styled.div`
   ${bodyRegularPrimaryCss}
@@ -49,7 +50,7 @@ const BodyRegularQuaternary = forwardRef((props, ref) => {
 
 type BodyRegularProps = {
   type?: "primary" | "secondary" | "tertiary" | "quaternary";
-  as?: keyof JSX.IntrinsicElements;
+  as?: keyof IntrinsicElements;
 } & HTMLAttributes<any>;
 
 const BodyRegular: FC<BodyRegularProps> = forwardRef(

@@ -53,7 +53,7 @@ const Title2RegularQuaternary = forwardRef((props, ref) => {
 
 type Title2RegularProps = {
   type?: "primary" | "secondary" | "tertiary" | "quaternary";
-  as?: keyof JSX.IntrinsicElements;
+  as?: keyof React.JSX.IntrinsicElements;
 } & HTMLAttributes<any>;
 
 const Title2Regular: ForwardRefExoticComponent<Title2RegularProps> = forwardRef(

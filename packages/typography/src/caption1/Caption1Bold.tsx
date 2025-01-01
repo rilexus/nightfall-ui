@@ -6,6 +6,7 @@ import {
   caption1BoldSecondaryCss,
   caption1BoldTertiaryCss,
 } from "./caption1.css";
+import IntrinsicElements = React.JSX.IntrinsicElements;
 
 const StyleCaption1BoldPrimary = styled.div`
   ${caption1BoldPrimaryCss}
@@ -49,7 +50,7 @@ const Caption1BoldQuaternary = forwardRef((props, ref) => {
 
 type Caption1BoldProps = {
   type?: "primary" | "secondary" | "tertiary" | "quaternary";
-  as?: keyof JSX.IntrinsicElements;
+  as?: keyof IntrinsicElements;
 } & HTMLAttributes<any>;
 
 const Caption1Bold: FC<Caption1BoldProps> = forwardRef(

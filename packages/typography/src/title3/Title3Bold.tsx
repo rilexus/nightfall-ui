@@ -53,7 +53,7 @@ const Title3BoldQuaternary = forwardRef((props, ref) => {
 
 type Title3BoldProps = {
   type?: "primary" | "secondary" | "tertiary" | "quaternary";
-  as?: keyof JSX.IntrinsicElements;
+  as?: keyof React.JSX.IntrinsicElements;
 } & HTMLAttributes<any>;
 
 const Title3Bold: ForwardRefExoticComponent<Title3BoldProps> = forwardRef(

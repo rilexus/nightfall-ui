@@ -1,12 +1,13 @@
 import React from "react";
-import ReactDOM from "react-dom";
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { App } from "./src/App";
 import { basename, production } from "./env";
-//
-ReactDOM.render(
+import { createRoot } from "react-dom/client";
+
+//@ts-ignore
+const root = createRoot(document.getElementById("root"));
+root.render(
   <BrowserRouter basename={production ? basename : ""}>
     <App />
-  </BrowserRouter>,
-  document.getElementById("root")
+  </BrowserRouter>
 );

@@ -9,7 +9,7 @@ import { SubHeadlineRegular } from "./SubHeadlineRegular";
 type Props = {
   type: "primary" | "secondary" | "tertiary" | "quaternary";
   weight: "bold" | "regular";
-  as?: keyof JSX.IntrinsicElements;
+  as?: keyof React.JSX.IntrinsicElements;
 } & HTMLAttributes<any>;
 
 const SubHeadline: ForwardRefExoticComponent<Props> = forwardRef(

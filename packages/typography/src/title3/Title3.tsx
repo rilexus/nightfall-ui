@@ -5,7 +5,7 @@ import { Title3Regular } from "./Title3Regular";
 type Props = {
   type: "primary" | "secondary" | "tertiary" | "quaternary";
   weight: "bold" | "regular";
-  as?: keyof JSX.IntrinsicElements;
+  as?: keyof React.JSX.IntrinsicElements;
 } & HTMLAttributes<any>;
 
 const Title3: FC<Props> = forwardRef(({ weight, ...props }, ref) => {

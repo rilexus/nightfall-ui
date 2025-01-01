@@ -6,6 +6,7 @@ import {
   caption2RegularSecondaryCss,
   caption2RegularTertiaryCss,
 } from "./caption2.css";
+import IntrinsicElements = React.JSX.IntrinsicElements;
 
 const StyleCaption2RegularPrimary = styled.div`
   ${caption2RegularPrimaryCss}
@@ -49,7 +50,7 @@ const Caption2RegularQuaternary = forwardRef((props, ref) => {
 
 type Caption2RegularProps = {
   type?: "primary" | "secondary" | "tertiary" | "quaternary";
-  as?: keyof JSX.IntrinsicElements;
+  as?: keyof IntrinsicElements;
 } & HTMLAttributes<any>;
 
 const Caption2Regular: FC<Caption2RegularProps> = forwardRef(

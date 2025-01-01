@@ -1,5 +1,12 @@
 import styled from "styled-components";
-import React, { FC, useCallback, useMemo, useState } from "react";
+import React, {
+  FC,
+  FunctionComponent,
+  PropsWithChildren,
+  useCallback,
+  useMemo,
+  useState,
+} from "react";
 import { useCSSProperties } from "@nightfall-ui/hooks";
 import { Ease } from "react-transitions-library";
 
@@ -31,13 +38,15 @@ const getPressedValue = (value: number, percent: number): number => {
 };
 
 // TODO: move out opacity mouse-over and down transition
-const RotationTransition: FC<{
-  deg?: number;
-  perspective?: string;
-  timeout?: number;
-  delay?: number;
-  ease?: Ease;
-}> = ({
+const RotationTransition: FunctionComponent<
+  PropsWithChildren<{
+    deg?: number;
+    perspective?: string;
+    timeout?: number;
+    delay?: number;
+    ease?: Ease;
+  }>
+> = ({
   children,
   ease = Ease.ease,
   delay = 0,

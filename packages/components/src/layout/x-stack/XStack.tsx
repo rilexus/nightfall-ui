@@ -1,8 +1,8 @@
-import React, { FC } from "react";
+import React, { FunctionComponent, PropsWithChildren } from "react";
 import { Spacing } from "../y-spacer";
 import { XSpacer } from "../x-spacer";
 
-const XStack: FC<{ spacing?: Spacing }> = ({
+const XStack: FunctionComponent<PropsWithChildren<{ spacing?: Spacing }>> = ({
   children,
   spacing = "medium",
 }) => {

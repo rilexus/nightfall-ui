@@ -1,6 +1,6 @@
 import React, { FC, forwardRef, HTMLAttributes } from "react";
-import { SquareInput } from "../square/SquareInput";
-import { RoundInput } from "../round/RoundInput";
+import { SquareInput } from "../square";
+import { RoundInput } from "../round";
 
 const Input: FC<
   HTMLAttributes<HTMLInputElement> & {
@@ -8,6 +8,7 @@ const Input: FC<
     shape?: "square" | "round";
     size?: "small" | "large" | "medium";
     variant?: "filled" | "outlined";
+    placeholder?: string;
   }
 > = forwardRef(function Input(
   { size = "medium", shape = "square", ...props },

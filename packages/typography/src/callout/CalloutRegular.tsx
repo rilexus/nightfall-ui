@@ -6,6 +6,7 @@ import {
   calloutRegularSecondaryCss,
   calloutRegularTertiaryCss,
 } from "./callout.css";
+import IntrinsicElements = React.JSX.IntrinsicElements;
 
 const StyleCalloutRegularPrimary = styled.div`
   ${calloutRegularPrimaryCss}
@@ -49,7 +50,7 @@ const CalloutRegularQuaternary = forwardRef((props, ref) => {
 
 type CalloutRegularProps = {
   type?: "primary" | "secondary" | "tertiary" | "quaternary";
-  as?: keyof JSX.IntrinsicElements;
+  as?: keyof IntrinsicElements;
 } & HTMLAttributes<any>;
 
 const CalloutRegular: FC<CalloutRegularProps> = forwardRef(

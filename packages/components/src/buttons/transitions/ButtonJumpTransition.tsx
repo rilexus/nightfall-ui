@@ -1,4 +1,12 @@
-import React, { FC, useCallback, useEffect, useRef, useState } from "react";
+import React, {
+  FC,
+  FunctionComponent,
+  PropsWithChildren,
+  useCallback,
+  useEffect,
+  useRef,
+  useState,
+} from "react";
 import { useCSSProperties } from "@nightfall-ui/hooks";
 import { Ease, ZoomInTransition } from "react-transitions-library";
 
@@ -18,7 +26,7 @@ const useTimeoutToggle = (
   timeout: number
 ): [boolean, () => void] => {
   const [value, setValue] = useState<boolean>(initialValue);
-  const timeoutRef = useRef<any>();
+  const timeoutRef = useRef<any>(null);
   const isMounted = useIsMounted();
 
   useEffect(() => {
@@ -41,14 +49,16 @@ const useTimeoutToggle = (
   return [value, toggle];
 };
 
-const ButtonJumpTransition: FC<{
-  delay?: number;
-  from?: number;
-  to?: number;
-  ease?: Ease;
-  timeout?: number;
-  disabled?: boolean;
-}> = ({
+const ButtonJumpTransition: FunctionComponent<
+  PropsWithChildren<{
+    delay?: number;
+    from?: number;
+    to?: number;
+    ease?: Ease;
+    timeout?: number;
+    disabled?: boolean;
+  }>
+> = ({
   children,
   from = 1,
   to = 1.1,

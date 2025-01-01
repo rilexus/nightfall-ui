@@ -6,6 +6,7 @@ import {
   calloutBoldSecondaryCss,
   calloutBoldTertiaryCss,
 } from "./callout.css";
+import IntrinsicElements = React.JSX.IntrinsicElements;
 
 const StyleCalloutBoldPrimary = styled.div`
   ${calloutBoldPrimaryCss}
@@ -49,7 +50,7 @@ const CalloutBoldQuaternary = forwardRef((props, ref) => {
 
 type CalloutBoldProps = {
   type?: "primary" | "secondary" | "tertiary" | "quaternary";
-  as?: keyof JSX.IntrinsicElements;
+  as?: keyof IntrinsicElements;
 } & HTMLAttributes<any>;
 
 const CalloutBold: FC<CalloutBoldProps> = forwardRef(

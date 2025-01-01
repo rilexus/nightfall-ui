@@ -53,7 +53,7 @@ const SubHeadlineBoldQuaternary = forwardRef((props, ref) => {
 
 type SubHeadlineBoldProps = {
   type?: "primary" | "secondary" | "tertiary" | "quaternary";
-  as?: keyof JSX.IntrinsicElements;
+  as?: keyof React.JSX.IntrinsicElements;
 } & HTMLAttributes<any>;
 
 const SubHeadlineBold: ForwardRefExoticComponent<SubHeadlineBoldProps> =

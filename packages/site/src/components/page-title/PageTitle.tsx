@@ -1,7 +1,7 @@
-import React, { FC } from "react";
+import React, { FunctionComponent, PropsWithChildren } from "react";
 import { LargeTitle } from "@nightfall-ui/typography";
 
-const PageTitle: FC = ({ children }) => {
+const PageTitle: FunctionComponent<PropsWithChildren> = ({ children }) => {
   return (
     <LargeTitle weight={"regular"} type={"primary"}>
       {children}

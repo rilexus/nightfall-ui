@@ -4,7 +4,7 @@ import { useCallbackRef } from "../useCallbackRef";
 function useMouseUp<Element extends HTMLElement>(
   callback: (this: Element) => any
 ): RefObject<Element> {
-  const ref = useRef<Element>();
+  const ref = useRef<Element>(null);
   const callbackRef = useCallbackRef(callback);
   useEffect(() => {
     ref.current?.addEventListener("mouseup", callbackRef.current);

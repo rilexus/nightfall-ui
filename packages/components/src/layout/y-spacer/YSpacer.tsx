@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import React, { FC } from "react";
+import React, { FunctionComponent, PropsWithChildren } from "react";
 import { getSpacing } from "./getSpacing";
 import { Spacing } from "./Spacing.type";
 
@@ -10,7 +10,7 @@ const StyledVerticalSpacer = styled.div<{ spacing: Spacing }>`
   }
 `;
 
-const YSpacer: FC<{ spacing?: Spacing }> = ({
+const YSpacer: FunctionComponent<PropsWithChildren<{ spacing?: Spacing }>> = ({
   children,
   spacing = "small",
 }) => {

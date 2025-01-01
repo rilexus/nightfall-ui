@@ -1,6 +1,3 @@
-import { Theme } from "../../Theme.type";
-import { StyleFunction } from "styled-components";
-
 type PaddingTheme = {
   "0": string;
   "1": string;
@@ -45,8 +42,8 @@ const paddingTheme: PaddingTheme = {
 
 type Padding = keyof PaddingTheme;
 
-const padding = (value: Padding): StyleFunction<any> => {
-  return ({ theme }): string => {
+const padding = (value: Padding): any => {
+  return ({ theme }: any): string => {
     return theme.padding[value];
   };
 };

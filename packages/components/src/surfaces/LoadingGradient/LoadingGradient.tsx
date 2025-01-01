@@ -1,21 +1,27 @@
-import React, { ReactElement } from "react";
+import React, {
+  FunctionComponent,
+  PropsWithChildren,
+  ReactElement,
+} from "react";
 
-const LoadingGradient: React.FC<{
-  width: string;
-  height: string;
-  viewBox: string;
-  animate?: boolean;
-  foregroundColor?: string;
-  backgroundColor?: string;
-  foregroundOpacity?: number;
-  backgroundOpacity?: number;
-  gradientRatio?: number;
-  interval?: number;
-  title?: string;
-  timeout: number;
-  animateBegin?: number;
-  beforeMask?: ReactElement;
-}> = ({
+const LoadingGradient: FunctionComponent<
+  PropsWithChildren<{
+    width: string;
+    height: string;
+    viewBox: string;
+    animate?: boolean;
+    foregroundColor?: string;
+    backgroundColor?: string;
+    foregroundOpacity?: number;
+    backgroundOpacity?: number;
+    gradientRatio?: number;
+    interval?: number;
+    title?: string;
+    timeout: number;
+    animateBegin?: number;
+    beforeMask?: ReactElement;
+  }>
+> = ({
   animate = true,
   backgroundColor = "#f5f6f7",
   backgroundOpacity = 1,

@@ -1,6 +1,7 @@
 import React, {
   createContext,
-  FC,
+  FunctionComponent,
+  PropsWithChildren,
   useCallback,
   useContext,
   useEffect,
@@ -41,7 +42,7 @@ const useFocusContext = () => {
   return useContext(BlurContext);
 };
 
-const FocusProvider: FC = ({ children }) => {
+const FocusProvider: FunctionComponent<PropsWithChildren> = ({ children }) => {
   const [state, setState] = useState<{ blurred: { [id: string]: boolean } }>({
     blurred: {},
   });
@@ -89,12 +90,9 @@ const FocusProvider: FC = ({ children }) => {
   );
 };
 
-const Focusable: FC<{ id: string; from?: string; to?: string }> = ({
-  children,
-  from = "0px",
-  to = "10px",
-  id,
-}) => {
+const Focusable: FunctionComponent<
+  PropsWithChildren<{ id: string; from?: string; to?: string }>
+> = ({ children, from = "0px", to = "10px", id }) => {
   const { register, unregister, blurred } = useFocusContext();
   useEffect(() => {
     register(id);

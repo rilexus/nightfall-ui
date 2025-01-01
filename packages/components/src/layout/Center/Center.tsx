@@ -1,4 +1,9 @@
-import React, { FC, HTMLAttributes, useMemo } from "react";
+import React, {
+  FunctionComponent,
+  HTMLAttributes,
+  PropsWithChildren,
+  useMemo,
+} from "react";
 import { Theme } from "@nightfall-ui/css";
 import { useTheme } from "styled-components";
 import { useCSSProperties, useMediaQuery } from "@nightfall-ui/hooks";
@@ -21,7 +26,9 @@ const descending = ([, a]: [string, number], [, b]: [string, number]) =>
  *     </div>
  * </Center>
  */
-const Center: FC<MediaProps & HTMLAttributes<HTMLDivElement>> = (props) => {
+const Center: FunctionComponent<
+  PropsWithChildren<MediaProps & HTMLAttributes<HTMLDivElement>>
+> = (props) => {
   const { breakpoints } = useTheme() as Theme;
 
   const sortedMedia = useMemo(() => {
