@@ -1,17 +1,8 @@
-import React, {
-  FunctionComponent,
-  HTMLAttributes,
-  PropsWithChildren,
-  useMemo,
-} from "react";
-import { Theme } from "@nightfall-ui/css";
-import { useTheme } from "styled-components";
-import { useCSSProperties, useMediaQuery } from "@nightfall-ui/hooks";
+import React from "react";
+import { media, Theme } from "@nightfall-ui/css";
+import styled from "styled-components";
 
 type MediaProps = { [Key in keyof Theme["breakpoints"]]?: number };
-
-const descending = ([, a]: [string, number], [, b]: [string, number]) =>
-  a > b ? -1 : 1;
 
 /**
  * Centers children relative to the parent.
@@ -26,68 +17,35 @@ const descending = ([, a]: [string, number], [, b]: [string, number]) =>
  *     </div>
  * </Center>
  */
-const Center: FunctionComponent<
-  PropsWithChildren<MediaProps & HTMLAttributes<HTMLDivElement>>
-> = (props) => {
-  const { breakpoints } = useTheme() as Theme;
+const Center = styled.div<MediaProps>`
+  margin: auto;
+  width: 100%;
 
-  const sortedMedia = useMemo(() => {
-    // Since breakpoints do not change, this will run once.
-    // Sort theme.media in descending order.
-    return Object.entries(breakpoints).sort(descending);
-  }, [breakpoints]);
+  ${({ small, theme }: any) => {
+    return `@media only screen and (max-width: ${theme.breakpoints.small}px) {
+      width: ${small}%;
+    }`;
+  }};
 
-  const queriesMap = sortedMedia.map(([queryName, deviceWidth], idx) => {
-    // listen for every media query, if its satisfied => boolean
-    return {
-      // eslint-disable-next-line
-      [queryName]: useMediaQuery(
-        `(${
-          sortedMedia.length - 1 === idx ? "max" : "min"
-        }-width: ${deviceWidth}px)`
-      ), // => boolean
-    };
-  });
+  ${media.medium`
+    ${({ medium }: any) => `width: ${medium}%`};
+  `};
 
-  let width = 100;
-  for (let i = 0; i < queriesMap.length; i++) {
-    const currentQuery = queriesMap[i];
-    const [[queryName, querySatisfied]] = Object.entries(currentQuery);
-    if (querySatisfied && queryName in props) {
-      // eslint-disable-next-line
-      // @ts-ignore
-      width = props[queryName]; // in percent
-      // return first satisfied query width
-      break;
-    }
-  }
+  ${media.large`
+    ${({ large }: any) => `width: ${large}%`};
+  `};
 
-  const style = useCSSProperties(
-    {
-      ...props.style,
-      margin: "auto",
-      width: `${width}%`,
-    },
-    [width, props.style]
-  );
+  ${media.tablet`
+    ${({ tablet }: any) => `width: ${tablet}%`};
+  `};
 
-  const filteredProps = useMemo(
-    () =>
-      Object.entries(props).reduce((acc, [key, value]) => {
-        if (key in breakpoints) return acc;
-        return {
-          ...acc,
-          [key]: value,
-        };
-      }, {}),
-    [props, breakpoints]
-  );
+  ${media.laptop`
+    ${({ laptop }: any) => `width: ${laptop}%`};
+  `};
 
-  return (
-    <div {...filteredProps} style={style}>
-      {props.children}
-    </div>
-  );
-};
+  ${media.desktop`
+    ${({ desktop }: any) => `width: ${desktop}%`};
+  `};
+`;
 
 export default Center;
