@@ -14,13 +14,23 @@ const filledButtonClickAnimation = css`
   }
 `;
 
+const filledButtonHoverTransition = css`
+  transition: opacity 200ms ease 0ms;
+  opacity: 1;
+  &:hover {
+    opacity: 0.7;
+  }
+`;
+
 const filledButtonCss = css`
+  ${filledButtonHoverTransition};
   ${buttonCss};
   ${filledButtonBackgroundColorCss};
   ${filledButtonClickAnimation}
 `;
 
 export {
+  filledButtonHoverTransition,
   filledButtonClickAnimation,
   filledButtonBackgroundColorCss,
   filledButtonCss,

@@ -97,21 +97,40 @@ const TypographyPage = () => {
           <Title1 type={"primary"} weight={"regular"} as={"h2"}>
             Title 2
           </Title1>
-          <div>
-            <h3>Regular</h3>
-            <Title2 weight={"regular"} type={"primary"}>
-              Primary
-            </Title2>
-            <Title2 weight={"regular"} type={"secondary"}>
-              Secondary
-            </Title2>
-            <Title2 weight={"regular"} type={"tertiary"}>
-              Tertiary
-            </Title2>
-            <Title2 weight={"regular"} type={"quaternary"}>
-              Quaternary
-            </Title2>
-          </div>
+
+          <Flex justify={"left"}>
+            <div>
+              <h3>Regular</h3>
+              <Title2 weight={"regular"} type={"primary"}>
+                Primary
+              </Title2>
+              <Title2 weight={"regular"} type={"secondary"}>
+                Secondary
+              </Title2>
+              <Title2 weight={"regular"} type={"tertiary"}>
+                Tertiary
+              </Title2>
+              <Title2 weight={"regular"} type={"quaternary"}>
+                Quaternary
+              </Title2>
+            </div>
+
+            <div>
+              <h3>Bold</h3>
+              <Title2 weight={"bold"} type={"primary"}>
+                Primary
+              </Title2>
+              <Title2 weight={"bold"} type={"secondary"}>
+                Secondary
+              </Title2>
+              <Title2 weight={"bold"} type={"tertiary"}>
+                Tertiary
+              </Title2>
+              <Title2 weight={"bold"} type={"quaternary"}>
+                Quaternary
+              </Title2>
+            </div>
+          </Flex>
         </div>
 
         <div>

@@ -14,7 +14,10 @@ const ButtonOpacityTransition: FunctionComponent<
     disabled?: boolean;
   }>
 > = ({ children, timeout = 200, ease = Ease.ease, delay = 0, disabled }) => {
-  const [mouseOver, mouseOverRef] = useMouseOver<HTMLDivElement>();
+  const [
+    mouseOver,
+    // mouseOverRef
+  ] = useMouseOver<HTMLDivElement>();
   const [mouseDown, mouseDownRef, setDown] = useMouseDown<HTMLDivElement>();
 
   const style = useCSSProperties(
@@ -34,7 +37,10 @@ const ButtonOpacityTransition: FunctionComponent<
   return (
     <div
       style={style}
-      ref={mergeRefs([mouseOverRef, mouseDownRef])}
+      ref={mergeRefs([
+        // mouseOverRef,
+        mouseDownRef,
+      ])}
       onTouchCancel={() => setDown(false)}
       onTouchEnd={() => setDown(false)}
     >
