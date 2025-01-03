@@ -1,5 +1,5 @@
 import React from "react";
-import { Button } from "@nightfall-ui/components";
+import { Button, filledSquareLargeButtonCss } from "@nightfall-ui/components";
 import styled from "styled-components";
 import { regularNormal2XLCss } from "@nightfall-ui/css";
 import { Hr, PageTitle } from "../../components";
@@ -8,6 +8,10 @@ import { LoadingGradient } from "@nightfall-ui/components";
 
 const H2 = styled.h2`
   ${regularNormal2XLCss}
+`;
+
+const A = styled.a`
+  ${filledSquareLargeButtonCss};
 `;
 
 const ButtonsPage = () => {
@@ -87,6 +91,8 @@ const ButtonsPage = () => {
             >
               Save
             </Button>
+
+            <A>As Link</A>
           </XStack>
         </div>
       </div>

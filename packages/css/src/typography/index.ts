@@ -8,5 +8,6 @@ export * from "./ultra-thin";
 export * from "./text-color";
 export * from "./text-align";
 export * from "./text-transform";
+export * from "./text-decoration";
 export * from "./font-family";
 export * from "./font";

@@ -17,6 +17,7 @@
   },
   "peerDependencies": {
     "@nightfall-ui/css": "^1.1.0",
+    "@nightfall-ui/icons": "^1.0.12",
     "@nightfall-ui/hooks": "^1.2.0",
     "@nightfall-ui/typography": "^1.1.0",
     "react": "^19.0.0 || ^18.0.0",

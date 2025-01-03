@@ -20,6 +20,9 @@ const buttonCss = css`
   border: none;
   outline: none;
   cursor: pointer;
+  &:hover {
+    text-decoration: none;
+  }
   &:disabled {
     opacity: 0.4;
     cursor: not-allowed;
