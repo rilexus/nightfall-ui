@@ -1,5 +1,9 @@
 import React from "react";
-import { Button, filledSquareLargeButtonCss } from "@nightfall-ui/components";
+import {
+  Button,
+  filledOvalExtraLargeButtonCss,
+  filledSquareLargeButtonCss,
+} from "@nightfall-ui/components";
 import styled from "styled-components";
 import { regularNormal2XLCss } from "@nightfall-ui/css";
 import { Hr, PageTitle } from "../../components";
@@ -10,8 +14,11 @@ const H2 = styled.h2`
   ${regularNormal2XLCss}
 `;
 
-const A = styled.a`
+const FilledSquareLargeLink = styled.a`
   ${filledSquareLargeButtonCss};
+`;
+const FilledOvalExtraLargeLink = styled.a`
+  ${filledOvalExtraLargeButtonCss};
 `;
 
 const ButtonsPage = () => {
@@ -67,6 +74,7 @@ const ButtonsPage = () => {
             <Button variant={"filled"} shape={"oval"} size={"extra-large"}>
               Save
             </Button>
+            <FilledOvalExtraLargeLink>As Link</FilledOvalExtraLargeLink>
           </XStack>
         </div>
       </div>
@@ -83,6 +91,7 @@ const ButtonsPage = () => {
             <Button variant={"filled"} size={"large"} shape={"square"}>
               Save
             </Button>
+            <FilledSquareLargeLink>As Link</FilledSquareLargeLink>
             <Button
               variant={"filled"}
               size={"extra-large"}
@@ -91,8 +100,6 @@ const ButtonsPage = () => {
             >
               Save
             </Button>
-
-            <A>As Link</A>
           </XStack>
         </div>
       </div>

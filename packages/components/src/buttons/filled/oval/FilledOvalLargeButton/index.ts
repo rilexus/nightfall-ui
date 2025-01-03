@@ -1,1 +1,1 @@
-export { default as FilledOvalLargeButton } from "./FilledOvalLargeButton";
+export * from "./FilledOvalLargeButton";

@@ -3,16 +3,20 @@ import React, {
   DetailedHTMLProps,
   forwardRef,
 } from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { filledButtonCss } from "../../css";
 import { rounded3XL } from "@nightfall-ui/css";
 import { squareButtonCss, squareExtraLargeButtonPadding } from "../../../css";
 
-const StyledFilledOvalLargeButton = styled.button`
+const filledOvalExtraLargeButtonCss = css`
   ${squareButtonCss};
   ${filledButtonCss};
   ${squareExtraLargeButtonPadding};
   ${rounded3XL};
+`;
+
+const StyledFilledOvalLargeButton = styled.button`
+  ${filledOvalExtraLargeButtonCss};
 `;
 
 const FilledOvalExtraLargeButton = forwardRef<
@@ -22,4 +26,4 @@ const FilledOvalExtraLargeButton = forwardRef<
   return <StyledFilledOvalLargeButton {...props} ref={ref} />;
 });
 
-export default FilledOvalExtraLargeButton;
+export { filledOvalExtraLargeButtonCss, FilledOvalExtraLargeButton };

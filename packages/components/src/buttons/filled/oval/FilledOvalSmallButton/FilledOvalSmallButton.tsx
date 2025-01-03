@@ -3,16 +3,20 @@ import React, {
   DetailedHTMLProps,
   forwardRef,
 } from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { filledButtonCss } from "../../css";
 import { regularNormalSMCss, rounded2XL } from "@nightfall-ui/css";
 import { squareSmallButtonPadding } from "../../../css";
 
-const StyledOvalFilledSmallButton = styled.button`
+const filledOvalSmallButtonCss = css`
   ${regularNormalSMCss};
   ${rounded2XL};
   ${squareSmallButtonPadding};
   ${filledButtonCss};
+`;
+
+const StyledOvalFilledSmallButton = styled.button`
+  ${filledOvalSmallButtonCss};
 `;
 
 const FilledOvalSmallButton = forwardRef<
@@ -22,4 +26,4 @@ const FilledOvalSmallButton = forwardRef<
   return <StyledOvalFilledSmallButton {...props} ref={ref} />;
 });
 
-export default FilledOvalSmallButton;
+export { FilledOvalSmallButton, filledOvalSmallButtonCss };

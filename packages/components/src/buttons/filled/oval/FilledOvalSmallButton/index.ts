@@ -1,1 +1,1 @@
-export { default as FilledOvalSmallButton } from "./FilledOvalSmallButton";
+export * from "./FilledOvalSmallButton";

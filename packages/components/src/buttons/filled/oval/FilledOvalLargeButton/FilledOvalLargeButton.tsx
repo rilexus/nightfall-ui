@@ -23,4 +23,4 @@ const FilledOvalLargeButton = forwardRef<
   return <StyledFilledOvalLargeButton {...props} ref={ref} />;
 });
 
-export default FilledOvalLargeButton;
+export { FilledOvalLargeButton };
