@@ -8,7 +8,7 @@ import {
 import React, { FC, forwardRef, HTMLAttributes } from "react";
 
 const StyleLargeTitleBoldPrimary = styled.div`
-  ${largeTitleBoldPrimaryCss}
+  ${largeTitleBoldPrimaryCss};
 `;
 
 const LargeTitleBoldPrimary = forwardRef((props, ref) => {
@@ -18,7 +18,7 @@ const LargeTitleBoldPrimary = forwardRef((props, ref) => {
 });
 
 const StyleLargeTitleBoldSecondary = styled.div`
-  ${largeTitleBoldSecondaryCss}
+  ${largeTitleBoldSecondaryCss};
 `;
 
 const LargeTitleBoldSecondary = forwardRef((props, ref) => {
@@ -28,7 +28,7 @@ const LargeTitleBoldSecondary = forwardRef((props, ref) => {
 });
 
 const StyleLargeTitleBoldTertiary = styled.div`
-  ${largeTitleBoldTertiaryCss}
+  ${largeTitleBoldTertiaryCss};
 `;
 
 const LargeTitleBoldTertiary = forwardRef((props, ref) => {
@@ -38,7 +38,7 @@ const LargeTitleBoldTertiary = forwardRef((props, ref) => {
 });
 
 const StyleLargeTitleBoldQuaternary = styled.div`
-  ${largeTitleBoldQuaternaryCss}
+  ${largeTitleBoldQuaternaryCss};
 `;
 
 const LargeTitleBoldQuaternary = forwardRef((props, ref) => {

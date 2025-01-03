@@ -34,7 +34,7 @@ const TypographyPage = () => {
           <Flex justify={"left"}>
             <div>
               <h3>Regular</h3>
-              <LargeTitle weight={"regular"} type={"primary"}>
+              <LargeTitle weight={"regular"} type={"primary"} as={"h1"}>
                 Primary
               </LargeTitle>
               <LargeTitle weight={"regular"} type={"secondary"}>

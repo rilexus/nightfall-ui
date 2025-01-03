@@ -1,1 +1,2 @@
-export { default as LargeTitle } from "./LargeTittle";
+export * from "./LargeTittle";
+export * from "./largeTitle.css";
