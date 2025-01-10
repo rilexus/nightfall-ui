@@ -5,11 +5,20 @@ const media = new Proxy(
   {},
   {
     get: function (target, prop: keyof Theme["breakpoints"]) {
-      return (...args: any) => {
-        return ({ theme }: { theme: Theme }) => {
+      return (strings: any, ...values: any) => {
+        return (context: { theme: Theme }) => {
+          const theme = context.theme;
+          const cssString = [...strings]
+            .map((str, i) => {
+              const value = values[i];
+              return `${str}${
+                typeof value === "function" ? value(context) : value
+              }`;
+            })
+            .join("");
           return css`
             @media only screen and (min-width: ${theme.breakpoints[prop]}px) {
-              ${args};
+              ${cssString};
             }
           `;
         };
@@ -24,16 +33,16 @@ Example:
 const Center = styled.div`
   margin: auto;
   ${small`
-    width: 95%
+    width: ${95}%;
   `}
   ${tablet`
-    width: 90%
+    width: ${({ theme }) => 90}%;
   `}
   ${laptop`
-    width: 50%
+    width: 50%;
   `};
   ${desktop`
-    width: 40%
+    width: 40%;
   `}
 `;
 * */
