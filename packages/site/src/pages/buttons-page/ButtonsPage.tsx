@@ -23,7 +23,7 @@ const FilledOvalExtraLargeLink = styled.a`
 
 const ButtonsPage = () => {
   return (
-    <Center small={80} medium={50}>
+    <Center sm={80} md={50}>
       <PageTitle>Buttons</PageTitle>
       <div>
         <LoadingGradient

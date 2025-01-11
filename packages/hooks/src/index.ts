@@ -15,3 +15,4 @@ export * from "./useScrollEvent";
 export * from "./useScrollVelocity";
 export * from "./useDebounce";
 export * from "./useThrottle";
+export * from "./useBreakpoints";

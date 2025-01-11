@@ -20,8 +20,8 @@ import { YStack } from "@nightfall-ui/components";
 const TypographyPage = () => {
   return (
     <Center
-      small={80}
-      medium={50}
+      sm={80}
+      md={50}
       style={{
         color: "white",
       }}

@@ -14,7 +14,7 @@ const FormsPage = () => {
   const [error, setError] = useState(false);
 
   return (
-    <Center small={80} medium={50}>
+    <Center sm={80} md={50}>
       <div>
         <PageTitle>Fields</PageTitle>
         <div>
@@ -149,7 +149,7 @@ const FormsPage = () => {
               top: 0,
             }}
           >
-            <Grid.Item small={12} large={6}>
+            <Grid.Item sm={12} lg={6}>
               <Input
                 shape={"square"}
                 variant={"outlined"}
@@ -160,7 +160,7 @@ const FormsPage = () => {
                 }}
               />
             </Grid.Item>
-            <Grid.Item small={12} large={6}>
+            <Grid.Item sm={12} lg={6}>
               <Input
                 shape={"square"}
                 variant={"outlined"}
@@ -172,7 +172,7 @@ const FormsPage = () => {
               />
             </Grid.Item>
 
-            <Grid.Item small={12} medium={9} large={10} laptop={11}>
+            <Grid.Item sm={12} md={9} lg={10}>
               <Input
                 shape={"square"}
                 variant={"outlined"}
@@ -184,7 +184,7 @@ const FormsPage = () => {
               />
             </Grid.Item>
 
-            <Grid.Item small={12} medium={3} large={2} laptop={1}>
+            <Grid.Item sm={12} md={3} lg={2}>
               <Input
                 shape={"square"}
                 variant={"outlined"}
@@ -196,7 +196,7 @@ const FormsPage = () => {
               />
             </Grid.Item>
 
-            <Grid.Item small={12} medium={3} large={2} laptop={1}>
+            <Grid.Item sm={12} md={3} lg={2}>
               <Input
                 shape={"square"}
                 variant={"outlined"}
@@ -208,7 +208,7 @@ const FormsPage = () => {
               />
             </Grid.Item>
 
-            <Grid.Item small={12} medium={9} large={10} laptop={11}>
+            <Grid.Item sm={12} md={9} lg={10}>
               <Input
                 shape={"square"}
                 variant={"outlined"}
@@ -220,7 +220,7 @@ const FormsPage = () => {
               />
             </Grid.Item>
 
-            <Grid.Item small={12}>
+            <Grid.Item sm={12}>
               <Input
                 shape={"square"}
                 variant={"outlined"}

@@ -4,7 +4,7 @@ import { LargeTitle } from "@nightfall-ui/typography";
 
 const Home = () => {
   return (
-    <Center small={80} medium={50}>
+    <Center sm={80} md={50}>
       <LargeTitle type={"primary"} weight={"bold"} as={"h1"}>
         Nightfall UI
       </LargeTitle>

@@ -6,7 +6,7 @@ import { Title1 } from "@nightfall-ui/typography";
 const SelectPage = () => {
   const [value, setValue] = useState("cat");
   return (
-    <Center small={80} medium={50}>
+    <Center sm={80} md={50}>
       <Title1 weight={"bold"} type={"primary"}>
         Select
       </Title1>

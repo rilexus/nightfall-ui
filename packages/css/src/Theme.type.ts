@@ -60,12 +60,12 @@ interface Theme {
     [name: string]: any;
   };
   breakpoints: {
-    small: number;
-    medium: number;
-    large: number;
-    tablet: number;
-    laptop: number;
-    desktop: number;
+    sm: number;
+    md: number;
+    lg: number;
+    xl: number;
+    "2xl": number;
+    "3xl": number;
   };
   font: {
     antialiased: string;

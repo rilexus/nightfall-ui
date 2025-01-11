@@ -1,6 +1,17 @@
 import { css } from "styled-components";
 import { Theme } from "../Theme.type";
 
+const interpolate = (strings: any, ...values: any) => {
+  return (context: any) => {
+    return [...strings /* removes the "raw" key */]
+      .map((str, i) => {
+        const value = values[i];
+        return `${str}${typeof value === "function" ? value(context) : value}`;
+      })
+      .join("");
+  };
+};
+
 const media = new Proxy(
   {},
   {
@@ -8,14 +19,7 @@ const media = new Proxy(
       return (strings: any, ...values: any) => {
         return (context: { theme: Theme }) => {
           const theme = context.theme;
-          const cssString = [...strings]
-            .map((str, i) => {
-              const value = values[i];
-              return `${str}${
-                typeof value === "function" ? value(context) : value
-              }`;
-            })
-            .join("");
+          const cssString = interpolate(strings, ...values)(context);
           return css`
             @media only screen and (min-width: ${theme.breakpoints[prop]}px) {
               ${cssString};
@@ -46,40 +50,49 @@ const Center = styled.div`
   `}
 `;
 * */
-const laptop = media.laptop;
-const medium = media.medium;
-const desktop = media.desktop;
-const small = media.small;
-const tablet = media.tablet;
-const large = media.large;
+// const laptop = media.laptop;
+// const medium = media.medium;
+// const desktop = media.desktop;
+// const small = media.small;
+// const tablet = media.tablet;
+// const large = media.large;
 
 const between = (min: number, max: number) => {
-  return (...args: any) => {
-    return css`
-      @media only screen and (min-width: ${min}px) and (max-width: ${max}px) {
-        ${args};
-      }
-    `;
+  return (strings: any, ...values: any) => {
+    return (context: any) => {
+      const cssString = interpolate(strings, ...values)(context);
+      return css`
+        @media only screen and (min-width: ${min}px) and (max-width: ${max}px) {
+          ${cssString};
+        }
+      `;
+    };
   };
 };
 
 const min = (value: number): any => {
-  return (...args: any) => {
-    return css`
-      @media only screen and (min-width: ${value}px) {
-        ${args};
-      }
-    `;
+  return (strings: any, ...values: any) => {
+    return (context: any) => {
+      const cssString = interpolate(strings, ...values)(context);
+      return css`
+        @media only screen and (min-width: ${value}px) {
+          ${cssString};
+        }
+      `;
+    };
   };
 };
 
 const max = (value: number): any => {
-  return (...args: any) => {
-    return css`
-      @media only screen and (max-width: ${value}px) {
-        ${args};
-      }
-    `;
+  return (strings: any, ...values: any) => {
+    return (context: any) => {
+      const cssString = interpolate(strings, ...values)(context);
+      return css`
+        @media only screen and (max-width: ${value}px) {
+          ${cssString};
+        }
+      `;
+    };
   };
 };
 
@@ -88,10 +101,10 @@ export {
   min,
   media,
   between,
-  laptop,
-  large,
-  tablet,
-  desktop,
-  medium,
-  small,
+  // laptop,
+  // large,
+  // tablet,
+  // desktop,
+  // medium,
+  // small,
 };

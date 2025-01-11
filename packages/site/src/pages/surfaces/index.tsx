@@ -3,7 +3,7 @@ import { Card, Center } from "@nightfall-ui/components";
 
 const SurfacesPage = () => {
   return (
-    <Center small={80} medium={50}>
+    <Center sm={80} md={50}>
       <div>Surfaces</div>
       <div>
         <Card>some</Card>

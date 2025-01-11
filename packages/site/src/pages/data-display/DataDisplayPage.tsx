@@ -7,7 +7,7 @@ import { Title1 } from "@nightfall-ui/typography";
 const DataDisplayPage = () => {
   const [elems, setE] = useState([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]);
   return (
-    <Center small={80} medium={50}>
+    <Center sm={80} md={50}>
       <Title1 weight={"bold"} type={"primary"}>
         Data Display
       </Title1>

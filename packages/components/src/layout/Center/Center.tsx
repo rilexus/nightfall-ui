@@ -2,7 +2,11 @@ import React from "react";
 import { media, Theme } from "@nightfall-ui/css";
 import styled from "styled-components";
 
-type MediaProps = { [Key in keyof Theme["breakpoints"]]?: number };
+type Default = { default?: number };
+
+type MediaProps = {
+  [Key in keyof Theme["breakpoints"]]?: number;
+} & Default;
 
 /**
  * Centers children relative to the parent.
@@ -19,32 +23,26 @@ type MediaProps = { [Key in keyof Theme["breakpoints"]]?: number };
  */
 const Center = styled.div<MediaProps>`
   margin: auto;
-  width: 100%;
+  width: ${({ ["default"]: _default }) => _default || 100}%;
 
-  ${({ small, theme }: any) => {
-    return `@media only screen and (max-width: ${theme.breakpoints.small}px) {
-      width: ${small}%;
-    }`;
-  }};
-
-  ${media.medium`
-    ${({ medium }: any) => `width: ${medium}%`};
+  ${media.sm`
+    ${({ sm }: any) => `width: ${sm}%`};
   `};
 
-  ${media.large`
-    ${({ large }: any) => `width: ${large}%`};
+  ${media.md`
+    ${({ md }: any) => `width: ${md}%`};
   `};
 
-  ${media.tablet`
-    ${({ tablet }: any) => `width: ${tablet}%`};
+  ${media.lg`
+    ${({ lg }: any) => `width: ${lg}%`};
   `};
 
-  ${media.laptop`
-    ${({ laptop }: any) => `width: ${laptop}%`};
+  ${media.xl`
+    ${({ xl }: any) => `width: ${xl}%`};
   `};
 
-  ${media.desktop`
-    ${({ desktop }: any) => `width: ${desktop}%`};
+  ${media["2xl"]`
+    ${({ ["2xl"]: value }: any) => `width: ${value}%`};
   `};
 `;
 

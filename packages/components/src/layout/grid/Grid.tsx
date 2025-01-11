@@ -19,18 +19,18 @@ const descending = ([, a]: [string, number], [, b]: [string, number]) =>
   a > b ? -1 : 1;
 
 type GrindItemProps = { [Key in keyof Theme["breakpoints"]]?: number } & {
-  columns?: number;
   timeout?: number;
   ease?: Ease;
   delay?: number;
+  default?: number;
 };
 
 const GridItem: FC<GrindItemProps & HTMLAttributes<HTMLDivElement>> = ({
   children,
+  ["default"]: _default = 100,
   timeout = 200,
   ease = Ease.easeIn,
   delay = 0,
-  columns = 12,
   ...props
 }) => {
   const spacing = useFlexContext();
@@ -41,26 +41,21 @@ const GridItem: FC<GrindItemProps & HTMLAttributes<HTMLDivElement>> = ({
     return Object.entries(breakpoints).sort(descending);
   }, [breakpoints]);
 
-  const queriesMap = sortedMedia.map(([queryName, deviceWidth], idx) => {
+  const queriesMap = sortedMedia.map(([queryName, deviceWidth]) => {
     // listen for every media query, if its satisfied => boolean
     return {
-      [queryName]: useMediaQuery(
-        `(${
-          sortedMedia.length - 1 === idx ? "max" : "min"
-        }-width: ${deviceWidth}px)`
-      ), // => boolean
+      [queryName]: useMediaQuery(`(min-width: ${deviceWidth}px)`),
     };
   });
 
-  let width = 100; // percent
-  const ratio = 100; // columns;
+  let width = _default; // percent
 
   for (let i = 0; i < queriesMap.length; i++) {
     const currentQuery = queriesMap[i];
     const [[queryName, querySatisfied]] = Object.entries(currentQuery);
     if (querySatisfied && queryName in props) {
       //@ts-ignore
-      width = ratio * props[queryName]; // in percent
+      width = props[queryName]; // in percent
       // return first satisfied query width
       break;
     }

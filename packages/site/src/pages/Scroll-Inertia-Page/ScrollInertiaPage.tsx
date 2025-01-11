@@ -69,7 +69,7 @@ const ScrollInertiaPage = () => {
   const velocity = useScrollVelocity(ref);
 
   return (
-    <Center small={80} medium={50}>
+    <Center sm={80} md={50}>
       <div
         ref={ref}
         style={{

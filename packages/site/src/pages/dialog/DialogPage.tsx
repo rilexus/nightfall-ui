@@ -19,7 +19,7 @@ const DialogPage = () => {
   const [permissionOpen, togglePermission] = useToggle(false);
 
   return (
-    <Center small={80} medium={50}>
+    <Center sm={80} md={50}>
       <Dialog open={dialogOpen}>
         <div>
           <Card>

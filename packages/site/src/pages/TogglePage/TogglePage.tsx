@@ -7,7 +7,7 @@ const TogglePage = () => {
   const [checked1, toggle1] = useReducer((s) => !s, false);
   const [checked2, toggle2] = useReducer((s) => !s, true);
   return (
-    <Center small={80} medium={50}>
+    <Center sm={80} md={50}>
       <Title1 type={"primary"} weight={"bold"}>
         Toggle
       </Title1>

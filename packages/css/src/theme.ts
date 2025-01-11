@@ -180,15 +180,15 @@ const theme: Theme = {
       800: "rgb(157 23 77)",
       900: "rgb(131 24 67)",
     },
-    // TODO: add brow
+    // TODO: add brown
   },
   breakpoints: {
-    small: 320,
-    medium: 321,
-    large: 425,
-    tablet: 768,
-    laptop: 1024,
-    desktop: 1440,
+    sm: 640,
+    md: 768,
+    lg: 1024,
+    xl: 1280,
+    "2xl": 1536,
+    "3xl": 2560,
   },
   font: {
     antialiased: "antialiased",
