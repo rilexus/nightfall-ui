@@ -7,5 +7,6 @@ export * from "./grid";
 export * from "./flex";
 export * from "./text-center";
 export * from "./padding";
+export * from "./margin";
 export * from "./hr";
 export * from "./Center";
