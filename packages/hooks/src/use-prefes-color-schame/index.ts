@@ -1,1 +1,1 @@
-export * from "./usePreferesColorSchema";
+export { default as usePrefersColorScheme } from "./usePreferesColorSchema";
