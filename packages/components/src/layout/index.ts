@@ -4,6 +4,7 @@ export * from "./x-spacer";
 export * from "./x-stack";
 export * from "./z-stack";
 export * from "./grid";
+export * from "./Flow";
 export * from "./flex";
 export * from "./text-center";
 export * from "./padding";

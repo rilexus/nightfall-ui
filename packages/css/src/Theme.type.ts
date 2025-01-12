@@ -14,6 +14,7 @@ export interface GenericTheme {
 }
 
 interface Theme {
+  name: string;
   lineHeight: {
     "3": string;
     "4": string;

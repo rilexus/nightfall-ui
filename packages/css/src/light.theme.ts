@@ -1,4 +1,5 @@
 const lightTheme = {
+  name: "light",
   textColor: {
     DEFAULT: "rgb(16,16,16)",
   },

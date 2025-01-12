@@ -3,6 +3,7 @@ import { paddingTheme } from "./spacing";
 import { Theme } from "./Theme.type";
 
 const theme: Theme = {
+  name: "default",
   margin: marginTheme,
   padding: paddingTheme,
   fontWeight: {

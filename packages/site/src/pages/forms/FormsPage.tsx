@@ -5,7 +5,7 @@ import {
   SquareOutlinedLargeInput,
   TextArea,
 } from "@nightfall-ui/components";
-import { Center, Flex, Grid, YSpacer, YStack } from "@nightfall-ui/components";
+import { Center, Flex, Flow, YSpacer, YStack } from "@nightfall-ui/components";
 import { Card } from "@nightfall-ui/components";
 import { Input, SquareInput } from "@nightfall-ui/components";
 import { Title1 } from "@nightfall-ui/typography";
@@ -143,13 +143,13 @@ const FormsPage = () => {
             <h4>Contact Form</h4>
           </YSpacer>
 
-          <Grid
+          <Flow
             spacing={"25"}
             style={{
               top: 0,
             }}
           >
-            <Grid.Item sm={12} lg={6}>
+            <Flow.Item sm={12} lg={6}>
               <Input
                 shape={"square"}
                 variant={"outlined"}
@@ -159,8 +159,8 @@ const FormsPage = () => {
                   width: "100%",
                 }}
               />
-            </Grid.Item>
-            <Grid.Item sm={12} lg={6}>
+            </Flow.Item>
+            <Flow.Item sm={12} lg={6}>
               <Input
                 shape={"square"}
                 variant={"outlined"}
@@ -170,9 +170,9 @@ const FormsPage = () => {
                   width: "100%",
                 }}
               />
-            </Grid.Item>
+            </Flow.Item>
 
-            <Grid.Item sm={12} md={9} lg={10}>
+            <Flow.Item sm={12} md={9} lg={10}>
               <Input
                 shape={"square"}
                 variant={"outlined"}
@@ -182,9 +182,9 @@ const FormsPage = () => {
                   width: "100%",
                 }}
               />
-            </Grid.Item>
+            </Flow.Item>
 
-            <Grid.Item sm={12} md={3} lg={2}>
+            <Flow.Item sm={12} md={3} lg={2}>
               <Input
                 shape={"square"}
                 variant={"outlined"}
@@ -194,9 +194,9 @@ const FormsPage = () => {
                   width: "100%",
                 }}
               />
-            </Grid.Item>
+            </Flow.Item>
 
-            <Grid.Item sm={12} md={3} lg={2}>
+            <Flow.Item sm={12} md={3} lg={2}>
               <Input
                 shape={"square"}
                 variant={"outlined"}
@@ -206,9 +206,9 @@ const FormsPage = () => {
                   width: "100%",
                 }}
               />
-            </Grid.Item>
+            </Flow.Item>
 
-            <Grid.Item sm={12} md={9} lg={10}>
+            <Flow.Item sm={12} md={9} lg={10}>
               <Input
                 shape={"square"}
                 variant={"outlined"}
@@ -218,9 +218,9 @@ const FormsPage = () => {
                   width: "100%",
                 }}
               />
-            </Grid.Item>
+            </Flow.Item>
 
-            <Grid.Item sm={12}>
+            <Flow.Item sm={12}>
               <Input
                 shape={"square"}
                 variant={"outlined"}
@@ -230,8 +230,8 @@ const FormsPage = () => {
                   width: "100%",
                 }}
               />
-            </Grid.Item>
-          </Grid>
+            </Flow.Item>
+          </Flow>
         </div>
         <div>
           <YSpacer spacing={"large"}>

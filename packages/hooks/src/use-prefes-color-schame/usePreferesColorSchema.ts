@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
+import { hasWindow } from "@nightfall-ui/css/dist/src/utils";
 
 const usePrefersColorScheme = () => {
-  if (typeof window === undefined || typeof window.matchMedia !== "function") {
+  if (!hasWindow() || typeof window.matchMedia !== "function") {
     return "no-preference";
   }
   const darkQuery = window.matchMedia?.(`(prefers-color-scheme: dark)`);

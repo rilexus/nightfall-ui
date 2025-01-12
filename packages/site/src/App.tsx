@@ -12,10 +12,11 @@ import {
   SelectPage,
   TogglePage,
   TypographyPage,
+  GridPage,
 } from "./pages";
 import { FormsPage } from "./pages/forms";
 import { DialogPage } from "./pages/dialog";
-import { GridPage } from "./pages/grid";
+import { FlowPage } from "./pages/flow";
 import ScrollInertiaPage from "./pages/Scroll-Inertia-Page/ScrollInertiaPage";
 import SurfacesPage from "./pages/surfaces";
 import { FocusProvider } from "./components/focusable";
@@ -89,6 +90,10 @@ const routes: any[] = [
   {
     path: "/typography",
     Element: TypographyPage,
+  },
+  {
+    path: "/layout-flow",
+    Element: FlowPage,
   },
   {
     path: "/layout-grid",
@@ -192,6 +197,9 @@ const App = () => {
             <li>
               <h2>Layout</h2>
               <Ul>
+                <Li>
+                  <Link to={"/layout-flow"}>Flow</Link>
+                </Li>
                 <Li>
                   <Link to={"/layout-grid"}>Grid</Link>
                 </Li>

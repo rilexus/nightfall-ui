@@ -11,4 +11,8 @@ const access = (
   return value;
 };
 
-export { access };
+const inObject = (object: Object, key: string) => key in object;
+const inWindow = (key: string) => inObject(window, key);
+const hasWindow = () => typeof window === "object";
+
+export { access, inObject, inWindow, hasWindow };
