@@ -1,4 +1,4 @@
-import { css, StyledFunction } from "styled-components";
+import { css } from "styled-components";
 import { GenericTheme, Theme } from "../Theme.type";
 
 function fontSize<T extends GenericTheme = Theme>(

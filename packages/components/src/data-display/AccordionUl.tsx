@@ -3,6 +3,8 @@ import React, {
   CSSProperties,
   forwardRef,
   HTMLAttributes,
+  LegacyRef,
+  MutableRefObject,
   ReactNode,
   useCallback,
   useContext,
@@ -38,7 +40,7 @@ const AccordionUl = forwardRef<
   HTMLAttributes<HTMLUListElement> & Props
 >(function AccordionUl(
   { children, style, scrollOnAdd = SCROLL_ON_ADD_VALUES.NONE, ...rest },
-  outsideRef: any
+  outsideRef
 ) {
   const [containerScrollPosition, setContainerScrollPosition] = useState(0);
   const [containerBoundingClientRect, setContainerBoundingClientRect] =
@@ -105,7 +107,7 @@ const AccordionUl = forwardRef<
   return (
     <ul
       {...rest}
-      ref={mergeRefs([containerRef, observerRef, outsideRef, scrollRef])}
+      ref={mergeRefs(containerRef, observerRef, outsideRef, scrollRef)}
       style={ulStyle}
     >
       <Context.Provider value={contextValue}>{children}</Context.Provider>

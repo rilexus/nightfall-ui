@@ -1,5 +1,4 @@
-import { MarginTheme } from "./spacing";
-import { PaddingTheme } from "./spacing";
+import { MarginTheme, PaddingTheme } from "./spacing";
 
 export interface GenericTheme {
   fontSize: {
@@ -15,6 +14,14 @@ export interface GenericTheme {
 
 interface Theme {
   name: string;
+  backdrop: {
+    sm: string;
+    md: string;
+    lg: string;
+    xl: string;
+    xxl: string;
+    xxxl: string;
+  };
   lineHeight: {
     "3": string;
     "4": string;

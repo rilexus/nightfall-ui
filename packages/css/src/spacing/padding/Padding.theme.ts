@@ -40,9 +40,7 @@ const paddingTheme: PaddingTheme = {
   300: "3rem",
 };
 
-type Padding = keyof PaddingTheme;
-
-const padding = (value: Padding): any => {
+const padding = (value: keyof PaddingTheme): any => {
   return ({ theme }: any): string => {
     return theme.padding[value];
   };

@@ -13,6 +13,5 @@ export const ThemeProvider: FunctionComponent<
   const _schema = schema || colorSchema;
 
   const theme = _schema === "dark" ? darkTheme : lightTheme;
-
   return <CssProvider theme={theme}>{children}</CssProvider>;
 };

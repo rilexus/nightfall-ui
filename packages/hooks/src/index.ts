@@ -16,3 +16,4 @@ export * from "./useScrollVelocity";
 export * from "./useDebounce";
 export * from "./useThrottle";
 export * from "./useBreakpoints";
+export * from "./useMousePosition";

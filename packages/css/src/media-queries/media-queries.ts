@@ -1,16 +1,6 @@
 import { css } from "styled-components";
 import { Theme } from "../Theme.type";
-
-const interpolate = (strings: any, ...values: any) => {
-  return (context: any) => {
-    return [...strings /* removes the "raw" key */]
-      .map((str, i) => {
-        const value = values[i];
-        return `${str}${typeof value === "function" ? value(context) : value}`;
-      })
-      .join("");
-  };
-};
+import { interpolate } from "../utils";
 
 const media = new Proxy(
   {},

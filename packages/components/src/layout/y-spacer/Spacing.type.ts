@@ -1,11 +1,5 @@
-import { MarginTheme } from "@nightfall-ui/css";
+import { MarginTheme, PaddingTheme } from "@nightfall-ui/css";
 
-type Spacing =
-  | "extra-small"
-  | "small"
-  | "medium"
-  | "large"
-  | "extra-large"
-  | keyof MarginTheme;
+type Spacing = keyof PaddingTheme | keyof MarginTheme;
 
 export type { Spacing };

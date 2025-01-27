@@ -1,4 +1,8 @@
-import React, { FC, HTMLAttributes } from "react";
+import React, {
+  forwardRef,
+  ForwardRefExoticComponent,
+  HTMLAttributes,
+} from "react";
 import styled from "styled-components";
 import {
   regularPlatter,
@@ -7,44 +11,49 @@ import {
   ultraThinPlatter,
 } from "@nightfall-ui/css";
 
-const StyledRegularPlatter = styled.div`
+const RegularPlatter = styled.div`
   ${regularPlatter};
 `;
 
-const StyledThickPlatter = styled.div`
+const ThickPlatter = styled.div`
   ${thickPlatter};
 `;
-const StyledThinPlatter = styled.div`
+
+const ThinPlatter = styled.div`
   ${thinPlatter};
 `;
 
-const StyledUltraThinPlatter = styled.div`
+const UltraThinPlatter = styled.div`
   ${ultraThinPlatter};
 `;
 
-const Platter: FC<
+const Platter: ForwardRefExoticComponent<
   {
     type: "regular" | "thick" | "thin" | "ultra-thin";
   } & HTMLAttributes<HTMLDivElement>
-> = ({ type, ...props }) => {
+> = forwardRef(({ type, ...props }, ref) => {
   switch (type) {
-    case "regular": {
+    case "ultra-thin": {
       //@ts-ignore
-      return <StyledRegularPlatter {...props} />;
+      return <UltraThinPlatter {...props} ref={ref} />;
     }
     case "thick": {
       //@ts-ignore
-      return <StyledThickPlatter {...props} />;
+      return <ThickPlatter {...props} ref={ref} />;
     }
     case "thin": {
       //@ts-ignore
-      return <StyledThinPlatter {...props} />;
+      return <ThinPlatter {...props} ref={ref} />;
+    }
+    case "regular": {
+      //@ts-ignore
+      return <RegularPlatter {...props} ref={ref} />;
     }
     default: {
       //@ts-ignore
-      return <StyledUltraThinPlatter {...props} />;
+      return <RegularPlatter {...props} ref={ref} />;
     }
   }
-};
+});
 
-export { Platter };
+export { Platter, RegularPlatter, UltraThinPlatter, ThinPlatter, ThickPlatter };

@@ -1,33 +1,41 @@
 import { css } from "styled-components";
+import { Theme } from "../../../Theme.type";
+import { access } from "../../../utils";
+
+export const backdrop = (name: keyof Theme["backdrop"]): any => {
+  return ({ theme }: { theme: Theme }): any => {
+    return access(name, theme.backdrop);
+  };
+};
 
 export const backdropBlurNone = css`
   backdrop-filter: ;
 `;
 
-export const backdropBlurSM = css`
-  backdrop-filter: blur(4px);
-`;
-
 export const backdropBlur = css`
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(${backdrop("md")});
 `;
 
-export const backdropMD = css`
-  backdrop-filter: blur(12px);
+export const backdropBlurSM = css`
+  backdrop-filter: blur(${backdrop("sm")});
 `;
 
-export const backdropLG = css`
-  backdrop-filter: blur(16px);
+export const backdropBlurMD = css`
+  backdrop-filter: blur(${backdrop("md")});
 `;
 
-export const backdropXL = css`
-  backdrop-filter: blur(24px);
+export const backdropBlurLG = css`
+  backdrop-filter: blur(${backdrop("lg")});
 `;
 
-export const backdrop2XL = css`
-  backdrop-filter: blur(40px);
+export const backdropBlurXL = css`
+  backdrop-filter: blur(${backdrop("xl")});
 `;
 
-export const backdrop3XL = css`
-  backdrop-filter: blur(64px);
+export const backdropBlur2XL = css`
+  backdrop-filter: blur(${backdrop("xxl")});
+`;
+
+export const backdropBlur3XL = css`
+  backdrop-filter: blur(${backdrop("xxxl")});
 `;

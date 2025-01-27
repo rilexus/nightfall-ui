@@ -1,5 +1,5 @@
 export * from "./Margin.theme";
-export type { MarginTheme } from "./MarginTheme";
+export * from "./MarginTheme.type";
 export * from "./m.css";
 export * from "./mx.css";
 export * from "./my.css";

@@ -3,12 +3,14 @@ import {
   Button,
   filledOvalExtraLargeButtonCss,
   filledSquareLargeButtonCss,
+  RadialMask,
 } from "@nightfall-ui/components";
 import styled from "styled-components";
 import { regularNormal2XLCss } from "@nightfall-ui/css";
 import { Hr, PageTitle } from "../../components";
 import { Center, XStack } from "@nightfall-ui/components";
 import { LoadingGradient } from "@nightfall-ui/components";
+import { useColorSchema } from "../../hooks/useColorSchema/useColorSchema";
 
 const H2 = styled.h2`
   ${regularNormal2XLCss}
@@ -22,6 +24,7 @@ const FilledOvalExtraLargeLink = styled.a`
 `;
 
 const ButtonsPage = () => {
+  const [scheme] = useColorSchema();
   return (
     <Center sm={80} md={50}>
       <PageTitle>Buttons</PageTitle>
@@ -142,9 +145,17 @@ const ButtonsPage = () => {
           <Button shape={"round"} variant={"filled"} size={"large"}>
             OK
           </Button>
-          <Button shape={"round"} variant={"filled"} size={"extra-large"}>
-            OK
-          </Button>
+          <RadialMask
+            textColorMix={{ color: "red", alpha: 0.7 }}
+            backgroundColorMix={{
+              color: scheme === "dark" ? "white" : "black",
+              alpha: 0.9,
+            }}
+          >
+            <Button shape={"round"} variant={"filled"} size={"extra-large"}>
+              OK
+            </Button>
+          </RadialMask>
         </XStack>
       </div>
     </Center>

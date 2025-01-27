@@ -57,7 +57,6 @@ const CssProvider = ({ theme, children }: any) => {
     }
     return defaultTheme;
   }, [theme]);
-
   return (
     <ThemeProvider theme={reconciliatedTheme}>
       <GlobalCss />

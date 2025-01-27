@@ -4,7 +4,7 @@ import { XSpacer } from "../x-spacer";
 
 const XStack: FunctionComponent<PropsWithChildren<{ spacing?: Spacing }>> = ({
   children,
-  spacing = "medium",
+  spacing = "12",
 }) => {
   return (
     <div

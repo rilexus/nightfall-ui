@@ -7,7 +7,8 @@
     "packages/icons",
     "packages/typography",
     "packages/utils",
-    "packages/site"
+    "packages/site",
+    "packages/themes"
   ],
   "version": "independent",
   "npmClient": "npm"

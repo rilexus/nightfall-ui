@@ -3,7 +3,7 @@ import { Spacing, YSpacer } from "../y-spacer";
 
 const YStack: FunctionComponent<PropsWithChildren<{ spacing?: Spacing }>> = ({
   children,
-  spacing = "medium",
+  spacing = "12",
 }) => {
   return (
     <div>

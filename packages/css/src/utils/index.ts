@@ -15,4 +15,15 @@ const inObject = (object: Object, key: string) => key in object;
 const inWindow = (key: string) => inObject(window, key);
 const hasWindow = () => typeof window === "object";
 
-export { access, inObject, inWindow, hasWindow };
+const interpolate = (strings: any, ...values: any) => {
+  return (context: any) => {
+    return [...strings /* removes the "raw" key */]
+      .map((str, i) => {
+        const value = values[i];
+        return `${str}${typeof value === "function" ? value(context) : value}`;
+      })
+      .join("");
+  };
+};
+
+export { access, inObject, inWindow, hasWindow, interpolate };

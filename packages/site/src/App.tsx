@@ -18,7 +18,9 @@ import { FormsPage } from "./pages/forms";
 import { DialogPage } from "./pages/dialog";
 import { FlowPage } from "./pages/flow";
 import ScrollInertiaPage from "./pages/Scroll-Inertia-Page/ScrollInertiaPage";
-import SurfacesPage from "./pages/surfaces";
+import { CardPage } from "./pages/surfaces/pages";
+import { PlatterPage } from "./pages/surfaces/pages";
+import { PlatterCardPage } from "./pages/surfaces/pages";
 import { FocusProvider } from "./components/focusable";
 import { Li, Ul } from "./components";
 import {
@@ -27,13 +29,10 @@ import {
 } from "@nightfall-ui/components";
 import { Flex } from "@nightfall-ui/components";
 import { Toggle } from "@nightfall-ui/components";
-import { createState, localStorageEnhancer } from "./libs";
 import { ThemeProvider } from "@nightfall-ui/css";
-
-const useColorSchema = createState<"light" | "dark">(
-  "light",
-  localStorageEnhancer("colorSchema")
-);
+import { useColorSchema } from "./hooks/useColorSchema/useColorSchema";
+import { Callout } from "@nightfall-ui/typography";
+import { Background } from "@nightfall-ui/components";
 
 const Page: FunctionComponent<PropsWithChildren> = ({ children }) => {
   return <div>{children}</div>;
@@ -45,6 +44,7 @@ const Providers: FunctionComponent<PropsWithChildren> = ({ children }) => {
   return (
     <FocusProvider>
       <ThemeProvider schema={schema}>
+        <Background />
         <DialogProvider>
           <DialogBackgroundTransition
             zoom={{ from: 1, to: 0.99, timeout: 400 }}
@@ -108,8 +108,16 @@ const routes: any[] = [
     Element: MediaCenter,
   },
   {
-    path: "/surfaces",
-    Element: SurfacesPage,
+    path: "/surfaces/card",
+    Element: CardPage,
+  },
+  {
+    path: "/surfaces/platter-card",
+    Element: PlatterCardPage,
+  },
+  {
+    path: "/surfaces/platter",
+    Element: PlatterPage,
   },
   {
     path: "*",
@@ -131,6 +139,14 @@ const ColorSchemaToggle = () => {
   return <Toggle onChange={toggle} checked={schema === "light"} />;
 };
 
+const ListTitle: FunctionComponent<PropsWithChildren> = ({ children }) => {
+  return (
+    <Callout type={"primary"} weight={"bold"}>
+      {children}
+    </Callout>
+  );
+};
+
 const App = () => {
   return (
     <div>
@@ -150,11 +166,13 @@ const App = () => {
                   marginBottom: "1rem",
                 }}
               >
-                <Link to={"/"}>Home</Link>
+                <Link to={"/"}>
+                  <ListTitle>Home</ListTitle>
+                </Link>
               </div>
             </Li>
             <Li>
-              <h2>Inputs</h2>
+              <ListTitle>Inputs</ListTitle>
               <Ul>
                 <Li>
                   <Link to={"/buttons"}>Buttons</Link>
@@ -171,7 +189,9 @@ const App = () => {
               </Ul>
             </Li>
             <li>
-              <h2>Typography</h2>
+              <h2>
+                <ListTitle>Typography</ListTitle>
+              </h2>
               <Ul>
                 <Li>
                   <Link to={"/typography"}>Typography</Link>
@@ -179,7 +199,7 @@ const App = () => {
               </Ul>
             </li>
             <Li>
-              <h2>Feedback</h2>
+              <ListTitle>Feedback</ListTitle>
               <Ul>
                 <Li>
                   <Link to={"/dialog"}>Dialog</Link>
@@ -187,7 +207,7 @@ const App = () => {
               </Ul>
             </Li>
             <li>
-              <h2>Data Display</h2>
+              <ListTitle>Data Display</ListTitle>
               <Ul>
                 <Li>
                   <Link to={"/data-display"}>Data Display</Link>
@@ -195,7 +215,7 @@ const App = () => {
               </Ul>
             </li>
             <li>
-              <h2>Layout</h2>
+              <ListTitle>Layout</ListTitle>
               <Ul>
                 <Li>
                   <Link to={"/layout-flow"}>Flow</Link>
@@ -209,18 +229,25 @@ const App = () => {
               </Ul>
             </li>
             <li>
-              <h2>Behaviour</h2>
+              <ListTitle>Behaviour</ListTitle>
               <Ul>
                 <Li>
                   <Link to={"/scroll-inertia"}>Scroll Inertia</Link>
                 </Li>
               </Ul>
             </li>
+
             <li>
-              <h2>Surfaces</h2>
+              <ListTitle>Surfaces</ListTitle>
               <Ul>
                 <Li>
-                  <Link to={"/surfaces"}>Surfaces</Link>
+                  <Link to={"/surfaces/platter"}>Platter</Link>
+                </Li>
+                <Li>
+                  <Link to={"/surfaces/card"}>Card</Link>
+                </Li>
+                <Li>
+                  <Link to={"/surfaces/platter-card"}>Platter Card</Link>
                 </Li>
               </Ul>
             </li>

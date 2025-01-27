@@ -1,14 +1,41 @@
-import React, { useState } from "react";
+import React, { FunctionComponent, PropsWithChildren, useState } from "react";
 import { PageTitle } from "../../components";
 import {
+  PlatterCard,
+  RadialMask,
   SquareFilledLargeInput,
   SquareOutlinedLargeInput,
   TextArea,
 } from "@nightfall-ui/components";
 import { Center, Flex, Flow, YSpacer, YStack } from "@nightfall-ui/components";
-import { Card } from "@nightfall-ui/components";
+
 import { Input, SquareInput } from "@nightfall-ui/components";
 import { Title1 } from "@nightfall-ui/typography";
+import { useColorSchema } from "../../hooks/useColorSchema/useColorSchema";
+// import { useMouseOver } from "@nightfall-ui/hooks";
+// import { ScaleTransition } from "react-transitions-library";
+
+const CardWithGradient: FunctionComponent<PropsWithChildren> = ({
+  children,
+}) => {
+  const [scheme] = useColorSchema();
+  // const [isOver, ref] = useMouseOver<HTMLDivElement>();
+
+  return (
+    // <ScaleTransition in={isOver} timeout={200} from={1} to={1.008}>
+    <RadialMask
+      // ref={ref}
+      textColorMix={{ color: "red", alpha: 0.8 }}
+      backgroundColorMix={{
+        color: scheme === "dark" ? "white" : "black",
+        alpha: 0.05,
+      }}
+    >
+      <PlatterCard type={"regular"}>{children}</PlatterCard>
+    </RadialMask>
+    // </ScaleTransition>
+  );
+};
 
 const FormsPage = () => {
   const [error, setError] = useState(false);
@@ -18,10 +45,11 @@ const FormsPage = () => {
       <div>
         <PageTitle>Fields</PageTitle>
         <div>
-          <Card
-            style={{
-              maxWidth: "1000px",
-            }}
+          <CardWithGradient
+          // type={"thin"}
+          // style={{
+          //   maxWidth: "1000px",
+          // }}
           >
             <button onClick={() => setError((e) => !e)}>error</button>
             <Flex justify={"evenly"}>
@@ -30,10 +58,10 @@ const FormsPage = () => {
                   Square
                 </Title1>
                 <div>
-                  <YSpacer spacing={"large"}>
+                  <YSpacer spacing={"225"}>
                     <h4>Filled</h4>
                   </YSpacer>
-                  <YStack spacing={"small"}>
+                  <YStack spacing={"100"}>
                     <Input
                       invalid={error}
                       shape={"square"}
@@ -49,10 +77,10 @@ const FormsPage = () => {
                     <SquareFilledLargeInput placeholder={"Placeholder"} />
                   </YStack>
                   <div>
-                    <YSpacer spacing={"large"}>
+                    <YSpacer spacing={"225"}>
                       <h4>Outlined</h4>
                     </YSpacer>
-                    <YStack spacing={"small"}>
+                    <YStack spacing={"100"}>
                       <Input
                         shape={"square"}
                         variant={"outlined"}
@@ -77,12 +105,12 @@ const FormsPage = () => {
                 <Title1 type={"primary"} weight={"regular"}>
                   Round
                 </Title1>
-                <YSpacer spacing={"large"}>
+                <YSpacer spacing={"225"}>
                   <h4>Filled</h4>
                 </YSpacer>
 
                 <div>
-                  <YStack spacing={"small"}>
+                  <YStack spacing={"100"}>
                     <Input
                       invalid={error}
                       placeholder={"Placeholder"}
@@ -104,10 +132,10 @@ const FormsPage = () => {
                     />
                   </YStack>
                   <div>
-                    <YSpacer spacing={"large"}>
+                    <YSpacer spacing={"225"}>
                       <h4>Outlined</h4>
                     </YSpacer>
-                    <YStack spacing={"small"}>
+                    <YStack spacing={"100"}>
                       <Input
                         invalid={error}
                         placeholder={"Placeholder"}
@@ -132,14 +160,14 @@ const FormsPage = () => {
                 </div>
               </div>
             </Flex>
-          </Card>
+          </CardWithGradient>
         </div>
         <div
           style={{
             position: "relative",
           }}
         >
-          <YSpacer spacing={"large"}>
+          <YSpacer spacing={"225"}>
             <h4>Contact Form</h4>
           </YSpacer>
 
@@ -149,7 +177,7 @@ const FormsPage = () => {
               top: 0,
             }}
           >
-            <Flow.Item sm={12} lg={6}>
+            <Flow.Item sm={100} lg={50}>
               <Input
                 shape={"square"}
                 variant={"outlined"}
@@ -160,7 +188,7 @@ const FormsPage = () => {
                 }}
               />
             </Flow.Item>
-            <Flow.Item sm={12} lg={6}>
+            <Flow.Item sm={100} lg={50}>
               <Input
                 shape={"square"}
                 variant={"outlined"}
@@ -172,7 +200,7 @@ const FormsPage = () => {
               />
             </Flow.Item>
 
-            <Flow.Item sm={12} md={9} lg={10}>
+            <Flow.Item sm={100} md={90} lg={10}>
               <Input
                 shape={"square"}
                 variant={"outlined"}
@@ -184,7 +212,7 @@ const FormsPage = () => {
               />
             </Flow.Item>
 
-            <Flow.Item sm={12} md={3} lg={2}>
+            <Flow.Item sm={100} md={30} lg={20}>
               <Input
                 shape={"square"}
                 variant={"outlined"}
@@ -196,7 +224,7 @@ const FormsPage = () => {
               />
             </Flow.Item>
 
-            <Flow.Item sm={12} md={3} lg={2}>
+            <Flow.Item sm={100} md={30} lg={20}>
               <Input
                 shape={"square"}
                 variant={"outlined"}
@@ -234,7 +262,7 @@ const FormsPage = () => {
           </Flow>
         </div>
         <div>
-          <YSpacer spacing={"large"}>
+          <YSpacer spacing={"225"}>
             <h4>Text area</h4>
           </YSpacer>
           <TextArea placeholder={"textarea"} />

@@ -1,4 +1,4 @@
-import { MarginTheme } from "./MarginTheme";
+import { MarginTheme } from "./MarginTheme.type";
 import { Theme } from "../../Theme.type";
 
 const marginTheme: MarginTheme = {

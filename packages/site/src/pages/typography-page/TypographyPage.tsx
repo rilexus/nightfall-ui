@@ -26,7 +26,7 @@ const TypographyPage = () => {
         color: "white",
       }}
     >
-      <YStack spacing={"extra-large"}>
+      <YStack spacing={"300"}>
         <div>
           <Title1 type={"primary"} weight={"regular"} as={"h2"}>
             Large Title

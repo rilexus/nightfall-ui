@@ -1,10 +1,10 @@
 import styled from "styled-components";
 import React, { FunctionComponent, PropsWithChildren } from "react";
-import { Spacing } from "./Spacing.type";
-import { getSpacing } from "../y-spacer/getSpacing";
+import { margin } from "@nightfall-ui/css";
+import { Spacing } from "../y-spacer";
 
 const StyledHorizontalSpacer = styled.div<{ spacing: Spacing }>`
-  margin-right: ${getSpacing()};
+  margin-right: ${({ spacing }) => margin(spacing)};
   &:last-child {
     margin-right: 0;
   }
@@ -12,7 +12,7 @@ const StyledHorizontalSpacer = styled.div<{ spacing: Spacing }>`
 
 const XSpacer: FunctionComponent<PropsWithChildren<{ spacing?: Spacing }>> = ({
   children,
-  spacing = "medium",
+  spacing = "12",
 }) => {
   return (
     <StyledHorizontalSpacer spacing={spacing}>

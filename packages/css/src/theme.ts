@@ -14,6 +14,14 @@ const theme: Theme = {
     bold: 700,
     extraBold: 900,
   },
+  backdrop: {
+    sm: "4px",
+    md: "6px",
+    lg: "8px",
+    xl: "12px",
+    xxl: "16px",
+    xxxl: "24px",
+  },
   lineHeight: {
     "3": ".75rem",
     "4": "1rem",

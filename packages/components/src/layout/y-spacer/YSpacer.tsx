@@ -1,10 +1,10 @@
 import styled from "styled-components";
 import React, { FunctionComponent, PropsWithChildren } from "react";
-import { getSpacing } from "./getSpacing";
+import { margin } from "@nightfall-ui/css";
 import { Spacing } from "./Spacing.type";
 
 const StyledVerticalSpacer = styled.div<{ spacing: Spacing }>`
-  margin-bottom: ${getSpacing()};
+  margin-bottom: ${({ spacing }) => margin(spacing)};
   &:last-child {
     margin-bottom: 0;
   }
@@ -12,7 +12,7 @@ const StyledVerticalSpacer = styled.div<{ spacing: Spacing }>`
 
 const YSpacer: FunctionComponent<PropsWithChildren<{ spacing?: Spacing }>> = ({
   children,
-  spacing = "small",
+  spacing = "12",
 }) => {
   return (
     <StyledVerticalSpacer spacing={spacing}>{children}</StyledVerticalSpacer>

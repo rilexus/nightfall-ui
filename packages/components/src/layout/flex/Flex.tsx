@@ -29,7 +29,7 @@ const Flex: FC<
   children,
   direction = "row",
   align = "center",
-  justify = "center",
+  justify = "left",
   ...props
 }) => {
   const style = useCSSProperties(
