@@ -1,6 +1,6 @@
 {
   "name": "@nightfall-ui/utils",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "license": "MIT",
   "description": "Utils for the Nightfall UI component library.",
   "author": "Stanislav Panchenko <email@stanislavpanchenko.de>",

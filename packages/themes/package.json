@@ -1,6 +1,6 @@
 {
   "name": "@nightfall-ui/themes",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "description": "Themes for the Nightfall UI component library.",
   "author": "Stanislav Panchenko <email@stanislavpanchenko.de>",
@@ -10,7 +10,6 @@
     "build": "tsc --project ./tsconfig.json",
     "start": "npm run tsc:watch"
   },
-  "peerDependencies": {},
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "repository": {

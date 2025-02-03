@@ -1,6 +1,6 @@
 {
   "name": "@nightfall-ui/css",
-  "version": "2.1.0",
+  "version": "3.0.0",
   "license": "MIT",
   "description": "Forms for the Nightfall UI component library.",
   "author": "Stanislav Panchenko <email@stanislavpanchenko.de>",
@@ -12,8 +12,8 @@
     "start": "npm run tsc:watch"
   },
   "peerDependencies": {
-    "react": "^19.0.0 || ^18.0.0",
     "@nightfall-ui/themes": "^1.0.0",
+    "react": "^19.0.0 || ^18.0.0",
     "styled-components": "^5"
   },
   "main": "dist/index.js",
