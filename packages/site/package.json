@@ -29,7 +29,7 @@
 		"webpack-dev-server": "^4.6.0"
 	},
 	"dependencies": {
-		"@nightfall-ui/components": "^4.0.1",
+		"@nightfall-ui/components": "^4.0.2",
 		"@nightfall-ui/css": "^3.0.0",
 		"@nightfall-ui/hooks": "^2.0.0",
 		"@nightfall-ui/theme": "^1.0.1",
