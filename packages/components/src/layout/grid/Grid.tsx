@@ -1,6 +1,6 @@
 import React, { FC, HTMLAttributes } from "react";
-import { Theme, PaddingTheme } from "@nightfall-ui/css";
 import { Ease } from "react-transitions-library";
+import { Theme } from "@nightfall-ui/themes";
 
 // const descending = ([, a]: [string, number], [, b]: [string, number]) =>
 //   a > b ? -1 : 1;

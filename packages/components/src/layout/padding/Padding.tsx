@@ -3,20 +3,17 @@ import React, {
   FunctionComponent,
   PropsWithChildren,
 } from "react";
-import { useTheme } from "styled-components";
 import { useCSSProperties } from "@nightfall-ui/hooks";
-import { PaddingTheme, Theme } from "@nightfall-ui/css";
 
 const Padding: FunctionComponent<
-  PropsWithChildren<{ style?: CSSProperties; value?: keyof PaddingTheme }>
-> = ({ children, value = "62", ...props }) => {
-  const theme = useTheme() as Theme;
+  PropsWithChildren<{ style?: CSSProperties; value: string }>
+> = ({ children, value, ...props }) => {
   const style = useCSSProperties(
     {
-      padding: theme.padding[value],
+      padding: value,
       ...props.style,
     },
-    [theme, value, props.style]
+    [value, props.style]
   );
 
   return <div style={style}>{children}</div>;

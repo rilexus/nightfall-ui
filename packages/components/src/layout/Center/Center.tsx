@@ -1,6 +1,7 @@
 import React from "react";
-import { media, Theme } from "@nightfall-ui/css";
+import { media } from "@nightfall-ui/css";
 import styled from "styled-components";
+import { Theme } from "@nightfall-ui/themes";
 
 type Default = { default?: number };
 

@@ -1,5 +1,5 @@
 import { css } from "styled-components";
-import { padding } from "./Padding.theme";
+import { padding } from "./getters";
 
 const p0 = css`
   padding: ${padding("0")};

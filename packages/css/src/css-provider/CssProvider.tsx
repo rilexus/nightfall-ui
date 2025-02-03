@@ -1,22 +1,8 @@
 import React, { useMemo } from "react";
 import { ThemeProvider } from "styled-components";
-import { theme } from "../theme";
 import { GlobalCss, ResetCss } from "../reset-css";
-
-const defaultTheme = theme;
-
-const access = (
-  path: string /* key.path.to.object.value */,
-  object: { [key: string]: object }
-): any => {
-  // Gets value from object by given path.
-  //@ts-ignore
-  const value = path.split(".").reduce((value, key) => value[key], object);
-  if (!value) {
-    console.warn(`Value is undefined for path: "${path}"!`);
-  }
-  return value;
-};
+import { baseTheme } from "@nightfall-ui/themes";
+import { access } from "../utils";
 
 const merge = (hostObj: any, obj: any): any => {
   return Object.keys(obj).reduce((acc, key) => {
@@ -53,9 +39,9 @@ const reconciliate = (defaultTheme: any, customTheme: any): any => {
 const CssProvider = ({ theme, children }: any) => {
   const reconciliatedTheme = useMemo(() => {
     if (theme) {
-      return reconciliate(defaultTheme, theme);
+      return reconciliate(baseTheme, theme);
     }
-    return defaultTheme;
+    return baseTheme;
   }, [theme]);
   return (
     <ThemeProvider theme={reconciliatedTheme}>

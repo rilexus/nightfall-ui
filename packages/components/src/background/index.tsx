@@ -2,11 +2,18 @@ import React, { useEffect } from "react";
 import styled, { css, keyframes } from "styled-components";
 import { primaryBaseBackgroundCss } from "@nightfall-ui/css";
 
-function random(min: number, max: number) {
-  min = Math.ceil(min);
-  max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-}
+const defaultColors = ["#583c87", "#ffacac", "#e45a84"];
+const lightColors = ["#583c87", "#ffacac", "#e45a84"];
+const darkColors = ["#1b0536", "#4f0c0c", "#590820"];
+
+const themeName = (callback: (name: string) => any) => {
+  return ({ theme }: any) => {
+    return callback(theme.name);
+  };
+};
+
+const color1 = ["rgb(8,49,71)", "rgb(238,70,48)", "rgb(235, 41, 37)"];
+const appliedColors = defaultColors;
 
 function nth(array: any[], index: number) {
   return array[index];
@@ -16,109 +23,36 @@ function length(array: any[]) {
   return array.length;
 }
 
+function random<T>(min?: number | T[], max?: number): T | number {
+  if (Array.isArray(min)) {
+    return nth(min, random(0, min.length - 1));
+  }
+  min = Math.ceil(min as number);
+  max = Math.floor(max as number);
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+function randomDarkColor() {
+  return random(darkColors);
+}
+
+function randomLightColor() {
+  return random(lightColors);
+}
+
+const randomColor = (name: string) => {
+  return name === "light" ? randomLightColor() : randomDarkColor();
+};
+
+const randomColorBasedOnTheme = ({ theme }: { theme: { name: string } }) => {
+  return randomColor(theme.name);
+};
+
 const move = keyframes`
   100% {
     transform: translate3d(0, 0, 1px) rotate(360deg);
   }
 `;
-
-const createAnimation = () => {
-  const particleSize = "20vmin";
-  const animationDuration = 6;
-  const amount = 20;
-  const colors = ["#583c87", "#E45A84", "#FFACAC"];
-
-  const cssstrings = css`
-    --particleSize: ${particleSize};
-    --animationDuration: ${animationDuration}s;
-    --amount: ${amount};
-    --blurRadius: calc((${Math.random} + 0.5) * var(--particleSize) * 0.5);
-    --x: ${Math.random() > 0.5 ? -1 : 1};
-
-    span {
-      width: var(--particleSize);
-      height: var(--particleSize);
-      border-radius: var(--particleSize);
-      backface-visibility: hidden;
-      position: absolute;
-      animation-name: ${move};
-      animation-duration: var(--animationDuration);
-      animation-timing-function: linear;
-      animation-iteration-count: infinite;
-      ${primaryBaseBackgroundCss};
-    }
-
-    ${() => {
-      let str = "";
-      const direction = Math.random() > 0.5 ? "normal" : "reverse";
-
-      for (let i = 0; i <= amount; ++i) {
-        str =
-          str +
-          `
-        span:nth-child(${i}) {
-          top: calc(${random(1, 100)} * 1%);
-          left: calc(${random(1, 100)} * 1%);
-          
-          animation-direction: ${direction};
-          
-          animation-duration: ${
-            random(animationDuration, animationDuration * 10) / 10 + 10
-          }s; 
-          animation-delay: -${
-            random(animationDuration, (animationDuration + 10) * 10) / 10
-          }s;
-          
-          transform-origin: calc((${random(1, 50)} - 25) * 1vw) calc((${random(
-            1,
-            50
-          )} - 25) * 1vh);
-          
-          box-shadow: calc((var(--particleSize) * 2 * var(--x))) 0 var(--blurRadius) ${nth(
-            colors,
-            random(1, length(colors))
-          )};
-    }
-      `;
-      }
-      return str;
-    }};
-  `;
-
-  return cssstrings;
-};
-
-/*
-*
-*   ${({ colors, amount, animationDuration }) => {
-    let str = "";
-    const direction = random() > 0.5 ? "normal" : "reverse";
-
-    for (let i = 0; i <= amount; i++) {
-      console.log({ i });
-      str =
-        str +
-        `
-        span:nth-child(${i}) {
-          top: calc(${random(100)} * 1%);
-          left: calc(${random(100)} * 1%);
-
-          animation-direction: ${direction};
-
-          animation-duration: ${random(animationDuration * 10) / 10 + 10}s;
-          animation-delay: -${random((animationDuration + 10) * 10) / 10}s;
-
-          transform-origin: calc((${random(50)} - 25) * 1vw) calc((${random(
-          50
-        )} - 25) * 1vh);
-
-          box-shadow: calc((var(--size) * 2 * var(--x))) 0 var(--blurRadius) ${nth(colors, random(length(colors)))};
-    }
-      `;
-    }
-    return str;
-  }};
-* */
 
 const direction1 = Math.random() > 0.5 ? "normal" : "reverse";
 const direction2 = Math.random() > 0.5 ? "normal" : "reverse";
@@ -144,9 +78,9 @@ const BG = styled.div<{
   ${primaryBaseBackgroundCss};
 
   span {
-    mix-blend-mode: ${({ theme }) => {
-      return theme.name === "light" ? "multiply" : "normal";
-    }};
+    mix-blend-mode: ${themeName((name: string) => {
+      return name === "light" ? "multiply" : "normal";
+    })};
     width: var(--size);
     height: var(--size);
     border-radius: var(--size);
@@ -165,7 +99,7 @@ const BG = styled.div<{
     animation-direction: ${direction1};
     animation-delay: -185s;
     transform-origin: 10vw 24vh;
-    box-shadow: -100vmin 0 13.45949872007388vmin #583c87;
+    box-shadow: -100vmin 0 13.45949872007388vmin ${nth(appliedColors, 0)};
   }
 
   span:nth-child(2) {
@@ -175,7 +109,7 @@ const BG = styled.div<{
     animation-duration: 235s;
     animation-delay: -55s;
     transform-origin: -2vw 5vh;
-    box-shadow: -100vmin 0 12.600935575632098vmin #583c87;
+    box-shadow: -100vmin 0 12.600935575632098vmin ${nth(appliedColors, 0)};
   }
 
   span:nth-child(3) {
@@ -185,7 +119,7 @@ const BG = styled.div<{
     animation-duration: 205s;
     animation-delay: -90s;
     transform-origin: 5vw -14vh;
-    box-shadow: -100vmin 0 13.058065316276275vmin #583c87;
+    box-shadow: -100vmin 0 13.058065316276275vmin ${nth(appliedColors, 0)};
   }
 
   span:nth-child(4) {
@@ -195,7 +129,7 @@ const BG = styled.div<{
     animation-duration: 110s;
     animation-delay: -53s;
     transform-origin: 7vw 1vh;
-    box-shadow: 100vmin 0 13.429612868434376vmin #ffacac;
+    box-shadow: 100vmin 0 13.429612868434376vmin ${nth(appliedColors, 1)};
   }
 
   span:nth-child(5) {
@@ -205,7 +139,7 @@ const BG = styled.div<{
     animation-duration: 138s;
     animation-delay: -40s;
     transform-origin: -20vw 23vh;
-    box-shadow: -100vmin 0 13.333622007986907vmin #e45a84;
+    box-shadow: -100vmin 0 13.333622007986907vmin ${nth(appliedColors, 2)};
   }
 `;
 

@@ -1,18 +1,25 @@
-import { MarginTheme, PaddingTheme } from "./spacing";
+export type Spacing = {
+  "0": string;
+  "1": string;
+  "12": string;
+  "25": string;
+  "37": string;
+  "50": string;
+  "62": string;
+  "75": string;
+  "87": string;
+  "100": string;
+  "125": string;
+  "150": string;
+  "175": string;
+  "200": string;
+  "225": string;
+  "250": string;
+  "275": string;
+  "300": string;
+};
 
-export interface GenericTheme {
-  fontSize: {
-    [name: string]: string;
-  };
-  lineHeight: {
-    [name: string]: string;
-  };
-  fontWeight: {
-    [name: string]: number;
-  };
-}
-
-interface Theme {
+export type Theme = {
   name: string;
   backdrop: {
     sm: string;
@@ -38,8 +45,8 @@ interface Theme {
     relaxed: string;
     loose: string;
   };
-  margin: MarginTheme;
-  padding: PaddingTheme;
+  margin: Spacing;
+  padding: Spacing;
   mode?: string;
   fontWeight: {
     ultraThin: number;
@@ -91,6 +98,4 @@ interface Theme {
   colors: {
     [name: string]: any;
   };
-}
-
-export type { Theme };
+};

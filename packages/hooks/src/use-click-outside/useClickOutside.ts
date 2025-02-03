@@ -1,30 +1,26 @@
-import { MouseEventHandler, useEffect, useRef } from "react";
+import { DependencyList, MouseEventHandler, useEffect, useRef } from "react";
 
-function useClickOutside<Element = any>(callback: MouseEventHandler<Element>) {
-  const callbackRef = useRef(callback);
+function useClickOutside<Element = any>(
+  callback: MouseEventHandler<Element>,
+  deps: DependencyList
+) {
   const ref = useRef<Element>(null);
 
   useEffect(() => {
-    if (callbackRef.current !== callback) {
-      callbackRef.current = callback;
-    }
-  }, [callback]);
-
-  useEffect(() => {
-    function handleClickOutside(event: any) {
+    const handle = (event: any) => {
       //@ts-ignore
       if (ref.current && !ref.current.contains(event.target)) {
-        callbackRef.current(event);
+        callback(event);
       }
-    }
+    };
 
     // Bind the event listener
-    document.addEventListener("click", handleClickOutside);
+    document.addEventListener("click", handle);
     return () => {
       // Unbind the event listener on clean up
-      document.removeEventListener("click", handleClickOutside);
+      document.removeEventListener("click", handle);
     };
-  }, [callbackRef, ref]);
+  }, deps);
 
   return ref;
 }

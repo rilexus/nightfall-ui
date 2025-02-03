@@ -1,4 +1,3 @@
-import { PaddingTheme, Theme } from "@nightfall-ui/css";
 import {
   CSSProperties,
   LegacyRef,
@@ -8,9 +7,10 @@ import {
 } from "react";
 import { useTheme } from "styled-components";
 import { useCSSProperties } from "@nightfall-ui/hooks";
+import { PaddingTheme, Theme } from "@nightfall-ui/themes";
 
 const useRoundButtonRadius = (
-  key: keyof PaddingTheme
+  key: PaddingTheme
 ): [CSSProperties, LegacyRef<any>] => {
   const ref = useRef<HTMLDivElement | null>(null);
   const [radius, setRadius] = useState(0);

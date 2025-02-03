@@ -1,6 +1,6 @@
 import { css } from "styled-components";
-import { Theme } from "../Theme.type";
 import { interpolate } from "../utils";
+import { Theme } from "@nightfall-ui/themes";
 
 const media = new Proxy(
   {},

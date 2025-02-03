@@ -1,5 +1,5 @@
 import { css } from "styled-components";
-import { margin } from "./Margin.theme";
+import { margin } from "./getters";
 
 const mx0 = css`
   margin-left: ${margin("0")};

@@ -26,6 +26,7 @@ import { Li, Ul } from "./components";
 import {
   DialogBackgroundTransition,
   DialogProvider,
+  Padding,
 } from "@nightfall-ui/components";
 import { Flex } from "@nightfall-ui/components";
 import { Toggle } from "@nightfall-ui/components";
@@ -260,18 +261,23 @@ const App = () => {
               width: "100vw",
               top: 0,
               height: "3rem",
+              zIndex: 1000,
             }}
           >
-            <Flex justify={"end"}>
-              <ColorSchemaToggle />
-            </Flex>
+            <Padding value={"5px 0 5px 0"}>
+              <Flex justify={"end"}>
+                <ColorSchemaToggle />
+              </Flex>
+            </Padding>
           </header>
           <Page>
-            <Routes>
-              {routes.map(({ path, Element }) => {
-                return <Route key={path} path={path} element={<Element />} />;
-              })}
-            </Routes>
+            <Padding value={"0 0 0 0"}>
+              <Routes>
+                {routes.map(({ path, Element }) => {
+                  return <Route key={path} path={path} element={<Element />} />;
+                })}
+              </Routes>
+            </Padding>
           </Page>
         </div>
       </Providers>

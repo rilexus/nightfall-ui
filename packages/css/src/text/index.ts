@@ -1,7 +1,7 @@
 import { css } from "styled-components";
-import { GenericTheme, Theme } from "../Theme.type";
+import { Theme } from "@nightfall-ui/themes";
 
-function fontSize<T extends GenericTheme = Theme>(
+function fontSize<T extends Theme>(
   name: keyof (Theme["fontSize"] & T["fontSize"])
 ) {
   // TODO: type theme here

@@ -1,7 +1,7 @@
-const access = (
+function access<SourceObject extends { [key: string]: any }>(
   path: string /* key.path.to.object.value */,
-  object: { [key: string]: any }
-): any => {
+  object: SourceObject
+): any {
   // Gets value from object by given path.
   //@ts-ignore
   const value = path.split(".").reduce((value, key) => value[key], object);
@@ -9,7 +9,7 @@ const access = (
     console.warn(`Value is undefined for path: "${path}"!`);
   }
   return value;
-};
+}
 
 const inObject = (object: Object, key: string) => key in object;
 const inWindow = (key: string) => inObject(window, key);

@@ -7,8 +7,8 @@ import React, {
 } from "react";
 import { useMediaQuery, useCSSProperties } from "@nightfall-ui/hooks";
 import { useTheme } from "styled-components";
-import { Theme, PaddingTheme } from "@nightfall-ui/css";
 import { Ease } from "react-transitions-library";
+import { PaddingTheme, Theme } from "@nightfall-ui/themes";
 
 const FlowContext = createContext<string | null>(null);
 const FlowContextProvider = FlowContext.Provider;
@@ -96,9 +96,7 @@ interface FlowComposition {
   Item: typeof FlowItem;
 }
 
-const Flow: FC<
-  HTMLAttributes<HTMLDivElement> & { spacing?: keyof PaddingTheme }
-> &
+const Flow: FC<HTMLAttributes<HTMLDivElement> & { spacing?: PaddingTheme }> &
   FlowComposition = ({ spacing = "0", children, ...props }) => {
   const theme = useTheme() as Theme;
   const style = useCSSProperties(

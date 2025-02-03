@@ -1,11 +1,10 @@
 import React, { FunctionComponent, PropsWithChildren } from "react";
-import { Spacing } from "../y-spacer";
 import { XSpacer } from "../x-spacer";
+import { Spacing } from "@nightfall-ui/themes";
 
-const XStack: FunctionComponent<PropsWithChildren<{ spacing?: Spacing }>> = ({
-  children,
-  spacing = "12",
-}) => {
+const XStack: FunctionComponent<
+  PropsWithChildren<{ spacing?: keyof Spacing }>
+> = ({ children, spacing = "12" }) => {
   return (
     <div
       style={{

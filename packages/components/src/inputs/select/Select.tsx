@@ -1,29 +1,35 @@
 import React, {
+  Children,
   createContext,
   FunctionComponent,
   PropsWithChildren,
+  useCallback,
   useContext,
-  useEffect,
+  useMemo,
   useRef,
-  useState,
 } from "react";
 import { Dialog } from "../../dialog";
 import { Checkmark, KeyboardArrowDown } from "@nightfall-ui/icons";
-import { useCSSProperties } from "@nightfall-ui/hooks";
+import { useCSSProperties, useRect, useToggle } from "@nightfall-ui/hooks";
 import { Flex } from "../../layout";
 import { Platter } from "../../surfaces";
 import styled from "styled-components";
 import { filledInputBackgroundColorCss, inputBorderRadius } from "../css";
+import { TransitionGroup } from "react-transitions-library";
+import { OptionMountTransition } from "./components";
+import { mergeRefs } from "@nightfall-ui/utils";
 
-const SelectContext = createContext<{
+type ContextType = {
   select: (value: string | number) => void;
   value: string | number;
-}>({
+} | null;
+
+const SelectContext = createContext<ContextType>({
   select: (value: string | number) => {},
   value: "",
 });
 
-const useSelectContext = () => useContext(SelectContext);
+const useSelectContext = (): ContextType => useContext(SelectContext);
 
 type Event = {
   target: {
@@ -40,104 +46,19 @@ const StyledSelect = styled.div`
 `;
 
 const StyledOptionText = styled.span`
-  max-width: 270px;
+  max-width: 200px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 `;
 
-const Select: FunctionComponent<
-  PropsWithChildren<{
-    value: string | number;
-    onChange: (event: Event) => void;
-    id?: string;
-  }>
-> = ({ id, children, onChange, value }) => {
-  const [open, setOpen] = useState(false);
-  const ref = useRef(null);
-  const positionRef = useRef({});
+type OptionProps = { value: string | number };
 
-  const timeoutRef = useRef<any>(null);
-
-  const select = (value: string | number) => {
-    onChange({ target: { value } });
-    timeoutRef.current = setTimeout(() => {
-      setOpen(false);
-    }, 120);
-  };
-
-  useEffect(() => {
-    return () => clearTimeout(timeoutRef.current);
-  }, []);
-
-  const dialogStyle = useCSSProperties(
-    {
-      display: "block",
-      //@ts-ignore
-      top: `${positionRef.current.top}px`,
-      //@ts-ignore
-      left: `${positionRef.current.left}px`,
-      position: "absolute",
-      height: undefined,
-    },
-    [open, positionRef]
-  );
-  const child = React.Children.toArray(children).filter(
-    ({ props }: any) => value === props.value
-    //@ts-ignore
-  )[0]?.props?.children;
-
-  return (
-    <SelectContext.Provider value={{ select, value }}>
-      <StyledSelect
-        ref={ref}
-        aria-expanded={open}
-        aria-labelledby={id}
-        aria-haspopup={"listbox"}
-      >
-        <div
-          onClick={(e) => {
-            //@ts-ignore
-            positionRef.current = e.target.getBoundingClientRect();
-            setOpen(true);
-          }}
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "space-between",
-          }}
-        >
-          <StyledOptionText
-            style={{
-              marginRight: "0.5rem",
-            }}
-          >
-            {child}
-          </StyledOptionText>
-          <div>
-            <KeyboardArrowDown />
-          </div>
-        </div>
-        <Dialog open={open} style={dialogStyle}>
-          <ul role={"listbox"}>{children}</ul>
-        </Dialog>
-      </StyledSelect>
-    </SelectContext.Provider>
-  );
-};
-
-const StyledChildren = styled.div`
-  &:hover {
-    .option {
-      transition: color 200ms ease 0ms;
-      color: white;
-    }
-  }
-`;
-
-const Option: FunctionComponent<
-  PropsWithChildren<{ value: string | number }>
-> = ({ value, children }) => {
+const Option: FunctionComponent<PropsWithChildren<OptionProps>> = ({
+  value,
+  children,
+}) => {
+  //@ts-ignore
   const { select, value: v } = useSelectContext();
   const isSelected = v === value;
 
@@ -168,34 +89,132 @@ const Option: FunctionComponent<
   );
 
   return (
-    <li>
-      <Platter type={"regular"} style={platterStyle}>
-        <StyledChildren>
-          <Flex
-            align={"center"}
-            justify={"between"}
-            onClick={() => select(value)}
-            style={flexStyle}
-          >
-            <StyledOptionText
-              className={"option"}
-              role={"option"}
-              aria-selected={isSelected}
+    <SelectContext.Provider value={null}>
+      <li>
+        <Platter type={"regular"} style={platterStyle}>
+          <StyledChildren>
+            <Flex
+              align={"center"}
+              justify={"between"}
+              onClick={() => select(value)}
+              style={flexStyle}
             >
-              {children}
-            </StyledOptionText>
-            <span style={checkmarkStyle}>
-              <Checkmark
-                fill={"#0984ffff"}
-                height={"1.5rem"}
-                width={"1.5rem"}
-              />
-            </span>
-          </Flex>
-        </StyledChildren>
-      </Platter>
-    </li>
+              <StyledOptionText
+                className={"option"}
+                role={"option"}
+                aria-selected={isSelected}
+              >
+                {children}
+              </StyledOptionText>
+              <span style={checkmarkStyle}>
+                <Checkmark
+                  fill={"#0984ffff"}
+                  height={"1.5rem"}
+                  width={"1.5rem"}
+                />
+              </span>
+            </Flex>
+          </StyledChildren>
+        </Platter>
+      </li>
+    </SelectContext.Provider>
   );
 };
 
-export { Select, Option };
+type SelectProps = {
+  value: string | number;
+  onChange: (event: Event) => void;
+  id?: string;
+};
+
+interface SelectComponent
+  extends FunctionComponent<PropsWithChildren<SelectProps>> {
+  Option: FunctionComponent<PropsWithChildren<OptionProps>>;
+}
+
+const Select: SelectComponent = ({ id, children, onChange, value }) => {
+  const [isOpen, , set] = useToggle(false);
+  const [rect, rectRef] = useRect<HTMLDivElement>();
+
+  const close = useCallback(() => set(false), []);
+  const open = useCallback(() => set(true), []);
+
+  const select = useCallback(
+    (value: string | number) => {
+      onChange({ target: { value } });
+      close();
+    },
+    [onChange]
+  );
+
+  const dialogStyle = useCSSProperties(
+    {
+      display: "block",
+      top: `${rect?.top}px`,
+      left: `${rect?.left}px`,
+      position: "absolute",
+      height: undefined,
+    },
+    [isOpen, rect]
+  );
+  const child = React.Children.toArray(children).filter(
+    ({ props }: any) => value === props.value
+    //@ts-ignore
+  )[0]?.props?.children;
+
+  const contextValue = useMemo(() => ({ select, value }), [select, value]);
+
+  return (
+    <SelectContext.Provider value={contextValue}>
+      <StyledSelect
+        aria-expanded={isOpen}
+        aria-labelledby={id}
+        aria-haspopup={"listbox"}
+      >
+        <Flex justify={"between"} align={"center"} ref={rectRef} onClick={open}>
+          <StyledOptionText
+            style={{
+              marginRight: "0.5rem",
+            }}
+          >
+            {child}
+          </StyledOptionText>
+          <div>
+            <KeyboardArrowDown />
+          </div>
+        </Flex>
+        <Dialog open={isOpen} style={dialogStyle} onOutsideClick={close}>
+          <ul role={"listbox"}>
+            <TransitionGroup>
+              {Children.map(children, (child, index) => {
+                return (
+                  <OptionMountTransition
+                    delay={40 * index}
+                    //@ts-ignore
+                    key={child.props.value}
+                  >
+                    {/* child: Option */}
+                    {child}
+                  </OptionMountTransition>
+                );
+              })}
+            </TransitionGroup>
+          </ul>
+        </Dialog>
+      </StyledSelect>
+    </SelectContext.Provider>
+  );
+};
+
+const StyledChildren = styled.div`
+  &:hover {
+    .option {
+      transition: color 200ms ease 0ms;
+      color: white;
+    }
+  }
+`;
+
+Select.Option = Option;
+
+export { Select };

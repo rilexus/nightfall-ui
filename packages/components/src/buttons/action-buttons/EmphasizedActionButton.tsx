@@ -2,7 +2,8 @@ import styled from "styled-components";
 import { bodyBoldPrimaryCss } from "@nightfall-ui/typography";
 import React, { FC, HTMLAttributes } from "react";
 import { StyledActionButton } from "./ActionButton.styled";
-import { color, Theme } from "@nightfall-ui/css";
+import { color } from "@nightfall-ui/css";
+import { Theme } from "@nightfall-ui/themes";
 
 const Button = styled(StyledActionButton)<{ color: string; theme: Theme }>`
   ${bodyBoldPrimaryCss};

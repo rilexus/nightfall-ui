@@ -1,12 +1,12 @@
 import React, { FunctionComponent, PropsWithChildren } from "react";
 import { Center, Flow, PlatterCard } from "@nightfall-ui/components";
 import { useTheme } from "styled-components";
-import { Theme } from "@nightfall-ui/css";
 import { useBreakpoints, useMouseOver } from "@nightfall-ui/hooks";
 import { LargeTitle } from "@nightfall-ui/typography";
 import { RadialMask } from "@nightfall-ui/components";
 import { useColorSchema } from "../../hooks/useColorSchema/useColorSchema";
 import { ScaleTransition } from "react-transitions-library";
+import { Theme } from "@nightfall-ui/themes";
 
 const CardWithGradient: FunctionComponent<PropsWithChildren> = ({
   children,

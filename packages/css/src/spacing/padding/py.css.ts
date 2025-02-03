@@ -1,5 +1,5 @@
 import { css } from "styled-components";
-import { padding } from "./Padding.theme";
+import { padding } from "./getters";
 
 const py0 = css`
   padding-top: ${padding("0")};

@@ -1,6 +1,6 @@
 import { css } from "styled-components";
-import { Theme } from "../../../Theme.type";
 import { access } from "../../../utils";
+import { Theme } from "@nightfall-ui/themes";
 
 export const backdrop = (name: keyof Theme["backdrop"]): any => {
   return ({ theme }: { theme: Theme }): any => {

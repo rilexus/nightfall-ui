@@ -1,5 +1,5 @@
-import { Theme } from "./Theme.type";
 import { access } from "./utils";
+import { Theme } from "@nightfall-ui/themes";
 
 export const color = (path: string): any => {
   return ({ theme }: { theme: Theme }): any => {

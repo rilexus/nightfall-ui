@@ -58,7 +58,6 @@ type Title2BoldProps = {
 
 const Title2Bold: ForwardRefExoticComponent<Title2BoldProps> = forwardRef(
   ({ type = "primary", ...props }, ref) => {
-    console.log({ type });
     switch (type) {
       case "secondary": {
         //TODO: type ref

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import {
   AcknowledgmentDialog,
   Dialog,
@@ -9,6 +9,7 @@ import {
   Button,
   Center,
   Flex,
+  DialogHandlers,
 } from "@nightfall-ui/components";
 import { useToggle } from "@nightfall-ui/hooks";
 
@@ -18,8 +19,34 @@ const DialogPage = () => {
 
   const [permissionOpen, togglePermission] = useToggle(false);
 
+  const dialogRef = useRef<DialogHandlers>({
+    close: () => {
+      // some
+      return;
+    },
+    open: () => {
+      // some
+      return;
+    },
+  });
+
   return (
     <Center sm={80} md={50}>
+      {/*eslint-disable-next-line  @typescript-eslint/ban-ts-comment  */}
+      {/*@ts-ignore*/}
+      <Dialog ref={dialogRef}>
+        <Card>
+          <DialogText title={"Dialog"} description={"Close by reference"} />
+          <ActionButton
+            onClick={() => {
+              dialogRef.current?.close?.();
+            }}
+          >
+            Close
+          </ActionButton>
+        </Card>
+      </Dialog>
+
       <Dialog open={dialogOpen}>
         <div>
           <Card>
@@ -84,6 +111,18 @@ const DialogPage = () => {
                 onClick={togglePermission}
               >
                 Open
+              </Button>
+
+              <Button
+                id={"permission-button"}
+                variant={"filled"}
+                shape={"round"}
+                size={"small"}
+                onClick={() => {
+                  dialogRef.current?.open?.();
+                }}
+              >
+                Open by reference
               </Button>
             </div>
           </div>

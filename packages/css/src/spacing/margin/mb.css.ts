@@ -1,5 +1,5 @@
 import { css } from "styled-components";
-import { margin } from "./Margin.theme";
+import { margin } from "./getters";
 
 const mb0 = css`
   margin-bottom: ${margin("0")};

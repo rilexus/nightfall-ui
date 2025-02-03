@@ -1,5 +1,3 @@
-import { theme as defaultTheme } from "./theme";
-
 export * from "./reset-css";
 export * from "./platter";
 export * from "./link";
@@ -10,7 +8,6 @@ export * from "./user-select";
 export * from "./spacing";
 export * from "./rounded";
 export * from "./position";
-export * from "./Theme.type";
 export * from "./backgrounds";
 export * from "./display";
 export * from "./cursor";
@@ -25,7 +22,4 @@ export * from "./placeholder";
 export * from "./css-provider";
 export * from "./theme-provider";
 export * from "./filters";
-
 export * from "./getters";
-
-export { defaultTheme };

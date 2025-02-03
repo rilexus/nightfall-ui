@@ -1,7 +1,7 @@
 import { CSSProperties, useMemo } from "react";
 import { useTheme } from "styled-components";
-import { Theme } from "@nightfall-ui/css";
 import { useMediaQuery } from "@nightfall-ui/hooks";
+import { Theme } from "@nightfall-ui/themes";
 
 const descending = ([, a]: [string, number], [, b]: [string, number]) =>
   a > b ? -1 : 1;

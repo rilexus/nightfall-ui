@@ -1,8 +1,7 @@
 import React, { FunctionComponent, PropsWithChildren } from "react";
 import { CssProvider } from "../css-provider";
 import { usePrefersColorScheme } from "@nightfall-ui/hooks";
-import darkTheme from "../dark.theme";
-import lightTheme from "../light.theme";
+import { darkTheme, lightTheme } from "@nightfall-ui/themes";
 
 type Schema = "dark" | "light";
 

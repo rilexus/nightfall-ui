@@ -27,7 +27,7 @@ const DialogText: FunctionComponent<PropsWithChildren<AlertProps>> = ({
 }) => {
   return (
     <TextCenter>
-      <Padding>
+      <Padding value={"1rem"}>
         <BodyRegular type={"primary"}>{title}</BodyRegular>
         <Footnote weight={"regular"} type={"primary"}>
           {description}

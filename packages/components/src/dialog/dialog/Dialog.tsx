@@ -1,9 +1,14 @@
 import React, {
   CSSProperties,
+  forwardRef,
+  ForwardRefExoticComponent,
   FunctionComponent,
   PropsWithChildren,
+  useCallback,
   useEffect,
+  useImperativeHandle,
   useRef,
+  useState,
 } from "react";
 import ReactDOM from "react-dom";
 import { TransitionGroup } from "react-transition-group";
@@ -40,19 +45,47 @@ const Portal: FunctionComponent<PropsWithChildren<{ container: any }>> = ({
   return ReactDOM.createPortal(children, container);
 };
 
-const Dialog: FunctionComponent<
-  PropsWithChildren<{
-    style?: CSSProperties;
-    open: boolean;
-    onOutsideClick?: () => void;
-  }>
-> = ({ open, children, style }) => {
+type DialogProps = PropsWithChildren<{
+  style?: CSSProperties;
+  open?: boolean;
+  onOutsideClick?: () => void;
+  onExited?: () => void;
+}>;
+
+export type DialogHandlers = {
+  open: () => void;
+  close: () => void;
+};
+
+const Dialog: ForwardRefExoticComponent<DialogProps> = forwardRef<
+  DialogHandlers,
+  DialogProps
+>(({ open, children, style, onExited, onOutsideClick }, outsideRef) => {
   const context = useDialogContext();
-  const setOpen = context?.[1] || (() => {});
+  const setOpen = context?.[1] || ((value: any) => {});
+
+  const [internalIsOpen, setInternalIsOpen] = useState(false);
+
+  useImperativeHandle(
+    outsideRef,
+    (): DialogHandlers => {
+      return {
+        open: () => {
+          setInternalIsOpen(true);
+        },
+        close: () => {
+          setInternalIsOpen(false);
+        },
+      };
+    },
+    []
+  );
+
+  const isOpen = !!open ? open : internalIsOpen;
 
   useEffect(() => {
-    setOpen(open);
-  }, [open]);
+    setOpen(isOpen);
+  }, [isOpen]);
 
   const contentStyle = useCSSProperties(
     {
@@ -75,7 +108,7 @@ const Dialog: FunctionComponent<
   const containerRef = useRef<HTMLElement | null>(null);
 
   useEffect(() => {
-    if (open) {
+    if (isOpen) {
       const container = document.createElement("div");
       containerRef.current = container;
       document.body.appendChild(container);
@@ -85,20 +118,16 @@ const Dialog: FunctionComponent<
         containerRef.current?.remove();
       }
     };
-  }, [open]);
+  }, [isOpen]);
 
-  const removeContainerRef = useCallbackRef(() => {
+  const removeContainer = useCallback(() => {
+    onExited?.();
     containerRef.current?.remove();
-  });
-
-  const onExited = () => {
-    // this callback is memoized by the Transition and does not have access to the updated "open" value
-    removeContainerRef.current();
-  };
+  }, []);
 
   return (
     <DialogContext.Provider value={null}>
-      <div style={wrapperStyle}>
+      <div style={wrapperStyle} onClick={onOutsideClick}>
         {containerRef.current && (
           <Portal container={containerRef.current}>
             <div
@@ -109,8 +138,11 @@ const Dialog: FunctionComponent<
             >
               <div style={contentStyle}>
                 <TransitionGroup>
-                  {open && (
-                    <ContentTransition key={"content"} onExited={onExited}>
+                  {isOpen && (
+                    <ContentTransition
+                      key={"content"}
+                      onExited={removeContainer}
+                    >
                       <div>{children}</div>
                     </ContentTransition>
                   )}
@@ -122,6 +154,6 @@ const Dialog: FunctionComponent<
       </div>
     </DialogContext.Provider>
   );
-};
+});
 
 export { Dialog };
