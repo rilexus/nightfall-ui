@@ -29,11 +29,11 @@
 		"webpack-dev-server": "^4.6.0"
 	},
 	"dependencies": {
-		"@nightfall-ui/components": "^4.0.0",
+		"@nightfall-ui/components": "^4.0.1",
 		"@nightfall-ui/css": "^3.0.0",
 		"@nightfall-ui/hooks": "^2.0.0",
-		"@nightfall-ui/theme": "^1.0.0",
-		"@nightfall-ui/typography": "^1.1.8",
+		"@nightfall-ui/theme": "^1.0.1",
+		"@nightfall-ui/typography": "^1.1.9",
 		"dotenv": "^10.0.0",
 		"react": "^19.0.0",
 		"react-dom": "^19.0.0",

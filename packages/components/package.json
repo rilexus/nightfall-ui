@@ -20,8 +20,8 @@
     "@nightfall-ui/hooks": "^2.0.0",
     "@nightfall-ui/icons": "^1.0.12",
     "@nightfall-ui/theme": "^1.0.0",
-    "@nightfall-ui/typography": "^1.1.7",
-    "@nightfall-ui/utils": "^2.0.0",
+    "@nightfall-ui/typography": "^1.1.9",
+    "@nightfall-ui/utils": "^1.1.1",
     "react": "^19.0.0 || ^18.0.0",
     "styled-components": "^5"
   },
