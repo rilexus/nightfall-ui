@@ -60,6 +60,13 @@ const direction3 = Math.random() > 0.5 ? "normal" : "reverse";
 const direction4 = Math.random() > 0.5 ? "normal" : "reverse";
 const direction5 = Math.random() > 0.5 ? "normal" : "reverse";
 
+/*
+* 
+* mix-blend-mode: ${themeName((name: string) => {
+      return name === "light" ? "multiply" : "normal";
+    })};
+* */
+
 // https://codepen.io/Mamboleoo/pen/BxMQYQ
 const BG = styled.div<{
   animationDuration: number;
@@ -68,19 +75,16 @@ const BG = styled.div<{
   --animationDuration: ${({ animationDuration }) => animationDuration}s;
   --size: ${({ size }) => size};
 
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
-  top: 0;
-  left: 0;
+  pointer-events: none;
   overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  z-index: -1000;
 
   ${primaryBaseBackgroundCss};
 
   span {
-    mix-blend-mode: ${themeName((name: string) => {
-      return name === "light" ? "multiply" : "normal";
-    })};
     width: var(--size);
     height: var(--size);
     border-radius: var(--size);

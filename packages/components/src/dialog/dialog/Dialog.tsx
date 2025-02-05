@@ -62,6 +62,11 @@ const Dialog: ForwardRefExoticComponent<DialogProps> = forwardRef<
   DialogProps
 >(({ open, children, style, onExited, onOutsideClick }, outsideRef) => {
   const context = useDialogContext();
+
+  if (context === null) {
+    console.warn("Dialog needs to be wrapped with the DialogProvider!");
+  }
+
   const setOpen = context?.[1] || ((value: any) => {});
 
   const [internalIsOpen, setInternalIsOpen] = useState(false);

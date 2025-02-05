@@ -15,7 +15,7 @@ import { BackdropTransition } from "./transitions/BackdropTransition";
 
 const DialogContext = createContext<
   [boolean, Dispatch<SetStateAction<boolean>>] | null
->([false, () => {}]);
+>(null);
 
 const useDialogContext = () => useContext(DialogContext);
 

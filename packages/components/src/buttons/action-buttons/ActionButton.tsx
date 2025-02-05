@@ -8,7 +8,6 @@ import { Theme } from "@nightfall-ui/themes";
 const Button = styled(StyledActionButton)<{ color: string; theme: Theme }>`
   ${bodyRegularPrimaryCss};
   color: ${({ color, ...rest }) => {
-    console.log("hier", getColor(color)(rest));
     //@ts-ignore
     return getColor(color)(rest);
   }};
