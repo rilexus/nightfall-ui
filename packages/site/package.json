@@ -1,6 +1,6 @@
 {
 	"name": "@nightfall-ui/site",
-	"version": "1.1.27",
+	"version": "1.1.28",
 	"license": "MIT",
 	"description": "Website for the Nightfall UI library.",
 	"author": "Stanislav Panchenko <email@stanislavpanchenko.de>",
@@ -29,7 +29,7 @@
 		"webpack-dev-server": "^4.6.0"
 	},
 	"dependencies": {
-		"@nightfall-ui/components": "^4.0.4",
+		"@nightfall-ui/components": "^4.0.5",
 		"@nightfall-ui/css": "^3.0.0",
 		"@nightfall-ui/hooks": "^2.0.0",
 		"@nightfall-ui/themes": "^1.0.1",
