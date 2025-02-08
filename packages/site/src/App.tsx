@@ -13,6 +13,7 @@ import {
   TogglePage,
   TypographyPage,
   GridPage,
+  BackgroundPage,
 } from "./pages";
 import { FormsPage } from "./pages/forms";
 import { DialogPage } from "./pages/dialog";
@@ -33,7 +34,6 @@ import { Toggle } from "@nightfall-ui/components";
 import { ThemeProvider } from "@nightfall-ui/css";
 import { useColorSchema } from "./hooks/useColorSchema/useColorSchema";
 import { Callout } from "@nightfall-ui/typography";
-import { Background } from "@nightfall-ui/components";
 
 const Page: FunctionComponent<PropsWithChildren> = ({ children }) => {
   return <div>{children}</div>;
@@ -45,7 +45,6 @@ const Providers: FunctionComponent<PropsWithChildren> = ({ children }) => {
   return (
     <FocusProvider>
       <ThemeProvider schema={schema}>
-        <Background />
         <DialogProvider>
           <DialogBackgroundTransition
             zoom={{ from: 1, to: 0.99, timeout: 400 }}
@@ -119,6 +118,11 @@ const routes: any[] = [
   {
     path: "/surfaces/platter",
     Element: PlatterPage,
+  },
+
+  {
+    path: "/background",
+    Element: BackgroundPage,
   },
   {
     path: "*",
@@ -252,6 +256,15 @@ const App = () => {
                 </Li>
               </Ul>
             </li>
+
+            <Li>
+              <ListTitle>Background</ListTitle>
+              <Ul>
+                <Li>
+                  <Link to={"/background"}>Background</Link>
+                </Li>
+              </Ul>
+            </Li>
           </Ul>
         </nav>
         <div>

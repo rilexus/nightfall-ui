@@ -79,12 +79,14 @@ const BG = styled.div<{
   overflow: hidden;
   height: 100vh;
   width: 100vw;
+  inset: 0;
   position: fixed;
   z-index: -1000;
 
   ${primaryBaseBackgroundCss};
 
   span {
+    pointer-events: none;
     width: var(--size);
     height: var(--size);
     border-radius: var(--size);

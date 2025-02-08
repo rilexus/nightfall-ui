@@ -7,3 +7,4 @@ export * from "./MediaCenter";
 export * from "./Scroll-Inertia-Page";
 export * from "./TogglePage";
 export * from "./Grid";
+export * from "./background";
