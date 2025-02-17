@@ -23,7 +23,7 @@
     "@nightfall-ui/typography": "^1.1.9",
     "@nightfall-ui/utils": "^1.1.1",
     "react": "^19.0.0 || ^18.0.0",
-    "styled-components": "^5"
+    "styled-components": "^6"
   },
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
