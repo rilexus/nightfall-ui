@@ -1,4 +1,4 @@
-# Nightfall UI - Inputs
+# Nightfall UI - Components/Inputs
 
 ##Install
 ```shell

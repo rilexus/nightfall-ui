@@ -1,4 +1,4 @@
-# Nightfall UI - Buttons
+# Nightfall UI - Components/Buttons
 
 ## Install
 ### npm
