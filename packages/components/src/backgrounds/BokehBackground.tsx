@@ -1,6 +1,5 @@
 import React, { FunctionComponent } from "react";
 import styled, { keyframes } from "styled-components";
-import { primaryBaseBackgroundCss } from "@nightfall-ui/css";
 import { useId } from "@nightfall-ui/hooks";
 
 const defaultColors = ["#7229ee", "#f62a2a", "#ef2663"];
