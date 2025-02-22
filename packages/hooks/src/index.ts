@@ -20,3 +20,4 @@ export * from "./useMousePosition";
 export * from "./useWindowEvent";
 export * from "./useEvent";
 export * from "./useRect";
+export * from "./useId";

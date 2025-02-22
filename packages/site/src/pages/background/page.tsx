@@ -1,5 +1,10 @@
 import React from "react";
-import { Background, Center, Flex } from "@nightfall-ui/components";
+import {
+  // bokehColors,
+  BokehBackground,
+  Center,
+  Flex,
+} from "@nightfall-ui/components";
 import { LargeTitle } from "@nightfall-ui/typography";
 
 const BackgroundPage = () => {
@@ -13,7 +18,8 @@ const BackgroundPage = () => {
           Normal
         </LargeTitle>
       </Flex>
-      <Background />
+      {/*<Background />*/}
+      <BokehBackground size={"20vmin"} amount={20} />
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam amet aut
       cum deleniti ducimus eligendi eos expedita ipsam itaque quisquam quos
       reiciendis voluptate, voluptatum? Assumenda esse ex explicabo nesciunt

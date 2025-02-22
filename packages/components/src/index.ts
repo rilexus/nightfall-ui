@@ -1,5 +1,5 @@
 export * from "./buttons";
-export * from "./background";
+export * from "./backgrounds";
 export * from "./accordion";
 export * from "./data-display";
 export * from "./dialog";
